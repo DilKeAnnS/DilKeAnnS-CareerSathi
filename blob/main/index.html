@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Dil-Ke-AnnS - India's First Career + Earning Ecosystem | 40 Lakh+ Jobs | 15,000+ Exams | Earn Cashback">
+    <title>Dil-Ke-AnnS Career Saathi | India's First Career + Earning Ecosystem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        /* ============================================
+           HEADER SECTION - PROFESSIONAL
+        ============================================ */
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: #ffd700;
+            letter-spacing: 1px;
+        }
+
+        /* Search Bar */
+        .search-wrapper {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s;
+        }
+
+        .search-bar:hover,
+        .search-bar:focus-within {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #ffd700;
+        }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: white;
+            width: 100%;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .search-bar input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-bar span {
+            color: #ffd700;
+            font-size: 1.1rem;
+        }
+
+        /* Header Right */
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .notification-bell {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: #ffd700;
+        }
+
+        .notification-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #e74c3c;
+            color: white;
+            font-size: 0.6rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        /* Login Dropdown - Professional */
+        .login-dropdown {
+            position: relative;
+        }
+
+        .login-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #0f172a;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+
+        .login-btn:hover {
+            transform: scale(1.02);
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #1e293b;
+            min-width: 200px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 100;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .login-dropdown:hover .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .dropdown-item.owner { border-left: 3px solid #ffd700; }
+        .dropdown-item.team { border-left: 3px solid #3498db; }
+        .dropdown-item.partner { border-left: 3px solid #2ecc71; }
+        .dropdown-item.user { border-left: 3px solid #e74c3c; }
+
+        /* ============================================
+           HERO SECTION
+        ============================================ */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3c72 100%);
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto 25px;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #0f172a;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffd700;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           AnnS AI SECTION - PROFESSIONAL
+        ============================================ */
+        .anns-ai-section {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+        .ai-card {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .ai-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .ai-header {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .ai-header span {
+            font-size: 2rem;
+        }
+
+        .ai-header h3 {
+            color: #0f172a;
+            font-size: 1.3rem;
+        }
+
+        .ai-header p {
+            color: #0f172a;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .ai-chat-area {
+            padding: 25px;
+        }
+
+        .suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .suggestion-chip {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #ffd700;
+        }
+
+        .suggestion-chip:hover {
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .ai-input-area {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .ai-input-area input {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 50px;
+            padding: 14px 20px;
+            color: white;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .ai-input-area input:focus {
+            border-color: #ffd700;
+        }
+
+        .ai-send-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border: none;
+            padding: 0 25px;
+            border-radius: 50px;
+            color: #0f172a;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .ai-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ai-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ============================================
+           ALERT BUTTONS
+        ============================================ */
+        .alert-section {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 0 25px;
+        }
+
+        .alert-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .whatsapp-btn, .telegram-btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .telegram-btn {
+            background: #0088cc;
+            color: white;
+        }
+
+        .whatsapp-btn:hover, .telegram-btn:hover {
+            transform: scale(1.02);
+        }
+
+        /* ============================================
+           TILES GRID - 12 TILES
+        ============================================ */
+        .tiles-section {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .tiles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .tile-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .tile-card:hover {
+            transform: translateY(-8px);
+            border-color: #ffd700;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .tile-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .tile-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .tile-count {
+            font-size: 0.75rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .tile-desc {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============================================
+           USER EARNING TILE - MONTH-END RETURNS
+        ============================================ */
+        .earning-section {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+        .earning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .earning-card {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-radius: 24px;
+            padding: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .earning-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .earning-header span {
+            font-size: 1.8rem;
+        }
+
+        .earning-header h3 {
+            font-size: 1.2rem;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .stat-box {
+            text-align: center;
+            flex: 1;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 16px;
+        }
+
+        .stat-box .amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-box .label {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .payout-info {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 15px;
+            border-radius: 16px;
+            margin: 15px 0;
+        }
+
+        .payout-info p {
+            margin: 5px 0;
+            font-size: 0.8rem;
+        }
+
+        .btn-earn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #0f172a;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: transform 0.2s;
+        }
+
+        .btn-earn:hover {
+            transform: scale(1.02);
+        }
+
+        .sponsorship-level {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .level-badge {
+            background: #ffd700;
+            color: #0f172a;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .referral-link {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-family: monospace;
+            word-break: break-all;
+        }
+
+        /* ============================================
+           FEATURED SECTION
+        ============================================ */
+        .featured-section {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 25px;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .featured-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .featured-card h4 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .featured-list {
+            list-style: none;
+        }
+
+        .featured-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        .featured-list li:hover {
+            color: #ffd700;
+        }
+
+        /* ============================================
+           FOOTER
+        ============================================ */
+        .footer {
+            background: #0f172a;
+            margin-top: 60px;
+            padding: 40px 25px 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .footer-col a {
+            display: block;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #ffd700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+        ============================================ */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            .search-wrapper {
+                max-width: 100%;
+                width: 100%;
+            }
+            
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            
+            .tiles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .earning-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-row {
+                flex-direction: column;
+            }
+            
+            .ai-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .ai-input-area {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stat-card {
+                padding: 10px 15px;
+            }
+            
+            .stat-number {
+                font-size: 1.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 200px;
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tile-card, .earning-card, .featured-card, .ai-card {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================
+     HEADER SECTION
+============================================ -->
+<header class="header">
+    <div class="header-container">
+        <div class="logo-area">
+            <div class="logo-icon">द</div>
+            <div class="logo-text">
+                <h1>Dil-Ke-AnnS</h1>
+                <p>Career Saathi</p>
+            </div>
+        </div>
+
+        <div class="search-wrapper">
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" placeholder="Search jobs, exams, partners...">
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="notification-bell">
+                🔔
+                <span class="notification-count">12</span>
+            </div>
+
+            <div class="login-dropdown">
+                <button class="login-btn">👤 Login ▼</button>
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-item owner" onclick="handleLogin('owner')">👑 Owner Login</a>
+                    <a href="#" class="dropdown-item team" onclick="handleLogin('team')">👥 Team Login</a>
+                    <a href="#" class="dropdown-item partner" onclick="handleLogin('partner')">🤝 Partners Login</a>
+                    <a href="#" class="dropdown-item user" onclick="handleLogin('user')">👤 User Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- ============================================
+     HERO SECTION
+============================================ -->
+<section class="hero">
+    <h2>सपना नहीं, करियर बनाएं | Earn While You Learn</h2>
+    <p>India's First Career + Earning Ecosystem. Backed by Data. Boosted by Earnings.</p>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">40 Lakh+</div>
+            <div class="stat-label">Verified Jobs</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">15,000+</div>
+            <div class="stat-label">Exam Paths</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Trusted Partners</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">36</div>
+            <div class="stat-label">States/UTs</div>
+        </div>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="jobs.html" class="btn-primary">🔍 Find Jobs</a>
+        <a href="exams.html" class="btn-secondary">📚 Explore Exams</a>
+        <a href="cashback.html" class="btn-primary">💰 Earn Cashback</a>
+    </div>
+</section>
+
+<!-- ============================================
+     AnnS AI SECTION - CAREER ASSISTANT
+============================================ -->
+<section class="anns-ai-section">
+    <div class="ai-card">
+        <div class="ai-header">
+            <span>🤖</span>
+            <div>
+                <h3>Ask AnnS AI - Your Career Assistant</h3>
+                <p>Powered by Advanced AI | 24/7 Available | Free for All Users</p>
+            </div>
+        </div>
+        <div class="ai-chat-area">
+            <div class="suggestions">
+                <span class="suggestion-chip" onclick="askAI('Which job is best for me?')">💼 Which job is best for me?</span>
+                <span class="suggestion-chip" onclick="askAI('Suggest exams after 12th Science')">📚 Suggest exams after 12th Science</span>
+                <span class="suggestion-chip" onclick="askAI('Find jobs near me in Haryana')">📍 Find jobs near me in Haryana</span>
+                <span class="suggestion-chip" onclick="askAI('How to prepare for SSC CGL?')">📖 How to prepare for SSC CGL?</span>
+                <span class="suggestion-chip" onclick="askAI('Best career options after B.Com')">💼 Best career options after B.Com</span>
+            </div>
+            <div class="ai-input-area">
+                <input type="text" id="aiQuestion" placeholder="💬 Type your career question here...">
+                <button class="ai-send-btn" onclick="askAI()">Send</button>
+            </div>
+            <div id="aiResponse" style="margin-top: 15px; font-size: 0.85rem; color: #ffd700; min-height: 50px;"></div>
+            <div class="ai-features">
+                <span class="ai-feature">🎯 Personalized Job Recommendations</span>
+                <span class="ai-feature">📚 Exam Path Guidance</span>
+                <span class="ai-feature">💼 Career Counselling</span>
+                <span class="ai-feature">📄 Resume Tips</span>
+                <span class="ai-feature">💰 Salary Predictions</span>
+                <span class="ai-feature">🎤 Interview Preparation</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     FREE ALERT CHANNELS
+============================================ -->
+<section class="alert-section">
+    <div class="alert-buttons">
+        <button class="whatsapp-btn" onclick="joinWhatsApp()">📱 Join WhatsApp Channel (FREE)</button>
+        <button class="telegram-btn" onclick="joinTelegram()">✈️ Join Telegram Channel (FREE)</button>
+    </div>
+</section>
+
+<!-- ============================================
+     MAIN TILES GRID - 12 TILES
+============================================ -->
+<section class="tiles-section">
+    <h2 class="section-title">📌 Explore Career Opportunities</h2>
+    <div class="tiles-grid">
+        <div class="tile-card" onclick="window.location.href='jobs.html'">
+            <div class="tile-icon">💼</div>
+            <div class="tile-title">Jobs Portal</div>
+            <div class="tile-count">40 Lakh+ Jobs</div>
+            <div class="tile-desc">Govt | Private | State | Global</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='exams.html'">
+            <div class="tile-icon">📚</div>
+            <div class="tile-title">Exams Portal</div>
+            <div class="tile-count">15,000+ Exams</div>
+            <div class="tile-desc">All Competitive Exams</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='mocktest.html'">
+            <div class="tile-icon">🏆</div>
+            <div class="tile-title">Mock Tests</div>
+            <div class="tile-count">100+ Tests</div>
+            <div class="tile-desc">Practice & Prepare</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='magazines.html'">
+            <div class="tile-icon">📰</div>
+            <div class="tile-title">Magazines Library</div>
+            <div class="tile-count">5,000+ FREE</div>
+            <div class="tile-desc">Read Online | Save to Library</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='business.html'">
+            <div class="tile-icon">💼</div>
+            <div class="tile-title">Business Ideas</div>
+            <div class="tile-count">25 Doors</div>
+            <div class="tile-desc">Startup | MSME | Franchise</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='currentaffairs.html'">
+            <div class="tile-icon">🏛️</div>
+            <div class="tile-title">Current Affairs</div>
+            <div class="tile-count">Monthly PDF</div>
+            <div class="tile-desc">Daily | Weekly | Monthly</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='e-newspapers.html'">
+            <div class="tile-icon">📰</div>
+            <div class="tile-title">E-Newspapers</div>
+            <div class="tile-count">100+ Papers</div>
+            <div class="tile-desc">All Languages</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='somethinginteresting.html'">
+            <div class="tile-icon">💡</div>
+            <div class="tile-title">Something Interesting</div>
+            <div class="tile-count">200+ Topics</div>
+            <div class="tile-desc">GD | Debate | Leadership</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='resultsforms.html'">
+            <div class="tile-icon">📋</div>
+            <div class="tile-title">Results & Forms</div>
+            <div class="tile-count">24/7 Alerts</div>
+            <div class="tile-desc">Exam Results | Application Forms</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='partners.html?type=shopping'">
+            <div class="tile-icon">🛍️</div>
+            <div class="tile-title">Shopping Partners</div>
+            <div class="tile-count">30+ Partners</div>
+            <div class="tile-desc">Amazon | Flipkart | Myntra</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='partners.html?type=travel'">
+            <div class="tile-icon">✈️</div>
+            <div class="tile-title">Travel Partners</div>
+            <div class="tile-count">25+ Partners</div>
+            <div class="tile-desc">Bus | Train | Flight | Hotel</div>
+        </div>
+        <div class="tile-card" onclick="window.location.href='partners.html?type=business'">
+            <div class="tile-icon">🤝</div>
+            <div class="tile-title">Business Partners</div>
+            <div class="tile-count">200+ Partners</div>
+            <div class="tile-desc">Sponsorship | Internships</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     USER EARNING TILE - MONTH-END RETURNS
+============================================ -->
+<section class="earning-section">
+    <h2 class="section-title">💰 Your Earnings Dashboard</h2>
+    <div class="earning-grid">
+        <div class="earning-card">
+            <div class="earning-header">
+                <span>💰</span>
+                <h3>Your Earnings</h3>
+            </div>
+            <div class="stats-row">
+                <div class="stat-box">
+                    <div class="amount" id="thisMonthEarnings">₹0</div>
+                    <div class="label">This Month</div>
+                </div>
+                <div class="stat-box">
+                    <div class="amount" id="lastMonthEarnings">₹0</div>
+                    <div class="label">Last Month</div>
+                </div>
+                <div class="stat-box">
+                    <div class="amount" id="totalEarnings">₹0</div>
+                    <div class="label">Total Earned</div>
+                </div>
+            </div>
+            <div class="payout-info">
+                <p>📅 <strong>Month-End Returns</strong></p>
+                <p>Current Month (June 2026): <strong id="pendingPayout">₹0</strong> (Pending)</p>
+                <p>Next Payout Date: <strong>30th June 2026</strong></p>
+                <p>Minimum Withdrawal: <strong>₹500</strong></p>
+                <p>Withdrawal Method: Bank Transfer / UPI</p>
+            </div>
+            <button class="btn-earn" onclick="withdrawEarnings()">💰 Withdraw Earnings</button>
+        </div>
+
+        <div class="earning-card">
+            <div class="earning-header">
+                <span>🎓</span>
+                <h3>Sponsorship Program</h3>
+            </div>
+            <div class="sponsorship-level">
+                <span>Your Level:</span>
+                <span class="level-badge" id="sponsorshipLevel">No Tier</span>
+            </div>
+            <div class="payout-info" style="margin-top: 15px;">
+                <p>🥉 <strong>Bronze Tier</strong> - 10 Referrals: ₹500 + Certificate</p>
+                <p>🥈 <strong>Silver Tier</strong> - 50 Referrals: ₹2000 + Certificate + Badge</p>
+                <p>🥇 <strong>Gold Tier</strong> - 200 Referrals: ₹10000 + Certificate + Trophy</p>
+                <p>💎 <strong>Platinum Tier</strong> - 1000 Referrals: ₹50000 + Lifetime Achievement</p>
+            </div>
+            <div class="referral-link" id="referralLinkDisplay">dilkeanns.com/?ref=YOUR_CODE</div>
+            <button class="btn-earn" onclick="generateReferralLink()" style="margin-top: 10px;">🔗 Generate Referral Link</button>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     FEATURED SECTION
+============================================ -->
+<section class="featured-section">
+    <h2 class="section-title">⭐ Featured This Week</h2>
+    <div class="featured-grid">
+        <div class="featured-card">
+            <h4>🏆 Top 10 Govt Jobs</h4>
+            <ul class="featured-list">
+                <li onclick="window.location.href='jobs.html'">SSC CGL 2024 - 15,000+ Posts</li>
+                <li onclick="window.location.href='jobs.html'">IBPS PO 2024 - 4,000+ Posts</li>
+                <li onclick="window.location.href='jobs.html'">UPSC Civil Services 2025</li>
+                <li onclick="window.location.href='jobs.html'">Railways RRB NTPC - 25,000+ Posts</li>
+                <li onclick="window.location.href='jobs.html'">Haryana Police - 12,000+ Posts</li>
+            </ul>
+        </div>
+        <div class="featured-card">
+            <h4>📚 Upcoming Exams</h4>
+            <ul class="featured-list">
+                <li onclick="window.location.href='exams.html'">JEE Main 2025 - April Session</li>
+                <li onclick="window.location.href='exams.html'">NEET UG 2025 - May Exam</li>
+                <li onclick="window.location.href='exams.html'">CAT 2025 - November Exam</li>
+                <li onclick="window.location.href='exams.html'">GATE 2026 - February Exam</li>
+                <li onclick="window.location.href='exams.html'">CTET 2025 - July Exam</li>
+            </ul>
+        </div>
+        <div class="featured-card">
+            <h4>🛍️ Partner Offers</h4>
+            <ul class="featured-list">
+                <li onclick="window.location.href='partners.html?type=shopping'">Amazon - Extra 10% Cashback</li>
+                <li onclick="window.location.href='partners.html?type=shopping'">Flipkart - Big Billion Days</li>
+                <li onclick="window.location.href='partners.html?type=travel'">MakeMyTrip - ₹500 Off on Flights</li>
+                <li onclick="window.location.href='partners.html?type=travel'">RedBus - ₹100 Off on Bus Booking</li>
+                <li onclick="window.location.href='partners.html?type=business'">Google Internship 2025 - Apply Now</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+============================================ -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>About Us</h4>
+            <a href="#">About Dil-Ke-AnnS</a>
+            <a href="#">Our Vision</a>
+            <a href="#">Our Team</a>
+            <a href="#">Success Stories</a>
+        </div>
+        <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="#">Blogs</a>
+            <a href="#">FAQs</a>
+            <a href="#">Help Center</a>
+            <a href="#">Career Guide</a>
+        </div>
+        <div class="footer-col">
+            <h4>Partners</h4>
+            <a href="#">Become a Partner</a>
+            <a href="#">Advertise with Us</a>
+            <a href="#">Affiliate Program</a>
+            <a href="#">Sponsorship</a>
+        </div>
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Disclaimer</a>
+            <a href="#">Refund Policy</a>
+        </div>
+        <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="#" onclick="joinWhatsApp()">WhatsApp</a>
+            <a href="#" onclick="joinTelegram()">Telegram</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
+        <p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p>
+        <p>Contact: support@dilkeanns.com</p>
+    </div>
+</footer>
+
+<script>
+    // ============================================
+    // USER EARNING DATA (LocalStorage)
+    // ============================================
+    let userEarnings = JSON.parse(localStorage.getItem('userEarnings')) || {
+        thisMonth: 0,
+        lastMonth: 0,
+        total: 0,
+        pending: 0
+    };
+    let userReferrals = JSON.parse(localStorage.getItem('userReferrals')) || [];
+    let userLevel = JSON.parse(localStorage.getItem('userLevel')) || 'No Tier';
+
+    function updateEarningsDisplay() {
+        document.getElementById('thisMonthEarnings').innerText = '₹' + userEarnings.thisMonth;
+        document.getElementById('lastMonthEarnings').innerText = '₹' + userEarnings.lastMonth;
+        document.getElementById('totalEarnings').innerText = '₹' + userEarnings.total;
+        document.getElementById('pendingPayout').innerText = '₹' + userEarnings.pending;
+        
+        let level = getSponsorshipLevel();
+        document.getElementById('sponsorshipLevel').innerText = level;
+    }
+
+    function getSponsorshipLevel() {
+        let referrals = userReferrals.length;
+        if (referrals >= 1000) return "💎 Platinum Tier";
+        if (referrals >= 200) return "🥇 Gold Tier";
+        if (referrals >= 50) return "🥈 Silver Tier";
+        if (referrals >= 10) return "🥉 Bronze Tier";
+        return "No Tier";
+    }
+
+    function generateReferralLink() {
+        let referralCode = Math.random().toString(36).substring(2, 10).toUpperCase();
+        let link = `https://dilkeanns.com/?ref=${referralCode}`;
+        document.getElementById('referralLinkDisplay').innerText = link;
+        navigator.clipboard.writeText(link);
+        alert('✅ Referral link copied to clipboard! Share with friends to earn rewards.');
+        
+        // Track referral generation
+        userReferrals.push({ code: referralCode, date: new Date().toISOString() });
+        localStorage.setItem('userReferrals', JSON.stringify(userReferrals));
+        updateEarningsDisplay();
+    }
+
+    function withdrawEarnings() {
+        if (userEarnings.pending >= 500) {
+            alert(`💰 Withdrawal request initiated for ₹${userEarnings.pending}. Amount will be credited within 3-5 business days.`);
+            userEarnings.pending = 0;
+            localStorage.setItem('userEarnings', JSON.stringify(userEarnings));
+            updateEarningsDisplay();
+        } else {
+            alert(`⚠️ Minimum withdrawal amount is ₹500. You have ₹${userEarnings.pending} pending. Shop/Book through our partners to earn more!`);
+        }
+    }
+
+    // ============================================
+    // AnnS AI FUNCTION
+    // ============================================
+    function askAI(question) {
+        let inputField = document.getElementById('aiQuestion');
+        let questionText = question || inputField.value;
+        
+        if (!questionText.trim()) {
+            alert('Please type your question!');
+            return;
+        }
+        
+        let response = getAIResponse(questionText);
+        document.getElementById('aiResponse').innerHTML = `🤖 AnnS AI: ${response}`;
+        inputField.value = '';
+    }
+
+    function getAIResponse(question) {
+        let q = question.toLowerCase();
+        if (q.includes('job') || q.includes('career')) {
+            return "Based on your profile, I recommend exploring government jobs, private sector opportunities, and global careers. Check our Jobs Portal for 40 Lakh+ verified jobs!";
+        } else if (q.includes('exam') || q.includes('12th') || q.includes('science')) {
+            return "After 12th Science, you can appear for JEE Main, NEET, NDA, or various state-level entrance exams. Check our Exams Portal for complete details!";
+        } else if (q.includes('haryana') || q.includes('near me')) {
+            return "Haryana has excellent opportunities! Check HSSC Group C & D, Haryana Police, Patwari, and HTET exams. Visit our Jobs Portal for Haryana state jobs!";
+        } else if (q.includes('ssc') || q.includes('cgl')) {
+            return "For SSC CGL preparation, focus on Quantitative Aptitude, Reasoning, English, and General Awareness. Practice mock tests daily. Check our Mock Test section!";
+        } else if (q.includes('b.com') || q.includes('commerce')) {
+            return "After B.Com, great career options include CA, CMA, CS, MBA, Banking PO, and Financial Analyst. Explore our Commerce stream in the Jobs Portal!";
+        } else {
+            return "Thank you for your question! Please visit our Jobs Portal, Exams Portal, or Partners section for more specific guidance. AnnS AI is here to help 24/7!";
+        }
+    }
+
+    // ============================================
+    // LOGIN HANDLERS (4 Types)
+    // ============================================
+    function handleLogin(type) {
+        let messages = {
+            owner: "👑 Owner Login - Full Admin Access Granted. Welcome back!",
+            team: "👥 Team Login - Staff Access Granted. Welcome to your dashboard!",
+            partner: "🤝 Partners Login - Partner Portal Access Granted. View your earnings!",
+            user: "👤 User Login - Welcome back! Check your earnings dashboard below."
+        };
+        alert(messages[type]);
+        // In production, redirect to respective dashboards
+        if (type === 'owner') window.location.href = 'admin/dashboard.html';
+        else if (type === 'team') window.location.href = 'team/dashboard.html';
+        else if (type === 'partner') window.location.href = 'partner/dashboard.html';
+        else window.location.href = 'dashboard.html';
+    }
+
+    // ============================================
+    // WHATSAPP & TELEGRAM
+    // ============================================
+    function joinWhatsApp() {
+        window.open('https://whatsapp.com/channel/DilKeAnnS', '_blank');
+        alert('📱 Follow Dil-Ke-AnnS on WhatsApp for daily job alerts & offers!');
+    }
+    
+    function joinTelegram() {
+        window.open('https://t.me/DilKeAnnS', '_blank');
+        alert('✈️ Follow Dil-Ke-AnnS on Telegram for instant updates!');
+    }
+
+    // ============================================
+    // NOTIFICATIONS
+    // ============================================
+    document.querySelector('.notification-bell').addEventListener('click', function() {
+        alert('🔔 New: SSC CGL Notification | New: Amazon Cashback Offer | New: Haryana Police Recruitment');
+    });
+
+    // ============================================
+    // SEARCH FUNCTIONALITY
+    // ============================================
+    document.querySelector('.search-bar input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            let query = this.value;
+            alert(`🔍 Searching for "${query}" in Jobs, Exams, and Partners...`);
+        }
+    });
+
+    // ============================================
+    // INITIALIZE
+    // ============================================
+    updateEarningsDisplay();
+</script>
+
+</body>
+</html>
