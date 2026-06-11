@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Dil-Ke-AnnS - Something Interesting | Free AI Tools | Group Discussion | Study Materials | Earn Cashback">
+    <title>Something Interesting - Dil-Ke-AnnS Career Saathi | Free AI Tools & GD Portal</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+        .logo-icon {
+            width: 45px; height: 45px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .logo-text h1 { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #fff, #ffd700); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo-text p { font-size: 0.7rem; color: #ffd700; }
+        .back-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffd700;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .back-btn:hover { background: #ffd700; color: #0f172a; }
+        .search-wrapper { flex: 1; max-width: 400px; }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .search-bar input { background: transparent; border: none; color: white; width: 100%; padding: 8px 0; font-size: 0.9rem; outline: none; }
+        .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
+        .search-bar span { color: #ffd700; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .notification-bell { position: relative; cursor: pointer; font-size: 1.3rem; color: #ffd700; }
+        .notification-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #e74c3c;
+            color: white;
+            font-size: 0.6rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3c72 100%);
+        }
+        .hero h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .hero h2 span { color: #ffd700; }
+        .hero p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); }
+        .profit-badge {
+            background: #4caf50;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.8rem;
+        }
+        .cashbar {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .cashbar span { color: #0f172a; font-weight: bold; }
+        .cashbar .amount { font-size: 1.5rem; font-weight: bold; color: #0f172a; }
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .stat-badge {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+        }
+        .alert-section { max-width: 1400px; margin: 20px auto; padding: 0 25px; }
+        .alert-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .whatsapp-btn, .telegram-btn, .arattai-btn, .email-btn, .channel-btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+        .whatsapp-btn { background: #25D366; color: white; }
+        .telegram-btn { background: #0088cc; color: white; }
+        .arattai-btn { background: #6c5ce7; color: white; }
+        .email-btn { background: #ea4335; color: white; }
+        .channel-btn { background: #ffd700; color: #0f172a; }
+        .whatsapp-btn:hover, .telegram-btn:hover, .arattai-btn:hover, .email-btn:hover, .channel-btn:hover { transform: scale(1.02); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px 25px; }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid #ffd700;
+        }
+        .door-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .door-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .door-card:hover { transform: translateY(-5px); border-color: #ffd700; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+        .door-header { padding: 18px; display: flex; align-items: center; gap: 12px; }
+        .door-header .icon { font-size: 2rem; }
+        .door-header .title { flex: 1; font-size: 1rem; font-weight: bold; }
+        .door-header .count {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: #ffd700;
+        }
+        .door-content { padding: 0 18px 18px 18px; max-height: 280px; overflow-y: auto; }
+        .door-content::-webkit-scrollbar { width: 4px; }
+        .door-content::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.1); }
+        .door-content::-webkit-scrollbar-thumb { background: #ffd700; border-radius: 10px; }
+        .item-item { padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .item-title { font-weight: 600; font-size: 0.85rem; margin-bottom: 5px; }
+        .item-details { font-size: 0.7rem; color: rgba(255, 255, 255, 0.7); display: flex; flex-wrap: wrap; gap: 12px; }
+        .rating-badge { background: #4caf50; padding: 2px 6px; border-radius: 10px; font-size: 0.6rem; }
+        .free-badge { background: #2196f3; padding: 2px 6px; border-radius: 10px; font-size: 0.6rem; }
+        .apply-link {
+            display: inline-block;
+            margin-top: 8px;
+            background: rgba(255, 215, 0, 0.15);
+            color: #ffd700;
+            padding: 4px 12px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 0.7rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .apply-link:hover { background: #ffd700; color: #0f172a; }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: #1e293b;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        .modal-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-modal { cursor: pointer; font-size: 1.5rem; color: #ffd700; }
+        .footer {
+            background: #0f172a;
+            margin-top: 40px;
+            padding: 30px 25px 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; }
+            .search-wrapper { max-width: 100%; width: 100%; }
+            .door-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 1.2rem; }
+            .cashbar { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo-area" onclick="window.location.href='index.html'">
+            <div class="logo-icon">द</div>
+            <div class="logo-text">
+                <h1>Dil-Ke-AnnS</h1>
+                <p>Career Saathi</p>
+            </div>
+        </div>
+        <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+        <div class="search-wrapper">
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Search AI tools, GD topics, study materials...">
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="notification-bell" onclick="showNotifications()">
+                🔔
+                <span class="notification-count">12</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>Something <span>Interesting</span></h2>
+    <p>Free AI Tools | Group Discussion | Study Materials | 100% Free for Everyone</p>
+    <div class="profit-badge">
+        💰 App Owner Profit Protected | Never Negative | Revenue > Expenses
+    </div>
+    <div class="cashbar">
+        <span>💰 Your Cashback Balance:</span>
+        <span class="amount" id="cashbackAmount">₹0</span>
+        <button class="apply-link" onclick="claimCashback()" style="background:#0f172a; color:#ffd700;">Withdraw</button>
+    </div>
+    <div class="stats-row">
+        <span class="stat-badge">🤖 AI Tools: 70+ (9.8⭐)</span>
+        <span class="stat-badge">💬 GD Topics: 1,500+</span>
+        <span class="stat-badge">📚 Study Materials: 7,500+</span>
+        <span class="stat-badge">👨‍🏫 Mentors: 50+ (4.8+⭐)</span>
+    </div>
+</section>
+
+<div class="festival-banner" style="background: linear-gradient(135deg, #e74c3c, #c0392b); padding: 15px; border-radius: 16px; text-align: center; margin: 0 25px 20px 25px;">
+    🎉 <strong>SPECIAL OFFER!</strong> 🎉<br>
+    🎁 2x Cashback on GD participation this week! | 🎁 Refer friends & earn ₹50 per referral! | 🎁 Top participants get bonus rewards!
+</div>
+
+<section class="alert-section">
+    <div class="alert-buttons">
+        <button class="whatsapp-btn" onclick="joinWhatsApp()">📱 Join WhatsApp Channel (FREE)</button>
+        <button class="telegram-btn" onclick="joinTelegram()">✈️ Join Telegram Channel (FREE)</button>
+        <button class="arattai-btn" onclick="joinArattai()">💬 Join Arattai Channel (FREE)</button>
+        <button class="channel-btn" onclick="joinDilKeAnnS()">🎯 Dil-Ke-AnnS Channel</button>
+        <button class="email-btn" onclick="sendEmail()">📧 Email Us</button>
+    </div>
+</section>
+
+<div class="container" id="mainContainer"></div>
+
+<div id="itemModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="modalItemTitle">Items</span>
+            <span class="close-modal" onclick="closeItemModal()">&times;</span>
+        </div>
+        <div id="itemList"></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
+    <p>💰 Profit Protected: Owner Never Goes Negative | Revenue > Expenses Guaranteed</p>
+    <p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p>
+    <p><a href="index.html">Home</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
+</footer>
+
+<script>
+    // ============================================
+    // PROFIT PROTECTION SYSTEM - Owner Never Negative
+    // ============================================
+    
+    // Fixed revenue rates (guaranteed income)
+    const REVENUE_RATES = {
+        aiToolClick: 10,      // ₹10 per AI tool click
+        magazineRead: 5,      // ₹5 per magazine read
+        materialDownload: 3,  // ₹3 per study material download
+        gdParticipation: 20,  // ₹20 per GD session (from sponsors)
+        mentorSession: 100    // ₹100 per mentor session (from partners)
+    };
+    
+    // User earning caps (to ensure profitability)
+    const USER_EARNING_CAP = 5000;      // Max ₹5000 per user per month
+    const MENTOR_PAYMENT_CAP = 70000;   // Max ₹70000 per mentor per month
+    const PROFIT_MARGIN_TARGET = 0.30;  // 30% profit margin target
+    
+    // Cashback limits (per user per month)
+    let userMonthlyEarnings = JSON.parse(localStorage.getItem('userMonthlyEarnings') || '0');
+    let userTotalCashback = JSON.parse(localStorage.getItem('userCashback') || '0');
+    
+    function canUserEarn(amount) {
+        if (userMonthlyEarnings + amount > USER_EARNING_CAP) {
+            alert(`⚠️ You have reached the monthly earning limit of ₹${USER_EARNING_CAP}. Next month you can earn more!`);
+            return false;
+        }
+        return true;
+    }
+    
+    function addUserEarnings(amount, source) {
+        if (!canUserEarn(amount)) return false;
+        
+        userMonthlyEarnings += amount;
+        userTotalCashback += amount;
+        localStorage.setItem('userMonthlyEarnings', userMonthlyEarnings);
+        localStorage.setItem('userCashback', userTotalCashback);
+        updateCashbackDisplay();
+        
+        // Track for profitability
+        trackProfitability(source, amount);
+        return true;
+    }
+    
+    function updateCashbackDisplay() {
+        document.getElementById('cashbackAmount').innerText = '₹' + userTotalCashback;
+    }
+    
+    function claimCashback() {
+        if (userTotalCashback >= 500) {
+            alert(`💰 Withdrawal request initiated for ₹${userTotalCashback}. Amount will be credited within 3-5 business days.`);
+            userTotalCashback = 0;
+            localStorage.setItem('userCashback', userTotalCashback);
+            updateCashbackDisplay();
+        } else {
+            alert(`⚠️ Minimum withdrawal amount is ₹500. You have ₹${userTotalCashback}. Participate in more activities to earn cashback!`);
+        }
+    }
+    
+    // Profitability tracker (ensures owner never negative)
+    let totalRevenue = JSON.parse(localStorage.getItem('totalRevenue') || '0');
+    let totalExpenses = JSON.parse(localStorage.getItem('totalExpenses') || '0');
+    let totalProfit = totalRevenue - totalExpenses;
+    
+    function trackProfitability(source, userEarned) {
+        let revenueEarned = 0;
+        
+        if (source === 'ai_tool') revenueEarned = REVENUE_RATES.aiToolClick;
+        else if (source === 'magazine') revenueEarned = REVENUE_RATES.magazineRead;
+        else if (source === 'material') revenueEarned = REVENUE_RATES.materialDownload;
+        else if (source === 'gd') revenueEarned = REVENUE_RATES.gdParticipation;
+        else if (source === 'mentor') revenueEarned = REVENUE_RATES.mentorSession;
+        
+        totalRevenue += revenueEarned;
+        totalExpenses += userEarned;
+        totalProfit = totalRevenue - totalExpenses;
+        
+        localStorage.setItem('totalRevenue', totalRevenue);
+        localStorage.setItem('totalExpenses', totalExpenses);
+        
+        // Log for monitoring
+        console.log(`📊 Profitability: Revenue: ₹${totalRevenue}, Expenses: ₹${totalExpenses}, Profit: ₹${totalProfit}`);
+        
+        // Alert if profit goes below zero (should never happen with caps)
+        if (totalProfit < 0) {
+            console.error("⚠️ PROFIT ALERT: Owner would be negative! Adjusting caps...");
+            // Emergency adjustment
+            USER_EARNING_CAP = Math.max(100, USER_EARNING_CAP * 0.8);
+        }
+    }
+    
+    // Reset monthly earnings on 1st of month
+    function checkMonthlyReset() {
+        const lastReset = localStorage.getItem('lastResetDate');
+        const today = new Date().toDateString();
+        if (lastReset !== today && new Date().getDate() === 1) {
+            userMonthlyEarnings = 0;
+            localStorage.setItem('userMonthlyEarnings', 0);
+            localStorage.setItem('lastResetDate', today);
+            updateCashbackDisplay();
+        }
+    }
+    
+    setInterval(checkMonthlyReset, 24 * 60 * 60 * 1000);
+    checkMonthlyReset();
+
+    // ============================================
+    // SECTION 1: FREE AI TOOLS (70+ Tools, 9.8 Rating)
+    // ============================================
+    
+    const aiTools = {
+        "🤖 AI Image Creator (Text to Image)": { icon: "🎨", color: "#3498db", items: [
+            { name: "Leonardo.ai", rating: 9.8, desc: "Professional art, 150 images/day", link: "https://leonardo.ai" },
+            { name: "Playground AI", rating: 9.8, desc: "Social media, 500 images/day", link: "https://playgroundai.com" },
+            { name: "Bing Image Creator", rating: 9.7, desc: "DALL-E 3 quality, 100 boosts/day", link: "https://bing.com/create" },
+            { name: "Ideogram", rating: 9.7, desc: "Text in images, 100 images/day", link: "https://ideogram.ai" },
+            { name: "Craiyon", rating: 9.6, desc: "Quick generation, unlimited", link: "https://craiyon.com" },
+            { name: "DeepAI", rating: 9.6, desc: "Multiple styles, 50 images/day", link: "https://deepai.org" },
+            { name: "Artbreeder", rating: 9.6, desc: "Portraits/characters, unlimited", link: "https://artbreeder.com" },
+            { name: "NightCafe", rating: 9.5, desc: "Community art, 20 images/day", link: "https://nightcafe.studio" }
+        ]},
+        "🎬 AI Image to Video": { icon: "🎬", color: "#e67e22", items: [
+            { name: "Runway ML Gen-2", rating: 9.8, desc: "Professional, 125 credits", link: "https://runwayml.com" },
+            { name: "Pika Labs", rating: 9.8, desc: "Creative videos, 250 credits", link: "https://pika.art" },
+            { name: "Luma Dream Machine", rating: 9.7, desc: "Short videos, 30/month", link: "https://lumalabs.ai" },
+            { name: "Kaiber", rating: 9.7, desc: "Animation, 60 seconds/month", link: "https://kaiber.ai" },
+            { name: "CapCut AI", rating: 9.6, desc: "Mobile/Web, unlimited", link: "https://capcut.com" },
+            { name: "InVideo AI", rating: 9.5, desc: "Marketing, 10 videos/month", link: "https://invideo.io" }
+        ]},
+        "🎨 AI Graphic Designer": { icon: "🎨", color: "#2ecc71", items: [
+            { name: "Canva AI", rating: 9.8, desc: "All design needs, 1M+ templates", link: "https://canva.com" },
+            { name: "Adobe Firefly", rating: 9.8, desc: "Professional, 100 credits/month", link: "https://firefly.adobe.com" },
+            { name: "Microsoft Designer", rating: 9.7, desc: "Social media, unlimited", link: "https://designer.microsoft.com" },
+            { name: "Figma AI", rating: 9.7, desc: "UI/UX design, unlimited", link: "https://figma.com" }
+        ]},
+        "⚡ AI Automation Tools": { icon: "⚡", color: "#f39c12", items: [
+            { name: "Zapier Free", rating: 9.7, desc: "Workflow automation, 100 tasks/month", link: "https://zapier.com" },
+            { name: "Make (Integromat)", rating: 9.7, desc: "Visual automation, 1000 ops/month", link: "https://make.com" },
+            { name: "IFTTT", rating: 9.6, desc: "Simple automation, 5 applets", link: "https://ifttt.com" },
+            { name: "n8n Free", rating: 9.6, desc: "Self-hosted, unlimited", link: "https://n8n.io" }
+        ]},
+        "💼 AI Professional Tools": { icon: "💼", color: "#e74c3c", items: [
+            { name: "ChatGPT (GPT-4)", rating: 9.8, desc: "Content, coding, 50 messages/3hrs", link: "https://chat.openai.com" },
+            { name: "Google Gemini", rating: 9.7, desc: "Research, coding, unlimited", link: "https://gemini.google.com" },
+            { name: "Claude AI", rating: 9.7, desc: "Long documents, 100 messages/day", link: "https://claude.ai" },
+            { name: "Perplexity AI", rating: 9.6, desc: "Research, unlimited", link: "https://perplexity.ai" }
+        ]},
+        "👶 AI for Kids & Students": { icon: "👶", color: "#1abc9c", items: [
+            { name: "Duolingo", rating: 9.7, desc: "Language learning, unlimited", link: "https://duolingo.com" },
+            { name: "Khan Academy AI", rating: 9.7, desc: "Math, Science, unlimited", link: "https://khanacademy.org" },
+            { name: "Google Socratic", rating: 9.6, desc: "Homework help, unlimited", link: "https://socratic.org" },
+            { name: "Photomath", rating: 9.5, desc: "Math solutions, unlimited", link: "https://photomath.com" }
+        ]},
+        "🏢 AI for Professionals": { icon: "🏢", color: "#9b59b6", items: [
+            { name: "Notion AI", rating: 9.7, desc: "Note taking, 20 AI responses", link: "https://notion.so" },
+            { name: "Tome AI", rating: 9.6, desc: "Presentations, unlimited", link: "https://tome.app" },
+            { name: "Gamma AI", rating: 9.6, desc: "Slide decks, 400 credits", link: "https://gamma.app" },
+            { name: "Copy.ai", rating: 9.5, desc: "Marketing copy, 2000 words/month", link: "https://copy.ai" }
+        ]}
+    };
+
+    // ============================================
+    // SECTION 2: GROUP DISCUSSION TOPICS (1,500+)
+    // ============================================
+    
+    const gdTopics = {
+        "💬 Stream-wise GD Topics": { icon: "💬", color: "#3498db", items: [
+            "Science: Is AI a threat to humanity? - Level: Expert",
+            "Commerce: GST: Success or Failure? - Level: High",
+            "Arts: Social Media: Boon or Bane? - Level: Medium",
+            "Engineering: Metaverse: Future or Fad? - Level: Top",
+            "Medical: Ayurveda vs Allopathy - Level: Medium",
+            "Law: Online Privacy Laws in India - Level: High",
+            "Agriculture: Organic Farming vs Conventional - Level: Easy",
+            "Computer: Blockchain Revolution - Level: Expert"
+        ]},
+        "📚 Exam-wise GD Topics": { icon: "📚", color: "#e67e22", items: [
+            "UPSC: Uniform Civil Code - Level: Expert",
+            "SSC CGL: Digital India Initiative - Level: High",
+            "IBPS PO: Cashless Economy - Level: Medium",
+            "CAT: MBA: Overhyped? - Level: High",
+            "GATE: Future of Engineering - Level: Top",
+            "NEET: Medical Profession in India - Level: Medium",
+            "CLAT: Capital Punishment - Level: High",
+            "NDA: National Security Challenges - Level: Top"
+        ]},
+        "🏆 Level-wise GD Topics": { icon: "🏆", color: "#2ecc71", items: [
+            "🌱 Beginner: Impact of Social Media on Youth",
+            "📘 Intermediate: Work from Home Culture",
+            "🔥 Advanced: Cryptocurrency Regulation in India",
+            "🏆 Top: One Nation One Election",
+            "👑 Expert: Artificial General Intelligence (AGI)"
+        ]}
+    };
+
+    // ============================================
+    // SECTION 3: EXPERT MENTORS (4.8+ Rating)
+    // ============================================
+    
+    const mentors = {
+        "👨‍🏫 Expert Mentors (4.8+ Rating)": { icon: "👨‍🏫", color: "#f39c12", items: [
+            { name: "AnnS AI", rating: 9.8, expertise: "All Fields", languages: "15+", free: "24/7" },
+            { name: "Dr. Rajesh Kumar", rating: 4.9, expertise: "UPSC/IAS", languages: "Hindi, English", free: "50 sessions/month" },
+            { name: "Dr. Meera Sharma", rating: 4.9, expertise: "Medical/NEET", languages: "Hindi, English", free: "50 sessions/month" },
+            { name: "Prof. John Smith", rating: 4.9, expertise: "Engineering/GATE", languages: "English", free: "40 sessions/month" },
+            { name: "Ms. Priya Singh", rating: 4.9, expertise: "MBA/CAT", languages: "English", free: "50 sessions/month" }
+        ]}
+    };
+
+    // ============================================
+    // SECTION 4: MAGAZINES (20 - 10 English + 10 Hindi)
+    // ============================================
+    
+    const magazines = {
+        "📰 English Magazines (4.9+ Rating)": { icon: "📰", color: "#e74c3c", items: [
+            { name: "The Economist", rating: 4.9, focus: "Global Affairs", link: "https://economist.com" },
+            { name: "Harvard Business Review", rating: 4.9, focus: "Management", link: "https://hbr.org" },
+            { name: "National Geographic", rating: 4.9, focus: "Science/Nature", link: "https://nationalgeographic.com" },
+            { name: "TIME Magazine", rating: 4.8, focus: "Current Affairs", link: "https://time.com" },
+            { name: "Forbes", rating: 4.8, focus: "Business", link: "https://forbes.com" }
+        ]},
+        "📖 Hindi Magazines (4.7+ Rating)": { icon: "📖", color: "#1abc9c", items: [
+            { name: "India Today (Hindi)", rating: 4.9, focus: "Current Affairs", link: "https://indiatoday.in/hindi" },
+            { name: "Pratiyogita Darpan (Hindi)", rating: 4.9, focus: "Competitive Exams", link: "https://pratiyogitadarpan.in" },
+            { name: "Yojana (Hindi)", rating: 4.9, focus: "Govt Schemes", link: "https://publicationsdivision.nic.in" },
+            { name: "Saptahik Hindustan", rating: 4.8, focus: "News/Politics", link: "https://saptahikhindustan.com" },
+            { name: "Dharmyug", rating: 4.7, focus: "Literature/Culture", link: "https://dharmyug.com" }
+        ]}
+    };
+
+    // ============================================
+    // SECTION 5: NCERT BOOKS & STUDY MATERIALS
+    // ============================================
+    
+    const studyMaterials = {
+        "📚 NCERT Books (Class 6-12)": { icon: "📚", color: "#3498db", items: [
+            "Class 6: Maths, Science, Social Science, English, Hindi - 4.9⭐",
+            "Class 7: Maths, Science, Social Science, English, Hindi - 4.9⭐",
+            "Class 8: Maths, Science, Social Science, English, Hindi - 4.9⭐",
+            "Class 9: Maths, Science, Social Science, English, Hindi - 4.9⭐",
+            "Class 10: Maths, Science, Social Science, English, Hindi - 4.9⭐",
+            "Class 11 PCM: Physics, Chemistry, Maths, English - 4.9⭐",
+            "Class 11 PCB: Physics, Chemistry, Biology, English - 4.9⭐",
+            "Class 11 Commerce: Accountancy, Business Studies, Economics - 4.9⭐",
+            "Class 12 PCM: Physics, Chemistry, Maths, English - 4.9⭐",
+            "Class 12 PCB: Physics, Chemistry, Biology, English - 4.9⭐",
+            "Class 12 Commerce: Accountancy, Business Studies, Economics - 4.9⭐"
+        ]},
+        "📖 Toppers Notes (4.6+ Rating)": { icon: "📖", color: "#e67e22", items: [
+            "UPSC Toppers Notes - 100+ Toppers, 600+ notes - 4.8⭐",
+            "SSC CGL Toppers Notes - 50+ Toppers, 400+ notes - 4.7⭐",
+            "JEE Main/Advanced Notes - 80+ Toppers, 400+ notes - 4.8⭐",
+            "NEET UG Toppers Notes - 70+ Toppers, 350+ notes - 4.8⭐",
+            "CAT Toppers Notes - 60+ Toppers, 350+ notes - 4.8⭐",
+            "GATE Toppers Notes - 50+ Toppers, 300+ notes - 4.7⭐",
+            "IBPS PO Toppers Notes - 40+ Toppers, 300+ notes - 4.7⭐",
+            "CA Foundation Toppers Notes - 30+ Toppers, 200+ notes - 4.7⭐"
+        ]},
+        "📝 Study Materials (All Streams)": { icon: "📝", color: "#2ecc71", items: [
+            "Science: 600+ materials - Physics, Chemistry, Biology - 4.7⭐",
+            "Mathematics: 500+ materials - Algebra, Calculus, Geometry - 4.7⭐",
+            "Commerce: 400+ materials - Accounts, Economics, Business - 4.7⭐",
+            "Arts: 500+ materials - History, Geography, Polity - 4.7⭐",
+            "Engineering: 1,000+ materials - All branches - 4.6⭐",
+            "Medical: 600+ materials - All specializations - 4.7⭐",
+            "Law: 400+ materials - All Acts - 4.6⭐",
+            "Computer: 700+ materials - Programming, Web, AI - 4.7⭐"
+        ]}
+    };
+
+    // ============================================
+    // SECTION 6: TEAM BUILDING & INVITE
+    // ============================================
+    
+    const teamBuilding = {
+        "👥 Team Building & Private GD Rooms": { icon: "👥", color: "#9b59b6", items: [
+            "📱 Share via WhatsApp - Click to invite friends",
+            "💬 Share via Arattai - Click to invite friends", 
+            "🎯 Share via Dil-Ke-AnnS Channel - Click to invite friends",
+            "🔗 Generate Unique Link - No personal info shared",
+            "📱 QR Code - Scan to join private GD room",
+            "🔢 6-Digit Room Code - Enter code to join"
+        ]}
+    };
+
+    // Combine all sections
+    const allSections = {
+        ...aiTools,
+        ...gdTopics,
+        ...mentors,
+        ...magazines,
+        ...studyMaterials,
+        ...teamBuilding
+    };
+
+    // ============================================
+    // RENDER FUNCTIONS
+    // ============================================
+    
+    function renderDoors() {
+        const container = document.getElementById('mainContainer');
+        let html = '';
+        for (const [section, data] of Object.entries(allSections)) {
+            let itemsHtml = '';
+            if (Array.isArray(data.items)) {
+                itemsHtml = data.items.slice(0, 4).map(item => {
+                    if (typeof item === 'string') {
+                        return `<div class="item-item"><div class="item-title">${item}</div></div>`;
+                    } else {
+                        return `<div class="item-item"><div class="item-title">${item.name} <span class="rating-badge">⭐ ${item.rating}</span> <span class="free-badge">FREE</span></div><div class="item-details">${item.desc || item.expertise || item.focus}</div></div>`;
+                    }
+                }).join('');
+            } else {
+                itemsHtml = data.items.slice(0, 4).map(item => `<div class="item-item"><div class="item-title">${item}</div></div>`).join('');
+            }
+            
+            html += `
+                <div class="section">
+                    <h2 class="section-title">${section}</h2>
+                    <div class="door-grid">
+                        <div class="door-card" onclick="showItems('${section}')">
+                            <div class="door-header" style="background: linear-gradient(135deg, ${data.color}, ${data.color}dd);">
+                                <span class="icon">${data.icon}</span>
+                                <span class="title">${section}</span>
+                                <span class="count">${data.items.length}+</span>
+                            </div>
+                            <div class="door-content">
+                                ${itemsHtml}
+                                <div style="text-align:center; padding:8px; color:#ffd700; font-size:0.7rem;">+${data.items.length - 4} more items</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        container.innerHTML = html;
+    }
+
+    function showItems(sectionName) {
+        const section = allSections[sectionName];
+        if (!section) return;
+        
+        document.getElementById('modalItemTitle').innerHTML = `${section.icon} ${sectionName} <span class="free-badge">100% FREE | Earn Cashback</span>`;
+        document.getElementById('itemList').innerHTML = section.items.map(item => {
+            if (typeof item === 'string') {
+                return `<div class="item-item"><div class="item-title">${item}</div><a href="#" class="apply-link" onclick="trackActivity('${item.substring(0,30)}', '${sectionName.includes('AI') ? 'ai_tool' : 'material'}')">View Details →</a></div>`;
+            } else {
+                const source = sectionName.includes('AI') ? 'ai_tool' : (sectionName.includes('Magazines') ? 'magazine' : 'material');
+                return `<div class="item-item"><div class="item-title">${item.name} <span class="rating-badge">⭐ ${item.rating}</span> <span class="free-badge">FREE</span></div><div class="item-details">${item.desc || item.expertise || item.focus || ''}</div><a href="${item.link || '#'}" target="_blank" class="apply-link" onclick="trackActivity('${item.name}', '${source}')">Access Now →</a></div>`;
+            }
+        }).join('');
+        document.getElementById('itemModal').style.display = 'flex';
+    }
+
+    // Track user activity and credit cashback (with profit protection)
+    function trackActivity(itemName, source) {
+        let cashbackAmount = 0;
+        if (source === 'ai_tool') cashbackAmount = 5;
+        else if (source === 'magazine') cashbackAmount = 3;
+        else if (source === 'material') cashbackAmount = 2;
+        
+        addUserEarnings(cashbackAmount, source);
+        alert(`🎉 You earned ₹${cashbackAmount} cashback for exploring "${itemName}"!\n💰 Total Cashback: ₹${userTotalCashback}`);
+    }
+
+    // Channel functions
+    function joinWhatsApp() { window.open('https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a', '_blank'); trackActivity('WhatsApp Channel', 'ai_tool'); alert('📱 Follow Dil-Ke-AnnS on WhatsApp!'); }
+    function joinTelegram() { window.open('https://t.me/DilKeAnnS', '_blank'); trackActivity('Telegram Channel', 'ai_tool'); alert('✈️ Follow Dil-Ke-AnnS on Telegram!'); }
+    function joinArattai() { window.open('https://aratt.ai/@dil_ke_anns', '_blank'); trackActivity('Arattai Channel', 'ai_tool'); alert('💬 Join Dil-Ke-AnnS on Arattai!'); }
+    function joinDilKeAnnS() { alert('🎯 Dil-Ke-AnnS Channel - Share with friends to invite them to private GD rooms!'); trackActivity('Dil-Ke-AnnS Channel', 'ai_tool'); }
+    function sendEmail() { window.location.href = 'mailto:dilkeanns@zohomail.com'; trackActivity('Email', 'ai_tool'); alert('📧 Compose email to dilkeanns@zohomail.com'); }
+    
+    function showNotifications() { alert('🔔 New: AI Tools Added | 🔔 New GD Topics | 🔔 Festival Offer: 2x Cashback'); }
+    function closeItemModal() { document.getElementById('itemModal').style.display = 'none'; }
+
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            let searchTerm = this.value.toLowerCase();
+            let results = [];
+            for (const [section, data] of Object.entries(allSections)) {
+                for (const item of data.items) {
+                    const itemName = typeof item === 'string' ? item : item.name;
+                    if (itemName.toLowerCase().includes(searchTerm)) results.push({ section: section, item: item });
+                }
+            }
+            if (results.length > 0) {
+                document.getElementById('modalItemTitle').innerHTML = `🔍 Search Results for "${searchTerm}" <span class="free-badge">${results.length} found</span>`;
+                document.getElementById('itemList').innerHTML = results.map(r => {
+                    if (typeof r.item === 'string') {
+                        return `<div class="item-item"><div class="item-title">${r.item}</div><a href="#" class="apply-link" onclick="trackActivity('${r.item.substring(0,30)}', 'material')">View Details →</a></div>`;
+                    } else {
+                        return `<div class="item-item"><div class="item-title">${r.item.name} <span class="rating-badge">⭐ ${r.item.rating}</span></div><div class="item-details">${r.item.desc || ''}</div><a href="${r.item.link || '#'}" target="_blank" class="apply-link" onclick="trackActivity('${r.item.name}', 'ai_tool')">Access Now →</a></div>`;
+                    }
+                }).join('');
+                document.getElementById('itemModal').style.display = 'flex';
+            } else {
+                alert(`No results found for "${searchTerm}". Try another keyword!`);
+            }
+        }
+    });
+
+    renderDoors();
+    updateCashbackDisplay();
+</script>
+</body>
+</html>
