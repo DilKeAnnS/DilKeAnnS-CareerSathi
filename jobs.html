@@ -6,13 +6,19 @@
     <meta name="description" content="Dil-Ke-AnnS - 40 Lakh+ Jobs | All 36 States | Complete Haryana | Govt | Private | Global">
     <title>Jobs Portal - Dil-Ke-AnnS Career Saathi | 40 Lakh+ Jobs</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             min-height: 100vh;
             color: #fff;
         }
+
         .header {
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
@@ -21,6 +27,7 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
+
         .header-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -31,9 +38,17 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-        .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+        }
+
         .logo-icon {
-            width: 45px; height: 45px;
+            width: 45px;
+            height: 45px;
             background: linear-gradient(135deg, #ffd700, #ff8c00);
             border-radius: 12px;
             display: flex;
@@ -41,8 +56,21 @@
             justify-content: center;
             font-size: 24px;
         }
-        .logo-text h1 { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #fff, #ffd700); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .logo-text p { font-size: 0.7rem; color: #ffd700; }
+
+        .logo-text h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .logo-text p {
+            font-size: 0.7rem;
+            color: #ffd700;
+        }
+
         .back-btn {
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid #ffd700;
@@ -53,8 +81,17 @@
             font-weight: 600;
             transition: all 0.2s;
         }
-        .back-btn:hover { background: #ffd700; color: #0f172a; }
-        .search-wrapper { flex: 1; max-width: 400px; }
+
+        .back-btn:hover {
+            background: #ffd700;
+            color: #0f172a;
+        }
+
+        .search-wrapper {
+            flex: 1;
+            max-width: 400px;
+        }
+
         .search-bar {
             display: flex;
             align-items: center;
@@ -63,11 +100,38 @@
             padding: 8px 18px;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .search-bar input { background: transparent; border: none; color: white; width: 100%; padding: 8px 0; font-size: 0.9rem; outline: none; }
-        .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
-        .search-bar span { color: #ffd700; }
-        .header-right { display: flex; align-items: center; gap: 20px; }
-        .notification-bell { position: relative; cursor: pointer; font-size: 1.3rem; color: #ffd700; }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: white;
+            width: 100%;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .search-bar input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .search-bar span {
+            color: #ffd700;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .notification-bell {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: #ffd700;
+        }
+
         .notification-count {
             position: absolute;
             top: -8px;
@@ -79,14 +143,27 @@
             border-radius: 50%;
             font-weight: bold;
         }
+
         .hero {
             text-align: center;
             padding: 40px 20px;
             background: linear-gradient(135deg, #0f172a 0%, #1e3c72 100%);
         }
-        .hero h2 { font-size: 1.8rem; margin-bottom: 15px; }
-        .hero h2 span { color: #ffd700; }
-        .hero p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 span {
+            color: #ffd700;
+        }
+
+        .hero p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
         .stats-row {
             display: flex;
             justify-content: center;
@@ -94,19 +171,27 @@
             flex-wrap: wrap;
             margin-top: 25px;
         }
+
         .stat-badge {
             background: rgba(255, 215, 0, 0.1);
             padding: 8px 20px;
             border-radius: 50px;
             font-size: 0.85rem;
         }
-        .alert-section { max-width: 1400px; margin: 20px auto; padding: 0 25px; }
+
+        .alert-section {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 0 25px;
+        }
+
         .alert-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
+
         .whatsapp-btn, .telegram-btn, .arattai-btn, .email-btn {
             padding: 10px 25px;
             border-radius: 50px;
@@ -119,24 +204,36 @@
             font-size: 0.85rem;
             transition: transform 0.2s;
         }
+
         .whatsapp-btn { background: #25D366; color: white; }
         .telegram-btn { background: #0088cc; color: white; }
         .arattai-btn { background: #6c5ce7; color: white; }
         .email-btn { background: #ea4335; color: white; }
-        .whatsapp-btn:hover, .telegram-btn:hover, .arattai-btn:hover, .email-btn:hover { transform: scale(1.02); }
-        .container { max-width: 1400px; margin: 0 auto; padding: 30px 25px; }
+
+        .whatsapp-btn:hover, .telegram-btn:hover, .arattai-btn:hover, .email-btn:hover {
+            transform: scale(1.02);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 25px;
+        }
+
         .section-title {
             font-size: 1.5rem;
             margin-bottom: 25px;
             padding-left: 15px;
             border-left: 4px solid #ffd700;
         }
+
         .door-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 25px;
             margin-bottom: 40px;
         }
+
         .door-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -146,10 +243,30 @@
             cursor: pointer;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .door-card:hover { transform: translateY(-5px); border-color: #ffd700; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
-        .door-header { padding: 18px; display: flex; align-items: center; gap: 12px; }
-        .door-header .icon { font-size: 2rem; }
-        .door-header .title { flex: 1; font-size: 1rem; font-weight: bold; }
+
+        .door-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffd700;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .door-header {
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .door-header .icon {
+            font-size: 2rem;
+        }
+
+        .door-header .title {
+            flex: 1;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
         .door-header .count {
             background: rgba(255, 215, 0, 0.2);
             padding: 4px 10px;
@@ -157,15 +274,53 @@
             font-size: 0.7rem;
             color: #ffd700;
         }
-        .door-content { padding: 0 18px 18px 18px; max-height: 280px; overflow-y: auto; }
-        .door-content::-webkit-scrollbar { width: 4px; }
-        .door-content::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.1); }
-        .door-content::-webkit-scrollbar-thumb { background: #ffd700; border-radius: 10px; }
-        .job-item { padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-        .job-title { font-weight: 600; font-size: 0.85rem; margin-bottom: 5px; }
-        .job-details { font-size: 0.7rem; color: rgba(255, 255, 255, 0.7); display: flex; flex-wrap: wrap; gap: 12px; }
-        .deadline { color: #ff6b6b; }
-        .salary { color: #4caf50; }
+
+        .door-content {
+            padding: 0 18px 18px 18px;
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
+        .door-content::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .door-content::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .door-content::-webkit-scrollbar-thumb {
+            background: #ffd700;
+            border-radius: 10px;
+        }
+
+        .job-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .job-title {
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
+        .job-details {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .deadline {
+            color: #ff6b6b;
+        }
+
+        .salary {
+            color: #4caf50;
+        }
+
         .apply-link {
             display: inline-block;
             margin-top: 8px;
@@ -176,14 +331,21 @@
             text-decoration: none;
             font-size: 0.7rem;
             transition: all 0.2s;
+            cursor: pointer;
         }
-        .apply-link:hover { background: #ffd700; color: #0f172a; }
+
+        .apply-link:hover {
+            background: #ffd700;
+            color: #0f172a;
+        }
+
         .state-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
             margin-bottom: 40px;
         }
+
         .state-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 16px;
@@ -193,10 +355,29 @@
             transition: all 0.3s;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .state-card:hover { transform: translateY(-3px); border-color: #ffd700; background: rgba(255, 215, 0, 0.1); }
-        .state-icon { font-size: 2rem; margin-bottom: 8px; }
-        .state-name { font-weight: bold; font-size: 0.9rem; margin-bottom: 5px; }
-        .state-jobs { font-size: 0.7rem; color: #ffd700; }
+
+        .state-card:hover {
+            transform: translateY(-3px);
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.1);
+        }
+
+        .state-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .state-name {
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .state-jobs {
+            font-size: 0.7rem;
+            color: #ffd700;
+        }
+
         .modal {
             display: none;
             position: fixed;
@@ -209,6 +390,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .modal-content {
             background: #1e293b;
             border-radius: 20px;
@@ -219,6 +401,7 @@
             padding: 25px;
             border: 1px solid rgba(255, 215, 0, 0.3);
         }
+
         .modal-header {
             font-size: 1.2rem;
             font-weight: bold;
@@ -229,7 +412,13 @@
             justify-content: space-between;
             align-items: center;
         }
-        .close-modal { cursor: pointer; font-size: 1.5rem; color: #ffd700; }
+
+        .close-modal {
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #ffd700;
+        }
+
         .footer {
             background: #0f172a;
             margin-top: 40px;
@@ -239,15 +428,37 @@
             font-size: 0.7rem;
             color: rgba(255, 255, 255, 0.5);
         }
-        .footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
-        @media (max-width: 768px) {
-            .header-container { flex-direction: column; }
-            .search-wrapper { max-width: 100%; width: 100%; }
-            .door-grid { grid-template-columns: 1fr; }
-            .state-grid { grid-template-columns: repeat(2, 1fr); }
-            .hero h2 { font-size: 1.2rem; }
+
+        .footer a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 10px;
         }
-        @media (max-width: 480px) { .state-grid { grid-template-columns: 1fr; } }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            .search-wrapper {
+                max-width: 100%;
+                width: 100%;
+            }
+            .door-grid {
+                grid-template-columns: 1fr;
+            }
+            .state-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .state-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -299,8 +510,25 @@
 
 <div class="container" id="mainContainer"></div>
 
-<div id="stateModal" class="modal"><div class="modal-content"><div class="modal-header"><span id="modalStateName">State Jobs</span><span class="close-modal" onclick="closeStateModal()">&times;</span></div><div id="modalJobsList"></div></div></div>
-<div id="doorModal" class="modal"><div class="modal-content"><div class="modal-header"><span id="doorModalTitle">Jobs</span><span class="close-modal" onclick="closeDoorModal()">&times;</span></div><div id="doorJobsList"></div></div></div>
+<div id="stateModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="modalStateName">State Jobs</span>
+            <span class="close-modal" onclick="closeStateModal()">&times;</span>
+        </div>
+        <div id="modalJobsList"></div>
+    </div>
+</div>
+
+<div id="doorModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="doorModalTitle">Jobs</span>
+            <span class="close-modal" onclick="closeDoorModal()">&times;</span>
+        </div>
+        <div id="doorJobsList"></div>
+    </div>
+</div>
 
 <footer class="footer">
     <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
@@ -328,171 +556,165 @@
         imu: `https://imu.edu.in/?ref=${AFFILIATE_ID}`,
         tcs: `https://www.tcs.com/careers?ref=${AFFILIATE_ID}`,
         amazon: `https://amazon.jobs?ref=${AFFILIATE_ID}`,
-        google: `https://careers.google.com?ref=${AFFILIATE_ID}`
+        google: `https://careers.google.com?ref=${AFFILIATE_ID}`,
+        microsoft: `https://careers.microsoft.com?ref=${AFFILIATE_ID}`,
+        byjus: `https://byjus.com/careers?ref=${AFFILIATE_ID}`,
+        testbook: `https://testbook.com/?ref=${AFFILIATE_ID}`,
+        unacademy: `https://unacademy.com/?referral=${AFFILIATE_ID}`,
+        upgrad: `https://www.upgrad.com/?ref=${AFFILIATE_ID}`,
+        makemytrip: `https://www.makemytrip.com/?ref=${AFFILIATE_ID}`,
+        redbus: `https://www.redbus.in/?ref=${AFFILIATE_ID}`,
+        oyo: `https://www.oyorooms.com/?ref=${AFFILIATE_ID}`,
+        flipkart: `https://www.flipkart.com/?affid=${AFFILIATE_ID}`,
+        myntra: `https://www.myntra.com/?ref=${AFFILIATE_ID}`
     };
 
     function trackAffiliateClick(jobTitle, platform, link) {
         let clicks = JSON.parse(localStorage.getItem('jobClicks') || '[]');
-        clicks.push({ jobTitle: jobTitle, platform: platform, timestamp: new Date().toISOString() });
+        clicks.push({
+            jobTitle: jobTitle,
+            platform: platform,
+            timestamp: new Date().toISOString()
+        });
         localStorage.setItem('jobClicks', JSON.stringify(clicks));
-        window.open(link, '_blank');
+        if (link && link !== '#') {
+            window.open(link, '_blank');
+        } else {
+            alert(`🔗 Apply link for ${jobTitle}\n\nYou can apply on official website: ${platform}`);
+        }
     }
 
     function joinWhatsApp() { window.open('https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a', '_blank'); alert('📱 Follow Dil-Ke-AnnS on WhatsApp!'); }
     function joinTelegram() { window.open('https://t.me/DilKeAnnS', '_blank'); alert('✈️ Follow Dil-Ke-AnnS on Telegram!'); }
     function joinArattai() { window.open('https://aratt.ai/@dil_ke_anns', '_blank'); alert('💬 Join Dil-Ke-AnnS on Arattai!'); }
     function sendEmail() { window.location.href = 'mailto:dilkeanns@zohomail.com'; }
+    function showNotifications() { alert('🔔 New: SSC CGL Notification | New: Haryana Police Recruitment | New: Amazon Hiring'); }
+    function closeStateModal() { document.getElementById('stateModal').style.display = 'none'; }
+    function closeDoorModal() { document.getElementById('doorModal').style.display = 'none'; }
 
     // ============================================
-    // SECTION 1: 10 EDUCATION STREAMS (FULLY EXPANDED - 15+ Jobs Each)
+    // SECTION 1: 10 EDUCATION STREAMS (FULLY EXPANDED)
     // ============================================
     const educationStreams = {
         "Science (PCM/PCB)": { icon: "🔬", color: "#3498db", totalJobs: "35,000+", jobs: [
-            "Lab Assistant - 2,000+ vacancies | Salary: ₹15,000-35,000 | Eligibility: B.Sc | Apply: naukri.com",
-            "Research Assistant - 3,000+ vacancies | Salary: ₹20,000-50,000 | Eligibility: M.Sc | Apply: icmr.gov.in",
-            "Science Teacher (PGT) - 8,000+ vacancies | Salary: ₹40,000-80,000 | Eligibility: M.Sc + B.Ed | Apply: kvsangathan.nic.in",
-            "Science Teacher (TGT) - 12,000+ vacancies | Salary: ₹35,000-60,000 | Eligibility: B.Sc + B.Ed | Apply: navodaya.gov.in",
-            "Data Scientist - 3,000+ vacancies | Salary: ₹8-35 LPA | Eligibility: B.Tech/M.Sc | Apply: linkedin.com",
-            "Biotech Analyst - 2,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: B.Tech/Biotech | Apply: biocon.com",
-            "Clinical Research Associate - 3,000+ vacancies | Salary: ₹4-20 LPA | Eligibility: Life Sciences | Apply: syngene.com",
-            "Pharmacist - 8,000+ vacancies | Salary: ₹20,000-55,000 | Eligibility: D.Pharm/B.Pharm | Apply: dsssb.delhi.gov.in",
-            "Quality Control Officer - 3,000+ vacancies | Salary: ₹3-12 LPA | Eligibility: B.Sc/M.Sc | Apply: drreddys.com",
-            "Environmental Scientist - 2,000+ vacancies | Salary: ₹4-15 LPA | Eligibility: M.Sc Env.Sc | Apply: moef.gov.in",
-            "Forensic Scientist - 1,000+ vacancies | Salary: ₹4-18 LPA | Eligibility: M.Sc Forensic | Apply: cfsl.gov.in",
-            "Microbiologist - 2,500+ vacancies | Salary: ₹3-12 LPA | Eligibility: B.Sc/M.Sc | Apply: naukri.com",
-            "Chemist (Analytical) - 3,000+ vacancies | Salary: ₹3-10 LPA | Eligibility: B.Sc/M.Sc | Apply: naukri.com",
-            "Food Technologist - 2,000+ vacancies | Salary: ₹3-12 LPA | Eligibility: B.Sc/M.Sc | Apply: fssai.gov.in",
-            "Geneticist - 800+ vacancies | Salary: ₹5-20 LPA | Eligibility: M.Sc/PhD | Apply: naukri.com"
+            "Lab Assistant - 2,000+ vacancies | Salary: ₹15,000-35,000 | Eligibility: B.Sc | Platform: naukri",
+            "Research Assistant - 3,000+ vacancies | Salary: ₹20,000-50,000 | Eligibility: M.Sc | Platform: icmr.gov.in",
+            "Science Teacher (PGT) - 8,000+ vacancies | Salary: ₹40,000-80,000 | Eligibility: M.Sc + B.Ed | Platform: kvsangathan.nic.in",
+            "Science Teacher (TGT) - 12,000+ vacancies | Salary: ₹35,000-60,000 | Eligibility: B.Sc + B.Ed | Platform: navodaya.gov.in",
+            "Data Scientist - 3,000+ vacancies | Salary: ₹8-35 LPA | Eligibility: B.Tech/M.Sc | Platform: linkedin",
+            "Biotech Analyst - 2,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: B.Tech/Biotech | Platform: biocon.com",
+            "Clinical Research Associate - 3,000+ vacancies | Salary: ₹4-20 LPA | Eligibility: Life Sciences | Platform: syngene.com",
+            "Pharmacist - 8,000+ vacancies | Salary: ₹20,000-55,000 | Eligibility: D.Pharm/B.Pharm | Platform: dsssb.delhi.gov.in",
+            "Quality Control Officer - 3,000+ vacancies | Salary: ₹3-12 LPA | Eligibility: B.Sc/M.Sc | Platform: drreddys.com",
+            "Environmental Scientist - 2,000+ vacancies | Salary: ₹4-15 LPA | Eligibility: M.Sc Env.Sc | Platform: moef.gov.in"
         ]},
         "Commerce": { icon: "📊", color: "#e67e22", totalJobs: "2,00,000+", jobs: [
-            "Junior Accountant - 25,000+ vacancies | Salary: ₹15,000-40,000 | Eligibility: B.Com | Apply: naukri.com",
-            "Accounts Executive - 12,000+ vacancies | Salary: ₹2.5-8 LPA | Eligibility: B.Com/M.Com | Apply: linkedin.com",
-            "Tax Assistant - 5,000+ vacancies | Salary: ₹2.5-6 LPA | Eligibility: B.Com | Apply: incometaxindia.gov.in",
-            "Banking PO - 35,000+ vacancies | Salary: ₹8-20 LPA | Eligibility: Graduate | Apply: ibps.in",
-            "Financial Analyst - 8,000+ vacancies | Salary: ₹5-25 LPA | Eligibility: MBA/B.Com | Apply: naukri.com",
-            "CA (Chartered Accountant) - 15,000+ vacancies | Salary: ₹8-50 LPA | Eligibility: CA | Apply: icai.org",
-            "CMA (Cost Accountant) - 8,000+ vacancies | Salary: ₹6-30 LPA | Eligibility: CMA | Apply: icmai.in",
-            "Company Secretary (CS) - 5,000+ vacancies | Salary: ₹6-40 LPA | Eligibility: CS | Apply: icsi.edu",
-            "Investment Banker - 2,000+ vacancies | Salary: ₹20-70 LPA | Eligibility: MBA/CFA | Apply: naukri.com",
-            "Auditor - 12,000+ vacancies | Salary: ₹3-20 LPA | Eligibility: CA/CPA | Apply: icai.org",
-            "GST Practitioner - 5,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: Graduate | Apply: gst.gov.in",
-            "TDS Consultant - 3,000+ vacancies | Salary: ₹3-12 LPA | Eligibility: Graduate | Apply: incometaxindia.gov.in",
-            "Risk Analyst - 2,500+ vacancies | Salary: ₹5-25 LPA | Eligibility: MBA/FRM | Apply: naukri.com",
-            "Credit Analyst - 3,000+ vacancies | Salary: ₹4-20 LPA | Eligibility: B.Com/MBA | Apply: naukri.com",
-            "Treasury Manager - 1,000+ vacancies | Salary: ₹10-40 LPA | Eligibility: MBA/CA | Apply: naukri.com"
+            "Junior Accountant - 25,000+ vacancies | Salary: ₹15,000-40,000 | Eligibility: B.Com | Platform: naukri",
+            "Accounts Executive - 12,000+ vacancies | Salary: ₹2.5-8 LPA | Eligibility: B.Com/M.Com | Platform: linkedin",
+            "Tax Assistant - 5,000+ vacancies | Salary: ₹2.5-6 LPA | Eligibility: B.Com | Platform: incometaxindia.gov.in",
+            "Banking PO - 35,000+ vacancies | Salary: ₹8-20 LPA | Eligibility: Graduate | Platform: ibps",
+            "Financial Analyst - 8,000+ vacancies | Salary: ₹5-25 LPA | Eligibility: MBA/B.Com | Platform: naukri",
+            "CA (Chartered Accountant) - 15,000+ vacancies | Salary: ₹8-50 LPA | Eligibility: CA | Platform: icai.org",
+            "CMA (Cost Accountant) - 8,000+ vacancies | Salary: ₹6-30 LPA | Eligibility: CMA | Platform: icmai.in",
+            "Company Secretary (CS) - 5,000+ vacancies | Salary: ₹6-40 LPA | Eligibility: CS | Platform: icsi.edu",
+            "Investment Banker - 2,000+ vacancies | Salary: ₹20-70 LPA | Eligibility: MBA/CFA | Platform: naukri",
+            "Auditor - 12,000+ vacancies | Salary: ₹3-20 LPA | Eligibility: CA/CPA | Platform: icai.org"
         ]},
         "Arts/Humanities": { icon: "🎨", color: "#9b59b6", totalJobs: "1,50,000+", jobs: [
-            "Teacher (PGT/TGT) - 25,000+ vacancies | Salary: ₹35,000-75,000 | Eligibility: MA + B.Ed | Apply: navodaya.gov.in",
-            "Content Writer - 12,000+ vacancies | Salary: ₹2-12 LPA | Eligibility: BA/MA | Apply: naukri.com",
-            "Customer Support Executive - 30,000+ vacancies | Salary: ₹2-7 LPA | Eligibility: Graduate | Apply: amazon.jobs",
-            "Govt Clerk (SSC) - 50,000+ vacancies | Salary: ₹25,000-55,000 | Eligibility: 12th/Graduate | Apply: ssc.nic.in",
-            "HR Executive - 8,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: MBA | Apply: naukri.com",
-            "Social Worker - 5,000+ vacancies | Salary: ₹2-10 LPA | Eligibility: MSW | Apply: ngos.net",
-            "Journalist - 3,000+ vacancies | Salary: ₹3-18 LPA | Eligibility: BJ/MA | Apply: timesjobs.com",
-            "Public Relations Officer - 2,500+ vacancies | Salary: ₹4-15 LPA | Eligibility: MBA/MA | Apply: naukri.com",
-            "Civil Services (IAS/IPS) - 1,500+ vacancies | Salary: ₹56,100-2,50,000 | Eligibility: Graduate | Apply: upsc.gov.in",
-            "Corporate Communications - 2,000+ vacancies | Salary: ₹6-25 LPA | Eligibility: MBA/MA | Apply: linkedin.com",
-            "Event Manager - 3,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: Graduate | Apply: naukri.com",
-            "NGO Coordinator - 2,500+ vacancies | Salary: ₹3-12 LPA | Eligibility: MSW | Apply: ngos.net",
-            "Psychologist - 2,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: MA/M.Sc | Apply: naukri.com",
-            "Librarian - 5,000+ vacancies | Salary: ₹25,000-55,000 | Eligibility: B.Lib/M.Lib | Apply: kvsangathan.nic.in",
-            "Translator - 3,000+ vacancies | Salary: ₹3-12 LPA | Eligibility: MA | Apply: naukri.com"
+            "Teacher (PGT/TGT) - 25,000+ vacancies | Salary: ₹35,000-75,000 | Eligibility: MA + B.Ed | Platform: navodaya.gov.in",
+            "Content Writer - 12,000+ vacancies | Salary: ₹2-12 LPA | Eligibility: BA/MA | Platform: naukri",
+            "Customer Support Executive - 30,000+ vacancies | Salary: ₹2-7 LPA | Eligibility: Graduate | Platform: amazon",
+            "Govt Clerk (SSC) - 50,000+ vacancies | Salary: ₹25,000-55,000 | Eligibility: 12th/Graduate | Platform: ssc",
+            "HR Executive - 8,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: MBA | Platform: naukri",
+            "Social Worker - 5,000+ vacancies | Salary: ₹2-10 LPA | Eligibility: MSW | Platform: ngos.net",
+            "Journalist - 3,000+ vacancies | Salary: ₹3-18 LPA | Eligibility: BJ/MA | Platform: timesjobs.com",
+            "Public Relations Officer - 2,500+ vacancies | Salary: ₹4-15 LPA | Eligibility: MBA/MA | Platform: naukri",
+            "Civil Services (IAS/IPS) - 1,500+ vacancies | Salary: ₹56,100-2,50,000 | Eligibility: Graduate | Platform: upsc",
+            "Corporate Communications - 2,000+ vacancies | Salary: ₹6-25 LPA | Eligibility: MBA/MA | Platform: linkedin"
         ]},
         "Engineering": { icon: "⚙️", color: "#2ecc71", totalJobs: "6,00,000+", jobs: [
-            "Graduate Engineer Trainee - 80,000+ vacancies | Salary: ₹3.5-9 LPA | Eligibility: B.Tech | Apply: tcs.com",
-            "Junior Engineer - 90,000+ vacancies | Salary: ₹35,000-75,000 | Eligibility: Diploma/B.Tech | Apply: ssc.nic.in",
-            "Software Engineer - 1,50,000+ vacancies | Salary: ₹5-40 LPA | Eligibility: B.Tech/MCA | Apply: linkedin.com",
-            "Project Engineer - 15,000+ vacancies | Salary: ₹8-25 LPA | Eligibility: B.Tech | Apply: naukri.com",
-            "Site Engineer - 30,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: B.Tech/Civil | Apply: naukri.com",
-            "Data Engineer - 12,000+ vacancies | Salary: ₹10-40 LPA | Eligibility: B.Tech | Apply: linkedin.com",
-            "Cloud Architect - 5,000+ vacancies | Salary: ₹20-60 LPA | Eligibility: B.Tech + Cert | Apply: linkedin.com",
-            "Technical Lead - 25,000+ vacancies | Salary: ₹15-45 LPA | Eligibility: B.Tech + 5+ years | Apply: naukri.com",
-            "Engineering Manager - 8,000+ vacancies | Salary: ₹30-80 LPA | Eligibility: B.Tech/MBA | Apply: linkedin.com",
-            "R&D Engineer - 6,000+ vacancies | Salary: ₹5-30 LPA | Eligibility: M.Tech/PhD | Apply: naukri.com",
-            "DevOps Engineer - 12,000+ vacancies | Salary: ₹8-40 LPA | Eligibility: B.Tech | Apply: linkedin.com",
-            "Cybersecurity Analyst - 8,000+ vacancies | Salary: ₹6-35 LPA | Eligibility: B.Tech | Apply: naukri.com",
-            "AI/ML Engineer - 5,000+ vacancies | Salary: ₹10-60 LPA | Eligibility: M.Tech/PhD | Apply: linkedin.com",
-            "Network Engineer - 10,000+ vacancies | Salary: ₹3-20 LPA | Eligibility: B.Tech | Apply: naukri.com",
-            "Hardware Engineer - 6,000+ vacancies | Salary: ₹3-18 LPA | Eligibility: B.Tech/ECE | Apply: naukri.com"
+            "Graduate Engineer Trainee - 80,000+ vacancies | Salary: ₹3.5-9 LPA | Eligibility: B.Tech | Platform: tcs",
+            "Junior Engineer - 90,000+ vacancies | Salary: ₹35,000-75,000 | Eligibility: Diploma/B.Tech | Platform: ssc",
+            "Software Engineer - 1,50,000+ vacancies | Salary: ₹5-40 LPA | Eligibility: B.Tech/MCA | Platform: linkedin",
+            "Project Engineer - 15,000+ vacancies | Salary: ₹8-25 LPA | Eligibility: B.Tech | Platform: naukri",
+            "Site Engineer - 30,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: B.Tech/Civil | Platform: naukri",
+            "Data Engineer - 12,000+ vacancies | Salary: ₹10-40 LPA | Eligibility: B.Tech | Platform: linkedin",
+            "Cloud Architect - 5,000+ vacancies | Salary: ₹20-60 LPA | Eligibility: B.Tech + Cert | Platform: linkedin",
+            "Technical Lead - 25,000+ vacancies | Salary: ₹15-45 LPA | Eligibility: B.Tech + 5+ years | Platform: naukri",
+            "Engineering Manager - 8,000+ vacancies | Salary: ₹30-80 LPA | Eligibility: B.Tech/MBA | Platform: linkedin",
+            "DevOps Engineer - 12,000+ vacancies | Salary: ₹8-40 LPA | Eligibility: B.Tech | Platform: linkedin"
         ]},
         "Medical": { icon: "🩺", color: "#e74c3c", totalJobs: "4,00,000+", jobs: [
-            "Intern Doctor - 40,000+ vacancies | Salary: ₹50,000-85,000 | Eligibility: MBBS | Apply: aiims.edu",
-            "Junior Resident - 25,000+ vacancies | Salary: ₹60,000-1,30,000 | Eligibility: MBBS | Apply: aiims.edu",
-            "Staff Nurse - 80,000+ vacancies | Salary: ₹25,000-60,000 | Eligibility: B.Sc Nursing | Apply: aiims.edu",
-            "Medical Officer - 20,000+ vacancies | Salary: ₹60,000-1,60,000 | Eligibility: MBBS | Apply: upsc.gov.in",
-            "Specialist Doctor (MD/MS) - 15,000+ vacancies | Salary: ₹1.5-6 LPA | Eligibility: MD/MS | Apply: aiims.edu",
-            "Surgeon - 8,000+ vacancies | Salary: ₹3-18 LPA | Eligibility: MS/DNB | Apply: aiims.edu",
-            "Dentist - 12,000+ vacancies | Salary: ₹30,000-2 LPA | Eligibility: BDS/MDS | Apply: dciindia.gov.in",
-            "Physiotherapist - 10,000+ vacancies | Salary: ₹25,000-90,000 | Eligibility: BPT/MPT | Apply: naukri.com",
-            "Hospital Administrator - 3,000+ vacancies | Salary: ₹5-25 LPA | Eligibility: MBA/MHA | Apply: linkedin.com",
-            "Public Health Officer - 6,000+ vacancies | Salary: ₹50,000-1.8 LPA | Eligibility: MPH | Apply: nhm.gov.in",
-            "Radiologist - 4,000+ vacancies | Salary: ₹1.5-8 LPA | Eligibility: MD Radiology | Apply: naukri.com",
-            "Pathologist - 4,000+ vacancies | Salary: ₹1.5-6 LPA | Eligibility: MD Pathology | Apply: naukri.com",
-            "Pharmacist - 25,000+ vacancies | Salary: ₹20,000-55,000 | Eligibility: D.Pharm/B.Pharm | Apply: dsssb.delhi.gov.in",
-            "Lab Technician - 18,000+ vacancies | Salary: ₹15,000-35,000 | Eligibility: DMLT/BMLT | Apply: naukri.com",
-            "Medical Coder - 10,000+ vacancies | Salary: ₹2.5-8 LPA | Eligibility: Life Sciences | Apply: naukri.com"
+            "Intern Doctor - 40,000+ vacancies | Salary: ₹50,000-85,000 | Eligibility: MBBS | Platform: aiims.edu",
+            "Junior Resident - 25,000+ vacancies | Salary: ₹60,000-1,30,000 | Eligibility: MBBS | Platform: aiims.edu",
+            "Staff Nurse - 80,000+ vacancies | Salary: ₹25,000-60,000 | Eligibility: B.Sc Nursing | Platform: aiims.edu",
+            "Medical Officer - 20,000+ vacancies | Salary: ₹60,000-1,60,000 | Eligibility: MBBS | Platform: upsc",
+            "Specialist Doctor (MD/MS) - 15,000+ vacancies | Salary: ₹1.5-6 LPA | Eligibility: MD/MS | Platform: aiims.edu",
+            "Surgeon - 8,000+ vacancies | Salary: ₹3-18 LPA | Eligibility: MS/DNB | Platform: aiims.edu",
+            "Dentist - 12,000+ vacancies | Salary: ₹30,000-2 LPA | Eligibility: BDS/MDS | Platform: dciindia.gov.in",
+            "Physiotherapist - 10,000+ vacancies | Salary: ₹25,000-90,000 | Eligibility: BPT/MPT | Platform: naukri",
+            "Hospital Administrator - 3,000+ vacancies | Salary: ₹5-25 LPA | Eligibility: MBA/MHA | Platform: linkedin",
+            "Public Health Officer - 6,000+ vacancies | Salary: ₹50,000-1.8 LPA | Eligibility: MPH | Platform: nhm.gov.in"
         ]},
         "Law": { icon: "⚖️", color: "#1abc9c", totalJobs: "1,00,000+", jobs: [
-            "Junior Advocate - 35,000+ vacancies | Salary: ₹15,000-50,000 | Eligibility: LLB | Apply: barcouncilofindia.org",
-            "Legal Assistant - 8,000+ vacancies | Salary: ₹2-9 LPA | Eligibility: LLB | Apply: naukri.com",
-            "Paralegal - 6,000+ vacancies | Salary: ₹2.5-10 LPA | Eligibility: LLB | Apply: naukri.com",
-            "Corporate Lawyer - 6,000+ vacancies | Salary: ₹8-40 LPA | Eligibility: LLB/LLM | Apply: linkedin.com",
-            "Legal Advisor - 4,500+ vacancies | Salary: ₹10-50 LPA | Eligibility: LLB/LLM | Apply: naukri.com",
-            "Public Prosecutor - 3,000+ vacancies | Salary: ₹50,000-1.8 LPA | Eligibility: LLB | Apply: upsc.gov.in",
-            "Judge (Judicial Services) - 3,000+ vacancies | Salary: ₹77,000-3 LPA | Eligibility: LLB | Apply: districtcourts.gov.in",
-            "Legal Consultant - 2,500+ vacancies | Salary: ₹8-40 LPA | Eligibility: LLB/LLM | Apply: naukri.com",
-            "Compliance Officer - 6,000+ vacancies | Salary: ₹5-25 LPA | Eligibility: LLB | Apply: naukri.com",
-            "Law Professor - 3,500+ vacancies | Salary: ₹50,000-1.8 LPA | Eligibility: LLM/PhD | Apply: ugc.ac.in"
+            "Junior Advocate - 35,000+ vacancies | Salary: ₹15,000-50,000 | Eligibility: LLB | Platform: barcouncilofindia.org",
+            "Legal Assistant - 8,000+ vacancies | Salary: ₹2-9 LPA | Eligibility: LLB | Platform: naukri",
+            "Paralegal - 6,000+ vacancies | Salary: ₹2.5-10 LPA | Eligibility: LLB | Platform: naukri",
+            "Corporate Lawyer - 6,000+ vacancies | Salary: ₹8-40 LPA | Eligibility: LLB/LLM | Platform: linkedin",
+            "Legal Advisor - 4,500+ vacancies | Salary: ₹10-50 LPA | Eligibility: LLB/LLM | Platform: naukri",
+            "Public Prosecutor - 3,000+ vacancies | Salary: ₹50,000-1.8 LPA | Eligibility: LLB | Platform: upsc",
+            "Judge (Judicial Services) - 3,000+ vacancies | Salary: ₹77,000-3 LPA | Eligibility: LLB | Platform: districtcourts.gov.in",
+            "Legal Consultant - 2,500+ vacancies | Salary: ₹8-40 LPA | Eligibility: LLB/LLM | Platform: naukri",
+            "Compliance Officer - 6,000+ vacancies | Salary: ₹5-25 LPA | Eligibility: LLB | Platform: naukri",
+            "Law Professor - 3,500+ vacancies | Salary: ₹50,000-1.8 LPA | Eligibility: LLM/PhD | Platform: ugc.ac.in"
         ]},
         "Agriculture": { icon: "🌾", color: "#27ae60", totalJobs: "60,000+", jobs: [
-            "Field Officer - 8,000+ vacancies | Salary: ₹25,000-50,000 | Eligibility: B.Sc Agri | Apply: nabard.org",
-            "Research Assistant - 5,000+ vacancies | Salary: ₹20,000-45,000 | Eligibility: M.Sc Agri | Apply: icar.org.in",
-            "Farm Manager - 5,000+ vacancies | Salary: ₹3-10 LPA | Eligibility: B.Sc Agri | Apply: naukri.com",
-            "Agri-Business Executive - 3,500+ vacancies | Salary: ₹3-15 LPA | Eligibility: MBA Agri | Apply: naukri.com",
-            "Food Processing Officer - 3,000+ vacancies | Salary: ₹4-15 LPA | Eligibility: Food Tech | Apply: naukri.com",
-            "Export Coordinator - 1,500+ vacancies | Salary: ₹3-12 LPA | Eligibility: B.Sc Agri | Apply: naukri.com",
-            "Soil Scientist - 1,200+ vacancies | Salary: ₹4-15 LPA | Eligibility: M.Sc Soil Sc | Apply: icar.org.in",
-            "Horticulturist - 3,000+ vacancies | Salary: ₹3-12 LPA | Eligibility: B.Sc Horti | Apply: naukri.com",
-            "Agricultural Officer - 5,000+ vacancies | Salary: ₹35,000-75,000 | Eligibility: B.Sc Agri | Apply: upsc.gov.in",
-            "NABARD Officer - 2,000+ vacancies | Salary: ₹8-18 LPA | Eligibility: Graduate | Apply: nabard.org"
+            "Field Officer - 8,000+ vacancies | Salary: ₹25,000-50,000 | Eligibility: B.Sc Agri | Platform: nabard.org",
+            "Research Assistant - 5,000+ vacancies | Salary: ₹20,000-45,000 | Eligibility: M.Sc Agri | Platform: icar.org.in",
+            "Farm Manager - 5,000+ vacancies | Salary: ₹3-10 LPA | Eligibility: B.Sc Agri | Platform: naukri",
+            "Agri-Business Executive - 3,500+ vacancies | Salary: ₹3-15 LPA | Eligibility: MBA Agri | Platform: naukri",
+            "Food Processing Officer - 3,000+ vacancies | Salary: ₹4-15 LPA | Eligibility: Food Tech | Platform: naukri",
+            "Export Coordinator - 1,500+ vacancies | Salary: ₹3-12 LPA | Eligibility: B.Sc Agri | Platform: naukri",
+            "Soil Scientist - 1,200+ vacancies | Salary: ₹4-15 LPA | Eligibility: M.Sc Soil Sc | Platform: icar.org.in",
+            "Horticulturist - 3,000+ vacancies | Salary: ₹3-12 LPA | Eligibility: B.Sc Horti | Platform: naukri",
+            "Agricultural Officer - 5,000+ vacancies | Salary: ₹35,000-75,000 | Eligibility: B.Sc Agri | Platform: upsc",
+            "NABARD Officer - 2,000+ vacancies | Salary: ₹8-18 LPA | Eligibility: Graduate | Platform: nabard.org"
         ]},
         "Computer Applications": { icon: "💻", color: "#3498db", totalJobs: "4,00,000+", jobs: [
-            "Software Developer - 1,20,000+ vacancies | Salary: ₹4-30 LPA | Eligibility: BCA/MCA/B.Tech | Apply: linkedin.com",
-            "Web Designer - 25,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: BCA | Apply: naukri.com",
-            "App Developer - 25,000+ vacancies | Salary: ₹4-20 LPA | Eligibility: BCA/MCA | Apply: naukri.com",
-            "Full Stack Developer - 40,000+ vacancies | Salary: ₹8-35 LPA | Eligibility: BCA/MCA | Apply: linkedin.com",
-            "Data Scientist - 8,000+ vacancies | Salary: ₹10-50 LPA | Eligibility: MCA/MTech | Apply: linkedin.com",
-            "Cloud Engineer - 6,500+ vacancies | Salary: ₹12-45 LPA | Eligibility: Cloud Cert | Apply: linkedin.com",
-            "DevOps Engineer - 8,000+ vacancies | Salary: ₹8-40 LPA | Eligibility: B.Tech | Apply: linkedin.com",
-            "Cybersecurity Analyst - 6,000+ vacancies | Salary: ₹6-35 LPA | Eligibility: B.Tech | Apply: naukri.com",
-            "IT Consultant - 5,000+ vacancies | Salary: ₹10-50 LPA | Eligibility: MBA/B.Tech | Apply: linkedin.com",
-            "AI/ML Engineer - 5,000+ vacancies | Salary: ₹15-70 LPA | Eligibility: M.Tech/PhD | Apply: linkedin.com",
-            "Database Administrator - 10,000+ vacancies | Salary: ₹4-22 LPA | Eligibility: BCA/MCA | Apply: naukri.com",
-            "System Administrator - 15,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: BCA/MCA | Apply: naukri.com"
+            "Software Developer - 1,20,000+ vacancies | Salary: ₹4-30 LPA | Eligibility: BCA/MCA/B.Tech | Platform: linkedin",
+            "Web Designer - 25,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: BCA | Platform: naukri",
+            "App Developer - 25,000+ vacancies | Salary: ₹4-20 LPA | Eligibility: BCA/MCA | Platform: naukri",
+            "Full Stack Developer - 40,000+ vacancies | Salary: ₹8-35 LPA | Eligibility: BCA/MCA | Platform: linkedin",
+            "Data Scientist - 8,000+ vacancies | Salary: ₹10-50 LPA | Eligibility: MCA/MTech | Platform: linkedin",
+            "Cloud Engineer - 6,500+ vacancies | Salary: ₹12-45 LPA | Eligibility: Cloud Cert | Platform: linkedin",
+            "DevOps Engineer - 8,000+ vacancies | Salary: ₹8-40 LPA | Eligibility: B.Tech | Platform: linkedin",
+            "Cybersecurity Analyst - 6,000+ vacancies | Salary: ₹6-35 LPA | Eligibility: B.Tech | Platform: naukri",
+            "IT Consultant - 5,000+ vacancies | Salary: ₹10-50 LPA | Eligibility: MBA/B.Tech | Platform: linkedin",
+            "AI/ML Engineer - 5,000+ vacancies | Salary: ₹15-70 LPA | Eligibility: M.Tech/PhD | Platform: linkedin"
         ]},
         "Management": { icon: "📈", color: "#f39c12", totalJobs: "2,00,000+", jobs: [
-            "Management Trainee - 40,000+ vacancies | Salary: ₹6-18 LPA | Eligibility: MBA/BBA | Apply: naukri.com",
-            "Executive Assistant - 8,000+ vacancies | Salary: ₹3-12 LPA | Eligibility: Graduate | Apply: naukri.com",
-            "Sales Associate - 50,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: Graduate | Apply: naukri.com",
-            "Business Analyst - 12,000+ vacancies | Salary: ₹6-25 LPA | Eligibility: MBA/B.Tech | Apply: linkedin.com",
-            "Operations Manager - 10,000+ vacancies | Salary: ₹12-40 LPA | Eligibility: MBA | Apply: naukri.com",
-            "Marketing Manager - 8,000+ vacancies | Salary: ₹10-45 LPA | Eligibility: MBA | Apply: linkedin.com",
-            "Product Manager - 5,000+ vacancies | Salary: ₹15-60 LPA | Eligibility: MBA/B.Tech | Apply: linkedin.com",
-            "HR Manager - 7,000+ vacancies | Salary: ₹8-35 LPA | Eligibility: MBA | Apply: naukri.com",
-            "Finance Manager - 5,000+ vacancies | Salary: ₹12-45 LPA | Eligibility: CA/MBA | Apply: linkedin.com",
-            "Strategy Consultant - 3,500+ vacancies | Salary: ₹15-60 LPA | Eligibility: MBA | Apply: linkedin.com"
+            "Management Trainee - 40,000+ vacancies | Salary: ₹6-18 LPA | Eligibility: MBA/BBA | Platform: naukri",
+            "Executive Assistant - 8,000+ vacancies | Salary: ₹3-12 LPA | Eligibility: Graduate | Platform: naukri",
+            "Sales Associate - 50,000+ vacancies | Salary: ₹3-15 LPA | Eligibility: Graduate | Platform: naukri",
+            "Business Analyst - 12,000+ vacancies | Salary: ₹6-25 LPA | Eligibility: MBA/B.Tech | Platform: linkedin",
+            "Operations Manager - 10,000+ vacancies | Salary: ₹12-40 LPA | Eligibility: MBA | Platform: naukri",
+            "Marketing Manager - 8,000+ vacancies | Salary: ₹10-45 LPA | Eligibility: MBA | Platform: linkedin",
+            "Product Manager - 5,000+ vacancies | Salary: ₹15-60 LPA | Eligibility: MBA/B.Tech | Platform: linkedin",
+            "HR Manager - 7,000+ vacancies | Salary: ₹8-35 LPA | Eligibility: MBA | Platform: naukri",
+            "Finance Manager - 5,000+ vacancies | Salary: ₹12-45 LPA | Eligibility: CA/MBA | Platform: linkedin",
+            "Strategy Consultant - 3,500+ vacancies | Salary: ₹15-60 LPA | Eligibility: MBA | Platform: linkedin"
         ]},
         "Vocational/Diploma": { icon: "🛠️", color: "#e67e22", totalJobs: "2,00,000+", jobs: [
-            "Electrician - 40,000+ vacancies | Salary: ₹15,000-35,000 | Eligibility: ITI | Apply: naukri.com",
-            "Plumber - 25,000+ vacancies | Salary: ₹15,000-35,000 | Eligibility: ITI | Apply: naukri.com",
-            "ITI Technician - 60,000+ vacancies | Salary: ₹12,000-30,000 | Eligibility: ITI | Apply: naukri.com",
-            "Welder - 25,000+ vacancies | Salary: ₹15,000-32,000 | Eligibility: ITI | Apply: naukri.com",
-            "Driver (Heavy/Light) - 35,000+ vacancies | Salary: ₹15,000-40,000 | Eligibility: 10th + License | Apply: naukri.com",
-            "Security Supervisor - 20,000+ vacancies | Salary: ₹15,000-35,000 | Eligibility: 12th | Apply: naukri.com",
-            "AC Technician - 15,000+ vacancies | Salary: ₹15,000-40,000 | Eligibility: ITI | Apply: naukri.com",
-            "Beautician - 18,000+ vacancies | Salary: ₹10,000-35,000 | Eligibility: 10th | Apply: naukri.com",
-            "Mobile Repair Technician - 15,000+ vacancies | Salary: ₹15,000-45,000 | Eligibility: ITI | Apply: naukri.com",
-            "Entrepreneur - 25,000+ opportunities | Salary: ₹20,000-1,00,000 | Eligibility: Self-employed | Apply: startupindia.gov.in"
+            "Electrician - 40,000+ vacancies | Salary: ₹15,000-35,000 | Eligibility: ITI | Platform: naukri",
+            "Plumber - 25,000+ vacancies | Salary: ₹15,000-35,000 | Eligibility: ITI | Platform: naukri",
+            "ITI Technician - 60,000+ vacancies | Salary: ₹12,000-30,000 | Eligibility: ITI | Platform: naukri",
+            "Welder - 25,000+ vacancies | Salary: ₹15,000-32,000 | Eligibility: ITI | Platform: naukri",
+            "Driver (Heavy/Light) - 35,000+ vacancies | Salary: ₹15,000-40,000 | Eligibility: 10th + License | Platform: naukri",
+            "Security Supervisor - 20,000+ vacancies | Salary: ₹15,000-35,000 | Eligibility: 12th | Platform: naukri",
+            "AC Technician - 15,000+ vacancies | Salary: ₹15,000-40,000 | Eligibility: ITI | Platform: naukri",
+            "Beautician - 18,000+ vacancies | Salary: ₹10,000-35,000 | Eligibility: 10th | Platform: naukri",
+            "Mobile Repair Technician - 15,000+ vacancies | Salary: ₹15,000-45,000 | Eligibility: ITI | Platform: naukri",
+            "Entrepreneur - 25,000+ opportunities | Salary: ₹20,000-1,00,000 | Eligibility: Self-employed | Platform: startupindia.gov.in"
         ]}
     };
 
@@ -500,187 +722,184 @@
     // SECTION 2: DEFENCE JOBS (20+ Entries)
     // ============================================
     const defenceJobs = [
-        "Indian Army - Agniveer (General Duty) - 40,000 posts | Last Date: 31 Dec 2024 | Salary: ₹30,000-40,000 | Eligibility: 10th/12th | Apply: joinindianarmy.nic.in",
-        "Indian Army - Agniveer (Technical) - 15,000 posts | Last Date: 31 Dec 2024 | Salary: ₹30,000-40,000 | Eligibility: 10+2 PCM | Apply: joinindianarmy.nic.in",
-        "Indian Navy - SSR/AA - 2,500 posts | Last Date: 20 Dec 2024 | Salary: ₹30,000-40,000 | Eligibility: 10+2 PCM | Apply: joinindiannavy.gov.in",
-        "Indian Air Force - Agniveer Vayu - 3,500 posts | Last Date: 25 Dec 2024 | Salary: ₹30,000-40,000 | Eligibility: 10+2/Graduate | Apply: agnipathvayu.cdac.in",
-        "NDA 2024 - 154th Course - 400 posts | Last Date: 31 Dec 2024 | Eligibility: 12th | Apply: upsc.gov.in",
-        "CDS 2024 (I) Exam - 400 posts | Last Date: 01 Jan 2025 | Salary: ₹56,100-1,77,500 | Eligibility: Graduate | Apply: upsc.gov.in",
-        "AFCAT 2024 - 300 posts | Last Date: 15 Jan 2025 | Salary: ₹56,100-1,77,500 | Eligibility: Graduate 60% | Apply: afcat.cdac.in",
-        "Indian Coast Guard - Navik (GD/DB) - 1,000 posts | Last Date: 10 Jan 2025 | Eligibility: 10+2 | Apply: joinindiancoastguard.gov.in",
-        "Indian Coast Guard - Yantrik - 300 posts | Last Date: 10 Jan 2025 | Eligibility: 10+2 PCM | Apply: joinindiancoastguard.gov.in",
-        "Army Nursing Assistant - 2,000 posts | Last Date: 28 Dec 2024 | Eligibility: 10+2 PCB | Apply: joinindianarmy.nic.in",
-        "Territorial Army - 500 posts | Last Date: 15 Jan 2025 | Eligibility: Graduate | Apply: indianarmy.nic.in",
-        "NCC Special Entry - 200 posts | Last Date: 20 Jan 2025 | Eligibility: Graduate + NCC 'C' | Apply: joinindianarmy.nic.in",
-        "JAG Entry - Judge Advocate General - 50 posts | Last Date: 25 Jan 2025 | Eligibility: LLB | Apply: joinindianarmy.nic.in"
+        "Indian Army - Agniveer (General Duty) - 40,000 posts | Last Date: 31 Dec 2024 | Salary: ₹30,000-40,000 | Eligibility: 10th/12th | Platform: joinindianarmy",
+        "Indian Army - Agniveer (Technical) - 15,000 posts | Last Date: 31 Dec 2024 | Salary: ₹30,000-40,000 | Eligibility: 10+2 PCM | Platform: joinindianarmy",
+        "Indian Navy - SSR/AA - 2,500 posts | Last Date: 20 Dec 2024 | Salary: ₹30,000-40,000 | Eligibility: 10+2 PCM | Platform: joinindiannavy.gov.in",
+        "Indian Air Force - Agniveer Vayu - 3,500 posts | Last Date: 25 Dec 2024 | Salary: ₹30,000-40,000 | Eligibility: 10+2/Graduate | Platform: agnipathvayu.cdac.in",
+        "NDA 2024 - 154th Course - 400 posts | Last Date: 31 Dec 2024 | Eligibility: 12th | Platform: upsc",
+        "CDS 2024 (I) Exam - 400 posts | Last Date: 01 Jan 2025 | Salary: ₹56,100-1,77,500 | Eligibility: Graduate | Platform: upsc",
+        "AFCAT 2024 - 300 posts | Last Date: 15 Jan 2025 | Salary: ₹56,100-1,77,500 | Eligibility: Graduate 60% | Platform: afcat.cdac.in",
+        "Indian Coast Guard - Navik (GD/DB) - 1,000 posts | Last Date: 10 Jan 2025 | Eligibility: 10+2 | Platform: joinindiancoastguard.gov.in",
+        "Indian Coast Guard - Yantrik - 300 posts | Last Date: 10 Jan 2025 | Eligibility: 10+2 PCM | Platform: joinindiancoastguard.gov.in",
+        "Army Nursing Assistant - 2,000 posts | Last Date: 28 Dec 2024 | Eligibility: 10+2 PCB | Platform: joinindianarmy",
+        "Territorial Army - 500 posts | Last Date: 15 Jan 2025 | Eligibility: Graduate | Platform: indianarmy.nic.in",
+        "NCC Special Entry - 200 posts | Last Date: 20 Jan 2025 | Eligibility: Graduate + NCC 'C' | Platform: joinindianarmy",
+        "JAG Entry - Judge Advocate General - 50 posts | Last Date: 25 Jan 2025 | Eligibility: LLB | Platform: joinindianarmy"
     ];
 
     // ============================================
     // SECTION 3: CENTRAL GOVT JOBS (30+ Entries)
     // ============================================
     const centralJobs = [
-        "SSC CGL 2024 - 15,000+ posts | Last Date: 15 Dec 2024 | Salary: ₹35,000-1,12,000 | Eligibility: Graduate | Apply: ssc.nic.in",
-        "SSC CHSL 2024 - 5,000+ posts | Last Date: 20 Dec 2024 | Salary: ₹25,000-45,000 | Eligibility: 12th | Apply: ssc.nic.in",
-        "SSC MTS 2024 - 10,000+ posts | Last Date: 30 Dec 2024 | Salary: ₹18,000-22,000 | Eligibility: 10th | Apply: ssc.nic.in",
-        "SSC CPO 2024 - 4,000+ posts | Last Date: 25 Dec 2024 | Salary: ₹35,000-45,000 | Eligibility: Graduate | Apply: ssc.nic.in",
-        "SSC JE 2024 - 2,000+ posts | Last Date: 28 Dec 2024 | Salary: ₹35,400-1,12,400 | Eligibility: Diploma/B.Tech | Apply: ssc.nic.in",
-        "IBPS PO 2024 - 4,000+ posts | Last Date: 10 Dec 2024 | Salary: ₹52,000-55,000 | Eligibility: Graduate | Apply: ibps.in",
-        "IBPS Clerk 2024 - 6,000+ posts | Last Date: 18 Dec 2024 | Salary: ₹28,000-30,000 | Eligibility: Graduate | Apply: ibps.in",
-        "IBPS SO 2024 - 1,500+ posts | Last Date: 22 Dec 2024 | Salary: ₹55,000-60,000 | Eligibility: Graduate | Apply: ibps.in",
-        "IBPS RRB PO 2024 - 8,000+ posts | Last Date: 28 Dec 2024 | Salary: ₹50,000-55,000 | Eligibility: Graduate | Apply: ibps.in",
-        "RBI Grade B 2024 - 300+ posts | Last Date: 30 Dec 2024 | Salary: ₹77,000-1,20,000 | Eligibility: Graduate 60% | Apply: rbi.org.in",
-        "RBI Assistant 2024 - 1,000+ posts | Last Date: 15 Jan 2025 | Salary: ₹36,000-45,000 | Eligibility: Graduate | Apply: rbi.org.in",
-        "UPSC Civil Services 2025 - 1,000+ posts | Last Date: 15 Feb 2025 | Salary: ₹56,100-2,50,000 | Eligibility: Graduate | Apply: upsc.gov.in",
-        "UPSC NDA 2025 - 400+ posts | Last Date: 31 Dec 2024 | Eligibility: 12th | Apply: upsc.gov.in",
-        "UPSC CDS 2025 - 400+ posts | Last Date: 01 Jan 2025 | Eligibility: Graduate | Apply: upsc.gov.in",
-        "UPSC CAPF 2025 - 300+ posts | Last Date: 15 Jan 2025 | Salary: ₹56,100-1,77,500 | Eligibility: Graduate | Apply: upsc.gov.in",
-        "Railways RRB NTPC 2024 - 25,000+ posts | Last Date: 25 Dec 2024 | Salary: ₹25,000-55,000 | Eligibility: 12th/Graduate | Apply: rrbcdg.gov.in",
-        "Railways RRB ALP 2024 - 10,000+ posts | Last Date: 28 Dec 2024 | Salary: ₹30,000-45,000 | Eligibility: 10+2/ITI | Apply: rrbald.gov.in",
-        "Railways RRB JE 2024 - 8,000+ posts | Last Date: 30 Dec 2024 | Salary: ₹35,000-50,000 | Eligibility: Diploma/B.Tech | Apply: rrbsecunderabad.gov.in",
-        "Railways RRB Group D 2024 - 20,000+ posts | Last Date: 25 Dec 2024 | Salary: ₹18,000-22,000 | Eligibility: 10th | Apply: rrbcdg.gov.in",
-        "India Post GDS 2024 - 30,000+ posts | Last Date: 20 Dec 2024 | Salary: ₹10,000-15,000 | Eligibility: 10th | Apply: indiapost.gov.in",
-        "India Post MTS 2024 - 5,000+ posts | Last Date: 30 Dec 2024 | Salary: ₹18,000-22,000 | Eligibility: 10th | Apply: indiapost.gov.in",
-        "India Post PA/SA 2024 - 3,000+ posts | Last Date: 25 Dec 2024 | Salary: ₹25,500-81,100 | Eligibility: 12th | Apply: indiapost.gov.in"
+        "SSC CGL 2024 - 15,000+ posts | Last Date: 15 Dec 2024 | Salary: ₹35,000-1,12,000 | Eligibility: Graduate | Platform: ssc",
+        "SSC CHSL 2024 - 5,000+ posts | Last Date: 20 Dec 2024 | Salary: ₹25,000-45,000 | Eligibility: 12th | Platform: ssc",
+        "SSC MTS 2024 - 10,000+ posts | Last Date: 30 Dec 2024 | Salary: ₹18,000-22,000 | Eligibility: 10th | Platform: ssc",
+        "SSC CPO 2024 - 4,000+ posts | Last Date: 25 Dec 2024 | Salary: ₹35,000-45,000 | Eligibility: Graduate | Platform: ssc",
+        "SSC JE 2024 - 2,000+ posts | Last Date: 28 Dec 2024 | Salary: ₹35,400-1,12,400 | Eligibility: Diploma/B.Tech | Platform: ssc",
+        "IBPS PO 2024 - 4,000+ posts | Last Date: 10 Dec 2024 | Salary: ₹52,000-55,000 | Eligibility: Graduate | Platform: ibps",
+        "IBPS Clerk 2024 - 6,000+ posts | Last Date: 18 Dec 2024 | Salary: ₹28,000-30,000 | Eligibility: Graduate | Platform: ibps",
+        "IBPS SO 2024 - 1,500+ posts | Last Date: 22 Dec 2024 | Salary: ₹55,000-60,000 | Eligibility: Graduate | Platform: ibps",
+        "IBPS RRB PO 2024 - 8,000+ posts | Last Date: 28 Dec 2024 | Salary: ₹50,000-55,000 | Eligibility: Graduate | Platform: ibps",
+        "RBI Grade B 2024 - 300+ posts | Last Date: 30 Dec 2024 | Salary: ₹77,000-1,20,000 | Eligibility: Graduate 60% | Platform: rbi",
+        "RBI Assistant 2024 - 1,000+ posts | Last Date: 15 Jan 2025 | Salary: ₹36,000-45,000 | Eligibility: Graduate | Platform: rbi",
+        "UPSC Civil Services 2025 - 1,000+ posts | Last Date: 15 Feb 2025 | Salary: ₹56,100-2,50,000 | Eligibility: Graduate | Platform: upsc",
+        "UPSC NDA 2025 - 400+ posts | Last Date: 31 Dec 2024 | Eligibility: 12th | Platform: upsc",
+        "UPSC CDS 2025 - 400+ posts | Last Date: 01 Jan 2025 | Eligibility: Graduate | Platform: upsc",
+        "UPSC CAPF 2025 - 300+ posts | Last Date: 15 Jan 2025 | Salary: ₹56,100-1,77,500 | Eligibility: Graduate | Platform: upsc",
+        "Railways RRB NTPC 2024 - 25,000+ posts | Last Date: 25 Dec 2024 | Salary: ₹25,000-55,000 | Eligibility: 12th/Graduate | Platform: railways",
+        "Railways RRB ALP 2024 - 10,000+ posts | Last Date: 28 Dec 2024 | Salary: ₹30,000-45,000 | Eligibility: 10+2/ITI | Platform: railways",
+        "Railways RRB JE 2024 - 8,000+ posts | Last Date: 30 Dec 2024 | Salary: ₹35,000-50,000 | Eligibility: Diploma/B.Tech | Platform: railways",
+        "Railways RRB Group D 2024 - 20,000+ posts | Last Date: 25 Dec 2024 | Salary: ₹18,000-22,000 | Eligibility: 10th | Platform: railways",
+        "India Post GDS 2024 - 30,000+ posts | Last Date: 20 Dec 2024 | Salary: ₹10,000-15,000 | Eligibility: 10th | Platform: indiapost.gov.in",
+        "India Post MTS 2024 - 5,000+ posts | Last Date: 30 Dec 2024 | Salary: ₹18,000-22,000 | Eligibility: 10th | Platform: indiapost.gov.in",
+        "India Post PA/SA 2024 - 3,000+ posts | Last Date: 25 Dec 2024 | Salary: ₹25,500-81,100 | Eligibility: 12th | Platform: indiapost.gov.in"
     ];
 
     // ============================================
     // SECTION 4: HARYANA COMPLETE JOBS (50+ Entries)
     // ============================================
     const haryanaJobsFull = [
-        "HSSC Group C & D Recruitment 2024 - 25,000 posts | Last Date: 31 Dec 2024 | Salary: ₹25,000-81,000 | Eligibility: 10th/12th/Graduate | Apply: hssc.gov.in",
-        "Haryana Police Constable - 12,000 posts | Last Date: 15 Dec 2024 | Salary: ₹30,000-45,000 | Eligibility: 10+2 | Apply: haryanapolice.gov.in",
-        "HSSC Gram Sachiv - 2,500 posts | Last Date: 20 Dec 2024 | Salary: ₹35,000-50,000 | Eligibility: Graduate | Apply: hssc.gov.in",
-        "Haryana Patwari - 1,800 posts | Last Date: 10 Dec 2024 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Apply: haryanarevenue.gov.in",
-        "HTET Teacher - 15,000 posts | Last Date: 15 Jan 2025 | Salary: ₹44,900-1,42,400 | Eligibility: B.Ed | Apply: bseh.org.in",
-        "HSSC DEO - 3,500 posts | Last Date: 25 Dec 2024 | Salary: ₹25,500-81,100 | Eligibility: Graduate with Computer | Apply: hssc.gov.in",
-        "Haryana Forest Guard - 800 posts | Last Date: 18 Dec 2024 | Salary: ₹21,700-69,100 | Eligibility: 10+2 | Apply: haryanaforest.gov.in",
-        "HSSC Junior Engineer - 1,200 posts | Last Date: 28 Dec 2024 | Salary: ₹35,400-1,12,400 | Eligibility: Diploma/B.Tech | Apply: hssc.gov.in",
-        "HSSC Clerk - 4,000 posts | Last Date: 30 Dec 2024 | Salary: ₹25,500-81,100 | Eligibility: 12th/Graduate | Apply: hssc.gov.in",
-        "Haryana Excise Inspector - 500 posts | Last Date: 22 Dec 2024 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Apply: haryanatax.gov.in",
-        "Haryana Sub Inspector (SI) - 1,500 posts | Last Date: 05 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Apply: haryanapolice.gov.in",
-        "HSSC Assistant Town Planner - 200 posts | Last Date: 10 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.Arch/B.Plan | Apply: hssc.gov.in",
-        "Haryana Agriculture Officer - 300 posts | Last Date: 12 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.Sc Agri | Apply: hagri.gov.in",
-        "HSSC Block Development Officer - 150 posts | Last Date: 15 Jan 2025 | Salary: ₹47,600-1,51,100 | Eligibility: Graduate | Apply: hssc.gov.in",
-        "Haryana Canal Patwari - 400 posts | Last Date: 18 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: 10+2 | Apply: haryana-irrigation.gov.in",
-        "HSSC Animal Husbandry Officer - 250 posts | Last Date: 20 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.V.Sc | Apply: hssc.gov.in",
-        "Haryana Food Supply Officer - 300 posts | Last Date: 22 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Apply: haryanafood.gov.in",
-        "HSSC Cooperative Bank Manager - 150 posts | Last Date: 25 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Apply: hssc.gov.in",
-        "Haryana Mining Officer - 100 posts | Last Date: 28 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Apply: haryanamining.gov.in",
-        "HSSC Lab Assistant - 500 posts | Last Date: 30 Jan 2025 | Salary: ₹25,500-81,100 | Eligibility: 10+2 with Science | Apply: hssc.gov.in",
-        "Haryana Staff Nurse - 800 posts | Last Date: 01 Feb 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.Sc Nursing | Apply: haryanahealth.gov.in",
-        "HSSC Pharmacist - 400 posts | Last Date: 05 Feb 2025 | Salary: ₹25,500-81,100 | Eligibility: D.Pharm/B.Pharm | Apply: hssc.gov.in",
-        "Haryana Veterinary Officer - 200 posts | Last Date: 10 Feb 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.V.Sc | Apply: haryanavet.gov.in",
-        "HSSC Scientific Assistant - 150 posts | Last Date: 15 Feb 2025 | Salary: ₹35,400-1,12,400 | Eligibility: M.Sc | Apply: hssc.gov.in",
-        "Haryana Fire Officer - 300 posts | Last Date: 20 Feb 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Apply: haryanafire.gov.in"
+        "HSSC Group C & D Recruitment 2024 - 25,000 posts | Last Date: 31 Dec 2024 | Salary: ₹25,000-81,000 | Eligibility: 10th/12th/Graduate | Platform: hssc",
+        "Haryana Police Constable - 12,000 posts | Last Date: 15 Dec 2024 | Salary: ₹30,000-45,000 | Eligibility: 10+2 | Platform: haryanapolice.gov.in",
+        "HSSC Gram Sachiv - 2,500 posts | Last Date: 20 Dec 2024 | Salary: ₹35,000-50,000 | Eligibility: Graduate | Platform: hssc",
+        "Haryana Patwari - 1,800 posts | Last Date: 10 Dec 2024 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Platform: haryanarevenue.gov.in",
+        "HTET Teacher - 15,000 posts | Last Date: 15 Jan 2025 | Salary: ₹44,900-1,42,400 | Eligibility: B.Ed | Platform: bseh.org.in",
+        "HSSC DEO - 3,500 posts | Last Date: 25 Dec 2024 | Salary: ₹25,500-81,100 | Eligibility: Graduate with Computer | Platform: hssc",
+        "Haryana Forest Guard - 800 posts | Last Date: 18 Dec 2024 | Salary: ₹21,700-69,100 | Eligibility: 10+2 | Platform: haryanaforest.gov.in",
+        "HSSC Junior Engineer - 1,200 posts | Last Date: 28 Dec 2024 | Salary: ₹35,400-1,12,400 | Eligibility: Diploma/B.Tech | Platform: hssc",
+        "HSSC Clerk - 4,000 posts | Last Date: 30 Dec 2024 | Salary: ₹25,500-81,100 | Eligibility: 12th/Graduate | Platform: hssc",
+        "Haryana Excise Inspector - 500 posts | Last Date: 22 Dec 2024 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Platform: haryanatax.gov.in",
+        "Haryana Sub Inspector (SI) - 1,500 posts | Last Date: 05 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Platform: haryanapolice.gov.in",
+        "HSSC Assistant Town Planner - 200 posts | Last Date: 10 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.Arch/B.Plan | Platform: hssc",
+        "Haryana Agriculture Officer - 300 posts | Last Date: 12 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.Sc Agri | Platform: hagri.gov.in",
+        "HSSC Block Development Officer - 150 posts | Last Date: 15 Jan 2025 | Salary: ₹47,600-1,51,100 | Eligibility: Graduate | Platform: hssc",
+        "Haryana Canal Patwari - 400 posts | Last Date: 18 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: 10+2 | Platform: haryana-irrigation.gov.in",
+        "HSSC Animal Husbandry Officer - 250 posts | Last Date: 20 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.V.Sc | Platform: hssc",
+        "Haryana Food Supply Officer - 300 posts | Last Date: 22 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Platform: haryanafood.gov.in",
+        "HSSC Cooperative Bank Manager - 150 posts | Last Date: 25 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Platform: hssc",
+        "Haryana Mining Officer - 100 posts | Last Date: 28 Jan 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Platform: haryanamining.gov.in",
+        "HSSC Lab Assistant - 500 posts | Last Date: 30 Jan 2025 | Salary: ₹25,500-81,100 | Eligibility: 10+2 with Science | Platform: hssc",
+        "Haryana Staff Nurse - 800 posts | Last Date: 01 Feb 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.Sc Nursing | Platform: haryanahealth.gov.in",
+        "HSSC Pharmacist - 400 posts | Last Date: 05 Feb 2025 | Salary: ₹25,500-81,100 | Eligibility: D.Pharm/B.Pharm | Platform: hssc",
+        "Haryana Veterinary Officer - 200 posts | Last Date: 10 Feb 2025 | Salary: ₹35,400-1,12,400 | Eligibility: B.V.Sc | Platform: haryanavet.gov.in",
+        "HSSC Scientific Assistant - 150 posts | Last Date: 15 Feb 2025 | Salary: ₹35,400-1,12,400 | Eligibility: M.Sc | Platform: hssc",
+        "Haryana Fire Officer - 300 posts | Last Date: 20 Feb 2025 | Salary: ₹35,400-1,12,400 | Eligibility: Graduate | Platform: haryanafire.gov.in"
     ];
 
     // ============================================
     // SECTION 5: ALL 36 STATES/UTs (Complete List)
     // ============================================
     const allStates = [
-        { name: "Haryana", icon: "🚜", jobCount: "50+", jobs: haryanaJobsFull, color: "#e67e22", portal: "hssc.gov.in" },
-        { name: "Uttar Pradesh", icon: "🕌", jobCount: "1,00,000+", jobs: ["UP Police Constable - 52,478 posts | Last Date: 20 Dec 2024 | Apply: uppbpb.gov.in","UPSSSC PET 2024 - 50,000+ posts | Last Date: 15 Dec 2024 | Apply: upsssc.gov.in","UPPSC RO/ARO - 500 posts | Last Date: 10 Jan 2025 | Apply: uppsc.up.nic.in","UP TET 2024 - 1,50,000 posts | Last Date: 30 Dec 2024 | Apply: updeled.gov.in"], color: "#9b59b6", portal: "uppsc.up.nic.in" },
-        { name: "Delhi", icon: "🏛️", jobCount: "30,000+", jobs: ["DSSSB Various - 15,000+ posts | Last Date: 25 Dec 2024 | Apply: dsssb.delhi.gov.in","Delhi Police Constable - 12,000+ | Last Date: 20 Dec 2024 | Apply: delhipolice.gov.in","Delhi District Court - 2,000+ | Last Date: 15 Jan 2025 | Apply: delhidistrictcourts.nic.in","MCD Teacher - 5,000+ | Last Date: 10 Jan 2025 | Apply: mcd.nic.in"], color: "#3498db", portal: "dsssb.delhi.gov.in" },
-        { name: "Bihar", icon: "📚", jobCount: "20,000+", jobs: ["BPSC 69th Combined - 500 posts | Last Date: 18 Dec 2024 | Apply: bpsc.bih.nic.in","Bihar Police SI - 2,000 posts | Last Date: 22 Dec 2024 | Apply: csbc.bih.nic.in","Bihar Teacher - 1,00,000+ | Last Date: 31 Dec 2024 | Apply: biharboardonline.bihar.gov.in","Bihar Police Constable - 8,000 | Last Date: 15 Jan 2025 | Apply: csbc.bih.nic.in"], color: "#e74c3c", portal: "bpsc.bih.nic.in" },
-        { name: "Rajasthan", icon: "🏜️", jobCount: "25,000+", jobs: ["Rajasthan Police Constable - 5,000+ | Last Date: 28 Dec 2024 | Apply: police.rajasthan.gov.in","RSMSSB Various - 10,000+ | Last Date: 15 Jan 2025 | Apply: rsmssb.rajasthan.gov.in","RPSC Lecturer - 3,000+ | Last Date: 20 Jan 2025 | Apply: rpsc.rajasthan.gov.in","REET 2024 - 50,000+ | Last Date: 31 Dec 2024 | Apply: rajeduboard.rajasthan.gov.in"], color: "#f39c12", portal: "rsmssb.rajasthan.gov.in" },
-        { name: "Madhya Pradesh", icon: "🌳", jobCount: "20,000+", jobs: ["MP Police Constable - 7,000+ | Last Date: 25 Dec 2024 | Apply: mppolice.gov.in","MPPSC State Service - 500+ | Last Date: 10 Jan 2025 | Apply: mppsc.mp.gov.in","MP Teacher - 50,000+ | Last Date: 31 Dec 2024 | Apply: peb.mp.gov.in","MP Jail Prahari - 2,000+ | Last Date: 15 Jan 2025 | Apply: mppolice.gov.in"], color: "#2ecc71", portal: "mppsc.mp.gov.in" },
-        { name: "Maharashtra", icon: "🌊", jobCount: "30,000+", jobs: ["Maharashtra Police - 15,000+ | Last Date: 30 Dec 2024 | Apply: mahapolice.gov.in","MPSC Rajyaseva - 500+ | Last Date: 15 Jan 2025 | Apply: mpsc.gov.in","MAHA TET - 50,000+ | Last Date: 31 Dec 2024 | Apply: mahatet.in","ZP Bharti - 10,000+ | Last Date: 20 Jan 2025 | Apply: maharashtra.gov.in"], color: "#e67e22", portal: "mpsc.gov.in" },
-        { name: "Punjab", icon: "🌾", jobCount: "15,000+", jobs: ["Punjab Police - 4,000+ | Last Date: 20 Dec 2024 | Apply: punjabpolice.gov.in","PPSC Various - 2,000+ | Last Date: 10 Jan 2025 | Apply: ppsc.gov.in","Punjab Teacher - 10,000+ | Last Date: 31 Dec 2024 | Apply: pseb.ac.in","Punjab Patwari - 1,000+ | Last Date: 15 Jan 2025 | Apply: revenue.punjab.gov.in"], color: "#1abc9c", portal: "ppsc.gov.in" },
-        { name: "Gujarat", icon: "🦁", jobCount: "20,000+", jobs: ["Gujarat Police - 8,000+ | Last Date: 22 Dec 2024 | Apply: police.gujarat.gov.in","GPSC Various - 3,000+ | Last Date: 15 Jan 2025 | Apply: gpsc.gujarat.gov.in","Gujarat Teacher - 15,000+ | Last Date: 31 Dec 2024 | Apply: gseb.org","Gujarat TET - 10,000+ | Last Date: 10 Jan 2025 | Apply: gseb.org"], color: "#e74c3c", portal: "gpsc.gujarat.gov.in" },
-        { name: "Tamil Nadu", icon: "🏛️", jobCount: "25,000+", jobs: ["TNPSC Group 4 - 6,000+ | Last Date: 28 Dec 2024 | Apply: tnpsc.gov.in","TN Police - 10,000+ | Last Date: 20 Dec 2024 | Apply: tnpolice.gov.in","TNTET - 20,000+ | Last Date: 31 Dec 2024 | Apply: trb.tn.nic.in","TNUSRB SI - 2,000+ | Last Date: 15 Jan 2025 | Apply: tnusrb.tn.gov.in"], color: "#3498db", portal: "tnpsc.gov.in" },
-        { name: "West Bengal", icon: "🐅", jobCount: "15,000+", jobs: ["WBCS 2024 - 500+ | Last Date: 25 Dec 2024 | Apply: wbpsc.gov.in","WB Police - 8,000+ | Last Date: 20 Dec 2024 | Apply: wbpolice.gov.in","WBTET - 20,000+ | Last Date: 31 Dec 2024 | Apply: wbbpe.org","WB School Service - 10,000+ | Last Date: 10 Jan 2025 | Apply: wbssc.gov.in"], color: "#e74c3c", portal: "wbpsc.gov.in" },
-        { name: "Karnataka", icon: "🐘", jobCount: "20,000+", jobs: ["KPSC Various - 3,000+ | Last Date: 30 Dec 2024 | Apply: kpsc.kar.nic.in","Karnataka Police - 8,000+ | Last Date: 20 Dec 2024 | Apply: ksp.gov.in","KARTET - 15,000+ | Last Date: 31 Dec 2024 | Apply: kartet.cag.gov.in","PDO Recruitment - 2,000+ | Last Date: 15 Jan 2025 | Apply: kpsc.kar.nic.in"], color: "#f39c12", portal: "kpsc.kar.nic.in" }
+        { name: "Haryana", icon: "🚜", jobCount: "50+", jobs: haryanaJobsFull, color: "#e67e22", portal: "hssc" },
+        { name: "Uttar Pradesh", icon: "🕌", jobCount: "1,00,000+", jobs: ["UP Police Constable - 52,478 posts | Last Date: 20 Dec 2024 | Platform: uppbpb.gov.in","UPSSSC PET 2024 - 50,000+ posts | Last Date: 15 Dec 2024 | Platform: upsssc.gov.in","UPPSC RO/ARO - 500 posts | Last Date: 10 Jan 2025 | Platform: uppsc.up.nic.in","UP TET 2024 - 1,50,000 posts | Last Date: 30 Dec 2024 | Platform: updeled.gov.in"], color: "#9b59b6", portal: "uppsc.up.nic.in" },
+        { name: "Delhi", icon: "🏛️", jobCount: "30,000+", jobs: ["DSSSB Various - 15,000+ posts | Last Date: 25 Dec 2024 | Platform: dsssb.delhi.gov.in","Delhi Police Constable - 12,000+ | Last Date: 20 Dec 2024 | Platform: delhipolice.gov.in","Delhi District Court - 2,000+ | Last Date: 15 Jan 2025 | Platform: delhidistrictcourts.nic.in","MCD Teacher - 5,000+ | Last Date: 10 Jan 2025 | Platform: mcd.nic.in"], color: "#3498db", portal: "dsssb.delhi.gov.in" },
+        { name: "Bihar", icon: "📚", jobCount: "20,000+", jobs: ["BPSC 69th Combined - 500 posts | Last Date: 18 Dec 2024 | Platform: bpsc.bih.nic.in","Bihar Police SI - 2,000 posts | Last Date: 22 Dec 2024 | Platform: csbc.bih.nic.in","Bihar Teacher - 1,00,000+ | Last Date: 31 Dec 2024 | Platform: biharboardonline.bihar.gov.in","Bihar Police Constable - 8,000 | Last Date: 15 Jan 2025 | Platform: csbc.bih.nic.in"], color: "#e74c3c", portal: "bpsc.bih.nic.in" },
+        { name: "Rajasthan", icon: "🏜️", jobCount: "25,000+", jobs: ["Rajasthan Police Constable - 5,000+ | Last Date: 28 Dec 2024 | Platform: police.rajasthan.gov.in","RSMSSB Various - 10,000+ | Last Date: 15 Jan 2025 | Platform: rsmssb.rajasthan.gov.in","RPSC Lecturer - 3,000+ | Last Date: 20 Jan 2025 | Platform: rpsc.rajasthan.gov.in","REET 2024 - 50,000+ | Last Date: 31 Dec 2024 | Platform: rajeduboard.rajasthan.gov.in"], color: "#f39c12", portal: "rsmssb.rajasthan.gov.in" },
+        { name: "Madhya Pradesh", icon: "🌳", jobCount: "20,000+", jobs: ["MP Police Constable - 7,000+ | Last Date: 25 Dec 2024 | Platform: mppolice.gov.in","MPPSC State Service - 500+ | Last Date: 10 Jan 2025 | Platform: mppsc.mp.gov.in","MP Teacher - 50,000+ | Last Date: 31 Dec 2024 | Platform: peb.mp.gov.in","MP Jail Prahari - 2,000+ | Last Date: 15 Jan 2025 | Platform: mppolice.gov.in"], color: "#2ecc71", portal: "mppsc.mp.gov.in" },
+        { name: "Maharashtra", icon: "🌊", jobCount: "30,000+", jobs: ["Maharashtra Police - 15,000+ | Last Date: 30 Dec 2024 | Platform: mahapolice.gov.in","MPSC Rajyaseva - 500+ | Last Date: 15 Jan 2025 | Platform: mpsc.gov.in","MAHA TET - 50,000+ | Last Date: 31 Dec 2024 | Platform: mahatet.in","ZP Bharti - 10,000+ | Last Date: 20 Jan 2025 | Platform: maharashtra.gov.in"], color: "#e67e22", portal: "mpsc.gov.in" },
+        { name: "Punjab", icon: "🌾", jobCount: "15,000+", jobs: ["Punjab Police - 4,000+ | Last Date: 20 Dec 2024 | Platform: punjabpolice.gov.in","PPSC Various - 2,000+ | Last Date: 10 Jan 2025 | Platform: ppsc.gov.in","Punjab Teacher - 10,000+ | Last Date: 31 Dec 2024 | Platform: pseb.ac.in","Punjab Patwari - 1,000+ | Last Date: 15 Jan 2025 | Platform: revenue.punjab.gov.in"], color: "#1abc9c", portal: "ppsc.gov.in" },
+        { name: "Gujarat", icon: "🦁", jobCount: "20,000+", jobs: ["Gujarat Police - 8,000+ | Last Date: 22 Dec 2024 | Platform: police.gujarat.gov.in","GPSC Various - 3,000+ | Last Date: 15 Jan 2025 | Platform: gpsc.gujarat.gov.in","Gujarat Teacher - 15,000+ | Last Date: 31 Dec 2024 | Platform: gseb.org","Gujarat TET - 10,000+ | Last Date: 10 Jan 2025 | Platform: gseb.org"], color: "#e74c3c", portal: "gpsc.gujarat.gov.in" },
+        { name: "Tamil Nadu", icon: "🏛️", jobCount: "25,000+", jobs: ["TNPSC Group 4 - 6,000+ | Last Date: 28 Dec 2024 | Platform: tnpsc.gov.in","TN Police - 10,000+ | Last Date: 20 Dec 2024 | Platform: tnpolice.gov.in","TNTET - 20,000+ | Last Date: 31 Dec 2024 | Platform: trb.tn.nic.in","TNUSRB SI - 2,000+ | Last Date: 15 Jan 2025 | Platform: tnusrb.tn.gov.in"], color: "#3498db", portal: "tnpsc.gov.in" },
+        { name: "West Bengal", icon: "🐅", jobCount: "15,000+", jobs: ["WBCS 2024 - 500+ | Last Date: 25 Dec 2024 | Platform: wbpsc.gov.in","WB Police - 8,000+ | Last Date: 20 Dec 2024 | Platform: wbpolice.gov.in","WBTET - 20,000+ | Last Date: 31 Dec 2024 | Platform: wbbpe.org","WB School Service - 10,000+ | Last Date: 10 Jan 2025 | Platform: wbssc.gov.in"], color: "#e74c3c", portal: "wbpsc.gov.in" },
+        { name: "Karnataka", icon: "🐘", jobCount: "20,000+", jobs: ["KPSC Various - 3,000+ | Last Date: 30 Dec 2024 | Platform: kpsc.kar.nic.in","Karnataka Police - 8,000+ | Last Date: 20 Dec 2024 | Platform: ksp.gov.in","KARTET - 15,000+ | Last Date: 31 Dec 2024 | Platform: kartet.cag.gov.in","PDO Recruitment - 2,000+ | Last Date: 15 Jan 2025 | Platform: kpsc.kar.nic.in"], color: "#f39c12", portal: "kpsc.kar.nic.in" },
+        { name: "Telangana", icon: "🕌", jobCount: "15,000+", jobs: ["TSPSC Group 1 - 500+ | Last Date: 15 Jan 2025 | Platform: tspsc.gov.in","Telangana Police - 5,000+ | Last Date: 20 Dec 2024 | Platform: tspolice.gov.in","TS TET - 10,000+ | Last Date: 31 Dec 2024 | Platform: tstet.cgg.gov.in","TSPSC Group 2 - 1,000+ | Last Date: 10 Jan 2025 | Platform: tspsc.gov.in"], color: "#9b59b6", portal: "tspsc.gov.in" },
+        { name: "Andhra Pradesh", icon: "🏛️", jobCount: "15,000+", jobs: ["APPSC Group 2 - 1,000+ | Last Date: 28 Dec 2024 | Platform: psc.ap.gov.in","AP Police - 5,000+ | Last Date: 20 Dec 2024 | Platform: appolice.gov.in","AP TET - 10,000+ | Last Date: 31 Dec 2024 | Platform: ap tet.apcfss.in","AP Panchayat - 1,000+ | Last Date: 10 Jan 2025 | Platform: appanchayat.gov.in"], color: "#2ecc71", portal: "psc.ap.gov.in" },
+        { name: "Kerala", icon: "🌴", jobCount: "10,000+", jobs: ["Kerala PSC - 2,000+ | Last Date: 31 Dec 2024 | Platform: keralapsc.gov.in","Kerala Police - 3,000+ | Last Date: 20 Dec 2024 | Platform: keralapolice.gov.in","KTET - 5,000+ | Last Date: 31 Dec 2024 | Platform: ktet.kerala.gov.in","Kerala High Court - 200+ | Last Date: 15 Jan 2025 | Platform: keralahighcourt.nic.in"], color: "#1abc9c", portal: "keralapsc.gov.in" },
+        { name: "Jharkhand", icon: "🌳", jobCount: "10,000+", jobs: ["Jharkhand Police - 4,000+ | Last Date: 20 Dec 2024 | Platform: jhpolice.gov.in","JPSC Various - 500+ | Last Date: 15 Jan 2025 | Platform: jpsc.gov.in","Jharkhand Teacher - 8,000+ | Last Date: 31 Dec 2024 | Platform: jac.nic.in","JSSC Various - 2,000+ | Last Date: 10 Jan 2025 | Platform: jssc.nic.in"], color: "#e67e22", portal: "jpsc.gov.in" },
+        { name: "Chhattisgarh", icon: "🌲", jobCount: "10,000+", jobs: ["Chhattisgarh Police - 5,000+ | Last Date: 20 Dec 2024 | Platform: cgpolice.gov.in","CGPSC Various - 500+ | Last Date: 15 Jan 2025 | Platform: psc.cg.gov.in","CG TET - 8,000+ | Last Date: 31 Dec 2024 | Platform: vyapam.cgstate.gov.in","CG Vyapam - 3,000+ | Last Date: 10 Jan 2025 | Platform: vyapam.cgstate.gov.in"], color: "#27ae60", portal: "psc.cg.gov.in" },
+        { name: "Odisha", icon: "🏯", jobCount: "10,000+", jobs: ["Odisha Police - 5,000+ | Last Date: 20 Dec 2024 | Platform: odishapolice.gov.in","OPSC Various - 1,000+ | Last Date: 15 Jan 2025 | Platform: opsc.gov.in","OTET - 10,000+ | Last Date: 31 Dec 2024 | Platform: bseodisha.ac.in","OSSC Various - 2,000+ | Last Date: 10 Jan 2025 | Platform: ossc.gov.in"], color: "#e74c3c", portal: "opsc.gov.in" },
+        { name: "Assam", icon: "🦏", jobCount: "8,000+", jobs: ["Assam Police - 3,000+ | Last Date: 20 Dec 2024 | Platform: assampolice.gov.in","APSC Various - 500+ | Last Date: 15 Jan 2025 | Platform: apsc.nic.in","Assam TET - 5,000+ | Last Date: 31 Dec 2024 | Platform: ssa.assam.gov.in","Direct Recruitment - 2,000+ | Last Date: 10 Jan 2025 | Platform: assam.gov.in"], color: "#3498db", portal: "apsc.nic.in" },
+        { name: "Himachal Pradesh", icon: "🏔️", jobCount: "5,000+", jobs: ["Himachal Police - 2,000+ | Last Date: 20 Dec 2024 | Platform: himachalpolice.gov.in","HPPSC Various - 500+ | Last Date: 15 Jan 2025 | Platform: hppsc.hp.gov.in","HP TET - 3,000+ | Last Date: 31 Dec 2024 | Platform: hpbose.org","HPSSSB Recruitment - 1,000+ | Last Date: 10 Jan 2025 | Platform: hpsssb.hp.gov.in"], color: "#1abc9c", portal: "hppsc.hp.gov.in" },
+        { name: "Uttarakhand", icon: "🏞️", jobCount: "5,000+", jobs: ["Uttarakhand Police - 3,000+ | Last Date: 20 Dec 2024 | Platform: uttarakhandpolice.uk.gov.in","UKPSC Various - 500+ | Last Date: 15 Jan 2025 | Platform: ukpsc.gov.in","UTET - 3,000+ | Last Date: 31 Dec 2024 | Platform: ubse.uk.gov.in","UKSSSC Recruitment - 1,000+ | Last Date: 10 Jan 2025 | Platform: sssc.uk.gov.in"], color: "#2ecc71", portal: "ukpsc.gov.in" },
+        { name: "Goa", icon: "🏖️", jobCount: "2,000+", jobs: ["Goa Police - 500+ | Last Date: 20 Dec 2024 | Platform: goapolice.gov.in","Goa PSC - 200+ | Last Date: 15 Jan 2025 | Platform: goapsc.gov.in","Goa Teacher - 1,000+ | Last Date: 31 Dec 2024 | Platform: dhe.goa.gov.in","Goa SSB - 300+ | Last Date: 10 Jan 2025 | Platform: goa.gov.in"], color: "#f39c12", portal: "goapsc.gov.in" },
+        { name: "Jammu & Kashmir", icon: "🏔️", jobCount: "5,000+", jobs: ["J&K Police - 2,000+ | Last Date: 20 Dec 2024 | Platform: jkpolice.gov.in","JKPSC Various - 500+ | Last Date: 15 Jan 2025 | Platform: jkpsc.nic.in","JKSSB Recruitment - 2,000+ | Last Date: 10 Jan 2025 | Platform: jkssb.nic.in","J&K Teacher - 1,000+ | Last Date: 31 Dec 2024 | Platform: jkbose.org"], color: "#e74c3c", portal: "jkpsc.nic.in" },
+        { name: "Chandigarh", icon: "🏛️", jobCount: "2,000+", jobs: ["Chandigarh Police - 500+ | Last Date: 20 Dec 2024 | Platform: chandigarhpolice.gov.in","Chandigarh Admin - 300+ | Last Date: 15 Jan 2025 | Platform: chandigarh.gov.in","Chandigarh Teacher - 500+ | Last Date: 31 Dec 2024 | Platform: chandigarh.gov.in"], color: "#3498db", portal: "chandigarh.gov.in" },
+        { name: "Puducherry", icon: "🏖️", jobCount: "1,000+", jobs: ["Puducherry Police - 200+ | Last Date: 20 Dec 2024 | Platform: police.py.gov.in","Puducherry PSC - 100+ | Last Date: 15 Jan 2025 | Platform: py.gov.in","Puducherry Teacher - 300+ | Last Date: 31 Dec 2024 | Platform: py.gov.in"], color: "#9b59b6", portal: "py.gov.in" }
     ];
 
     // ============================================
-    // SECTION 6: PRIVATE SECTOR JOBS (50+ Entries)
+    // SECTION 6-8: PRIVATE, GLOBAL, MERCHANT NAVY, SPORTS
     // ============================================
     const privateJobs = [
-        "TCS - System Engineer - 10,000+ | ₹3.5-4.5 LPA | Eligibility: B.Tech/MCA | Apply: tcs.com/careers",
-        "Infosys - Systems Engineer - 8,000+ | ₹3.5-4 LPA | Eligibility: B.Tech/MCA | Apply: infosys.com/careers",
-        "Wipro - Project Engineer - 5,000+ | ₹3.5-4 LPA | Eligibility: B.Tech | Apply: wipro.com/careers",
-        "Amazon - Customer Associate - 5,000+ | ₹2.5-3.5 LPA | Eligibility: 12th/Graduate | Apply: amazon.jobs",
-        "Google - Software Engineer - 500+ | ₹30-50 LPA | Eligibility: B.Tech/M.Tech | Apply: careers.google.com",
-        "Microsoft - Software Developer - 300+ | ₹25-45 LPA | Eligibility: B.Tech/M.Tech | Apply: careers.microsoft.com",
-        "Flipkart - Operations Associate - 2,000+ | ₹3-4 LPA | Eligibility: Graduate | Apply: flipkartcareers.com",
-        "BYJU'S - BDA - 3,000+ | ₹5-8 LPA | Eligibility: Graduate | Apply: byjus.com/careers",
-        "Reliance - Management Trainee - 1,000+ | ₹7-10 LPA | Eligibility: MBA | Apply: relianceindustries.com/careers",
-        "Accenture - Associate Software Engineer - 5,000+ | ₹4-5 LPA | Eligibility: B.Tech/MCA | Apply: accenture.com/careers",
-        "Cognizant - Programmer Analyst - 4,000+ | ₹3.5-4.5 LPA | Eligibility: B.Tech/MCA | Apply: cognizant.com/careers",
-        "Capgemini - Software Engineer - 3,000+ | ₹3.5-4 LPA | Eligibility: B.Tech/MCA | Apply: capgemini.com/careers",
-        "IBM - Associate System Engineer - 2,000+ | ₹3.5-4.5 LPA | Eligibility: B.Tech/MCA | Apply: ibm.com/careers",
-        "Oracle - Applications Engineer - 1,000+ | ₹5-7 LPA | Eligibility: B.Tech/MCA | Apply: oracle.com/careers"
+        "TCS - System Engineer - 10,000+ | ₹3.5-4.5 LPA | Eligibility: B.Tech/MCA | Platform: tcs",
+        "Infosys - Systems Engineer - 8,000+ | ₹3.5-4 LPA | Eligibility: B.Tech/MCA | Platform: infosys",
+        "Wipro - Project Engineer - 5,000+ | ₹3.5-4 LPA | Eligibility: B.Tech | Platform: wipro",
+        "Amazon - Customer Associate - 5,000+ | ₹2.5-3.5 LPA | Eligibility: 12th/Graduate | Platform: amazon",
+        "Google - Software Engineer - 500+ | ₹30-50 LPA | Eligibility: B.Tech/M.Tech | Platform: google",
+        "Microsoft - Software Developer - 300+ | ₹25-45 LPA | Eligibility: B.Tech/M.Tech | Platform: microsoft",
+        "Flipkart - Operations Associate - 2,000+ | ₹3-4 LPA | Eligibility: Graduate | Platform: flipkart",
+        "BYJU'S - BDA - 3,000+ | ₹5-8 LPA | Eligibility: Graduate | Platform: byjus",
+        "Reliance - Management Trainee - 1,000+ | ₹7-10 LPA | Eligibility: MBA | Platform: reliance",
+        "Accenture - Associate Software Engineer - 5,000+ | ₹4-5 LPA | Eligibility: B.Tech/MCA | Platform: accenture.com/careers",
+        "Cognizant - Programmer Analyst - 4,000+ | ₹3.5-4.5 LPA | Platform: cognizant.com/careers",
+        "Capgemini - Software Engineer - 3,000+ | ₹3.5-4 LPA | Platform: capgemini.com/careers",
+        "IBM - Associate System Engineer - 2,000+ | ₹3.5-4.5 LPA | Platform: ibm.com/careers",
+        "Oracle - Applications Engineer - 1,000+ | ₹5-7 LPA | Platform: oracle.com/careers"
     ];
 
-    // ============================================
-    // SECTION 7: GLOBAL JOBS (20+ Entries)
-    // ============================================
     const globalJobs = [
-        "USA - Software Engineer | $70,000-150,000 | H1-B Visa | Apply: indeed.com",
-        "USA - Data Scientist | $80,000-160,000 | H1-B Visa | Apply: indeed.com",
-        "USA - Nurse | $60,000-120,000 | H1-B Visa | Apply: indeed.com",
-        "UK - IT Professional | £30,000-80,000 | Skilled Worker Visa | Apply: gov.uk",
-        "UK - Healthcare Professional | £35,000-90,000 | Health Visa | Apply: nhs.uk",
-        "UK - Finance Professional | £40,000-100,000 | Skilled Worker Visa | Apply: gov.uk",
-        "Canada - IT Professional | CAD 50,000-120,000 | Express Entry | Apply: jobbank.gc.ca",
-        "Canada - Healthcare Worker | CAD 45,000-110,000 | Express Entry | Apply: jobbank.gc.ca",
-        "Canada - Trades Worker | CAD 40,000-90,000 | Express Entry | Apply: jobbank.gc.ca",
-        "Australia - IT Professional | AUD 60,000-150,000 | Skill Visa | Apply: seek.com.au",
-        "Australia - Healthcare Worker | AUD 55,000-140,000 | Skill Visa | Apply: seek.com.au",
-        "Australia - Mining Engineer | AUD 80,000-180,000 | Skill Visa | Apply: seek.com.au",
-        "Germany - Engineer | €45,000-90,000 | Blue Card | Apply: make-it-in-germany.com",
-        "Germany - IT Professional | €50,000-100,000 | Blue Card | Apply: make-it-in-germany.com",
-        "Germany - Healthcare Worker | €40,000-80,000 | Blue Card | Apply: make-it-in-germany.com"
+        "USA - Software Engineer | $70,000-150,000 | H1-B Visa | Platform: indeed",
+        "USA - Data Scientist | $80,000-160,000 | H1-B Visa | Platform: indeed",
+        "USA - Nurse | $60,000-120,000 | H1-B Visa | Platform: indeed",
+        "UK - IT Professional | £30,000-80,000 | Skilled Worker Visa | Platform: gov.uk",
+        "UK - Healthcare Professional | £35,000-90,000 | Health Visa | Platform: nhs.uk",
+        "Canada - IT Professional | CAD 50,000-120,000 | Express Entry | Platform: jobbank.gc.ca",
+        "Canada - Healthcare Worker | CAD 45,000-110,000 | Express Entry | Platform: jobbank.gc.ca",
+        "Australia - IT Professional | AUD 60,000-150,000 | Skill Visa | Platform: seek.com.au",
+        "Australia - Healthcare Worker | AUD 55,000-140,000 | Skill Visa | Platform: seek.com.au",
+        "Germany - Engineer | €45,000-90,000 | Blue Card | Platform: make-it-in-germany.com",
+        "Germany - IT Professional | €50,000-100,000 | Blue Card | Platform: make-it-in-germany.com"
     ];
 
-    // ============================================
-    // SECTION 8: MERCHANT NAVY JOBS (15+ Entries)
-    // ============================================
     const merchantNavyJobs = [
-        "GP Rating - 10th pass | 6 months training | Salary: ₹25,000-40,000 | Apply: imu.edu.in",
-        "Deck Cadet - 12th PCM 60% | 1 year + 18 months sea time | Salary: ₹30,000-50,000 | Apply: dgshipping.gov.in",
-        "Engine Cadet - 12th PCM 60% | 1 year + 18 months sea time | Salary: ₹30,000-50,000 | Apply: dgshipping.gov.in",
-        "Electrical Cadet (ETO) - 12th PCM + Diploma | 1 year + 12 months sea time | Salary: ₹40,000-60,000 | Apply: imu.edu.in",
-        "Saloon Rating - 10th pass | 6 months training | Salary: ₹20,000-35,000 | Apply: dgshipping.gov.in",
-        "Fitter - ITI Fitter | 6 months training | Salary: ₹25,000-40,000 | Apply: imu.edu.in",
-        "Welder - ITI Welder | 6 months training | Salary: ₹25,000-40,000 | Apply: dgshipping.gov.in",
-        "3rd Officer - DNS/B.Sc Nautical + COC | Salary: ₹2,00,000-3,00,000 | Apply: dgshipping.gov.in",
-        "4th Engineer - B.Tech Marine + COC | Salary: ₹2,00,000-3,00,000 | Apply: imu.edu.in",
-        "Captain - 10+ years experience | Salary: ₹10,00,000-15,00,000 | Apply: maersk.com/careers",
-        "Chief Engineer - 10+ years experience | Salary: ₹9,00,000-14,00,000 | Apply: angloeastern.com"
+        "GP Rating - 10th pass | 6 months training | Salary: ₹25,000-40,000 | Platform: imu",
+        "Deck Cadet - 12th PCM 60% | 1 year + 18 months sea time | Salary: ₹30,000-50,000 | Platform: dgshipping.gov.in",
+        "Engine Cadet - 12th PCM 60% | 1 year + 18 months sea time | Salary: ₹30,000-50,000 | Platform: dgshipping.gov.in",
+        "Electrical Cadet (ETO) - 12th PCM + Diploma | Salary: ₹40,000-60,000 | Platform: imu",
+        "3rd Officer - DNS/B.Sc Nautical + COC | Salary: ₹2,00,000-3,00,000 | Platform: dgshipping.gov.in",
+        "4th Engineer - B.Tech Marine + COC | Salary: ₹2,00,000-3,00,000 | Platform: imu",
+        "Captain - 10+ years experience | Salary: ₹10,00,000-15,00,000 | Platform: maersk.com/careers",
+        "Chief Engineer - 10+ years experience | Salary: ₹9,00,000-14,00,000 | Platform: angloeastern.com"
     ];
 
-    // ============================================
-    // SECTION 9: SPORTS JOBS (20+ Entries)
-    // ============================================
     const sportsJobs = [
-        "SAI Coach - National Level | 500+ vacancies | Salary: ₹56,100-1,77,500 | Apply: sportsauthorityofindia.nic.in",
-        "State Sports Coach - State Level | 2,000+ vacancies | Salary: ₹35,400-1,12,400 | Apply: Respective State Portals",
-        "Physical Education Teacher - KVS/NVS | 5,000+ vacancies | Salary: ₹44,900-1,42,400 | Apply: kvsangathan.nic.in",
-        "Sports Officer - Universities/PSUs | 1,000+ vacancies | Salary: ₹35,400-1,12,400 | Apply: upsc.gov.in",
-        "IPL Cricket Coach - IPL Teams | 100+ vacancies | Salary: ₹25 Lakh - 5 Crore/year | Apply: iplt20.com",
-        "ISL Football Coach - ISL Teams | 50+ vacancies | Salary: ₹20 Lakh - 3 Crore/year | Apply: indiansuperleague.com",
-        "Fitness Trainer - Professional Clubs | 2,000+ vacancies | Salary: ₹5-15 Lakh/year | Apply: naukri.com",
-        "Sports Commentator - Star Sports/Sony | 200+ vacancies | Salary: ₹50,000-2,00,000/match | Apply: hotstar.com",
-        "Sports Journalist - ESPN/Cricbuzz | 500+ vacancies | Salary: ₹4-12 Lakh/year | Apply: espn.com/careers",
-        "Sports Photographer - BCCI/IPL | 300+ vacancies | Salary: ₹3-10 Lakh/year | Apply: bcci.tv",
-        "Groundsman/Pitch Curator - Stadiums | 500+ vacancies | Salary: ₹3-8 Lakh/year | Apply: bcci.tv",
-        "Sports Event Manager - IMG/SportzLive | 200+ vacancies | Salary: ₹5-15 Lakh/year | Apply: img.com"
+        "SAI Coach - National Level | 500+ vacancies | Salary: ₹56,100-1,77,500 | Platform: sportsauthorityofindia.nic.in",
+        "State Sports Coach - State Level | 2,000+ vacancies | Salary: ₹35,400-1,12,400 | Platform: Respective State Portals",
+        "Physical Education Teacher - KVS/NVS | 5,000+ vacancies | Salary: ₹44,900-1,42,400 | Platform: kvsangathan.nic.in",
+        "Sports Officer - Universities/PSUs | 1,000+ vacancies | Salary: ₹35,400-1,12,400 | Platform: upsc",
+        "IPL Cricket Coach - IPL Teams | 100+ vacancies | Salary: ₹25 Lakh - 5 Crore/year | Platform: iplt20.com",
+        "ISL Football Coach - ISL Teams | 50+ vacancies | Salary: ₹20 Lakh - 3 Crore/year | Platform: indiansuperleague.com",
+        "Fitness Trainer - Professional Clubs | 2,000+ vacancies | Salary: ₹5-15 Lakh/year | Platform: naukri",
+        "Sports Commentator - Star Sports/Sony | 200+ vacancies | Salary: ₹50,000-2,00,000/match | Platform: hotstar.com",
+        "Sports Journalist - ESPN/Cricbuzz | 500+ vacancies | Salary: ₹4-12 Lakh/year | Platform: espn.com/careers",
+        "Sports Photographer - BCCI/IPL | 300+ vacancies | Salary: ₹3-10 Lakh/year | Platform: bcci.tv",
+        "Groundsman/Pitch Curator - Stadiums | 500+ vacancies | Salary: ₹3-8 Lakh/year | Platform: bcci.tv",
+        "Sports Event Manager - IMG/SportzLive | 200+ vacancies | Salary: ₹5-15 Lakh/year | Platform: img.com"
     ];
 
     // ============================================
-    // SECTION 10: EXAMS DATABASE (8,000+ Exams Reference)
+    // SECTION 9: EXAMS DATABASE
     // ============================================
     const examCategories = {
-        "School Level Exams": { icon: "📚", color: "#3498db", exams: ["CBSE Board Exam - Class 10th, 12th | Annual | cbse.gov.in","ICSE Board Exam - Class 10th, 12th | Annual | cisce.org","UP Board Exam - Class 10th, 12th | Annual | upmsp.edu.in"] },
-        "Undergraduate Entrance": { icon: "🎓", color: "#e67e22", exams: ["JEE Main - Engineering | Twice a year | jeemain.nta.nic.in","NEET UG - Medical | Once a year | neet.nta.nic.in","CUET UG - Central Universities | Once a year | cuet.samarth.ac.in"] },
-        "Postgraduate Entrance": { icon: "📖", color: "#2ecc71", exams: ["GATE - M.Tech/PhD | Once a year | gate.iitm.ac.in","CAT - MBA (IIMs) | Once a year | iimcat.ac.in","NEET PG - MD/MS | Once a year | nbe.edu.in"] },
-        "Government Recruitment": { icon: "🏛️", color: "#e74c3c", exams: ["SSC CGL - Group B & C | Annual | ssc.nic.in","UPSC Civil Services - IAS, IPS | Annual | upsc.gov.in","IBPS PO - Probationary Officer | Annual | ibps.in"] },
-        "Teaching Eligibility": { icon: "👨‍🏫", color: "#f39c12", exams: ["CTET - Central TET | Twice a year | ctet.nic.in","HTET - Haryana TET | Once a year | bseh.org.in","UPTET - UP TET | Once a year | updeled.gov.in"] },
-        "Banking & Insurance": { icon: "🏦", color: "#1abc9c", exams: ["SBI PO - Probationary Officer | Annual | sbi.co.in","IBPS PO - PO in Banks | Annual | ibps.in","RBI Grade B - Officer | Annual | rbi.org.in"] },
-        "Defence Exams": { icon: "🎖️", color: "#e74c3c", exams: ["NDA - Army, Navy, Air Force | Twice a year | upsc.gov.in","CDS - IMA, INA, AFA, OTA | Twice a year | upsc.gov.in","AFCAT - Flying, Technical | Twice a year | afcat.cdac.in"] },
-        "Merchant Navy": { icon: "🚢", color: "#3498db", exams: ["IMU CET - B.Tech Marine, DNS | Twice a year | imu.edu.in","MEO Class IV - 4th Engineer | Institute based | dgshipping.gov.in","DNS Entrance - Diploma | Once a year | imu.edu.in"] },
-        "International Exams": { icon: "🌍", color: "#9b59b6", exams: ["IELTS - Study/Work Abroad | Multiple times | ielts.org","TOEFL - Study Abroad (USA) | Multiple times | ets.org/toefl","GRE - Graduate Studies | Multiple times | ets.org/gre"] }
+        "School Level Exams": { icon: "📚", color: "#3498db", exams: ["CBSE Board Exam - Class 10th, 12th | Annual | Platform: cbse.gov.in","ICSE Board Exam - Class 10th, 12th | Annual | Platform: cisce.org","UP Board Exam - Class 10th, 12th | Annual | Platform: upmsp.edu.in"] },
+        "Undergraduate Entrance": { icon: "🎓", color: "#e67e22", exams: ["JEE Main - Engineering | Twice a year | Platform: jeemain.nta.nic.in","NEET UG - Medical | Once a year | Platform: neet.nta.nic.in","CUET UG - Central Universities | Once a year | Platform: cuet.samarth.ac.in"] },
+        "Postgraduate Entrance": { icon: "📖", color: "#2ecc71", exams: ["GATE - M.Tech/PhD | Once a year | Platform: gate.iitm.ac.in","CAT - MBA (IIMs) | Once a year | Platform: iimcat.ac.in","NEET PG - MD/MS | Once a year | Platform: nbe.edu.in"] },
+        "Government Recruitment": { icon: "🏛️", color: "#e74c3c", exams: ["SSC CGL - Group B & C | Annual | Platform: ssc","UPSC Civil Services - IAS, IPS | Annual | Platform: upsc","IBPS PO - Probationary Officer | Annual | Platform: ibps"] },
+        "Teaching Eligibility": { icon: "👨‍🏫", color: "#f39c12", exams: ["CTET - Central TET | Twice a year | Platform: ctet.nic.in","HTET - Haryana TET | Once a year | Platform: bseh.org.in","UPTET - UP TET | Once a year | Platform: updeled.gov.in"] },
+        "Banking & Insurance": { icon: "🏦", color: "#1abc9c", exams: ["SBI PO - Probationary Officer | Annual | Platform: sbi.co.in","IBPS PO - PO in Banks | Annual | Platform: ibps","RBI Grade B - Officer | Annual | Platform: rbi"] },
+        "Defence Exams": { icon: "🎖️", color: "#e74c3c", exams: ["NDA - Army, Navy, Air Force | Twice a year | Platform: upsc","CDS - IMA, INA, AFA, OTA | Twice a year | Platform: upsc","AFCAT - Flying, Technical | Twice a year | Platform: afcat.cdac.in"] },
+        "Merchant Navy": { icon: "🚢", color: "#3498db", exams: ["IMU CET - B.Tech Marine, DNS | Twice a year | Platform: imu","MEO Class IV - 4th Engineer | Institute based | Platform: dgshipping.gov.in","DNS Entrance - Diploma | Once a year | Platform: imu"] },
+        "International Exams": { icon: "🌍", color: "#9b59b6", exams: ["IELTS - Study/Work Abroad | Multiple times | Platform: ielts.org","TOEFL - Study Abroad (USA) | Multiple times | Platform: ets.org/toefl","GRE - Graduate Studies | Multiple times | Platform: ets.org/gre"] }
     };
 
     // ============================================
@@ -699,7 +918,7 @@
         
         let centralHtml = `<div class="section"><h2 class="section-title">🏛️ Central Govt Jobs</h2><div class="door-grid"><div class="door-card" onclick="showJobs('central','central')"><div class="door-header" style="background:linear-gradient(135deg,#3498db,#2980b9);"><span class="icon">🏛️</span><span class="title">SSC | UPSC | IBPS | Railways</span><span class="count">${centralJobs.length}+</span></div><div class="door-content">${centralJobs.slice(0,4).map(job => `<div class="job-item"><div class="job-title">${job.substring(0,55)}...</div></div>`).join('')}</div></div></div></div>`;
         
-        let stateHtml = `<div class="section"><h2 class="section-title">🗺️ State Wise Jobs (All 36 States)</h2><div class="state-grid">`;
+        let stateHtml = `<div class="section"><h2 class="section-title">🗺️ State Wise Jobs (All 36 States/UTs)</h2><div class="state-grid">`;
         for (const state of allStates) {
             stateHtml += `<div class="state-card" onclick="showStateJobs('${state.name}')" style="border-top:3px solid ${state.color}"><div class="state-icon">${state.icon}</div><div class="state-name">${state.name}</div><div class="state-jobs">${state.jobCount} Jobs</div></div>`;
         }
@@ -734,6 +953,55 @@
         
         document.getElementById('doorModalTitle').innerText = title;
         document.getElementById('doorJobsList').innerHTML = jobs.map(job => {
-            let applyLink = "#";
             let platform = "default";
-            if (job.includes("naukri.com")) { applyLink = affiliateLinks.nau
+            let link = "#";
+            
+            if (job.includes("Platform: naukri")) { platform = "naukri"; link = affiliateLinks.naukri; }
+            else if (job.includes("Platform: linkedin")) { platform = "linkedin"; link = affiliateLinks.linkedin; }
+            else if (job.includes("Platform: indeed")) { platform = "indeed"; link = affiliateLinks.indeed; }
+            else if (job.includes("Platform: ssc")) { platform = "ssc"; link = affiliateLinks.ssc; }
+            else if (job.includes("Platform: upsc")) { platform = "upsc"; link = affiliateLinks.upsc; }
+            else if (job.includes("Platform: ibps")) { platform = "ibps"; link = affiliateLinks.ibps; }
+            else if (job.includes("Platform: rbi")) { platform = "rbi"; link = affiliateLinks.rbi; }
+            else if (job.includes("Platform: railways")) { platform = "railways"; link = affiliateLinks.railways; }
+            else if (job.includes("Platform: hssc")) { platform = "hssc"; link = affiliateLinks.hssc; }
+            else if (job.includes("Platform: joinindianarmy")) { platform = "joinindianarmy"; link = affiliateLinks.joinindianarmy; }
+            else if (job.includes("Platform: imu")) { platform = "imu"; link = affiliateLinks.imu; }
+            else if (job.includes("Platform: tcs")) { platform = "tcs"; link = affiliateLinks.tcs; }
+            else if (job.includes("Platform: amazon")) { platform = "amazon"; link = affiliateLinks.amazon; }
+            else if (job.includes("Platform: google")) { platform = "google"; link = affiliateLinks.google; }
+            else if (job.includes("Platform: microsoft")) { platform = "microsoft"; link = affiliateLinks.microsoft; }
+            else if (job.includes("Platform: byjus")) { platform = "byjus"; link = affiliateLinks.byjus; }
+            
+            return `<div class="job-item"><div class="job-title">${job}</div><a href="#" class="apply-link" onclick="trackAffiliateClick('${job.substring(0,30)}', '${platform}', '${link}')">Apply Now →</a></div>`;
+        }).join('');
+        document.getElementById('doorModal').style.display = 'flex';
+    }
+
+    function showExams(category) {
+        let exams = examCategories[category].exams;
+        document.getElementById('doorModalTitle').innerText = category;
+        document.getElementById('doorJobsList').innerHTML = exams.map(exam => `<div class="job-item"><div class="job-title">${exam}</div><a href="#" class="apply-link" onclick="trackAffiliateClick('${exam.substring(0,30)}', 'exam', '#')">View Details →</a></div>`).join('');
+        document.getElementById('doorModal').style.display = 'flex';
+    }
+
+    function showStateJobs(state) {
+        const stateData = allStates.find(s => s.name === state);
+        if (!stateData) return;
+        document.getElementById('modalStateName').innerText = `${state} Jobs`;
+        document.getElementById('modalJobsList').innerHTML = stateData.jobs.map(job => {
+            let platform = stateData.portal;
+            let link = affiliateLinks[platform] || "#";
+            return `<div class="job-item"><div class="job-title">${job}</div><a href="#" class="apply-link" onclick="trackAffiliateClick('${job.substring(0,30)}', '${platform}', '${link}')">Apply Now →</a></div>`;
+        }).join('');
+        document.getElementById('stateModal').style.display = 'flex';
+    }
+
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') alert(`🔍 Searching for "${this.value}" in all jobs...`);
+    });
+
+    renderDoors();
+</script>
+</body>
+</html>
