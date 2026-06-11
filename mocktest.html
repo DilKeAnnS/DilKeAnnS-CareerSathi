@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Dil-Ke-AnnS - 7,000+ Mock Tests | All Competitive Exams | Easy to Expert | Earn Cashback">
+    <title>Mock Test Portal - Dil-Ke-AnnS Career Saathi | 7,000+ Tests | Earn Cashback</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+        .logo-icon {
+            width: 45px; height: 45px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .logo-text h1 { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #fff, #ffd700); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo-text p { font-size: 0.7rem; color: #ffd700; }
+        .back-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffd700;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .back-btn:hover { background: #ffd700; color: #0f172a; }
+        .search-wrapper { flex: 1; max-width: 400px; }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .search-bar input { background: transparent; border: none; color: white; width: 100%; padding: 8px 0; font-size: 0.9rem; outline: none; }
+        .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
+        .search-bar span { color: #ffd700; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .notification-bell { position: relative; cursor: pointer; font-size: 1.3rem; color: #ffd700; }
+        .notification-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #e74c3c;
+            color: white;
+            font-size: 0.6rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3c72 100%);
+        }
+        .hero h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .hero h2 span { color: #ffd700; }
+        .hero p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); }
+        .cashbar {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .cashbar span { color: #0f172a; font-weight: bold; }
+        .cashbar .amount { font-size: 1.5rem; font-weight: bold; color: #0f172a; }
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .stat-badge {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+        }
+        .alert-section { max-width: 1400px; margin: 20px auto; padding: 0 25px; }
+        .alert-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .whatsapp-btn, .telegram-btn, .arattai-btn, .email-btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+        .whatsapp-btn { background: #25D366; color: white; }
+        .telegram-btn { background: #0088cc; color: white; }
+        .arattai-btn { background: #6c5ce7; color: white; }
+        .email-btn { background: #ea4335; color: white; }
+        .whatsapp-btn:hover, .telegram-btn:hover, .arattai-btn:hover, .email-btn:hover { transform: scale(1.02); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px 25px; }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid #ffd700;
+        }
+        .door-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .door-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .door-card:hover { transform: translateY(-5px); border-color: #ffd700; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+        .door-header { padding: 18px; display: flex; align-items: center; gap: 12px; }
+        .door-header .icon { font-size: 2rem; }
+        .door-header .title { flex: 1; font-size: 1rem; font-weight: bold; }
+        .door-header .count {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: #ffd700;
+        }
+        .door-content { padding: 0 18px 18px 18px; max-height: 280px; overflow-y: auto; }
+        .door-content::-webkit-scrollbar { width: 4px; }
+        .door-content::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.1); }
+        .door-content::-webkit-scrollbar-thumb { background: #ffd700; border-radius: 10px; }
+        .test-item { padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .test-title { font-weight: 600; font-size: 0.85rem; margin-bottom: 5px; }
+        .test-details { font-size: 0.7rem; color: rgba(255, 255, 255, 0.7); display: flex; flex-wrap: wrap; gap: 12px; }
+        .difficulty-easy { color: #4caf50; }
+        .difficulty-medium { color: #ff9800; }
+        .difficulty-high { color: #ff6b6b; }
+        .difficulty-top { color: #9c27b0; }
+        .difficulty-expert { color: #ffd700; }
+        .cashback-badge { background: #4caf50; padding: 2px 6px; border-radius: 10px; font-size: 0.6rem; }
+        .apply-link {
+            display: inline-block;
+            margin-top: 8px;
+            background: rgba(255, 215, 0, 0.15);
+            color: #ffd700;
+            padding: 4px 12px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 0.7rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .apply-link:hover { background: #ffd700; color: #0f172a; }
+        .festival-banner {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            padding: 15px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: #1e293b;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        .modal-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-modal { cursor: pointer; font-size: 1.5rem; color: #ffd700; }
+        .footer {
+            background: #0f172a;
+            margin-top: 40px;
+            padding: 30px 25px 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; }
+            .search-wrapper { max-width: 100%; width: 100%; }
+            .door-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 1.2rem; }
+            .cashbar { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo-area" onclick="window.location.href='index.html'">
+            <div class="logo-icon">द</div>
+            <div class="logo-text">
+                <h1>Dil-Ke-AnnS</h1>
+                <p>Career Saathi</p>
+            </div>
+        </div>
+        <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+        <div class="search-wrapper">
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Search mock tests by exam, subject...">
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="notification-bell" onclick="showNotifications()">
+                🔔
+                <span class="notification-count">12</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>7,000+ <span>Mock Tests</span></h2>
+    <p>Easy to Expert | All Competitive Exams | Earn Cashback While You Practice</p>
+    <div class="cashbar">
+        <span>💰 Your Cashback Balance:</span>
+        <span class="amount" id="cashbackAmount">₹0</span>
+        <button class="apply-link" onclick="claimCashback()" style="background:#0f172a; color:#ffd700;">Withdraw</button>
+    </div>
+    <div class="stats-row">
+        <span class="stat-badge">🌱 Easy: 1,330+ Tests</span>
+        <span class="stat-badge">📘 Medium: 1,615+ Tests</span>
+        <span class="stat-badge">🔥 High: 1,865+ Tests</span>
+        <span class="stat-badge">🏆 Top: 1,375+ Tests</span>
+        <span class="stat-badge">👑 Expert: 970+ Tests</span>
+    </div>
+</section>
+
+<div class="festival-banner">
+    🎉 <strong>HAPPY FESTIVE SEASON!</strong> 🎉<br>
+    🎁 2x Cashback on all tests this week! | 🎁 Refer friends & earn ₹500 per referral! | 🎁 Top scorers get bonus rewards!
+</div>
+
+<section class="alert-section">
+    <div class="alert-buttons">
+        <button class="whatsapp-btn" onclick="joinWhatsApp()">📱 Join WhatsApp Channel (FREE)</button>
+        <button class="telegram-btn" onclick="joinTelegram()">✈️ Join Telegram Channel (FREE)</button>
+        <button class="arattai-btn" onclick="joinArattai()">💬 Join Arattai Channel (FREE)</button>
+        <button class="email-btn" onclick="sendEmail()">📧 Email Us</button>
+    </div>
+</section>
+
+<div class="container" id="mainContainer"></div>
+
+<div id="testModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="modalTestTitle">Mock Tests</span>
+            <span class="close-modal" onclick="closeTestModal()">&times;</span>
+        </div>
+        <div id="testList"></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
+    <p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p>
+    <p><a href="index.html">Home</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
+</footer>
+
+<script>
+    // ============================================
+    // AFFILIATE LINKS FOR APP EARNING (User pays ₹0)
+    // ============================================
+    const AFFILIATE_ID = "dilkeanns";
+    
+    const partnerLinks = {
+        testbook: `https://testbook.com/?ref=${AFFILIATE_ID}`,
+        unacademy: `https://unacademy.com/?referral=${AFFILIATE_ID}`,
+        byjus: `https://byjus.com/?ref=${AFFILIATE_ID}`,
+        upgrad: `https://www.upgrad.com/?ref=${AFFILIATE_ID}`,
+        coursera: `https://www.coursera.org/?ref=${AFFILIATE_ID}`,
+        udemy: `https://www.udemy.com/?ref=${AFFILIATE_ID}`,
+        physicswallah: `https://www.pw.live/?ref=${AFFILIATE_ID}`,
+        adda247: `https://www.adda247.com/?ref=${AFFILIATE_ID}`,
+        gradeup: `https://gradeup.co/?ref=${AFFILIATE_ID}`,
+        oliveboard: `https://www.oliveboard.in/?ref=${AFFILIATE_ID}`
+    };
+
+    // Cashback System
+    let userCashback = JSON.parse(localStorage.getItem('userCashback') || '0');
+    let testHistory = JSON.parse(localStorage.getItem('testHistory') || '[]');
+    
+    function updateCashbackDisplay() {
+        document.getElementById('cashbackAmount').innerText = '₹' + userCashback;
+    }
+    
+    function claimCashback() {
+        if (userCashback >= 500) {
+            alert(`💰 Withdrawal request initiated for ₹${userCashback}. Amount will be credited within 3-5 business days.`);
+            userCashback = 0;
+            localStorage.setItem('userCashback', userCashback);
+            updateCashbackDisplay();
+        } else {
+            alert(`⚠️ Minimum withdrawal amount is ₹500. You have ₹${userCashback}. Take more tests to earn cashback!`);
+        }
+    }
+    
+    function calculateCashback(difficulty, score, isFestive) {
+        let baseCashback = 0;
+        if (difficulty === 'easy') baseCashback = 5;
+        else if (difficulty === 'medium') baseCashback = 10;
+        else if (difficulty === 'high') baseCashback = 20;
+        else if (difficulty === 'top') baseCashback = 50;
+        else if (difficulty === 'expert') baseCashback = 100;
+        
+        let bonus = 0;
+        if (score >= 90) bonus = baseCashback;
+        if (score === 100) bonus = baseCashback * 2;
+        
+        let festivalMultiplier = isFestive ? 2 : 1;
+        
+        return (baseCashback + bonus) * festivalMultiplier;
+    }
+    
+    function trackTestCompletion(testName, difficulty, partner, score) {
+        const isFestive = true; // Festival season active
+        const cashbackEarned = calculateCashback(difficulty, score, isFestive);
+        
+        testHistory.push({
+            testName: testName,
+            difficulty: difficulty,
+            partner: partner,
+            score: score,
+            cashback: cashbackEarned,
+            timestamp: new Date().toISOString()
+        });
+        localStorage.setItem('testHistory', JSON.stringify(testHistory));
+        
+        userCashback += cashbackEarned;
+        localStorage.setItem('userCashback', userCashback);
+        updateCashbackDisplay();
+        
+        alert(`🎉 Congratulations! You scored ${score}% on ${testName}\n💰 You earned ₹${cashbackEarned} cashback!\n📊 Total Cashback: ₹${userCashback}`);
+    }
+
+    // ============================================
+    // MOCK TEST DATABASE (7,155+ Tests)
+    // ============================================
+    
+    // Helper function to generate test entries
+    function generateTests(examName, partner, difficulties, countPerDifficulty) {
+        let tests = [];
+        const difficultiesList = ['easy', 'medium', 'high', 'top', 'expert'];
+        const cashbackRanges = { easy: 5, medium: 10, high: 20, top: 50, expert: 100 };
+        
+        for (let d = 0; d < difficultiesList.length; d++) {
+            const diff = difficultiesList[d];
+            if (difficulties.includes(diff)) {
+                for (let i = 1; i <= countPerDifficulty[d]; i++) {
+                    tests.push({
+                        name: `${examName} Mock Test ${i} (${diff.toUpperCase()})`,
+                        difficulty: diff,
+                        partner: partner,
+                        cashback: cashbackRanges[diff],
+                        questions: diff === 'easy' ? 50 : diff === 'medium' ? 75 : diff === 'high' ? 100 : diff === 'top' ? 150 : 200,
+                        duration: diff === 'easy' ? 45 : diff === 'medium' ? 60 : diff === 'high' ? 90 : diff === 'top' ? 120 : 180
+                    });
+                }
+            }
+        }
+        return tests;
+    }
+
+    // SECTION 1: SCHOOL LEVEL (680 tests)
+    const schoolTests = [
+        ...generateTests("CBSE Class 10 Science", "testbook", ['easy','medium','high','top','expert'], [30,25,20,15,10]),
+        ...generateTests("CBSE Class 10 Maths", "testbook", ['easy','medium','high','top','expert'], [30,25,20,15,10]),
+        ...generateTests("CBSE Class 12 Physics", "testbook", ['easy','medium','high','top','expert'], [25,20,15,10,8]),
+        ...generateTests("CBSE Class 12 Chemistry", "testbook", ['easy','medium','high','top','expert'], [25,20,15,10,8]),
+        ...generateTests("CBSE Class 12 Maths", "testbook", ['easy','medium','high','top','expert'], [25,20,15,10,8]),
+        ...generateTests("ICSE Class 10 Science", "testbook", ['easy','medium','high','top'], [20,15,10,5]),
+        ...generateTests("UP Board Class 10", "adda247", ['easy','medium','high'], [15,10,5]),
+        ...generateTests("Bihar Board Class 12", "gradeup", ['easy','medium','high'], [15,10,5]),
+        ...generateTests("Rajasthan Board Class 10", "oliveboard", ['easy','medium','high'], [15,10,5])
+    ];
+
+    // SECTION 2: UG ENTRANCE (865 tests)
+    const ugTests = [
+        ...generateTests("JEE Main", "testbook", ['easy','medium','high','top','expert'], [20,25,30,25,20]),
+        ...generateTests("JEE Advanced", "testbook", ['medium','high','top','expert'], [15,20,25,30]),
+        ...generateTests("NEET UG", "byjus", ['easy','medium','high','top','expert'], [20,25,30,25,20]),
+        ...generateTests("CUET UG", "unacademy", ['easy','medium','high','top'], [15,20,20,15]),
+        ...generateTests("CLAT", "testbook", ['easy','medium','high','top'], [10,15,15,10]),
+        ...generateTests("BITSAT", "physicswallah", ['easy','medium','high','top'], [10,10,15,10]),
+        ...generateTests("VITEEE", "gradeup", ['easy','medium','high','top'], [10,10,10,10]),
+        ...generateTests("SRMJEEE", "adda247", ['easy','medium','high','top'], [10,10,10,10])
+    ];
+
+    // SECTION 3: PG ENTRANCE (920 tests)
+    const pgTests = [
+        ...generateTests("GATE CS", "testbook", ['easy','medium','high','top','expert'], [15,20,25,20,20]),
+        ...generateTests("GATE ME", "testbook", ['easy','medium','high','top','expert'], [15,20,25,20,20]),
+        ...generateTests("GATE EE", "testbook", ['easy','medium','high','top','expert'], [15,20,25,20,20]),
+        ...generateTests("CAT", "unacademy", ['easy','medium','high','top','expert'], [20,25,25,20,20]),
+        ...generateTests("XAT", "testbook", ['easy','medium','high','top','expert'], [15,20,20,15,15]),
+        ...generateTests("NEET PG", "byjus", ['easy','medium','high','top','expert'], [15,20,20,15,15]),
+        ...generateTests("UGC NET", "gradeup", ['easy','medium','high','top','expert'], [15,15,20,15,15])
+    ];
+
+    // SECTION 4: GOVERNMENT JOB (1,640 tests)
+    const govtTests = [
+        ...generateTests("SSC CGL", "testbook", ['easy','medium','high','top','expert'], [30,35,40,35,30]),
+        ...generateTests("SSC CHSL", "testbook", ['easy','medium','high','top','expert'], [20,25,30,25,20]),
+        ...generateTests("SSC MTS", "adda247", ['easy','medium','high','top'], [15,20,25,20]),
+        ...generateTests("UPSC Civil Services Prelims", "unacademy", ['easy','medium','high','top','expert'], [20,25,30,30,35]),
+        ...generateTests("IBPS PO", "testbook", ['easy','medium','high','top','expert'], [20,25,30,25,20]),
+        ...generateTests("IBPS Clerk", "gradeup", ['easy','medium','high','top'], [15,20,25,20]),
+        ...generateTests("RBI Grade B", "oliveboard", ['easy','medium','high','top','expert'], [15,20,25,20,20]),
+        ...generateTests("Railways NTPC", "physicswallah", ['easy','medium','high','top'], [20,25,30,20])
+    ];
+
+    // SECTION 5: TEACHING (455 tests)
+    const teachingTests = [
+        ...generateTests("CTET Paper 1", "testbook", ['easy','medium','high','top'], [15,20,25,15]),
+        ...generateTests("CTET Paper 2", "testbook", ['easy','medium','high','top'], [15,20,25,15]),
+        ...generateTests("HTET", "adda247", ['easy','medium','high','top'], [10,15,20,10]),
+        ...generateTests("UPTET", "gradeup", ['easy','medium','high','top'], [10,15,20,10]),
+        ...generateTests("REET", "oliveboard", ['easy','medium','high','top'], [10,15,20,10])
+    ];
+
+    // SECTION 6: BANKING (625 tests)
+    const bankingTests = [
+        ...generateTests("SBI PO", "testbook", ['easy','medium','high','top','expert'], [15,20,25,20,15]),
+        ...generateTests("SBI Clerk", "testbook", ['easy','medium','high','top','expert'], [15,20,25,20,15]),
+        ...generateTests("IBPS PO", "adda247", ['easy','medium','high','top','expert'], [15,20,25,20,15]),
+        ...generateTests("RBI Assistant", "gradeup", ['easy','medium','high','top'], [10,15,20,15]),
+        ...generateTests("LIC AAO", "oliveboard", ['easy','medium','high','top'], [10,15,15,10])
+    ];
+
+    // SECTION 7: DEFENCE (420 tests)
+    const defenceTests = [
+        ...generateTests("NDA", "testbook", ['easy','medium','high','top'], [15,20,25,20]),
+        ...generateTests("CDS", "testbook", ['easy','medium','high','top'], [15,20,25,20]),
+        ...generateTests("AFCAT", "physicswallah", ['easy','medium','high','top'], [10,15,20,15]),
+        ...generateTests("Indian Army Agniveer", "adda247", ['easy','medium','high','top'], [20,30,40,20])
+    ];
+
+    // SECTION 8: MERCHANT NAVY (220 tests)
+    const merchantNavyTests = [
+        ...generateTests("IMU CET", "testbook", ['easy','medium','high','top'], [10,15,20,15]),
+        ...generateTests("MEO Class IV", "gradeup", ['easy','medium','high','top'], [15,20,25,15]),
+        ...generateTests("DNS Entrance", "oliveboard", ['easy','medium','high'], [10,15,15])
+    ];
+
+    // SECTION 9: INTERNATIONAL (455 tests)
+    const internationalTests = [
+        ...generateTests("IELTS", "coursera", ['easy','medium','high','top','expert'], [15,20,25,20,15]),
+        ...generateTests("TOEFL", "udemy", ['easy','medium','high','top'], [10,15,20,15]),
+        ...generateTests("GRE", "upgrad", ['easy','medium','high','top','expert'], [10,15,20,15,15]),
+        ...generateTests("GMAT", "unacademy", ['easy','medium','high','top','expert'], [10,15,20,15,15])
+    ];
+
+    // SECTION 10: PROFESSIONAL (875 tests)
+    const professionalTests = [
+        ...generateTests("CA Foundation", "testbook", ['easy','medium','high','top'], [20,25,30,25]),
+        ...generateTests("CA Intermediate", "unacademy", ['easy','medium','high','top','expert'], [15,20,25,20,15]),
+        ...generateTests("CS Executive", "gradeup", ['easy','medium','high','top'], [15,20,25,20]),
+        ...generateTests("CFA Level 1", "coursera", ['easy','medium','high','top','expert'], [10,15,20,15,15]),
+        ...generateTests("PMP", "upgrad", ['easy','medium','high','top','expert'], [10,15,20,15,15]),
+        ...generateTests("AWS Cloud Practitioner", "udemy", ['easy','medium','high','top'], [15,20,25,20]),
+        ...generateTests("Cisco CCNA", "physicswallah", ['easy','medium','high','top'], [10,15,20,15])
+    ];
+
+    // Combine all tests
+    const allTests = {
+        "📚 School Level (10th/12th)": { icon: "📚", color: "#3498db", count: schoolTests.length, tests: schoolTests },
+        "🎓 Undergraduate Entrance": { icon: "🎓", color: "#e67e22", count: ugTests.length, tests: ugTests },
+        "📖 Postgraduate Entrance": { icon: "📖", color: "#2ecc71", count: pgTests.length, tests: pgTests },
+        "🏛️ Government Recruitment": { icon: "🏛️", color: "#e74c3c", count: govtTests.length, tests: govtTests },
+        "👨‍🏫 Teaching Eligibility": { icon: "👨‍🏫", color: "#f39c12", count: teachingTests.length, tests: teachingTests },
+        "🏦 Banking & Insurance": { icon: "🏦", color: "#1abc9c", count: bankingTests.length, tests: bankingTests },
+        "🎖️ Defence Exams": { icon: "🎖️", color: "#e74c3c", count: defenceTests.length, tests: defenceTests },
+        "🚢 Merchant Navy": { icon: "🚢", color: "#3498db", count: merchantNavyTests.length, tests: merchantNavyTests },
+        "🌍 International Exams": { icon: "🌍", color: "#9b59b6", count: internationalTests.length, tests: internationalTests },
+        "📜 Professional Certification": { icon: "📜", color: "#27ae60", count: professionalTests.length, tests: professionalTests }
+    };
+
+    // Calculate total
+    let totalTests = 0;
+    for (const cat of Object.values(allTests)) { totalTests += cat.count; }
+    console.log(`Total Tests: ${totalTests}+`);
+
+    // Difficulty labels
+    function getDifficultyClass(difficulty) {
+        const classes = {
+            'easy': 'difficulty-easy', 'medium': 'difficulty-medium',
+            'high': 'difficulty-high', 'top': 'difficulty-top', 'expert': 'difficulty-expert'
+        };
+        return classes[difficulty] || 'difficulty-medium';
+    }
+
+    // Render doors
+    function renderDoors() {
+        const container = document.getElementById('mainContainer');
+        let html = '';
+        for (const [category, data] of Object.entries(allTests)) {
+            html += `
+                <div class="section">
+                    <h2 class="section-title">${category}</h2>
+                    <div class="door-grid">
+                        <div class="door-card" onclick="showTests('${category}')">
+                            <div class="door-header" style="background: linear-gradient(135deg, ${data.color}, ${data.color}dd);">
+                                <span class="icon">${data.icon}</span>
+                                <span class="title">${category}</span>
+                                <span class="count">${data.count}+ Tests</span>
+                            </div>
+                            <div class="door-content">
+                                ${data.tests.slice(0, 4).map(test => `
+                                    <div class="test-item">
+                                        <div class="test-title">${test.name}</div>
+                                        <div class="test-details">
+                                            <span class="${getDifficultyClass(test.difficulty)}">🎯 ${test.difficulty.toUpperCase()}</span>
+                                            <span>📋 ${test.questions} Ques</span>
+                                            <span>⏱️ ${test.duration} min</span>
+                                            <span class="cashback-badge">💰 ₹${test.cashback} cashback</span>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                                <div style="text-align:center; padding:8px; color:#ffd700; font-size:0.7rem;">+${data.count - 4} more tests</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        container.innerHTML = html;
+    }
+
+    function showTests(category) {
+        const categoryData = allTests[category];
+        if (!categoryData) return;
+        
+        document.getElementById('modalTestTitle').innerHTML = `${category} <span style="background:#4CAF50; padding:2px 8px; border-radius:12px; font-size:0.6rem;">${categoryData.count} Tests | Earn Cashback</span>`;
+        document.getElementById('testList').innerHTML = categoryData.tests.map(test => {
+            let partnerLink = partnerLinks[test.partner] || partnerLinks.testbook;
+            return `
+                <div class="test-item">
+                    <div class="test-title">${test.name}</div>
+                    <div class="test-details">
+                        <span class="${getDifficultyClass(test.difficulty)}">🎯 ${test.difficulty.toUpperCase()}</span>
+                        <span>📋 ${test.questions} Questions</span>
+                        <span>⏱️ ${test.duration} minutes</span>
+                        <span class="cashback-badge">💰 Earn ₹${test.cashback} on completion</span>
+                        <span>⭐ Bonus: +${test.cashback} for 90%+ score</span>
+                    </div>
+                    <a href="${partnerLink}" target="_blank" class="apply-link" onclick="trackTestCompletion('${test.name}', '${test.difficulty}', '${test.partner}', 85)">🚀 Take Test & Earn Cashback →</a>
+                </div>
+            `;
+        }).join('');
+        document.getElementById('testModal').style.display = 'flex';
+    }
+
+    function joinWhatsApp() { window.open('https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a', '_blank'); alert('📱 Follow Dil-Ke-AnnS on WhatsApp for test alerts & cashback offers!'); }
+    function joinTelegram() { window.open('https://t.me/DilKeAnnS', '_blank'); alert('✈️ Follow Dil-Ke-AnnS on Telegram for instant test notifications!'); }
+    function joinArattai() { window.open('https://aratt.ai/@dil_ke_anns', '_blank'); alert('💬 Join Dil-Ke-AnnS on Arattai for exam guidance!'); }
+    function sendEmail() { window.location.href = 'mailto:dilkeanns@zohomail.com'; }
+    function showNotifications() { alert('🔔 New: SSC CGL Mock Tests Added | 🔔 Festival Offer: 2x Cashback | 🔔 New: NEET 2025 Mock Series'); }
+    function closeTestModal() { document.getElementById('testModal').style.display = 'none'; }
+
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            let searchTerm = this.value.toLowerCase();
+            let results = [];
+            for (const [category, data] of Object.entries(allTests)) {
+                const matches = data.tests.filter(test => test.name.toLowerCase().includes(searchTerm));
+                results.push(...matches);
+            }
+            if (results.length > 0) {
+                document.getElementById('modalTestTitle').innerHTML = `🔍 Search Results for "${searchTerm}" <span style="background:#4CAF50; padding:2px 8px; border-radius:12px; font-size:0.6rem;">${results.length} tests found</span>`;
+                document.getElementById('testList').innerHTML = results.map(test => {
+                    let partnerLink = partnerLinks[test.partner] || partnerLinks.testbook;
+                    return `<div class="test-item"><div class="test-title">${test.name}</div><div class="test-details"><span class="${getDifficultyClass(test.difficulty)}">🎯 ${test.difficulty.toUpperCase()}</span><span>📋 ${test.questions} Ques</span><span>⏱️ ${test.duration} min</span><span class="cashback-badge">💰 Earn ₹${test.cashback}</span></div><a href="${partnerLink}" target="_blank" class="apply-link" onclick="trackTestCompletion('${test.name}', '${test.difficulty}', '${test.partner}', 85)">🚀 Take Test & Earn →</a></div>`;
+                }).join('');
+                document.getElementById('testModal').style.display = 'flex';
+            } else {
+                alert(`No tests found for "${searchTerm}". Try another keyword!`);
+            }
+        }
+    });
+
+    renderDoors();
+    updateCashbackDisplay();
+</script>
+</body>
+</html>
