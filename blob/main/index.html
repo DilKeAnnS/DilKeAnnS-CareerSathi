@@ -19,9 +19,7 @@
             color: #fff;
         }
 
-        /* ============================================
-           HEADER SECTION - PROFESSIONAL
-        ============================================ */
+        /* Header */
         .header {
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
@@ -46,6 +44,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
+            cursor: pointer;
         }
 
         .logo-icon {
@@ -74,7 +73,6 @@
             letter-spacing: 1px;
         }
 
-        /* Search Bar */
         .search-wrapper {
             flex: 1;
             max-width: 400px;
@@ -112,10 +110,8 @@
 
         .search-bar span {
             color: #ffd700;
-            font-size: 1.1rem;
         }
 
-        /* Header Right */
         .header-right {
             display: flex;
             align-items: center;
@@ -141,7 +137,6 @@
             font-weight: bold;
         }
 
-        /* Login Dropdown - Professional */
         .login-dropdown {
             position: relative;
         }
@@ -208,9 +203,7 @@
         .dropdown-item.partner { border-left: 3px solid #2ecc71; }
         .dropdown-item.user { border-left: 3px solid #e74c3c; }
 
-        /* ============================================
-           HERO SECTION
-        ============================================ */
+        /* Hero */
         .hero {
             text-align: center;
             padding: 50px 20px;
@@ -293,9 +286,7 @@
             transform: translateY(-2px);
         }
 
-        /* ============================================
-           AnnS AI SECTION - PROFESSIONAL
-        ============================================ */
+        /* AnnS AI */
         .anns-ai-section {
             max-width: 1400px;
             margin: 40px auto;
@@ -411,9 +402,7 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        /* ============================================
-           ALERT BUTTONS
-        ============================================ */
+        /* Alert Buttons */
         .alert-section {
             max-width: 1400px;
             margin: 30px auto;
@@ -427,7 +416,7 @@
             flex-wrap: wrap;
         }
 
-        .whatsapp-btn, .telegram-btn {
+        .whatsapp-btn, .telegram-btn, .arattai-btn, .email-btn {
             padding: 12px 30px;
             border-radius: 50px;
             font-weight: bold;
@@ -440,23 +429,16 @@
             transition: transform 0.2s;
         }
 
-        .whatsapp-btn {
-            background: #25D366;
-            color: white;
-        }
+        .whatsapp-btn { background: #25D366; color: white; }
+        .telegram-btn { background: #0088cc; color: white; }
+        .arattai-btn { background: #6c5ce7; color: white; }
+        .email-btn { background: #ea4335; color: white; }
 
-        .telegram-btn {
-            background: #0088cc;
-            color: white;
-        }
-
-        .whatsapp-btn:hover, .telegram-btn:hover {
+        .whatsapp-btn:hover, .telegram-btn:hover, .arattai-btn:hover, .email-btn:hover {
             transform: scale(1.02);
         }
 
-        /* ============================================
-           TILES GRID - 12 TILES
-        ============================================ */
+        /* Tiles Grid */
         .tiles-section {
             max-width: 1400px;
             margin: 40px auto;
@@ -493,31 +475,12 @@
             background: rgba(255, 255, 255, 0.08);
         }
 
-        .tile-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
+        .tile-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .tile-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 8px; }
+        .tile-count { font-size: 0.75rem; color: #ffd700; margin-bottom: 10px; }
+        .tile-desc { font-size: 0.7rem; color: rgba(255, 255, 255, 0.6); }
 
-        .tile-title {
-            font-size: 1.1rem;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .tile-count {
-            font-size: 0.75rem;
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
-
-        .tile-desc {
-            font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* ============================================
-           USER EARNING TILE - MONTH-END RETURNS
-        ============================================ */
+        /* User Earning Tile */
         .earning-section {
             max-width: 1400px;
             margin: 40px auto;
@@ -546,13 +509,8 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .earning-header span {
-            font-size: 1.8rem;
-        }
-
-        .earning-header h3 {
-            font-size: 1.2rem;
-        }
+        .earning-header span { font-size: 1.8rem; }
+        .earning-header h3 { font-size: 1.2rem; }
 
         .stats-row {
             display: flex;
@@ -570,16 +528,8 @@
             border-radius: 16px;
         }
 
-        .stat-box .amount {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ffd700;
-        }
-
-        .stat-box .label {
-            font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
+        .stat-box .amount { font-size: 1.5rem; font-weight: bold; color: #ffd700; }
+        .stat-box .label { font-size: 0.7rem; color: rgba(255, 255, 255, 0.7); }
 
         .payout-info {
             background: rgba(255, 215, 0, 0.1);
@@ -588,10 +538,7 @@
             margin: 15px 0;
         }
 
-        .payout-info p {
-            margin: 5px 0;
-            font-size: 0.8rem;
-        }
+        .payout-info p { margin: 5px 0; font-size: 0.8rem; }
 
         .btn-earn {
             background: linear-gradient(135deg, #ffd700, #ff8c00);
@@ -606,9 +553,7 @@
             transition: transform 0.2s;
         }
 
-        .btn-earn:hover {
-            transform: scale(1.02);
-        }
+        .btn-earn:hover { transform: scale(1.02); }
 
         .sponsorship-level {
             display: flex;
@@ -639,9 +584,99 @@
             word-break: break-all;
         }
 
-        /* ============================================
-           FEATURED SECTION
-        ============================================ */
+        /* Dashboard Containers */
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 0 25px;
+            display: none;
+        }
+
+        .dashboard-container.active {
+            display: block;
+        }
+
+        .dashboard-card {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border-radius: 24px;
+            padding: 25px;
+            border: 2px solid #ffd700;
+        }
+
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .dashboard-header span { font-size: 2rem; }
+        .dashboard-header h3 { font-size: 1.3rem; color: #ffd700; }
+
+        .dashboard-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .dashboard-stat-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .dashboard-stat-box .amount {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .dashboard-stat-box .label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 5px;
+        }
+
+        .partner-breakdown {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .partner-breakdown h4 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .partner-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.85rem;
+        }
+
+        .dashboard-btn {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            color: #0f172a;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        .dashboard-btn:hover { transform: scale(1.02); }
+
+        /* Featured Section */
         .featured-section {
             max-width: 1400px;
             margin: 40px auto;
@@ -660,29 +695,17 @@
             padding: 20px;
         }
 
-        .featured-card h4 {
-            color: #ffd700;
-            margin-bottom: 15px;
-        }
-
-        .featured-list {
-            list-style: none;
-        }
-
+        .featured-card h4 { color: #ffd700; margin-bottom: 15px; }
+        .featured-list { list-style: none; }
         .featured-list li {
             padding: 8px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.8rem;
             cursor: pointer;
         }
+        .featured-list li:hover { color: #ffd700; }
 
-        .featured-list li:hover {
-            color: #ffd700;
-        }
-
-        /* ============================================
-           FOOTER
-        ============================================ */
+        /* Footer */
         .footer {
             background: #0f172a;
             margin-top: 60px;
@@ -698,12 +721,7 @@
             gap: 30px;
         }
 
-        .footer-col h4 {
-            color: #ffd700;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-
+        .footer-col h4 { color: #ffd700; margin-bottom: 15px; font-size: 1rem; }
         .footer-col a {
             display: block;
             color: rgba(255, 255, 255, 0.7);
@@ -711,11 +729,9 @@
             font-size: 0.8rem;
             margin-bottom: 8px;
             transition: color 0.2s;
+            cursor: pointer;
         }
-
-        .footer-col a:hover {
-            color: #ffd700;
-        }
+        .footer-col a:hover { color: #ffd700; }
 
         .footer-bottom {
             text-align: center;
@@ -726,90 +742,41 @@
             color: rgba(255, 255, 255, 0.5);
         }
 
-        /* ============================================
-           RESPONSIVE DESIGN
-        ============================================ */
+        /* Responsive */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            }
-            
-            .search-wrapper {
-                max-width: 100%;
-                width: 100%;
-            }
-            
-            .hero h2 {
-                font-size: 1.3rem;
-            }
-            
-            .tiles-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .earning-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .stats-row {
-                flex-direction: column;
-            }
-            
-            .ai-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .ai-input-area {
-                flex-direction: column;
-            }
+            .header-container { flex-direction: column; }
+            .search-wrapper { max-width: 100%; width: 100%; }
+            .hero h2 { font-size: 1.3rem; }
+            .tiles-grid { grid-template-columns: 1fr; }
+            .earning-grid { grid-template-columns: 1fr; }
+            .dashboard-stats-grid { grid-template-columns: 1fr; }
+            .ai-header { flex-direction: column; text-align: center; }
+            .ai-input-area { flex-direction: column; }
         }
 
         @media (max-width: 480px) {
-            .stat-card {
-                padding: 10px 15px;
-            }
-            
-            .stat-number {
-                font-size: 1.2rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn-primary, .btn-secondary {
-                width: 200px;
-                text-align: center;
-            }
+            .stat-card { padding: 10px 15px; }
+            .stat-number { font-size: 1.2rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .btn-primary, .btn-secondary { width: 200px; text-align: center; }
         }
 
-        /* Animations */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .tile-card, .earning-card, .featured-card, .ai-card {
+        .tile-card, .earning-card, .featured-card, .ai-card, .dashboard-card {
             animation: fadeInUp 0.5s ease forwards;
         }
     </style>
 </head>
 <body>
 
-<!-- ============================================
-     HEADER SECTION
-============================================ -->
+<!-- HEADER -->
 <header class="header">
     <div class="header-container">
-        <div class="logo-area">
+        <div class="logo-area" onclick="window.location.href='index.html'">
             <div class="logo-icon">द</div>
             <div class="logo-text">
                 <h1>Dil-Ke-AnnS</h1>
@@ -820,12 +787,12 @@
         <div class="search-wrapper">
             <div class="search-bar">
                 <span>🔍</span>
-                <input type="text" placeholder="Search jobs, exams, partners...">
+                <input type="text" id="searchInput" placeholder="Search jobs, exams, partners...">
             </div>
         </div>
 
         <div class="header-right">
-            <div class="notification-bell">
+            <div class="notification-bell" onclick="showNotifications()">
                 🔔
                 <span class="notification-count">12</span>
             </div>
@@ -843,42 +810,26 @@
     </div>
 </header>
 
-<!-- ============================================
-     HERO SECTION
-============================================ -->
+<!-- HERO -->
 <section class="hero">
     <h2>सपना नहीं, करियर बनाएं | Earn While You Learn</h2>
     <p>India's First Career + Earning Ecosystem. Backed by Data. Boosted by Earnings.</p>
     
     <div class="stats-grid">
-        <div class="stat-card">
-            <div class="stat-number">40 Lakh+</div>
-            <div class="stat-label">Verified Jobs</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">15,000+</div>
-            <div class="stat-label">Exam Paths</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">200+</div>
-            <div class="stat-label">Trusted Partners</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">36</div>
-            <div class="stat-label">States/UTs</div>
-        </div>
+        <div class="stat-card"><div class="stat-number">40 Lakh+</div><div class="stat-label">Verified Jobs</div></div>
+        <div class="stat-card"><div class="stat-number">15,000+</div><div class="stat-label">Exam Paths</div></div>
+        <div class="stat-card"><div class="stat-number">200+</div><div class="stat-label">Trusted Partners</div></div>
+        <div class="stat-card"><div class="stat-number">36</div><div class="stat-label">States/UTs</div></div>
     </div>
 
     <div class="cta-buttons">
         <a href="jobs.html" class="btn-primary">🔍 Find Jobs</a>
         <a href="exams.html" class="btn-secondary">📚 Explore Exams</a>
-        <a href="cashback.html" class="btn-primary">💰 Earn Cashback</a>
+        <a href="partners.html" class="btn-primary">💰 Earn Cashback</a>
     </div>
 </section>
 
-<!-- ============================================
-     AnnS AI SECTION - CAREER ASSISTANT
-============================================ -->
+<!-- AnnS AI -->
 <section class="anns-ai-section">
     <div class="ai-card">
         <div class="ai-header">
@@ -913,101 +864,37 @@
     </div>
 </section>
 
-<!-- ============================================
-     FREE ALERT CHANNELS
-============================================ -->
+<!-- ALERT CHANNELS -->
 <section class="alert-section">
     <div class="alert-buttons">
         <button class="whatsapp-btn" onclick="joinWhatsApp()">📱 Join WhatsApp Channel (FREE)</button>
         <button class="telegram-btn" onclick="joinTelegram()">✈️ Join Telegram Channel (FREE)</button>
+        <button class="arattai-btn" onclick="joinArattai()">💬 Join Arattai Channel (FREE)</button>
+        <button class="email-btn" onclick="sendEmail()">📧 Email Us</button>
     </div>
 </section>
 
-<!-- ============================================
-     MAIN TILES GRID - 12 TILES
-============================================ -->
+<!-- MAIN TILES - 12 TILES -->
 <section class="tiles-section">
     <h2 class="section-title">📌 Explore Career Opportunities</h2>
     <div class="tiles-grid">
-        <div class="tile-card" onclick="window.location.href='jobs.html'">
-            <div class="tile-icon">💼</div>
-            <div class="tile-title">Jobs Portal</div>
-            <div class="tile-count">40 Lakh+ Jobs</div>
-            <div class="tile-desc">Govt | Private | State | Global</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='exams.html'">
-            <div class="tile-icon">📚</div>
-            <div class="tile-title">Exams Portal</div>
-            <div class="tile-count">15,000+ Exams</div>
-            <div class="tile-desc">All Competitive Exams</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='mocktest.html'">
-            <div class="tile-icon">🏆</div>
-            <div class="tile-title">Mock Tests</div>
-            <div class="tile-count">100+ Tests</div>
-            <div class="tile-desc">Practice & Prepare</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='magazines.html'">
-            <div class="tile-icon">📰</div>
-            <div class="tile-title">Magazines Library</div>
-            <div class="tile-count">5,000+ FREE</div>
-            <div class="tile-desc">Read Online | Save to Library</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='business.html'">
-            <div class="tile-icon">💼</div>
-            <div class="tile-title">Business Ideas</div>
-            <div class="tile-count">25 Doors</div>
-            <div class="tile-desc">Startup | MSME | Franchise</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='currentaffairs.html'">
-            <div class="tile-icon">🏛️</div>
-            <div class="tile-title">Current Affairs</div>
-            <div class="tile-count">Monthly PDF</div>
-            <div class="tile-desc">Daily | Weekly | Monthly</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='e-newspapers.html'">
-            <div class="tile-icon">📰</div>
-            <div class="tile-title">E-Newspapers</div>
-            <div class="tile-count">100+ Papers</div>
-            <div class="tile-desc">All Languages</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='somethinginteresting.html'">
-            <div class="tile-icon">💡</div>
-            <div class="tile-title">Something Interesting</div>
-            <div class="tile-count">200+ Topics</div>
-            <div class="tile-desc">GD | Debate | Leadership</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='resultsforms.html'">
-            <div class="tile-icon">📋</div>
-            <div class="tile-title">Results & Forms</div>
-            <div class="tile-count">24/7 Alerts</div>
-            <div class="tile-desc">Exam Results | Application Forms</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='partners.html?type=shopping'">
-            <div class="tile-icon">🛍️</div>
-            <div class="tile-title">Shopping Partners</div>
-            <div class="tile-count">30+ Partners</div>
-            <div class="tile-desc">Amazon | Flipkart | Myntra</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='partners.html?type=travel'">
-            <div class="tile-icon">✈️</div>
-            <div class="tile-title">Travel Partners</div>
-            <div class="tile-count">25+ Partners</div>
-            <div class="tile-desc">Bus | Train | Flight | Hotel</div>
-        </div>
-        <div class="tile-card" onclick="window.location.href='partners.html?type=business'">
-            <div class="tile-icon">🤝</div>
-            <div class="tile-title">Business Partners</div>
-            <div class="tile-count">200+ Partners</div>
-            <div class="tile-desc">Sponsorship | Internships</div>
-        </div>
+        <div class="tile-card" onclick="window.location.href='jobs.html'"><div class="tile-icon">💼</div><div class="tile-title">Jobs Portal</div><div class="tile-count">40 Lakh+ Jobs</div><div class="tile-desc">Govt | Private | State | Global</div></div>
+        <div class="tile-card" onclick="window.location.href='exams.html'"><div class="tile-icon">📚</div><div class="tile-title">Exams Portal</div><div class="tile-count">15,000+ Exams</div><div class="tile-desc">All Competitive Exams</div></div>
+        <div class="tile-card" onclick="window.location.href='mocktest.html'"><div class="tile-icon">🏆</div><div class="tile-title">Mock Tests</div><div class="tile-count">100+ Tests</div><div class="tile-desc">Practice & Prepare</div></div>
+        <div class="tile-card" onclick="window.location.href='magazines.html'"><div class="tile-icon">📰</div><div class="tile-title">Magazines Library</div><div class="tile-count">5,000+ FREE</div><div class="tile-desc">Read Online | Save to Library</div></div>
+        <div class="tile-card" onclick="window.location.href='business.html'"><div class="tile-icon">💼</div><div class="tile-title">Business Ideas</div><div class="tile-count">25 Doors</div><div class="tile-desc">Startup | MSME | Franchise</div></div>
+        <div class="tile-card" onclick="window.location.href='currentaffairs.html'"><div class="tile-icon">🏛️</div><div class="tile-title">Current Affairs</div><div class="tile-count">Monthly PDF</div><div class="tile-desc">Daily | Weekly | Monthly</div></div>
+        <div class="tile-card" onclick="window.location.href='e-newspapers.html'"><div class="tile-icon">📰</div><div class="tile-title">E-Newspapers</div><div class="tile-count">100+ Papers</div><div class="tile-desc">All Languages</div></div>
+        <div class="tile-card" onclick="window.location.href='somethinginteresting.html'"><div class="tile-icon">💡</div><div class="tile-title">Something Interesting</div><div class="tile-count">200+ Topics</div><div class="tile-desc">GD | Debate | Leadership</div></div>
+        <div class="tile-card" onclick="window.location.href='resultsforms.html'"><div class="tile-icon">📋</div><div class="tile-title">Results & Forms</div><div class="tile-count">24/7 Alerts</div><div class="tile-desc">Exam Results | Application Forms</div></div>
+        <div class="tile-card" onclick="window.location.href='partners.html?type=shopping'"><div class="tile-icon">🛍️</div><div class="tile-title">Shopping Partners</div><div class="tile-count">30+ Partners</div><div class="tile-desc">Amazon | Flipkart | Myntra</div></div>
+        <div class="tile-card" onclick="window.location.href='partners.html?type=travel'"><div class="tile-icon">✈️</div><div class="tile-title">Travel Partners</div><div class="tile-count">25+ Partners</div><div class="tile-desc">Bus | Train | Flight | Hotel</div></div>
+        <div class="tile-card" onclick="window.location.href='partners.html?type=business'"><div class="tile-icon">🤝</div><div class="tile-title">Business Partners</div><div class="tile-count">200+ Partners</div><div class="tile-desc">Sponsorship | Internships</div></div>
     </div>
 </section>
 
-<!-- ============================================
-     USER EARNING TILE - MONTH-END RETURNS
-============================================ -->
-<section class="earning-section">
+<!-- USER EARNING TILE (Visible to all, but personal data only after login) -->
+<section class="earning-section" id="userEarningSection">
     <h2 class="section-title">💰 Your Earnings Dashboard</h2>
     <div class="earning-grid">
         <div class="earning-card">
@@ -1060,9 +947,10 @@
     </div>
 </section>
 
-<!-- ============================================
-     FEATURED SECTION
-============================================ -->
+<!-- DASHBOARD CONTAINER (For Owner/Team/Partner views) -->
+<div id="dashboardContainer" class="dashboard-container"></div>
+
+<!-- FEATURED SECTION -->
 <section class="featured-section">
     <h2 class="section-title">⭐ Featured This Week</h2>
     <div class="featured-grid">
@@ -1099,31 +987,29 @@
     </div>
 </section>
 
-<!-- ============================================
-     FOOTER
-============================================ -->
+<!-- FOOTER -->
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-col">
             <h4>About Us</h4>
-            <a href="#">About Dil-Ke-AnnS</a>
-            <a href="#">Our Vision</a>
-            <a href="#">Our Team</a>
-            <a href="#">Success Stories</a>
+            <a onclick="window.location.href='index.html'">About Dil-Ke-AnnS</a>
+            <a onclick="window.location.href='index.html'">Our Vision</a>
+            <a onclick="window.location.href='index.html'">Our Team</a>
+            <a onclick="window.location.href='index.html'">Success Stories</a>
         </div>
         <div class="footer-col">
             <h4>Resources</h4>
-            <a href="#">Blogs</a>
+            <a onclick="window.location.href='jobs.html'">Jobs Portal</a>
+            <a onclick="window.location.href='exams.html'">Exams Portal</a>
             <a href="#">FAQs</a>
-            <a href="#">Help Center</a>
             <a href="#">Career Guide</a>
         </div>
         <div class="footer-col">
             <h4>Partners</h4>
-            <a href="#">Become a Partner</a>
-            <a href="#">Advertise with Us</a>
-            <a href="#">Affiliate Program</a>
-            <a href="#">Sponsorship</a>
+            <a onclick="window.location.href='partners.html'">Become a Partner</a>
+            <a onclick="window.location.href='partners.html'">Advertise with Us</a>
+            <a onclick="window.location.href='partners.html'">Affiliate Program</a>
+            <a onclick="window.location.href='partners.html'">Sponsorship</a>
         </div>
         <div class="footer-col">
             <h4>Legal</h4>
@@ -1134,73 +1020,418 @@
         </div>
         <div class="footer-col">
             <h4>Connect</h4>
-            <a href="#" onclick="joinWhatsApp()">WhatsApp</a>
-            <a href="#" onclick="joinTelegram()">Telegram</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
+            <a onclick="joinWhatsApp()">WhatsApp</a>
+            <a onclick="joinTelegram()">Telegram</a>
+            <a onclick="joinArattai()">Arattai</a>
+            <a onclick="sendEmail()">Email</a>
         </div>
     </div>
     <div class="footer-bottom">
         <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
         <p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p>
-        <p>Contact: support@dilkeanns.com</p>
+        <p>Contact: dilkeanns@zohomail.com</p>
     </div>
 </footer>
 
 <script>
     // ============================================
-    // USER EARNING DATA (LocalStorage)
+    // YOUR ACTUAL CHANNELS & CONTACTS
     // ============================================
-    let userEarnings = JSON.parse(localStorage.getItem('userEarnings')) || {
-        thisMonth: 0,
-        lastMonth: 0,
-        total: 0,
-        pending: 0
-    };
-    let userReferrals = JSON.parse(localStorage.getItem('userReferrals')) || [];
-    let userLevel = JSON.parse(localStorage.getItem('userLevel')) || 'No Tier';
+    const WHATSAPP_LINK = "https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a";
+    const TELEGRAM_LINK = "https://t.me/DilKeAnnS";
+    const ARATTAI_LINK = "https://aratt.ai/@dil_ke_anns";
+    const EMAIL = "dilkeanns@zohomail.com";
 
-    function updateEarningsDisplay() {
-        document.getElementById('thisMonthEarnings').innerText = '₹' + userEarnings.thisMonth;
-        document.getElementById('lastMonthEarnings').innerText = '₹' + userEarnings.lastMonth;
-        document.getElementById('totalEarnings').innerText = '₹' + userEarnings.total;
-        document.getElementById('pendingPayout').innerText = '₹' + userEarnings.pending;
-        
-        let level = getSponsorshipLevel();
-        document.getElementById('sponsorshipLevel').innerText = level;
+    function joinWhatsApp() {
+        window.open(WHATSAPP_LINK, '_blank');
+        alert('📱 Follow Dil-Ke-AnnS on WhatsApp for daily job alerts & offers!');
     }
 
-    function getSponsorshipLevel() {
-        let referrals = userReferrals.length;
-        if (referrals >= 1000) return "💎 Platinum Tier";
-        if (referrals >= 200) return "🥇 Gold Tier";
-        if (referrals >= 50) return "🥈 Silver Tier";
-        if (referrals >= 10) return "🥉 Bronze Tier";
-        return "No Tier";
+    function joinTelegram() {
+        window.open(TELEGRAM_LINK, '_blank');
+        alert('✈️ Follow Dil-Ke-AnnS on Telegram for instant updates!');
+    }
+
+    function joinArattai() {
+        window.open(ARATTAI_LINK, '_blank');
+        alert('💬 Join Dil-Ke-AnnS on Arattai for career discussions and guidance!');
+    }
+
+    function sendEmail() {
+        window.location.href = 'mailto:' + EMAIL;
+        alert('📧 Compose email to dilkeanns@zohomail.com for any queries!');
+    }
+
+    // ============================================
+    // DATA ISOLATION - SEPARATE STORAGE FOR EACH USER TYPE
+    // ============================================
+    
+    // Owner Data (Only Owner can access - Aggregated, no individual user details)
+    let ownerData = {
+        totalRevenue: 125000,
+        monthlyRevenue: 45000,
+        weeklyRevenue: 12000,
+        partnerCommissions: {
+            shopping: 25000,
+            travel: 15000,
+            business: 5000,
+            industrial: 0
+        },
+        userCashbackPaid: 8500,
+        userCashbackPending: 3200,
+        netProfit: 116500,
+        withdrawableBalance: 116500,
+        totalUsers: 1250,
+        totalPartners: 200,
+        totalClicks: 45000,
+        conversionRate: "3.2%"
+    }
+
+    // Team Data (Only Team can access)
+    let teamData = {
+        assignedTasks: [
+            { id: 1, task: "Update SSC CGL jobs", status: "pending", priority: "high" },
+            { id: 2, task: "Add new partner offers", status: "in-progress", priority: "medium" },
+            { id: 3, task: "Review user feedback", status: "pending", priority: "low" }
+        ],
+        supportTickets: [
+            { id: 101, user: "user***@email.com", issue: "Login issue", status: "open" },
+            { id: 102, user: "user***@email.com", issue: "Payment query", status: "resolved" }
+        ],
+        pendingQueries: 12,
+        resolvedToday: 5,
+        contentQueue: 8,
+        teamMembers: 4
+    }
+
+    // Partner Data (Each Partner has their own data - isolated)
+    let partnerData = {
+        partnerId: "PARTNER_001",
+        name: "Amazon India",
+        category: "Shopping",
+        rating: 4.6,
+        earnings: {
+            thisMonth: 25000,
+            lastMonth: 22000,
+            total: 125000,
+            pending: 5000
+        },
+        referrals: [
+            { userId: "USER_123", date: "2026-06-01", commission: 250 },
+            { userId: "USER_456", date: "2026-06-05", commission: 180 },
+            { userId: "USER_789", date: "2026-06-10", commission: 320 }
+        ],
+        commissionRate: "5-10%",
+        clickCount: 1250,
+        conversionRate: "3.2%"
+    }
+
+    // User Data (Each User has their own data - isolated from others)
+    let userData = {
+        userId: "USER_" + Math.random().toString(36).substring(2, 8).toUpperCase(),
+        earnings: {
+            thisMonth: 150,
+            lastMonth: 200,
+            total: 350,
+            pending: 150
+        },
+        cashbackHistory: [
+            { date: "2026-06-01", source: "Amazon", amount: 50, status: "credited" },
+            { date: "2026-06-05", source: "Flipkart", amount: 100, status: "pending" }
+        ],
+        referrals: [
+            { code: "REF123", clicks: 5, signups: 2, earnings: 100 }
+        ],
+        level: "Bronze",
+        nextLevel: "Silver (Need 8 more referrals)"
+    }
+
+    // Current active user type
+    let currentUserType = null;
+
+    // ============================================
+    // LOGIN HANDLER WITH DATA ISOLATION
+    // ============================================
+    function handleLogin(type) {
+        currentUserType = type;
+        localStorage.setItem('currentUserType', type);
+        
+        // Hide user earning section
+        document.getElementById('userEarningSection').style.display = 'none';
+        
+        if (type === 'owner') {
+            showOwnerDashboard();
+            alert('👑 Owner Login - Full Admin Access Granted. You can view all aggregated data.');
+        } 
+        else if (type === 'team') {
+            showTeamDashboard();
+            alert('👥 Team Login - Staff Access Granted. You can manage content and support tickets.');
+        } 
+        else if (type === 'partner') {
+            showPartnerDashboard();
+            alert('🤝 Partners Login - Partner Portal Access Granted. You can view your earnings only.');
+        } 
+        else if (type === 'user') {
+            showUserDashboard();
+            alert('👤 User Login - Welcome back! You can view your personal earnings only.');
+        }
+    }
+
+    function logout() {
+        currentUserType = null;
+        localStorage.removeItem('currentUserType');
+        document.getElementById('dashboardContainer').classList.remove('active');
+        document.getElementById('dashboardContainer').innerHTML = '';
+        document.getElementById('userEarningSection').style.display = 'block';
+        updateUserEarningsDisplay();
+        alert('👋 Logged out successfully!');
+    }
+
+    // ============================================
+    // OWNER DASHBOARD (Aggregated data only - no individual user details)
+    // ============================================
+    function showOwnerDashboard() {
+        const container = document.getElementById('dashboardContainer');
+        container.innerHTML = `
+            <div class="dashboard-card">
+                <div class="dashboard-header">
+                    <span>👑</span>
+                    <h3>Owner Earnings Dashboard</h3>
+                    <button class="dashboard-btn" onclick="logout()" style="width: auto; padding: 8px 20px; margin-left: auto;">🚪 Logout</button>
+                </div>
+                <div class="dashboard-stats-grid">
+                    <div class="dashboard-stat-box">
+                        <div class="amount">₹${ownerData.totalRevenue.toLocaleString()}</div>
+                        <div class="label">Total App Revenue</div>
+                    </div>
+                    <div class="dashboard-stat-box">
+                        <div class="amount">₹${ownerData.monthlyRevenue.toLocaleString()}</div>
+                        <div class="label">This Month Revenue</div>
+                    </div>
+                    <div class="dashboard-stat-box">
+                        <div class="amount">₹${ownerData.weeklyRevenue.toLocaleString()}</div>
+                        <div class="label">This Week Revenue</div>
+                    </div>
+                    <div class="dashboard-stat-box">
+                        <div class="amount">₹${ownerData.netProfit.toLocaleString()}</div>
+                        <div class="label">Net Profit</div>
+                    </div>
+                </div>
+                
+                <div class="partner-breakdown">
+                    <h4>📊 Partner-wise Earnings</h4>
+                    <div class="partner-row"><span>🛍️ Shopping Partners</span><span>₹${ownerData.partnerCommissions.shopping.toLocaleString()}</span></div>
+                    <div class="partner-row"><span>✈️ Travel Partners</span><span>₹${ownerData.partnerCommissions.travel.toLocaleString()}</span></div>
+                    <div class="partner-row"><span>🤝 Business Partners</span><span>₹${ownerData.partnerCommissions.business.toLocaleString()}</span></div>
+                    <div class="partner-row"><span>🏭 Industrial Partners</span><span>₹${ownerData.partnerCommissions.industrial.toLocaleString()}</span></div>
+                </div>
+                
+                <div class="partner-breakdown">
+                    <h4>👥 User & Platform Stats</h4>
+                    <div class="partner-row"><span>Total Cashback Paid to Users</span><span>₹${ownerData.userCashbackPaid.toLocaleString()}</span></div>
+                    <div class="partner-row"><span>Pending Cashback</span><span>₹${ownerData.userCashbackPending.toLocaleString()}</span></div>
+                    <div class="partner-row"><span>Total Registered Users</span><span>${ownerData.totalUsers}</span></div>
+                    <div class="partner-row"><span>Active Partners</span><span>${ownerData.totalPartners}</span></div>
+                    <div class="partner-row"><span>Total Clicks</span><span>${ownerData.totalClicks.toLocaleString()}</span></div>
+                    <div class="partner-row"><span>Conversion Rate</span><span>${ownerData.conversionRate}</span></div>
+                </div>
+                
+                <div class="partner-breakdown">
+                    <h4>💰 Withdrawal Information</h4>
+                    <div class="partner-row"><span>Withdrawable Balance</span><span>₹${ownerData.withdrawableBalance.toLocaleString()}</span></div>
+                    <div class="partner-row"><span>Next Payout Date</span><span>30th June 2026</span></div>
+                    <div class="partner-row"><span>Minimum Withdrawal</span><span>₹10,000</span></div>
+                </div>
+                
+                <button class="dashboard-btn" onclick="ownerWithdraw()">💰 Withdraw to Bank Account</button>
+            </div>
+        `;
+        container.classList.add('active');
+    }
+
+    // ============================================
+    // TEAM DASHBOARD (Operational data only)
+    // ============================================
+    function showTeamDashboard() {
+        const container = document.getElementById('dashboardContainer');
+        container.innerHTML = `
+            <div class="dashboard-card">
+                <div class="dashboard-header">
+                    <span>👥</span>
+                    <h3>Team Dashboard</h3>
+                    <button class="dashboard-btn" onclick="logout()" style="width: auto; padding: 8px 20px; margin-left: auto;">🚪 Logout</button>
+                </div>
+                <div class="dashboard-stats-grid">
+                    <div class="dashboard-stat-box">
+                        <div class="amount">${teamData.pendingQueries}</div>
+                        <div class="label">Pending Queries</div>
+                    </div>
+                    <div class="dashboard-stat-box">
+                        <div class="amount">${teamData.resolvedToday}</div>
+                        <div class="label">Resolved Today</div>
+                    </div>
+                    <div class="dashboard-stat-box">
+                        <div class="amount">${teamData.contentQueue}</div>
+                        <div class="label">Content Queue</div>
+                    </div>
+                    <div class="dashboard-stat-box">
+                        <div class="amount">${teamData.teamMembers}</div>
+                        <div class="label">Team Members</div>
+                    </div>
+                </div>
+                
+                <div class="partner-breakdown">
+                    <h4>📋 Assigned Tasks</h4>
+                    ${teamData.assignedTasks.map(task => `
+                        <div class="partner-row"><span>${task.task}</span><span class="${task.status === 'pending' ? 'deadline' : 'salary'}">${task.status} (${task.priority})</span></div>
+                    `).join('')}
+                </div>
+                
+                <div class="partner-breakdown">
+                    <h4>🎫 Support Tickets</h4>
+                    ${teamData.supportTickets.map(ticket => `
+                        <div class="partner-row"><span>Ticket #${ticket.id}: ${ticket.issue}</span><span>${ticket.status}</span></div>
+                    `).join('')}
+                </div>
+                
+                <button class="dashboard-btn" onclick="refreshTeamData()">🔄 Refresh Dashboard</button>
+            </div>
+        `;
+        container.classList.add('active');
+    }
+
+    // ============================================
+    // PARTNER DASHBOARD (Partner's own data only - isolated)
+    // ============================================
+    function showPartnerDashboard() {
+        const container = document.getElementById('dashboardContainer');
+        container.innerHTML = `
+            <div class="dashboard-card">
+                <div class="dashboard-header">
+                    <span>🤝</span>
+                    <h3>Partner Dashboard - ${partnerData.name}</h3>
+                    <button class="dashboard-btn" onclick="logout()" style="width: auto; padding: 8px 20px; margin-left: auto;">🚪 Logout</button>
+                </div>
+                <div class="dashboard-stats-grid">
+                    <div class="dashboard-stat-box">
+                        <div class="amount">₹${partnerData.earnings.thisMonth.toLocaleString()}</div>
+                        <div class="label">This Month Earnings</div>
+                    </div>
+                    <div class="dashboard-stat-box">
+                        <div class="amount">₹${partnerData.earnings.total.toLocaleString()}</div>
+                        <div class="label">Total Earnings</div>
+                    </div>
+                    <div class="dashboard-stat-box">
+                        <div class="amount">₹${partnerData.earnings.pending.toLocaleString()}</div>
+                        <div class="label">Pending Payout</div>
+                    </div>
+                    <div class="dashboard-stat-box">
+                        <div class="amount">⭐ ${partnerData.rating}</div>
+                        <div class="label">Rating</div>
+                    </div>
+                </div>
+                
+                <div class="partner-breakdown">
+                    <h4>📊 Performance Metrics</h4>
+                    <div class="partner-row"><span>Total Clicks</span><span>${partnerData.clickCount}</span></div>
+                    <div class="partner-row"><span>Conversion Rate</span><span>${partnerData.conversionRate}</span></div>
+                    <div class="partner-row"><span>Commission Rate</span><span>${partnerData.commissionRate}</span></div>
+                </div>
+                
+                <div class="partner-breakdown">
+                    <h4>📈 Recent Referrals</h4>
+                    ${partnerData.referrals.map(ref => `
+                        <div class="partner-row"><span>User: ${ref.userId} (${ref.date})</span><span>₹${ref.commission}</span></div>
+                    `).join('')}
+                </div>
+                
+                <button class="dashboard-btn" onclick="partnerWithdraw()">💰 Request Payout</button>
+            </div>
+        `;
+        container.classList.add('active');
+    }
+
+    // ============================================
+    // USER DASHBOARD (User's own data only - isolated)
+    // ============================================
+    function showUserDashboard() {
+        // Update earnings display with user's own data
+        document.getElementById('thisMonthEarnings').innerText = '₹' + userData.earnings.thisMonth;
+        document.getElementById('lastMonthEarnings').innerText = '₹' + userData.earnings.lastMonth;
+        document.getElementById('totalEarnings').innerText = '₹' + userData.earnings.total;
+        document.getElementById('pendingPayout').innerText = '₹' + userData.earnings.pending;
+        document.getElementById('sponsorshipLevel').innerText = userData.level;
+        
+        // Update referral link
+        document.getElementById('referralLinkDisplay').innerText = `dilkeanns.com/?ref=${userData.userId}`;
+        
+        // Show user earning section
+        document.getElementById('userEarningSection').style.display = 'block';
+        
+        // Hide dashboard container
+        document.getElementById('dashboardContainer').classList.remove('active');
+        
+        // Scroll to earnings section
+        document.getElementById('userEarningSection').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function updateUserEarningsDisplay() {
+        document.getElementById('thisMonthEarnings').innerText = '₹' + userData.earnings.thisMonth;
+        document.getElementById('lastMonthEarnings').innerText = '₹' + userData.earnings.lastMonth;
+        document.getElementById('totalEarnings').innerText = '₹' + userData.earnings.total;
+        document.getElementById('pendingPayout').innerText = '₹' + userData.earnings.pending;
+        document.getElementById('sponsorshipLevel').innerText = userData.level;
+    }
+
+    // ============================================
+    // HELPER FUNCTIONS
+    // ============================================
+    function ownerWithdraw() {
+        if (ownerData.withdrawableBalance >= 10000) {
+            alert(`💰 Withdrawal request initiated for ₹${ownerData.withdrawableBalance.toLocaleString()}. Amount will be credited within 2-3 business days.`);
+            ownerData.withdrawableBalance = 0;
+            ownerData.netProfit = 0;
+            showOwnerDashboard();
+        } else {
+            alert(`⚠️ Minimum withdrawal amount is ₹10,000. Current balance: ₹${ownerData.withdrawableBalance.toLocaleString()}`);
+        }
+    }
+
+    function partnerWithdraw() {
+        if (partnerData.earnings.pending >= 1000) {
+            alert(`💰 Payout request initiated for ₹${partnerData.earnings.pending}. Amount will be credited within 5-7 business days.`);
+            partnerData.earnings.pending = 0;
+            showPartnerDashboard();
+        } else {
+            alert(`⚠️ Minimum payout amount is ₹1,000. Current pending: ₹${partnerData.earnings.pending}`);
+        }
+    }
+
+    function refreshTeamData() {
+        alert('🔄 Dashboard refreshed!');
+        showTeamDashboard();
+    }
+
+    function withdrawEarnings() {
+        if (userData.earnings.pending >= 500) {
+            alert(`💰 Withdrawal request initiated for ₹${userData.earnings.pending}. Amount will be credited within 3-5 business days.`);
+            userData.earnings.pending = 0;
+            localStorage.setItem('userData', JSON.stringify(userData));
+            updateUserEarningsDisplay();
+        } else {
+            alert(`⚠️ Minimum withdrawal amount is ₹500. You have ₹${userData.earnings.pending} pending. Shop/Book through our partners to earn more!`);
+        }
     }
 
     function generateReferralLink() {
-        let referralCode = Math.random().toString(36).substring(2, 10).toUpperCase();
-        let link = `https://dilkeanns.com/?ref=${referralCode}`;
+        let link = `https://dilkeanns.com/?ref=${userData.userId}`;
         document.getElementById('referralLinkDisplay').innerText = link;
         navigator.clipboard.writeText(link);
         alert('✅ Referral link copied to clipboard! Share with friends to earn rewards.');
         
-        // Track referral generation
-        userReferrals.push({ code: referralCode, date: new Date().toISOString() });
-        localStorage.setItem('userReferrals', JSON.stringify(userReferrals));
-        updateEarningsDisplay();
-    }
-
-    function withdrawEarnings() {
-        if (userEarnings.pending >= 500) {
-            alert(`💰 Withdrawal request initiated for ₹${userEarnings.pending}. Amount will be credited within 3-5 business days.`);
-            userEarnings.pending = 0;
-            localStorage.setItem('userEarnings', JSON.stringify(userEarnings));
-            updateEarningsDisplay();
-        } else {
-            alert(`⚠️ Minimum withdrawal amount is ₹500. You have ₹${userEarnings.pending} pending. Shop/Book through our partners to earn more!`);
-        }
+        userData.referrals.push({ code: userData.userId, clicks: 0, signups: 0, earnings: 0 });
+        localStorage.setItem('userData', JSON.stringify(userData));
+        updateUserEarningsDisplay();
     }
 
     // ============================================
@@ -1238,47 +1469,13 @@
     }
 
     // ============================================
-    // LOGIN HANDLERS (4 Types)
+    // NOTIFICATIONS & SEARCH
     // ============================================
-    function handleLogin(type) {
-        let messages = {
-            owner: "👑 Owner Login - Full Admin Access Granted. Welcome back!",
-            team: "👥 Team Login - Staff Access Granted. Welcome to your dashboard!",
-            partner: "🤝 Partners Login - Partner Portal Access Granted. View your earnings!",
-            user: "👤 User Login - Welcome back! Check your earnings dashboard below."
-        };
-        alert(messages[type]);
-        // In production, redirect to respective dashboards
-        if (type === 'owner') window.location.href = 'admin/dashboard.html';
-        else if (type === 'team') window.location.href = 'team/dashboard.html';
-        else if (type === 'partner') window.location.href = 'partner/dashboard.html';
-        else window.location.href = 'dashboard.html';
-    }
-
-    // ============================================
-    // WHATSAPP & TELEGRAM
-    // ============================================
-    function joinWhatsApp() {
-        window.open('https://whatsapp.com/channel/DilKeAnnS', '_blank');
-        alert('📱 Follow Dil-Ke-AnnS on WhatsApp for daily job alerts & offers!');
-    }
-    
-    function joinTelegram() {
-        window.open('https://t.me/DilKeAnnS', '_blank');
-        alert('✈️ Follow Dil-Ke-AnnS on Telegram for instant updates!');
-    }
-
-    // ============================================
-    // NOTIFICATIONS
-    // ============================================
-    document.querySelector('.notification-bell').addEventListener('click', function() {
+    function showNotifications() {
         alert('🔔 New: SSC CGL Notification | New: Amazon Cashback Offer | New: Haryana Police Recruitment');
-    });
+    }
 
-    // ============================================
-    // SEARCH FUNCTIONALITY
-    // ============================================
-    document.querySelector('.search-bar input').addEventListener('keypress', function(e) {
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
             let query = this.value;
             alert(`🔍 Searching for "${query}" in Jobs, Exams, and Partners...`);
@@ -1288,7 +1485,7 @@
     // ============================================
     // INITIALIZE
     // ============================================
-    updateEarningsDisplay();
+    updateUserEarningsDisplay();
 </script>
 
 </body>
