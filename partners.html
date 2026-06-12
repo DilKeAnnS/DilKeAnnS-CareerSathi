@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Dil-Ke-AnnS - 230+ Trusted Partners | Shopping | Travel | Business | Industrial | Mentors | Earn Cashback">
+    <title>Partners Portal - Dil-Ke-AnnS Career Saathi | 230+ Partners | Earn Cashback</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+        .logo-icon {
+            width: 45px; height: 45px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .logo-text h1 { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #fff, #ffd700); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo-text p { font-size: 0.7rem; color: #ffd700; }
+        .back-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffd700;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .back-btn:hover { background: #ffd700; color: #0f172a; }
+        .search-wrapper { flex: 1; max-width: 400px; }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .search-bar input { background: transparent; border: none; color: white; width: 100%; padding: 8px 0; font-size: 0.9rem; outline: none; }
+        .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
+        .search-bar span { color: #ffd700; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .user-menu { position: relative; cursor: pointer; }
+        .user-avatar {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #0f172a;
+        }
+        .user-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #1e293b;
+            min-width: 200px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 100;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        .user-menu:hover .user-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: #fff;
+        }
+        .dropdown-item:hover { background: rgba(255,215,0,0.1); }
+        .notification-bell { position: relative; cursor: pointer; font-size: 1.3rem; color: #ffd700; }
+        .notification-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #e74c3c;
+            color: white;
+            font-size: 0.6rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3c72 100%);
+        }
+        .hero h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .hero h2 span { color: #ffd700; }
+        .hero p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); }
+        .cashbar {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .cashbar span { color: #0f172a; font-weight: bold; }
+        .cashbar .amount { font-size: 1.5rem; font-weight: bold; color: #0f172a; }
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .stat-badge {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+        }
+        .golden-rule {
+            background: linear-gradient(135deg, #4caf50, #2196f3);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.8rem;
+        }
+        .alert-section { max-width: 1400px; margin: 20px auto; padding: 0 25px; }
+        .alert-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .whatsapp-btn, .telegram-btn, .arattai-btn, .email-btn, .channel-btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+        .whatsapp-btn { background: #25D366; color: white; }
+        .telegram-btn { background: #0088cc; color: white; }
+        .arattai-btn { background: #6c5ce7; color: white; }
+        .email-btn { background: #ea4335; color: white; }
+        .channel-btn { background: #ffd700; color: #0f172a; }
+        .whatsapp-btn:hover, .telegram-btn:hover, .arattai-btn:hover, .email-btn:hover, .channel-btn:hover { transform: scale(1.02); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px 25px; }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid #ffd700;
+        }
+        .door-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .door-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .door-card:hover { transform: translateY(-5px); border-color: #ffd700; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+        .door-header { padding: 18px; display: flex; align-items: center; gap: 12px; }
+        .door-header .icon { font-size: 2rem; }
+        .door-header .title { flex: 1; font-size: 1rem; font-weight: bold; }
+        .door-header .count {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: #ffd700;
+        }
+        .door-content { padding: 0 18px 18px 18px; max-height: 280px; overflow-y: auto; }
+        .door-content::-webkit-scrollbar { width: 4px; }
+        .door-content::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.1); }
+        .door-content::-webkit-scrollbar-thumb { background: #ffd700; border-radius: 10px; }
+        .partner-item { padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .partner-title { font-weight: 600; font-size: 0.85rem; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .partner-details { font-size: 0.7rem; color: rgba(255, 255, 255, 0.7); display: flex; flex-wrap: wrap; gap: 12px; }
+        .rating-badge { background: #4caf50; padding: 2px 6px; border-radius: 10px; font-size: 0.6rem; }
+        .cashback-badge { background: #ff9800; padding: 2px 6px; border-radius: 10px; font-size: 0.6rem; }
+        .apply-link {
+            display: inline-block;
+            margin-top: 8px;
+            background: rgba(255, 215, 0, 0.15);
+            color: #ffd700;
+            padding: 4px 12px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 0.7rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .apply-link:hover { background: #ffd700; color: #0f172a; }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: #1e293b;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        .modal-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-modal { cursor: pointer; font-size: 1.5rem; color: #ffd700; }
+        .footer {
+            background: #0f172a;
+            margin-top: 40px;
+            padding: 30px 25px 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; }
+            .search-wrapper { max-width: 100%; width: 100%; }
+            .door-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 1.2rem; }
+            .cashbar { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo-area" onclick="window.location.href='index.html'">
+            <div class="logo-icon">द</div>
+            <div class="logo-text">
+                <h1>Dil-Ke-AnnS</h1>
+                <p>Career Saathi</p>
+            </div>
+        </div>
+        <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+        <div class="search-wrapper">
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Search partners...">
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="notification-bell" onclick="showNotifications()">
+                🔔
+                <span class="notification-count">12</span>
+            </div>
+            <div class="user-menu">
+                <div class="user-avatar" id="userAvatar">👤</div>
+                <div class="user-dropdown">
+                    <div class="dropdown-item" onclick="showDashboard()">💰 My Earnings</div>
+                    <div class="dropdown-item" onclick="showTransactions()">📜 Transaction History</div>
+                    <div class="dropdown-item" onclick="showFoundation()">🏛️ Dil Ke Anns Foundation</div>
+                    <div class="dropdown-item" onclick="showMentorApply()">👨‍🏫 Apply as Mentor</div>
+                    <div class="dropdown-item" onclick="showPartnerApply()">🤝 Become Partner</div>
+                    <div class="dropdown-item" onclick="withdrawCashback()">💸 Withdraw</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>230+ <span>Trusted Partners</span></h2>
+    <p>Shopping | Travel | Business | Industrial | Mentors | 4.5+ Rating | Earn Cashback</p>
+    <div class="cashbar">
+        <span>💰 Your Cashback Balance:</span>
+        <span class="amount" id="cashbackAmount">₹0</span>
+        <button class="apply-link" onclick="withdrawCashback()" style="background:#0f172a; color:#ffd700;">Withdraw (Min ₹500)</button>
+    </div>
+    <div class="golden-rule">
+        🏆 GOLDEN RULE: Owner Profit First | Mentor/Partner Payment ONLY when Owner Profit Positive | Excess > ₹19.99L → Foundation
+    </div>
+    <div class="stats-row">
+        <span class="stat-badge">🛍️ Shopping: 50+</span>
+        <span class="stat-badge">✈️ Travel: 40+</span>
+        <span class="stat-badge">🤝 Business: 60+</span>
+        <span class="stat-badge">🏭 Industrial: 50+</span>
+        <span class="stat-badge">👨‍🏫 Mentors: 30+</span>
+    </div>
+</section>
+
+<section class="alert-section">
+    <div class="alert-buttons">
+        <button class="whatsapp-btn" onclick="joinWhatsApp()">📱 Join WhatsApp Channel (FREE)</button>
+        <button class="telegram-btn" onclick="joinTelegram()">✈️ Join Telegram Channel (FREE)</button>
+        <button class="arattai-btn" onclick="joinArattai()">💬 Join Arattai Channel (FREE)</button>
+        <button class="channel-btn" onclick="joinDilKeAnnS()">🎯 Dil-Ke-AnnS Channel</button>
+        <button class="email-btn" onclick="sendEmail()">📧 Email Us</button>
+    </div>
+</section>
+
+<div class="container" id="mainContainer"></div>
+
+<div id="partnerModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="modalPartnerTitle">Partners</span>
+            <span class="close-modal" onclick="closePartnerModal()">&times;</span>
+        </div>
+        <div id="partnerList"></div>
+    </div>
+</div>
+
+<div id="dashboardModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span>💰 My Dashboard</span>
+            <span class="close-modal" onclick="closeDashboardModal()">&times;</span>
+        </div>
+        <div id="dashboardContent"></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
+    <p>🏆 GOLDEN RULE: Owner Profit First | Mentors & Partners paid only when Owner Profit Positive</p>
+    <p>🏛️ Excess income > ₹19.99 Lakh automatically transfers to "Dil Ke Anns" Foundation for social work</p>
+    <p>📚 230+ Partners | 4.5+ Rating | Zero Cost to Users | Cashback after App receives payment</p>
+    <p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p>
+    <p><a href="index.html">Home</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
+</footer>
+
+<script>
+    // ============================================
+    // USER CASHBACK SYSTEM
+    // ============================================
+    let userId = localStorage.getItem('userId');
+    if (!userId) {
+        userId = 'USER_' + Math.random().toString(36).substring(2, 10).toUpperCase();
+        localStorage.setItem('userId', userId);
+    }
+    
+    let userCashback = JSON.parse(localStorage.getItem('userCashback') || '0');
+    let transactions = JSON.parse(localStorage.getItem('transactions') || '[]');
+    
+    function updateDisplay() {
+        document.getElementById('cashbackAmount').innerText = '₹' + userCashback;
+        document.getElementById('userAvatar').innerText = userId.substring(5, 7);
+    }
+    
+    function addTransaction(partnerName, type, commission, link) {
+        const transaction = {
+            id: 'TXN_' + Date.now(),
+            partner: partnerName,
+            type: type,
+            date: new Date().toISOString(),
+            commission: commission,
+            cashback: Math.floor(commission * 0.2),
+            status: 'pending',
+            statusMessage: 'Awaiting provider verification (7-30 days)'
+        };
+        transactions.unshift(transaction);
+        localStorage.setItem('transactions', JSON.stringify(transactions));
+        
+        alert(`✅ Tracked: ${partnerName}\n💰 Estimated Cashback: ₹${transaction.cashback}\n⏳ Credited after app receives payment (7-45 days)`);
+        
+        if (link && link !== '#') window.open(link, '_blank');
+    }
+    
+    function withdrawCashback() {
+        if (userCashback >= 500) {
+            alert(`💰 Withdrawal for ₹${userCashback} initiated! Will be credited within 3-5 days.`);
+            userCashback = 0;
+            localStorage.setItem('userCashback', userCashback);
+            updateDisplay();
+        } else {
+            alert(`⚠️ Need ₹500 minimum. You have ₹${userCashback}`);
+        }
+        closeDashboardModal();
+    }
+    
+    function showDashboard() {
+        let pendingCount = transactions.filter(t => t.status === 'pending').length;
+        let totalEarned = transactions.reduce((sum, t) => sum + t.cashback, 0);
+        document.getElementById('dashboardContent').innerHTML = `
+            <div><h3>💰 Balance</h3><p>Available: ₹${userCashback}</p><p>Total Earned: ₹${totalEarned}</p><p>Pending: ${pendingCount} transactions</p></div>
+            <button class="apply-link" onclick="withdrawCashback()">Withdraw</button>
+            <button class="apply-link" onclick="closeDashboardModal()">Close</button>
+        `;
+        document.getElementById('dashboardModal').style.display = 'flex';
+    }
+    
+    function showTransactions() {
+        if (transactions.length === 0) {
+            document.getElementById('dashboardContent').innerHTML = `<p>No transactions yet.</p><button class="apply-link" onclick="closeDashboardModal()">Close</button>`;
+        } else {
+            document.getElementById('dashboardContent').innerHTML = `<h3>📜 Transaction History</h3>${transactions.slice(0, 10).map(t => `<div style="border-bottom:1px solid #333; padding:8px 0;"><strong>${t.partner}</strong><br>💰 ₹${t.cashback}<br>${t.status}</div>`).join('')}<button class="apply-link" onclick="closeDashboardModal()">Close</button>`;
+        }
+        document.getElementById('dashboardModal').style.display = 'flex';
+    }
+    
+    function showFoundation() {
+        document.getElementById('dashboardContent').innerHTML = `
+            <h3>🏛️ Dil Ke Anns Foundation</h3>
+            <div style="background:rgba(255,255,255,0.05); padding:15px; border-radius:12px; margin:10px 0;">
+                <p><strong>Mission:</strong> Free Education | Skill Development | Job Placement</p>
+                <p><strong>Funding Source 1:</strong> App Owner excess income (>₹19.99L/year)</p>
+                <p><strong>Funding Source 2:</strong> Foundation's own revenue (donations, placements, courses)</p>
+                <p><strong>Self-Sustainability Target:</strong> 100% by Year 4</p>
+                <p><strong>Impact Target:</strong> 12,000+ beneficiaries/year</p>
+            </div>
+            <button class="apply-link" onclick="closeDashboardModal()">Close</button>
+        `;
+        document.getElementById('dashboardModal').style.display = 'flex';
+    }
+    
+    function showMentorApply() {
+        document.getElementById('dashboardContent').innerHTML = `
+            <h3>👨‍🏫 Apply as Mentor</h3>
+            <div style="background:rgba(255,255,255,0.05); padding:15px; border-radius:12px; margin:10px 0;">
+                <p><strong>Requirements:</strong> 4.8+ rating | 3+ years experience | Graduate</p>
+                <p><strong>Payment:</strong> Only when Owner Profit Positive (Golden Rule)</p>
+                <p><strong>Benefits:</strong> Free sessions | Certificate | Exposure</p>
+                <p>📧 Send your profile to: mentors@dilkeanns.com</p>
+            </div>
+            <button class="apply-link" onclick="closeDashboardModal()">Close</button>
+        `;
+        document.getElementById('dashboardModal').style.display = 'flex';
+    }
+    
+    function showPartnerApply() {
+        document.getElementById('dashboardContent').innerHTML = `
+            <h3>🤝 Become a Partner</h3>
+            <div style="background:rgba(255,255,255,0.05); padding:15px; border-radius:12px; margin:10px 0;">
+                <p><strong>Requirements:</strong> 4.5+ rating | 2+ years business | GST registered</p>
+                <p><strong>Commission:</strong> Only when Owner Profit Positive (Golden Rule)</p>
+                <p>📧 Send your proposal to: partners@dilkeanns.com</p>
+            </div>
+            <button class="apply-link" onclick="closeDashboardModal()">Close</button>
+        `;
+        document.getElementById('dashboardModal').style.display = 'flex';
+    }
+    
+    function closeDashboardModal() { document.getElementById('dashboardModal').style.display = 'none'; }
+    function closePartnerModal() { document.getElementById('partnerModal').style.display = 'none'; }
+    
+    function joinWhatsApp() { window.open('https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a', '_blank'); addTransaction('WhatsApp Channel', 'channel', 2, '#'); alert('📱 + ₹2 cashback (after verification)'); }
+    function joinTelegram() { window.open('https://t.me/DilKeAnnS', '_blank'); addTransaction('Telegram Channel', 'channel', 2, '#'); alert('✈️ + ₹2 cashback (after verification)'); }
+    function joinArattai() { window.open('https://aratt.ai/@dil_ke_anns', '_blank'); addTransaction('Arattai Channel', 'channel', 2, '#'); alert('💬 + ₹2 cashback (after verification)'); }
+    function joinDilKeAnnS() { addTransaction('Dil-Ke-AnnS Channel', 'channel', 2, '#'); alert('🎯 + ₹2 cashback (after verification)'); }
+    function sendEmail() { window.location.href = 'mailto:dilkeanns@zohomail.com'; addTransaction('Email Contact', 'email', 1, '#'); alert('📧 + ₹1 cashback (after verification)'); }
+    function showNotifications() { alert('🔔 New: Amazon Sale | New: MakeMyTrip Offer | New: Mentors Available'); }
+
+    // ============================================
+    // PARTNERS DATABASE
+    // ============================================
+    
+    const partnerCategories = {
+        "🛍️ Shopping Partners (4.5+ Rating)": { icon: "🛍️", color: "#ff6b6b", count: "50+", items: [
+            { name: "Amazon India", rating: 4.6, category: "Online Shopping", earn: "₹50-500", link: "https://amazon.in" },
+            { name: "Flipkart", rating: 4.5, category: "Online Shopping", earn: "₹40-400", link: "https://flipkart.com" },
+            { name: "Myntra", rating: 4.7, category: "Fashion", earn: "₹50-300", link: "https://myntra.com" },
+            { name: "Ajio", rating: 4.5, category: "Fashion", earn: "₹40-250", link: "https://ajio.com" },
+            { name: "Nykaa", rating: 4.8, category: "Beauty", earn: "₹50-200", link: "https://nykaa.com" },
+            { name: "Meesho", rating: 4.5, category: "Social Commerce", earn: "₹20-100", link: "https://meesho.com" }
+        ]},
+        "🍔 Food Delivery (4.5+ Rating)": { icon: "🍔", color: "#e67e22", count: "15+", items: [
+            { name: "Zomato", rating: 4.5, category: "Food Delivery", earn: "₹20-100", link: "https://zomato.com" },
+            { name: "Swiggy", rating: 4.5, category: "Food Delivery", earn: "₹20-100", link: "https://swiggy.com" },
+            { name: "Domino's", rating: 4.6, category: "Food Delivery", earn: "₹30-150", link: "https://dominos.co.in" },
+            { name: "Pizza Hut", rating: 4.5, category: "Food Delivery", earn: "₹30-150", link: "https://pizzahut.co.in" }
+        ]},
+        "✈️ Travel Partners (4.5+ Rating)": { icon: "✈️", color: "#3498db", count: "40+", items: [
+            { name: "MakeMyTrip", rating: 4.6, category: "Flights/Hotels", earn: "₹200-2000", link: "https://makemytrip.com" },
+            { name: "RedBus", rating: 4.6, category: "Bus Booking", earn: "₹50-200", link: "https://redbus.in" },
+            { name: "IRCTC", rating: 4.5, category: "Train Booking", earn: "₹10-50", link: "https://irctc.co.in" },
+            { name: "Uber", rating: 4.6, category: "Cab", earn: "₹20-100", link: "https://uber.com" },
+            { name: "Ola", rating: 4.5, category: "Cab", earn: "₹20-100", link: "https://olacabs.com" },
+            { name: "OYO", rating: 4.3, category: "Hotels", earn: "₹100-500", link: "https://oyorooms.com" }
+        ]},
+        "🚗 EV & Automation Partners": { icon: "🚗", color: "#2ecc71", count: "15+", items: [
+            { name: "Tata Motors EV", rating: 4.6, category: "Electric Vehicles", earn: "₹2000-10000", link: "https://tatamotors.com" },
+            { name: "Ola Electric", rating: 4.5, category: "EV Scooter", earn: "₹500-2000", link: "https://olaelectric.com" },
+            { name: "Ather Energy", rating: 4.6, category: "EV Scooter", earn: "₹500-2000", link: "https://atherenergy.com" },
+            { name: "Mahindra Electric", rating: 4.5, category: "EV Cars", earn: "₹2000-10000", link: "https://mahindraelectric.com" }
+        ]},
+        "🤝 Indian Business Partners": { icon: "🤝", color: "#f39c12", count: "60+", items: [
+            { name: "Tata Group", rating: 4.7, category: "Conglomerate", earn: "₹1000-10000", link: "https://tata.com" },
+            { name: "Reliance Industries", rating: 4.6, category: "Conglomerate", earn: "₹1000-10000", link: "https://relianceindustries.com" },
+            { name: "Adani Group", rating: 4.5, category: "Conglomerate", earn: "₹1000-10000", link: "https://adani.com" },
+            { name: "Mahindra Group", rating: 4.6, category: "Conglomerate", earn: "₹1000-10000", link: "https://mahindra.com" },
+            { name: "Jindal Group", rating: 4.5, category: "Conglomerate", earn: "₹1000-10000", link: "https://jindalsteel.com" },
+            { name: "Google India", rating: 4.8, category: "Internships", earn: "₹1000-5000", link: "https://careers.google.com" }
+        ]},
+        "🏭 Industrial Partners": { icon: "🏭", color: "#9b59b6", count: "50+", items: [
+            { name: "Canva", rating: 4.8, category: "Design", earn: "₹500-2000", link: "https://canva.com" },
+            { name: "Coursera", rating: 4.7, category: "Learning", earn: "₹1000-5000", link: "https://coursera.org" },
+            { name: "Udemy", rating: 4.6, category: "Learning", earn: "₹500-3000", link: "https://udemy.com" },
+            { name: "GitHub", rating: 4.8, category: "Developer", earn: "₹500-2000", link: "https://github.com" },
+            { name: "Unacademy", rating: 4.7, category: "Learning", earn: "₹300-500", link: "https://unacademy.com" },
+            { name: "Testbook", rating: 4.6, category: "Learning", earn: "₹100-250", link: "https://testbook.com" }
+        ]},
+        "👨‍🏫 Expert Mentors (4.8+ Rating)": { icon: "👨‍🏫", color: "#1abc9c", count: "30+", items: [
+            { name: "AnnS AI", rating: 9.8, expertise: "All Fields", languages: "15+", free: "24/7", link: "#" },
+            { name: "Dr. Rajesh Kumar", rating: 4.9, expertise: "UPSC/IAS", languages: "Hindi, English", link: "#" },
+            { name: "Dr. Meera Sharma", rating: 4.9, expertise: "Medical/NEET", languages: "Hindi, English", link: "#" },
+            { name: "Prof. John Smith", rating: 4.9, expertise: "Engineering/GATE", languages: "English", link: "#" },
+            { name: "Ms. Priya Singh", rating: 4.9, expertise: "MBA/CAT", languages: "English", link: "#" }
+        ]}
+    };
+
+    function renderDoors() {
+        const container = document.getElementById('mainContainer');
+        let html = '';
+        for (const [category, data] of Object.entries(partnerCategories)) {
+            html += `
+                <div class="section">
+                    <h2 class="section-title">${category}</h2>
+                    <div class="door-grid">
+                        <div class="door-card" onclick="showPartners('${category}')">
+                            <div class="door-header" style="background: linear-gradient(135deg, ${data.color}, ${data.color}dd);">
+                                <span class="icon">${data.icon}</span>
+                                <span class="title">${category}</span>
+                                <span class="count">${data.count}</span>
+                            </div>
+                            <div class="door-content">
+                                ${data.items.slice(0, 4).map(p => `
+                                    <div class="partner-item">
+                                        <div class="partner-title">${p.name} <span class="rating-badge">⭐ ${p.rating}</span></div>
+                                        <div class="partner-details">${p.category || p.expertise || ''}</div>
+                                    </div>
+                                `).join('')}
+                                <div style="text-align:center; padding:8px; color:#ffd700; font-size:0.7rem;">+${data.items.length - 4} more partners</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        container.innerHTML = html;
+    }
+
+    function showPartners(categoryName) {
+        const category = partnerCategories[categoryName];
+        if (!category) return;
+        
+        document.getElementById('modalPartnerTitle').innerHTML = `${category.icon} ${categoryName} <span class="cashback-badge">Earn Cashback (After App Receives Payment)</span>`;
+        document.getElementById('partnerList').innerHTML = category.items.map(p => {
+            let earnAmount = p.earn ? parseInt(p.earn.split('-')[0].replace('₹', '')) : 50;
+            return `
+                <div class="partner-item">
+                    <div class="partner-title">${p.name} <span class="rating-badge">⭐ ${p.rating}</span> <span class="cashback-badge">💰 Earn ₹${Math.floor(earnAmount * 0.2)}</span></div>
+                    <div class="partner-details">${p.category || p.expertise || ''} | ${p.languages ? 'Languages: ' + p.languages : ''}</div>
+                    <div class="partner-details" style="font-size:0.65rem; color:#ff9800;">⏳ Cashback credited after app receives payment (7-45 days)</div>
+                    <a href="${p.link}" target="_blank" class="apply-link" onclick="addTransaction('${p.name}', 'partner', ${earnAmount}, '${p.link}')">🔗 Shop/Apply & Earn →</a>
+                </div>
+            `;
+        }).join('');
+        document.getElementById('partnerModal').style.display = 'flex';
+    }
+
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            let searchTerm = this.value.toLowerCase();
+            let results = [];
+            for (const [category, data] of Object.entries(partnerCategories)) {
+                for (const p of data.items) {
+                    if (p.name.toLowerCase().includes(searchTerm)) results.push(p);
+                }
+            }
+            if (results.length > 0) {
+                document.getElementById('modalPartnerTitle').innerHTML = `🔍 Search Results for "${searchTerm}" <span class="cashback-badge">${results.length} found</span>`;
+                document.getElementById('partnerList').innerHTML = results.map(p => {
+                    let earnAmount = p.earn ? parseInt(p.earn.split('-')[0].replace('₹', '')) : 50;
+                    return `<div class="partner-item"><div class="partner-title">${p.name} <span class="rating-badge">⭐ ${p.rating}</span> <span class="cashback-badge">💰 Earn ₹${Math.floor(earnAmount * 0.2)}</span></div><div class="partner-details">${p.category || p.expertise || ''}</div><a href="${p.link}" target="_blank" class="apply-link" onclick="addTransaction('${p.name}', 'partner', ${earnAmount}, '${p.link}')">🔗 Shop & Earn →</a></div>`;
+                }).join('');
+                document.getElementById('partnerModal').style.display = 'flex';
+            } else {
+                alert(`No partners found for "${searchTerm}"`);
+            }
+        }
+    });
+
+    renderDoors();
+    updateDisplay();
+</script>
+</body>
+</html>
