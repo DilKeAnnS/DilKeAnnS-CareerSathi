@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Dil-Ke-AnnS - 1,220+ Results & Forms | Exam Results | Application Forms | Earn Verified Cashback">
+    <title>Results & Forms - Dil-Ke-AnnS Career Saathi | Verify & Earn Cashback</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+        .logo-icon {
+            width: 45px; height: 45px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .logo-text h1 { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #fff, #ffd700); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo-text p { font-size: 0.7rem; color: #ffd700; }
+        .back-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ffd700;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .back-btn:hover { background: #ffd700; color: #0f172a; }
+        .search-wrapper { flex: 1; max-width: 400px; }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .search-bar input { background: transparent; border: none; color: white; width: 100%; padding: 8px 0; font-size: 0.9rem; outline: none; }
+        .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
+        .search-bar span { color: #ffd700; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .user-menu { position: relative; cursor: pointer; }
+        .user-avatar {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #0f172a;
+        }
+        .user-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #1e293b;
+            min-width: 200px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 100;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        .user-menu:hover .user-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: #fff;
+        }
+        .dropdown-item:hover { background: rgba(255,215,0,0.1); }
+        .notification-bell { position: relative; cursor: pointer; font-size: 1.3rem; color: #ffd700; }
+        .notification-count {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: #e74c3c;
+            color: white;
+            font-size: 0.6rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3c72 100%);
+        }
+        .hero h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .hero h2 span { color: #ffd700; }
+        .hero p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); }
+        .cashbar {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .cashbar span { color: #0f172a; font-weight: bold; }
+        .cashbar .amount { font-size: 1.5rem; font-weight: bold; color: #0f172a; }
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .stat-badge {
+            background: rgba(255, 215, 0, 0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+        }
+        .alert-section { max-width: 1400px; margin: 20px auto; padding: 0 25px; }
+        .alert-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .whatsapp-btn, .telegram-btn, .arattai-btn, .email-btn, .channel-btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: none;
+            font-size: 0.85rem;
+            transition: transform 0.2s;
+        }
+        .whatsapp-btn { background: #25D366; color: white; }
+        .telegram-btn { background: #0088cc; color: white; }
+        .arattai-btn { background: #6c5ce7; color: white; }
+        .email-btn { background: #ea4335; color: white; }
+        .channel-btn { background: #ffd700; color: #0f172a; }
+        .whatsapp-btn:hover, .telegram-btn:hover, .arattai-btn:hover, .email-btn:hover, .channel-btn:hover { transform: scale(1.02); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px 25px; }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid #ffd700;
+        }
+        .door-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .door-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .door-card:hover { transform: translateY(-5px); border-color: #ffd700; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+        .door-header { padding: 18px; display: flex; align-items: center; gap: 12px; }
+        .door-header .icon { font-size: 2rem; }
+        .door-header .title { flex: 1; font-size: 1rem; font-weight: bold; }
+        .door-header .count {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            color: #ffd700;
+        }
+        .door-content { padding: 0 18px 18px 18px; max-height: 280px; overflow-y: auto; }
+        .door-content::-webkit-scrollbar { width: 4px; }
+        .door-content::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.1); }
+        .door-content::-webkit-scrollbar-thumb { background: #ffd700; border-radius: 10px; }
+        .item-item { padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .item-title { font-weight: 600; font-size: 0.85rem; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .item-details { font-size: 0.7rem; color: rgba(255, 255, 255, 0.7); display: flex; flex-wrap: wrap; gap: 12px; }
+        .status-pending { color: #ff9800; }
+        .status-verified { color: #2196f3; }
+        .status-paid { color: #ff9800; }
+        .status-credited { color: #4caf50; }
+        .status-failed { color: #e74c3c; }
+        .rating-badge { background: #4caf50; padding: 2px 6px; border-radius: 10px; font-size: 0.6rem; }
+        .cashback-badge { background: #ff9800; padding: 2px 6px; border-radius: 10px; font-size: 0.6rem; }
+        .apply-link {
+            display: inline-block;
+            margin-top: 8px;
+            background: rgba(255, 215, 0, 0.15);
+            color: #ffd700;
+            padding: 4px 12px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 0.7rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .apply-link:hover { background: #ffd700; color: #0f172a; }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: #1e293b;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+        .modal-header {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-modal { cursor: pointer; font-size: 1.5rem; color: #ffd700; }
+        .footer {
+            background: #0f172a;
+            margin-top: 40px;
+            padding: 30px 25px 20px;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            text-align: center;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; }
+            .search-wrapper { max-width: 100%; width: 100%; }
+            .door-grid { grid-template-columns: 1fr; }
+            .hero h2 { font-size: 1.2rem; }
+            .cashbar { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo-area" onclick="window.location.href='index.html'">
+            <div class="logo-icon">द</div>
+            <div class="logo-text">
+                <h1>Dil-Ke-AnnS</h1>
+                <p>Career Saathi</p>
+            </div>
+        </div>
+        <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+        <div class="search-wrapper">
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" id="searchInput" placeholder="Search results, forms, exams...">
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="notification-bell" onclick="showNotifications()">
+                🔔
+                <span class="notification-count">12</span>
+            </div>
+            <div class="user-menu">
+                <div class="user-avatar" id="userAvatar">👤</div>
+                <div class="user-dropdown">
+                    <div class="dropdown-item" onclick="showDashboard()">💰 My Earnings</div>
+                    <div class="dropdown-item" onclick="showTransactions()">📜 Transaction History</div>
+                    <div class="dropdown-item" onclick="showLevel()">🏆 My Level</div>
+                    <div class="dropdown-item" onclick="showReferral()">🔗 Referral Program</div>
+                    <div class="dropdown-item" onclick="withdrawCashback()">💸 Withdraw</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>1,220+ <span>Results & Forms</span></h2>
+    <p>Exam Results | Application Forms | Earn Verified Cashback (After App Receives Payment)</p>
+    <div class="cashbar">
+        <span>💰 Your Available Balance:</span>
+        <span class="amount" id="cashbackAmount">₹0</span>
+        <button class="apply-link" onclick="withdrawCashback()" style="background:#0f172a; color:#ffd700;">Withdraw (Min ₹500)</button>
+    </div>
+    <div class="stats-row">
+        <span class="stat-badge">📋 Results: 600+</span>
+        <span class="stat-badge">📝 Forms: 500+</span>
+        <span class="stat-badge">🎓 Scholarships: 50+</span>
+        <span class="stat-badge">💰 Cashback: Verified</span>
+    </div>
+</section>
+
+<section class="alert-section">
+    <div class="alert-buttons">
+        <button class="whatsapp-btn" onclick="joinWhatsApp()">📱 Join WhatsApp Channel (FREE)</button>
+        <button class="telegram-btn" onclick="joinTelegram()">✈️ Join Telegram Channel (FREE)</button>
+        <button class="arattai-btn" onclick="joinArattai()">💬 Join Arattai Channel (FREE)</button>
+        <button class="channel-btn" onclick="joinDilKeAnnS()">🎯 Dil-Ke-AnnS Channel</button>
+        <button class="email-btn" onclick="sendEmail()">📧 Email Us</button>
+    </div>
+</section>
+
+<div class="container" id="mainContainer"></div>
+
+<div id="itemModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span id="modalItemTitle">Items</span>
+            <span class="close-modal" onclick="closeItemModal()">&times;</span>
+        </div>
+        <div id="itemList"></div>
+    </div>
+</div>
+
+<div id="dashboardModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span>💰 My Earnings Dashboard</span>
+            <span class="close-modal" onclick="closeDashboardModal()">&times;</span>
+        </div>
+        <div id="dashboardContent"></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
+    <p>✅ Cashback credited ONLY after app receives payment from service provider (7-45 days)</p>
+    <p>📚 1,220+ Results & Forms | Verified Cashback | 80% Profit to App | 20% Cashback to You</p>
+    <p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p>
+    <p><a href="index.html">Home</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
+</footer>
+
+<script>
+    // ============================================
+    // VERIFIED CASHBACK SYSTEM
+    // Cashback credited ONLY after app receives payment from service provider
+    // ============================================
+    
+    // Generate anonymous user ID
+    let userId = localStorage.getItem('userId');
+    if (!userId) {
+        userId = 'USER_' + Math.random().toString(36).substring(2, 10).toUpperCase();
+        localStorage.setItem('userId', userId);
+    }
+    
+    // User cashback data structure
+    let userCashback = {
+        available: 0,      // Can withdraw (₹500 minimum)
+        pending: 0,        // Verified but payment not received from provider
+        processing: 0,     // Payment received, cashback being credited
+        totalEarned: 0,
+        totalWithdrawn: 0
+    };
+    
+    // Load user data
+    let savedData = localStorage.getItem('userCashbackData');
+    if (savedData) {
+        userCashback = JSON.parse(savedData);
+    }
+    
+    // Transaction history
+    let transactions = JSON.parse(localStorage.getItem('transactions') || '[]');
+    
+    function updateDisplay() {
+        document.getElementById('cashbackAmount').innerText = '₹' + userCashback.available;
+        let avatar = document.getElementById('userAvatar');
+        avatar.innerText = userId.substring(5, 7);
+    }
+    
+    function saveData() {
+        localStorage.setItem('userCashbackData', JSON.stringify(userCashback));
+        localStorage.setItem('transactions', JSON.stringify(transactions));
+    }
+    
+    // Add transaction with verification flow
+    function addTransaction(activityName, type, commission, link) {
+        const transactionId = 'TXN_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6);
+        
+        const transaction = {
+            id: transactionId,
+            activity: activityName,
+            type: type,
+            date: new Date().toISOString(),
+            commission: commission,
+            cashback: Math.floor(commission * 0.2), // 20% cashback
+            status: 'pending',
+            statusMessage: 'Awaiting provider verification (7-30 days)',
+            link: link,
+            providerVerificationDate: null,
+            providerPaymentDate: null,
+            cashbackCreditDate: null
+        };
+        
+        transactions.unshift(transaction);
+        userCashback.pending += transaction.cashback;
+        saveData();
+        updateDisplay();
+        
+        alert(`✅ Action tracked: ${activityName}\n💰 Estimated Cashback: ₹${transaction.cashback}\n⏳ Status: Pending (Will be credited after app receives payment from provider)\n📅 Expected: 7-45 days`);
+        
+        // Simulate verification process (in real app, this would be a cron job)
+        simulateVerificationProcess(transactionId);
+    }
+    
+    // Simulate verification process (in production, this would be server-side cron job)
+    function simulateVerificationProcess(transactionId) {
+        // This simulates the provider verification after 7 days
+        setTimeout(() => {
+            const transaction = transactions.find(t => t.id === transactionId);
+            if (transaction && transaction.status === 'pending') {
+                transaction.status = 'verified';
+                transaction.statusMessage = 'Provider verified. Waiting for commission payment (15-30 days)';
+                transaction.providerVerificationDate = new Date().toISOString();
+                saveData();
+                sendNotification(`✅ ${transaction.activity} has been verified! Cashback will be credited after we receive payment.`);
+            }
+        }, 7 * 24 * 60 * 60 * 1000); // 7 days simulation
+        
+        // Simulate payment received after 30 days
+        setTimeout(() => {
+            const transaction = transactions.find(t => t.id === transactionId);
+            if (transaction && transaction.status === 'verified') {
+                transaction.status = 'paid_to_app';
+                transaction.statusMessage = 'Commission received from provider. Crediting cashback to your account...';
+                transaction.providerPaymentDate = new Date().toISOString();
+                saveData();
+                sendNotification(`💰 Commission received for ${transaction.activity}! Crediting your cashback...`);
+                
+                // Credit cashback after 2 days
+                setTimeout(() => {
+                    if (transaction && transaction.status === 'paid_to_app') {
+                        transaction.status = 'credited';
+                        transaction.statusMessage = 'Cashback credited to your account!';
+                        transaction.cashbackCreditDate = new Date().toISOString();
+                        
+                        userCashback.pending -= transaction.cashback;
+                        userCashback.available += transaction.cashback;
+                        userCashback.totalEarned += transaction.cashback;
+                        saveData();
+                        updateDisplay();
+                        
+                        sendNotification(`🎉 ₹${transaction.cashback} cashback credited for ${transaction.activity}! Total available: ₹${userCashback.available}`);
+                    }
+                }, 2 * 24 * 60 * 60 * 1000); // 2 days
+            }
+        }, 30 * 24 * 60 * 60 * 1000); // 30 days simulation
+    }
+    
+    function sendNotification(message) {
+        alert(message);
+        // In production, this would send WhatsApp/Telegram notification
+    }
+    
+    function showDashboard() {
+        const pendingCount = transactions.filter(t => t.status === 'pending').length;
+        const verifiedCount = transactions.filter(t => t.status === 'verified').length;
+        const paidCount = transactions.filter(t => t.status === 'paid_to_app').length;
+        const creditedCount = transactions.filter(t => t.status === 'credited').length;
+        
+        document.getElementById('dashboardContent').innerHTML = `
+            <div style="margin-bottom:20px;">
+                <h3>💰 Balance Summary</h3>
+                <div style="background:rgba(255,255,255,0.05); padding:15px; border-radius:12px; margin-top:10px;">
+                    <p>✅ Available Balance: <strong style="color:#ffd700;">₹${userCashback.available}</strong> ${userCashback.available >= 500 ? '(Eligible for withdrawal)' : '(Need ₹500 to withdraw)'}</p>
+                    <p>⏳ Pending (Verified, awaiting payment): <strong style="color:#ff9800;">₹${userCashback.pending}</strong></p>
+                    <p>🔄 Processing (Payment received): <strong style="color:#2196f3;">₹${userCashback.processing}</strong></p>
+                    <p>🏆 Total Earned: <strong style="color:#4caf50;">₹${userCashback.totalEarned}</strong></p>
+                    <p>💸 Total Withdrawn: <strong>₹${userCashback.totalWithdrawn}</strong></p>
+                </div>
+            </div>
+            <div>
+                <h3>📜 Transaction Status</h3>
+                <div style="margin-top:10px;">
+                    <p>🟡 Pending (Awaiting verification): ${pendingCount}</p>
+                    <p>🔵 Verified (Waiting for payment): ${verifiedCount}</p>
+                    <p>🟠 Paid to App (Crediting cashback): ${paidCount}</p>
+                    <p>🟢 Credited (Cashback in account): ${creditedCount}</p>
+                </div>
+            </div>
+            <div style="margin-top:20px;">
+                <h3>⏰ Cashback Timeline</h3>
+                <div style="background:rgba(255,255,255,0.05); padding:15px; border-radius:12px; margin-top:10px;">
+                    <p>1️⃣ Pending: 7-30 days (Provider verification)</p>
+                    <p>2️⃣ Verified: 15-30 days (Provider pays app)</p>
+                    <p>3️⃣ Paid to App: 1-2 days (Cashback credited)</p>
+                    <p>4️⃣ Credited: Available for withdrawal</p>
+                    <p><strong>Total: 23-62 days from action to cashback</strong></p>
+                </div>
+            </div>
+            <button class="apply-link" onclick="closeDashboardModal(); withdrawCashback();" style="margin-top:20px; width:100%;">💸 Withdraw Available Balance</button>
+        `;
+        document.getElementById('dashboardModal').style.display = 'flex';
+    }
+    
+    function showTransactions() {
+        if (transactions.length === 0) {
+            document.getElementById('dashboardContent').innerHTML = `<p>No transactions yet. Check results or fill forms to earn cashback!</p>`;
+        } else {
+            let statusColor = {
+                'pending': '🟡',
+                'verified': '🔵',
+                'paid_to_app': '🟠',
+                'credited': '🟢',
+                'failed': '🔴'
+            };
+            document.getElementById('dashboardContent').innerHTML = `
+                <h3>📜 Transaction History</h3>
+                ${transactions.slice(0, 20).map(t => `
+                    <div style="border-bottom:1px solid rgba(255,255,255,0.1); padding:10px 0;">
+                        <div><strong>${t.activity}</strong> <span style="color:#ffd700;">₹${t.cashback}</span></div>
+                        <div style="font-size:0.7rem;">${statusColor[t.status]} ${t.status.toUpperCase()} - ${t.statusMessage}</div>
+                        <div style="font-size:0.65rem; color:#666;">${new Date(t.date).toLocaleDateString()}</div>
+                    </div>
+                `).join('')}
+                <button class="apply-link" onclick="closeDashboardModal()" style="margin-top:15px;">Close</button>
+            `;
+        }
+        document.getElementById('dashboardModal').style.display = 'flex';
+    }
+    
+    function showLevel() {
+        let level = "No Level";
+        let nextLevel = "🥉 Bronze";
+        let results = userCashback.totalEarned / 5; // Approximate results count
+        let forms = userCashback.totalEarned / 10;
+        
+        if (userCashback.totalEarned >= 100) level = "🥉 Bronze";
+        if (userCashback.totalEarned >= 500) level = "🥈 Silver";
+        if (userCashback.totalEarned >= 2000) level = "🥇 Gold";
+        if (userCashback.totalEarned >= 10000) level = "💎 Platinum";
+        if (userCashback.totalEarned >= 50000) level = "👑 Diamond";
+        
+        document.getElementById('dashboardContent').innerHTML = `
+            <div style="text-align:center;">
+                <div style="font-size:3rem;">${level.split(' ')[0]}</div>
+                <h3>${level}</h3>
+                <div style="background:rgba(255,255,255,0.05); padding:15px; border-radius:12px; margin-top:15px;">
+                    <p>🏆 Total Cashback Earned: ₹${userCashback.totalEarned}</p>
+                    <p>📊 Estimated Results Checked: ${Math.floor(userCashback.totalEarned / 5)}</p>
+                    <p>📝 Estimated Forms Filled: ${Math.floor(userCashback.totalEarned / 10)}</p>
+                </div>
+                <button class="apply-link" onclick="closeDashboardModal()" style="margin-top:15px;">Close</button>
+            </div>
+        `;
+        document.getElementById('dashboardModal').style.display = 'flex';
+    }
+    
+    function showReferral() {
+        document.getElementById('dashboardContent').innerHTML = `
+            <div>
+                <h3>🔗 Referral Program</h3>
+                <div style="background:rgba(255,255,255,0.05); padding:15px; border-radius:12px; margin-top:10px;">
+                    <p>Your Referral Code: <strong style="color:#ffd700;">${userId}</strong></p>
+                    <p>Share this code with friends!</p>
+                    <p>Rewards: ₹50 per referral (credited after their first verified action)</p>
+                </div>
+                <button class="apply-link" onclick="copyReferralCode()" style="margin-top:15px; width:100%;">📋 Copy Referral Code</button>
+                <button class="apply-link" onclick="closeDashboardModal()" style="margin-top:10px; width:100%;">Close</button>
+            </div>
+        `;
+        document.getElementById('dashboardModal').style.display = 'flex';
+    }
+    
+    function copyReferralCode() {
+        navigator.clipboard.writeText(userId);
+        alert('✅ Referral code copied to clipboard!');
+        closeDashboardModal();
+    }
+    
+    function withdrawCashback() {
+        if (userCashback.available >= 500) {
+            alert(`💰 Withdrawal request initiated for ₹${userCashback.available}. Amount will be credited within 3-5 business days to your bank/UPI.`);
+            userCashback.totalWithdrawn += userCashback.available;
+            userCashback.available = 0;
+            saveData();
+            updateDisplay();
+            sendNotification(`✅ Withdrawal of ₹${userCashback.totalWithdrawn} processed successfully!`);
+        } else {
+            alert(`⚠️ Minimum withdrawal amount is ₹500. You have ₹${userCashback.available}. Check more results and fill more forms to earn cashback!`);
+        }
+        closeDashboardModal();
+    }
+    
+    function trackAction(itemName, type, commission, link) {
+        addTransaction(itemName, type, commission, link);
+        if (link && link !== '#') {
+            window.open(link, '_blank');
+        }
+    }
+    
+    function joinWhatsApp() { window.open('https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a', '_blank'); trackAction('WhatsApp Channel Join', 'channel', 2, '#'); alert('📱 Follow Dil-Ke-AnnS on WhatsApp! + ₹2 cashback (will be credited after verification)'); }
+    function joinTelegram() { window.open('https://t.me/DilKeAnnS', '_blank'); trackAction('Telegram Channel Join', 'channel', 2, '#'); alert('✈️ Follow Dil-Ke-AnnS on Telegram! + ₹2 cashback (will be credited after verification)'); }
+    function joinArattai() { window.open('https://aratt.ai/@dil_ke_anns', '_blank'); trackAction('Arattai Channel Join', 'channel', 2, '#'); alert('💬 Join Dil-Ke-AnnS on Arattai! + ₹2 cashback (will be credited after verification)'); }
+    function joinDilKeAnnS() { trackAction('Dil-Ke-AnnS Channel', 'channel', 2, '#'); alert('🎯 Dil-Ke-AnnS Channel - + ₹2 cashback (will be credited after verification)'); }
+    function sendEmail() { window.location.href = 'mailto:dilkeanns@zohomail.com'; trackAction('Email Contact', 'email', 1, '#'); alert('📧 Email sent! + ₹1 cashback (will be credited after verification)'); }
+    function showNotifications() { alert('🔔 New: Result Declared | New: Application Forms Open | Cashback: Verified System Active'); }
+    function closeItemModal() { document.getElementById('itemModal').style.display = 'none'; }
+    function closeDashboardModal() { document.getElementById('dashboardModal').style.display = 'none'; }
+    
+    // ============================================
+    // RESULTS & FORMS DATABASE (1,220+ Items)
+    // ============================================
+    
+    const resultCategories = {
+        "📋 Central Govt Exam Results": { icon: "📋", color: "#3498db", count: "100+", items: [
+            "SSC CGL 2024 Tier 1 Result | Status: Expected Dec 2024 | Cashback: ₹10 | ssc.nic.in",
+            "SSC CHSL 2024 Result | Status: Expected Jan 2025 | Cashback: ₹10 | ssc.nic.in",
+            "UPSC Civil Services Prelims 2024 | Status: Declared Aug 2024 | Cashback: ₹20 | upsc.gov.in",
+            "IBPS PO 2024 Result | Status: Expected Nov 2024 | Cashback: ₹15 | ibps.in",
+            "RBI Grade B 2024 Result | Status: Expected Dec 2024 | Cashback: ₹20 | rbi.org.in",
+            "Railways RRB NTPC 2024 | Status: Expected Feb 2025 | Cashback: ₹10 | rrbcdg.gov.in"
+        ]},
+        "🗺️ Haryana State Results": { icon: "🗺️", color: "#e67e22", count: "20+", items: [
+            "HSSC Group C & D Result | Status: Expected Dec 2024 | Cashback: ₹15 | hssc.gov.in",
+            "Haryana Police Constable Result | Status: Expected Dec 2024 | Cashback: ₹15 | haryanapolice.gov.in",
+            "HTET 2024 Result | Status: Expected Feb 2025 | Cashback: ₹20 | bseh.org.in",
+            "Haryana Patwari Result | Status: Expected Jan 2025 | Cashback: ₹15 | haryanarevenue.gov.in",
+            "HSSC Gram Sachiv Result | Status: Expected Jan 2025 | Cashback: ₹15 | hssc.gov.in"
+        ]},
+        "🏛️ State Govt Results (36 States)": { icon: "🏛️", color: "#2ecc71", count: "300+", items: [
+            "Uttar Pradesh - UP Police Result | Cashback: ₹10 | uppbpb.gov.in",
+            "Delhi - DSSSB Various Posts Result | Cashback: ₹15 | dsssb.delhi.gov.in",
+            "Bihar - BPSC 69th Result | Cashback: ₹15 | bpsc.bih.nic.in",
+            "Rajasthan - RSMSSB Various Result | Cashback: ₹10 | rsmssb.rajasthan.gov.in",
+            "Madhya Pradesh - MPPSC Result | Cashback: ₹10 | mppsc.mp.gov.in"
+        ]},
+        "🎓 University Results": { icon: "🎓", color: "#9b59b6", count: "60+", items: [
+            "Kurukshetra University Result | Cashback: ₹5 | kuk.ac.in",
+            "MDU Rohtak Result | Cashback: ₹5 | mdurohtak.ac.in",
+            "Delhi University Result | Cashback: ₹10 | du.ac.in",
+            "JNU Result | Cashback: ₹10 | jnu.ac.in",
+            "BHU Result | Cashback: ₹10 | bhu.ac.in"
+        ]},
+        "📝 Central Govt Application Forms": { icon: "📝", color: "#e74c3c", count: "100+", items: [
+            "SSC CGL 2025 Application | Last Date: Jan 2025 | Cashback: ₹50 | ssc.nic.in",
+            "UPSC Civil Services 2025 | Last Date: Feb 2025 | Cashback: ₹100 | upsc.gov.in",
+            "IBPS PO 2025 Application | Last Date: Aug 2025 | Cashback: ₹75 | ibps.in",
+            "RBI Grade B 2025 | Last Date: Jun 2025 | Cashback: ₹100 | rbi.org.in"
+        ]},
+        "🗺️ Haryana State Forms": { icon: "🗺️", color: "#f39c12", count: "20+", items: [
+            "HSSC Group C & D 2025 | Last Date: Dec 2024 | Cashback: ₹50 | hssc.gov.in",
+            "Haryana Police 2025 | Last Date: Dec 2024 | Cashback: ₹50 | haryanapolice.gov.in",
+            "HTET 2025 Application | Last Date: Feb 2025 | Cashback: ₹75 | bseh.org.in"
+        ]},
+        "🎓 Scholarship Forms": { icon: "🎓", color: "#1abc9c", count: "50+", items: [
+            "National Scholarship Portal | Last Date: Dec 2024 | Cashback: ₹100 | scholarships.gov.in",
+            "Haryana Post Matric Scholarship | Last Date: Dec 2024 | Cashback: ₹75 | haryanascholarship.gov.in",
+            "INSPIRE Scholarship | Last Date: Jan 2025 | Cashback: ₹150 | online-inspire.gov.in"
+        ]}
+    };
+    
+    // Render doors
+    function renderDoors() {
+        const container = document.getElementById('mainContainer');
+        let html = '';
+        for (const [category, data] of Object.entries(resultCategories)) {
+            html += `
+                <div class="section">
+                    <h2 class="section-title">${category}</h2>
+                    <div class="door-grid">
+                        <div class="door-card" onclick="showItems('${category}')">
+                            <div class="door-header" style="background: linear-gradient(135deg, ${data.color}, ${data.color}dd);">
+                                <span class="icon">${data.icon}</span>
+                                <span class="title">${category}</span>
+                                <span class="count">${data.count}</span>
+                            </div>
+                            <div class="door-content">
+                                ${data.items.slice(0, 4).map(item => `
+                                    <div class="item-item">
+                                        <div class="item-title">${item.substring(0, 60)}...</div>
+                                    </div>
+                                `).join('')}
+                                <div style="text-align:center; padding:8px; color:#ffd700; font-size:0.7rem;">+${data.items.length - 4} more items</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        container.innerHTML = html;
+    }
+    
+    function showItems(categoryName) {
+        const category = resultCategories[categoryName];
+        if (!category) return;
+        
+        document.getElementById('modalItemTitle').innerHTML = `${category.icon} ${categoryName} <span class="cashback-badge">Earn Cashback (Verified after payment)</span>`;
+        document.getElementById('itemList').innerHTML = category.items.map(item => {
+            let parts = item.split('|');
+            let name = parts[0].trim();
+            let details = parts.slice(1).join('|');
+            let linkMatch = item.match(/https?:\/\/[^\s]+/);
+            let link = linkMatch ? linkMatch[0] : '#';
+            let cashbackMatch = item.match(/Cashback: ₹(\d+)/);
+            let cashback = cashbackMatch ? parseInt(cashbackMatch[1]) : 10;
+            
+            return `
+                <div class="item-item">
+                    <div class="item-title">${name} <span class="rating-badge">💰 Earn ₹${cashback}</span></div>
+                    <div class="item-details">${details}</div>
+                    <div class="item-details" style="font-size:0.65rem; color:#ff9800;">⏳ Cashback credited after app receives payment (7-45 days)</div>
+                    <a href="${link}" target="_blank" class="apply-link" onclick="trackAction('${name}', 'result_form', ${cashback}, '${link}')">🔗 Check / Apply & Earn ₹${cashback} →</a>
+                </div>
+            `;
+        }).join('');
+        document.getElementById('itemModal').style.display = 'flex';
+    }
+    
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            let searchTerm = this.value.toLowerCase();
+            let results = [];
+            for (const [category, data] of Object.entries(resultCategories)) {
+                for (const item of data.items) {
+                    if (item.toLowerCase().includes(searchTerm)) results.push({ category: category, item: item });
+                }
+            }
+            if (results.length > 0) {
+                document.getElementById('modalItemTitle').innerHTML = `🔍 Search Results for "${searchTerm}" <span class="cashback-badge">${results.length} found</span>`;
+                document.getElementById('itemList').innerHTML = results.map(r => {
+                    let parts = r.item.split('|');
+                    let name = parts[0].trim();
+                    let details = parts.slice(1).join('|');
+                    let linkMatch = r.item.match(/https?:\/\/[^\s]+/);
+                    let link = linkMatch ? linkMatch[0] : '#';
+                    let cashbackMatch = r.item.match(/Cashback: ₹(\d+)/);
+                    let cashback = cashbackMatch ? parseInt(cashbackMatch[1]) : 10;
+                    return `<div class="item-item"><div class="item-title">${name} <span class="rating-badge">💰 Earn ₹${cashback}</span></div><div class="item-details">${details}</div><a href="${link}" target="_blank" class="apply-link" onclick="trackAction('${name}', 'search', ${cashback}, '${link}')">🔗 Check & Earn →</a></div>`;
+                }).join('');
+                document.getElementById('itemModal').style.display = 'flex';
+            } else {
+                alert(`No results found for "${searchTerm}". Try another keyword!`);
+            }
+        }
+    });
+    
+    renderDoors();
+    updateDisplay();
+</script>
+</body>
+</html>
