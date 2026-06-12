@@ -6,20 +6,13 @@
     <meta name="description" content="Dil-Ke-AnnS - India's First Career + Earning Ecosystem | 40 Lakh+ Jobs | 15,000+ Exams | Earn Cashback">
     <title>Dil-Ke-AnnS Career Saathi | India's First Career + Earning Ecosystem</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             min-height: 100vh;
             color: #fff;
         }
-
-        /* Header */
         .header {
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
@@ -28,7 +21,6 @@
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .header-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -39,17 +31,9 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-        }
-
+        .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; }
         .logo-icon {
-            width: 45px;
-            height: 45px;
+            width: 45px; height: 45px;
             background: linear-gradient(135deg, #ffd700, #ff8c00);
             border-radius: 12px;
             display: flex;
@@ -57,27 +41,9 @@
             justify-content: center;
             font-size: 24px;
         }
-
-        .logo-text h1 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #fff, #ffd700);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .logo-text p {
-            font-size: 0.7rem;
-            color: #ffd700;
-            letter-spacing: 1px;
-        }
-
-        .search-wrapper {
-            flex: 1;
-            max-width: 400px;
-        }
-
+        .logo-text h1 { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #fff, #ffd700); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo-text p { font-size: 0.7rem; color: #ffd700; }
+        .search-wrapper { flex: 1; max-width: 400px; }
         .search-bar {
             display: flex;
             align-items: center;
@@ -85,46 +51,54 @@
             border-radius: 50px;
             padding: 8px 18px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s;
         }
-
-        .search-bar:hover,
-        .search-bar:focus-within {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: #ffd700;
-        }
-
-        .search-bar input {
-            background: transparent;
-            border: none;
-            color: white;
-            width: 100%;
-            padding: 8px 0;
-            font-size: 0.9rem;
-            outline: none;
-        }
-
-        .search-bar input::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        .search-bar span {
-            color: #ffd700;
-        }
-
-        .header-right {
+        .search-bar input { background: transparent; border: none; color: white; width: 100%; padding: 8px 0; font-size: 0.9rem; outline: none; }
+        .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
+        .search-bar span { color: #ffd700; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .user-menu { position: relative; cursor: pointer; }
+        .user-avatar {
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 20px;
+            justify-content: center;
+            font-weight: bold;
+            color: #0f172a;
         }
-
-        .notification-bell {
-            position: relative;
+        .user-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #1e293b;
+            min-width: 200px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 100;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        .user-menu:hover .user-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             cursor: pointer;
-            font-size: 1.3rem;
-            color: #ffd700;
+            transition: background 0.2s;
+            color: #fff;
         }
-
+        .dropdown-item:hover { background: rgba(255,215,0,0.1); }
+        .notification-bell { position: relative; cursor: pointer; font-size: 1.3rem; color: #ffd700; }
         .notification-count {
             position: absolute;
             top: -8px;
@@ -136,288 +110,47 @@
             border-radius: 50%;
             font-weight: bold;
         }
-
-        .login-dropdown {
-            position: relative;
-        }
-
-        .login-btn {
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
-            color: #0f172a;
-            border: none;
-            padding: 8px 18px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            transition: transform 0.2s;
-        }
-
-        .login-btn:hover {
-            transform: scale(1.02);
-        }
-
-        .dropdown-content {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: #1e293b;
-            min-width: 200px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s;
-            z-index: 100;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-        }
-
-        .login-dropdown:hover .dropdown-content {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown-item {
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            cursor: pointer;
-            transition: background 0.2s;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .dropdown-item:hover {
-            background: rgba(255, 215, 0, 0.1);
-        }
-
-        .dropdown-item.owner { border-left: 3px solid #ffd700; }
-        .dropdown-item.team { border-left: 3px solid #3498db; }
-        .dropdown-item.partner { border-left: 3px solid #2ecc71; }
-        .dropdown-item.user { border-left: 3px solid #e74c3c; }
-
-        /* Hero */
         .hero {
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
             background: linear-gradient(135deg, #0f172a 0%, #1e3c72 100%);
         }
-
-        .hero h2 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            background: linear-gradient(135deg, #fff, #ffd700);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+        .hero h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .hero h2 span { color: #ffd700; }
+        .hero p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); }
+        .cashbar {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
         }
-
-        .hero p {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
-
-        .stats-grid {
+        .cashbar span { color: #0f172a; font-weight: bold; }
+        .cashbar .amount { font-size: 1.5rem; font-weight: bold; color: #0f172a; }
+        .stats-row {
             display: flex;
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-top: 25px;
         }
-
-        .stat-card {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 15px 25px;
-            border-radius: 20px;
-            backdrop-filter: blur(5px);
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #ffd700;
-        }
-
-        .stat-label {
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
-            color: #0f172a;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.2s;
-            display: inline-block;
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid #ffd700;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-
-        .btn-primary:hover, .btn-secondary:hover {
-            transform: translateY(-2px);
-        }
-
-        /* AnnS AI */
-        .anns-ai-section {
-            max-width: 1400px;
-            margin: 40px auto;
-            padding: 0 25px;
-        }
-
-        .ai-card {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border-radius: 24px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .ai-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .ai-header {
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .ai-header span {
-            font-size: 2rem;
-        }
-
-        .ai-header h3 {
-            color: #0f172a;
-            font-size: 1.3rem;
-        }
-
-        .ai-header p {
-            color: #0f172a;
-            font-size: 0.8rem;
-            opacity: 0.8;
-        }
-
-        .ai-chat-area {
-            padding: 25px;
-        }
-
-        .suggestions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .suggestion-chip {
+        .stat-badge {
             background: rgba(255, 215, 0, 0.1);
-            padding: 8px 16px;
+            padding: 8px 20px;
             border-radius: 50px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            color: #ffd700;
+            font-size: 0.85rem;
         }
-
-        .suggestion-chip:hover {
-            background: rgba(255, 215, 0, 0.2);
-        }
-
-        .ai-input-area {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .ai-input-area input {
-            flex: 1;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 50px;
-            padding: 14px 20px;
-            color: white;
-            font-size: 0.9rem;
-            outline: none;
-        }
-
-        .ai-input-area input:focus {
-            border-color: #ffd700;
-        }
-
-        .ai-send-btn {
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
-            border: none;
-            padding: 0 25px;
-            border-radius: 50px;
-            color: #0f172a;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .ai-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .ai-feature {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Alert Buttons */
-        .alert-section {
-            max-width: 1400px;
-            margin: 30px auto;
-            padding: 0 25px;
-        }
-
+        .alert-section { max-width: 1400px; margin: 20px auto; padding: 0 25px; }
         .alert-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
-
-        .whatsapp-btn, .telegram-btn, .arattai-btn, .email-btn {
-            padding: 12px 30px;
+        .whatsapp-btn, .telegram-btn, .arattai-btn, .email-btn, .channel-btn {
+            padding: 10px 25px;
             border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
@@ -425,39 +158,28 @@
             align-items: center;
             gap: 10px;
             border: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: transform 0.2s;
         }
-
         .whatsapp-btn { background: #25D366; color: white; }
         .telegram-btn { background: #0088cc; color: white; }
         .arattai-btn { background: #6c5ce7; color: white; }
         .email-btn { background: #ea4335; color: white; }
-
-        .whatsapp-btn:hover, .telegram-btn:hover, .arattai-btn:hover, .email-btn:hover {
-            transform: scale(1.02);
-        }
-
-        /* Tiles Grid */
-        .tiles-section {
-            max-width: 1400px;
-            margin: 40px auto;
-            padding: 0 25px;
-        }
-
+        .channel-btn { background: #ffd700; color: #0f172a; }
+        .whatsapp-btn:hover, .telegram-btn:hover, .arattai-btn:hover, .email-btn:hover, .channel-btn:hover { transform: scale(1.02); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px 25px; }
         .section-title {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             margin-bottom: 25px;
             padding-left: 15px;
             border-left: 4px solid #ffd700;
         }
-
         .tiles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 25px;
+            margin-bottom: 40px;
         }
-
         .tile-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
@@ -468,38 +190,27 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
         }
-
         .tile-card:hover {
             transform: translateY(-8px);
             border-color: #ffd700;
             background: rgba(255, 255, 255, 0.08);
         }
-
         .tile-icon { font-size: 2.5rem; margin-bottom: 15px; }
         .tile-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 8px; }
         .tile-count { font-size: 0.75rem; color: #ffd700; margin-bottom: 10px; }
         .tile-desc { font-size: 0.7rem; color: rgba(255, 255, 255, 0.6); }
-
-        /* User Earning Tile */
-        .earning-section {
-            max-width: 1400px;
-            margin: 40px auto;
-            padding: 0 25px;
-        }
-
         .earning-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 25px;
+            margin-bottom: 40px;
         }
-
         .earning-card {
             background: linear-gradient(135deg, #1e293b, #0f172a);
             border-radius: 24px;
             padding: 25px;
             border: 1px solid rgba(255, 215, 0, 0.2);
         }
-
         .earning-header {
             display: flex;
             align-items: center;
@@ -508,18 +219,15 @@
             padding-bottom: 15px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .earning-header span { font-size: 1.8rem; }
         .earning-header h3 { font-size: 1.2rem; }
-
-        .stats-row {
+        .stats-row-flex {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
             flex-wrap: wrap;
             gap: 15px;
         }
-
         .stat-box {
             text-align: center;
             flex: 1;
@@ -527,19 +235,15 @@
             padding: 15px;
             border-radius: 16px;
         }
-
         .stat-box .amount { font-size: 1.5rem; font-weight: bold; color: #ffd700; }
         .stat-box .label { font-size: 0.7rem; color: rgba(255, 255, 255, 0.7); }
-
         .payout-info {
             background: rgba(255, 215, 0, 0.1);
             padding: 15px;
             border-radius: 16px;
             margin: 15px 0;
         }
-
         .payout-info p { margin: 5px 0; font-size: 0.8rem; }
-
         .btn-earn {
             background: linear-gradient(135deg, #ffd700, #ff8c00);
             color: #0f172a;
@@ -552,9 +256,7 @@
             margin-top: 10px;
             transition: transform 0.2s;
         }
-
         .btn-earn:hover { transform: scale(1.02); }
-
         .sponsorship-level {
             display: flex;
             align-items: center;
@@ -565,7 +267,6 @@
             padding-top: 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
         .level-badge {
             background: #ffd700;
             color: #0f172a;
@@ -574,7 +275,6 @@
             font-weight: bold;
             font-size: 0.8rem;
         }
-
         .referral-link {
             background: rgba(255, 255, 255, 0.05);
             padding: 10px;
@@ -583,118 +283,17 @@
             font-family: monospace;
             word-break: break-all;
         }
-
-        /* Dashboard Containers */
-        .dashboard-container {
-            max-width: 1400px;
-            margin: 40px auto;
-            padding: 0 25px;
-            display: none;
-        }
-
-        .dashboard-container.active {
-            display: block;
-        }
-
-        .dashboard-card {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border-radius: 24px;
-            padding: 25px;
-            border: 2px solid #ffd700;
-        }
-
-        .dashboard-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-        }
-
-        .dashboard-header span { font-size: 2rem; }
-        .dashboard-header h3 { font-size: 1.3rem; color: #ffd700; }
-
-        .dashboard-stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-
-        .dashboard-stat-box {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 16px;
-            text-align: center;
-        }
-
-        .dashboard-stat-box .amount {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #ffd700;
-        }
-
-        .dashboard-stat-box .label {
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin-top: 5px;
-        }
-
-        .partner-breakdown {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        .partner-breakdown h4 {
-            color: #ffd700;
-            margin-bottom: 15px;
-        }
-
-        .partner-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.85rem;
-        }
-
-        .dashboard-btn {
-            background: linear-gradient(135deg, #ffd700, #ff8c00);
-            color: #0f172a;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 20px;
-            width: 100%;
-            transition: transform 0.2s;
-        }
-
-        .dashboard-btn:hover { transform: scale(1.02); }
-
-        /* Featured Section */
-        .featured-section {
-            max-width: 1400px;
-            margin: 40px auto;
-            padding: 0 25px;
-        }
-
         .featured-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
+            margin-bottom: 40px;
         }
-
         .featured-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             padding: 20px;
         }
-
         .featured-card h4 { color: #ffd700; margin-bottom: 15px; }
         .featured-list { list-style: none; }
         .featured-list li {
@@ -704,76 +303,28 @@
             cursor: pointer;
         }
         .featured-list li:hover { color: #ffd700; }
-
-        /* Footer */
         .footer {
             background: #0f172a;
-            margin-top: 60px;
-            padding: 40px 25px 20px;
+            margin-top: 40px;
+            padding: 30px 25px 20px;
             border-top: 1px solid rgba(255, 215, 0, 0.2);
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-        }
-
-        .footer-col h4 { color: #ffd700; margin-bottom: 15px; font-size: 1rem; }
-        .footer-col a {
-            display: block;
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            font-size: 0.8rem;
-            margin-bottom: 8px;
-            transition: color 0.2s;
-            cursor: pointer;
-        }
-        .footer-col a:hover { color: #ffd700; }
-
-        .footer-bottom {
             text-align: center;
-            padding-top: 30px;
-            margin-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.7rem;
             color: rgba(255, 255, 255, 0.5);
         }
-
-        /* Responsive */
+        .footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
         @media (max-width: 768px) {
             .header-container { flex-direction: column; }
             .search-wrapper { max-width: 100%; width: 100%; }
-            .hero h2 { font-size: 1.3rem; }
             .tiles-grid { grid-template-columns: 1fr; }
             .earning-grid { grid-template-columns: 1fr; }
-            .dashboard-stats-grid { grid-template-columns: 1fr; }
-            .ai-header { flex-direction: column; text-align: center; }
-            .ai-input-area { flex-direction: column; }
-        }
-
-        @media (max-width: 480px) {
-            .stat-card { padding: 10px 15px; }
-            .stat-number { font-size: 1.2rem; }
-            .cta-buttons { flex-direction: column; align-items: center; }
-            .btn-primary, .btn-secondary { width: 200px; text-align: center; }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .tile-card, .earning-card, .featured-card, .ai-card, .dashboard-card {
-            animation: fadeInUp 0.5s ease forwards;
+            .hero h2 { font-size: 1.2rem; }
+            .cashbar { flex-direction: column; gap: 8px; }
         }
     </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
     <div class="header-container">
         <div class="logo-area" onclick="window.location.href='index.html'">
@@ -783,99 +334,57 @@
                 <p>Career Saathi</p>
             </div>
         </div>
-
         <div class="search-wrapper">
             <div class="search-bar">
                 <span>🔍</span>
                 <input type="text" id="searchInput" placeholder="Search jobs, exams, partners...">
             </div>
         </div>
-
         <div class="header-right">
             <div class="notification-bell" onclick="showNotifications()">
                 🔔
                 <span class="notification-count">12</span>
             </div>
-
-            <div class="login-dropdown">
-                <button class="login-btn">👤 Login ▼</button>
-                <div class="dropdown-content">
-                    <a href="#" class="dropdown-item owner" onclick="handleLogin('owner')">👑 Owner Login</a>
-                    <a href="#" class="dropdown-item team" onclick="handleLogin('team')">👥 Team Login</a>
-                    <a href="#" class="dropdown-item partner" onclick="handleLogin('partner')">🤝 Partners Login</a>
-                    <a href="#" class="dropdown-item user" onclick="handleLogin('user')">👤 User Login</a>
+            <div class="user-menu">
+                <div class="user-avatar">👤</div>
+                <div class="user-dropdown">
+                    <div class="dropdown-item" onclick="handleLogin('owner')">👑 Owner Login</div>
+                    <div class="dropdown-item" onclick="handleLogin('team')">👥 Team Login</div>
+                    <div class="dropdown-item" onclick="handleLogin('partner')">🤝 Partners Login</div>
+                    <div class="dropdown-item" onclick="handleLogin('user')">👤 User Login</div>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <h2>सपना नहीं, करियर बनाएं | Earn While You Learn</h2>
     <p>India's First Career + Earning Ecosystem. Backed by Data. Boosted by Earnings.</p>
-    
-    <div class="stats-grid">
-        <div class="stat-card"><div class="stat-number">40 Lakh+</div><div class="stat-label">Verified Jobs</div></div>
-        <div class="stat-card"><div class="stat-number">15,000+</div><div class="stat-label">Exam Paths</div></div>
-        <div class="stat-card"><div class="stat-number">200+</div><div class="stat-label">Trusted Partners</div></div>
-        <div class="stat-card"><div class="stat-number">36</div><div class="stat-label">States/UTs</div></div>
+    <div class="stats-row">
+        <div class="stat-badge">40 Lakh+ Jobs</div>
+        <div class="stat-badge">15,000+ Exams</div>
+        <div class="stat-badge">200+ Partners</div>
+        <div class="stat-badge">36 States/UTs</div>
     </div>
-
-    <div class="cta-buttons">
-        <a href="jobs.html" class="btn-primary">🔍 Find Jobs</a>
-        <a href="exams.html" class="btn-secondary">📚 Explore Exams</a>
-        <a href="partners.html" class="btn-primary">💰 Earn Cashback</a>
+    <div class="cashbar">
+        <span>💰 Your Cashback Balance:</span>
+        <span class="amount" id="cashbackAmount">₹0</span>
+        <button class="btn-earn" onclick="claimCashback()" style="width: auto; padding: 8px 20px;">Withdraw</button>
     </div>
 </section>
 
-<!-- AnnS AI -->
-<section class="anns-ai-section">
-    <div class="ai-card">
-        <div class="ai-header">
-            <span>🤖</span>
-            <div>
-                <h3>Ask AnnS AI - Your Career Assistant</h3>
-                <p>Powered by Advanced AI | 24/7 Available | Free for All Users</p>
-            </div>
-        </div>
-        <div class="ai-chat-area">
-            <div class="suggestions">
-                <span class="suggestion-chip" onclick="askAI('Which job is best for me?')">💼 Which job is best for me?</span>
-                <span class="suggestion-chip" onclick="askAI('Suggest exams after 12th Science')">📚 Suggest exams after 12th Science</span>
-                <span class="suggestion-chip" onclick="askAI('Find jobs near me in Haryana')">📍 Find jobs near me in Haryana</span>
-                <span class="suggestion-chip" onclick="askAI('How to prepare for SSC CGL?')">📖 How to prepare for SSC CGL?</span>
-                <span class="suggestion-chip" onclick="askAI('Best career options after B.Com')">💼 Best career options after B.Com</span>
-            </div>
-            <div class="ai-input-area">
-                <input type="text" id="aiQuestion" placeholder="💬 Type your career question here...">
-                <button class="ai-send-btn" onclick="askAI()">Send</button>
-            </div>
-            <div id="aiResponse" style="margin-top: 15px; font-size: 0.85rem; color: #ffd700; min-height: 50px;"></div>
-            <div class="ai-features">
-                <span class="ai-feature">🎯 Personalized Job Recommendations</span>
-                <span class="ai-feature">📚 Exam Path Guidance</span>
-                <span class="ai-feature">💼 Career Counselling</span>
-                <span class="ai-feature">📄 Resume Tips</span>
-                <span class="ai-feature">💰 Salary Predictions</span>
-                <span class="ai-feature">🎤 Interview Preparation</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ALERT CHANNELS -->
 <section class="alert-section">
     <div class="alert-buttons">
         <button class="whatsapp-btn" onclick="joinWhatsApp()">📱 Join WhatsApp Channel (FREE)</button>
         <button class="telegram-btn" onclick="joinTelegram()">✈️ Join Telegram Channel (FREE)</button>
         <button class="arattai-btn" onclick="joinArattai()">💬 Join Arattai Channel (FREE)</button>
+        <button class="channel-btn" onclick="joinDilKeAnnS()">🎯 Dil-Ke-AnnS Channel</button>
         <button class="email-btn" onclick="sendEmail()">📧 Email Us</button>
     </div>
 </section>
 
-<!-- MAIN TILES - 12 TILES -->
-<section class="tiles-section">
+<div class="container">
     <h2 class="section-title">📌 Explore Career Opportunities</h2>
     <div class="tiles-grid">
         <div class="tile-card" onclick="window.location.href='jobs.html'"><div class="tile-icon">💼</div><div class="tile-title">Jobs Portal</div><div class="tile-count">40 Lakh+ Jobs</div><div class="tile-desc">Govt | Private | State | Global</div></div>
@@ -891,602 +400,76 @@
         <div class="tile-card" onclick="window.location.href='partners.html?type=travel'"><div class="tile-icon">✈️</div><div class="tile-title">Travel Partners</div><div class="tile-count">25+ Partners</div><div class="tile-desc">Bus | Train | Flight | Hotel</div></div>
         <div class="tile-card" onclick="window.location.href='partners.html?type=business'"><div class="tile-icon">🤝</div><div class="tile-title">Business Partners</div><div class="tile-count">200+ Partners</div><div class="tile-desc">Sponsorship | Internships</div></div>
     </div>
-</section>
 
-<!-- USER EARNING TILE (Visible to all, but personal data only after login) -->
-<section class="earning-section" id="userEarningSection">
     <h2 class="section-title">💰 Your Earnings Dashboard</h2>
     <div class="earning-grid">
         <div class="earning-card">
-            <div class="earning-header">
-                <span>💰</span>
-                <h3>Your Earnings</h3>
-            </div>
-            <div class="stats-row">
-                <div class="stat-box">
-                    <div class="amount" id="thisMonthEarnings">₹0</div>
-                    <div class="label">This Month</div>
-                </div>
-                <div class="stat-box">
-                    <div class="amount" id="lastMonthEarnings">₹0</div>
-                    <div class="label">Last Month</div>
-                </div>
-                <div class="stat-box">
-                    <div class="amount" id="totalEarnings">₹0</div>
-                    <div class="label">Total Earned</div>
-                </div>
+            <div class="earning-header"><span>💰</span><h3>Your Earnings</h3></div>
+            <div class="stats-row-flex">
+                <div class="stat-box"><div class="amount" id="thisMonthEarnings">₹0</div><div class="label">This Month</div></div>
+                <div class="stat-box"><div class="amount" id="lastMonthEarnings">₹0</div><div class="label">Last Month</div></div>
+                <div class="stat-box"><div class="amount" id="totalEarnings">₹0</div><div class="label">Total Earned</div></div>
             </div>
             <div class="payout-info">
                 <p>📅 <strong>Month-End Returns</strong></p>
                 <p>Current Month (June 2026): <strong id="pendingPayout">₹0</strong> (Pending)</p>
                 <p>Next Payout Date: <strong>30th June 2026</strong></p>
                 <p>Minimum Withdrawal: <strong>₹500</strong></p>
-                <p>Withdrawal Method: Bank Transfer / UPI</p>
             </div>
-            <button class="btn-earn" onclick="withdrawEarnings()">💰 Withdraw Earnings</button>
+            <button class="btn-earn" onclick="claimCashback()">💰 Withdraw Earnings</button>
         </div>
-
         <div class="earning-card">
-            <div class="earning-header">
-                <span>🎓</span>
-                <h3>Sponsorship Program</h3>
-            </div>
-            <div class="sponsorship-level">
-                <span>Your Level:</span>
-                <span class="level-badge" id="sponsorshipLevel">No Tier</span>
-            </div>
+            <div class="earning-header"><span>🎓</span><h3>Sponsorship Program</h3></div>
+            <div class="sponsorship-level"><span>Your Level:</span><span class="level-badge" id="sponsorshipLevel">No Tier</span></div>
             <div class="payout-info" style="margin-top: 15px;">
-                <p>🥉 <strong>Bronze Tier</strong> - 10 Referrals: ₹500 + Certificate</p>
-                <p>🥈 <strong>Silver Tier</strong> - 50 Referrals: ₹2000 + Certificate + Badge</p>
-                <p>🥇 <strong>Gold Tier</strong> - 200 Referrals: ₹10000 + Certificate + Trophy</p>
-                <p>💎 <strong>Platinum Tier</strong> - 1000 Referrals: ₹50000 + Lifetime Achievement</p>
+                <p>🥉 Bronze: 10 Referrals → ₹500 + Certificate</p>
+                <p>🥈 Silver: 50 Referrals → ₹2000 + Badge</p>
+                <p>🥇 Gold: 200 Referrals → ₹10000 + Trophy</p>
+                <p>💎 Platinum: 1000 Referrals → ₹50000 + Lifetime Achievement</p>
             </div>
             <div class="referral-link" id="referralLinkDisplay">dilkeanns.com/?ref=YOUR_CODE</div>
             <button class="btn-earn" onclick="generateReferralLink()" style="margin-top: 10px;">🔗 Generate Referral Link</button>
         </div>
     </div>
-</section>
 
-<!-- DASHBOARD CONTAINER (For Owner/Team/Partner views) -->
-<div id="dashboardContainer" class="dashboard-container"></div>
-
-<!-- FEATURED SECTION -->
-<section class="featured-section">
     <h2 class="section-title">⭐ Featured This Week</h2>
     <div class="featured-grid">
-        <div class="featured-card">
-            <h4>🏆 Top 10 Govt Jobs</h4>
-            <ul class="featured-list">
-                <li onclick="window.location.href='jobs.html'">SSC CGL 2024 - 15,000+ Posts</li>
-                <li onclick="window.location.href='jobs.html'">IBPS PO 2024 - 4,000+ Posts</li>
-                <li onclick="window.location.href='jobs.html'">UPSC Civil Services 2025</li>
-                <li onclick="window.location.href='jobs.html'">Railways RRB NTPC - 25,000+ Posts</li>
-                <li onclick="window.location.href='jobs.html'">Haryana Police - 12,000+ Posts</li>
-            </ul>
-        </div>
-        <div class="featured-card">
-            <h4>📚 Upcoming Exams</h4>
-            <ul class="featured-list">
-                <li onclick="window.location.href='exams.html'">JEE Main 2025 - April Session</li>
-                <li onclick="window.location.href='exams.html'">NEET UG 2025 - May Exam</li>
-                <li onclick="window.location.href='exams.html'">CAT 2025 - November Exam</li>
-                <li onclick="window.location.href='exams.html'">GATE 2026 - February Exam</li>
-                <li onclick="window.location.href='exams.html'">CTET 2025 - July Exam</li>
-            </ul>
-        </div>
-        <div class="featured-card">
-            <h4>🛍️ Partner Offers</h4>
-            <ul class="featured-list">
-                <li onclick="window.location.href='partners.html?type=shopping'">Amazon - Extra 10% Cashback</li>
-                <li onclick="window.location.href='partners.html?type=shopping'">Flipkart - Big Billion Days</li>
-                <li onclick="window.location.href='partners.html?type=travel'">MakeMyTrip - ₹500 Off on Flights</li>
-                <li onclick="window.location.href='partners.html?type=travel'">RedBus - ₹100 Off on Bus Booking</li>
-                <li onclick="window.location.href='partners.html?type=business'">Google Internship 2025 - Apply Now</li>
-            </ul>
-        </div>
+        <div class="featured-card"><h4>🏆 Top 10 Govt Jobs</h4><ul class="featured-list"><li onclick="window.location.href='jobs.html'">SSC CGL 2024 - 15,000+ Posts</li><li onclick="window.location.href='jobs.html'">IBPS PO 2024 - 4,000+ Posts</li><li onclick="window.location.href='jobs.html'">UPSC Civil Services 2025</li><li onclick="window.location.href='jobs.html'">Railways RRB NTPC - 25,000+ Posts</li><li onclick="window.location.href='jobs.html'">Haryana Police - 12,000+ Posts</li></ul></div>
+        <div class="featured-card"><h4>📚 Upcoming Exams</h4><ul class="featured-list"><li onclick="window.location.href='exams.html'">JEE Main 2025 - April Session</li><li onclick="window.location.href='exams.html'">NEET UG 2025 - May Exam</li><li onclick="window.location.href='exams.html'">CAT 2025 - November Exam</li><li onclick="window.location.href='exams.html'">GATE 2026 - February Exam</li><li onclick="window.location.href='exams.html'">CTET 2025 - July Exam</li></ul></div>
+        <div class="featured-card"><h4>🛍️ Partner Offers</h4><ul class="featured-list"><li onclick="window.location.href='partners.html'">Amazon - Extra 10% Cashback</li><li onclick="window.location.href='partners.html'">Flipkart - Big Billion Days</li><li onclick="window.location.href='partners.html'">MakeMyTrip - ₹500 Off on Flights</li><li onclick="window.location.href='partners.html'">RedBus - ₹100 Off on Bus Booking</li><li onclick="window.location.href='partners.html'">Google Internship 2025 - Apply Now</li></ul></div>
     </div>
-</section>
+</div>
 
-<!-- FOOTER -->
 <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-col">
-            <h4>About Us</h4>
-            <a onclick="window.location.href='index.html'">About Dil-Ke-AnnS</a>
-            <a onclick="window.location.href='index.html'">Our Vision</a>
-            <a onclick="window.location.href='index.html'">Our Team</a>
-            <a onclick="window.location.href='index.html'">Success Stories</a>
-        </div>
-        <div class="footer-col">
-            <h4>Resources</h4>
-            <a onclick="window.location.href='jobs.html'">Jobs Portal</a>
-            <a onclick="window.location.href='exams.html'">Exams Portal</a>
-            <a href="#">FAQs</a>
-            <a href="#">Career Guide</a>
-        </div>
-        <div class="footer-col">
-            <h4>Partners</h4>
-            <a onclick="window.location.href='partners.html'">Become a Partner</a>
-            <a onclick="window.location.href='partners.html'">Advertise with Us</a>
-            <a onclick="window.location.href='partners.html'">Affiliate Program</a>
-            <a onclick="window.location.href='partners.html'">Sponsorship</a>
-        </div>
-        <div class="footer-col">
-            <h4>Legal</h4>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Disclaimer</a>
-            <a href="#">Refund Policy</a>
-        </div>
-        <div class="footer-col">
-            <h4>Connect</h4>
-            <a onclick="joinWhatsApp()">WhatsApp</a>
-            <a onclick="joinTelegram()">Telegram</a>
-            <a onclick="joinArattai()">Arattai</a>
-            <a onclick="sendEmail()">Email</a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
-        <p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p>
-        <p>Contact: dilkeanns@zohomail.com</p>
-    </div>
+    <div class="footer-content"><div class="footer-col"><h4>About Us</h4><a onclick="window.location.href='index.html'">About Dil-Ke-AnnS</a><a onclick="window.location.href='index.html'">Our Vision</a></div>
+    <div class="footer-col"><h4>Resources</h4><a onclick="window.location.href='jobs.html'">Jobs Portal</a><a onclick="window.location.href='exams.html'">Exams Portal</a></div>
+    <div class="footer-col"><h4>Partners</h4><a onclick="window.location.href='partners.html'">Become a Partner</a><a onclick="window.location.href='partners.html'">Affiliate Program</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    <div class="footer-col"><h4>Connect</h4><a onclick="joinWhatsApp()">WhatsApp</a><a onclick="joinTelegram()">Telegram</a><a onclick="joinArattai()">Arattai</a></div></div>
+    <div class="footer-bottom"><p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p><p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p><p>Contact: dilkeanns@zohomail.com</p></div>
 </footer>
 
 <script>
-    // ============================================
-    // YOUR ACTUAL CHANNELS & CONTACTS
-    // ============================================
-    const WHATSAPP_LINK = "https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a";
-    const TELEGRAM_LINK = "https://t.me/DilKeAnnS";
-    const ARATTAI_LINK = "https://aratt.ai/@dil_ke_anns";
-    const EMAIL = "dilkeanns@zohomail.com";
-
-    function joinWhatsApp() {
-        window.open(WHATSAPP_LINK, '_blank');
-        alert('📱 Follow Dil-Ke-AnnS on WhatsApp for daily job alerts & offers!');
+    let userCashback = JSON.parse(localStorage.getItem('userCashback') || '0');
+    let userReferrals = JSON.parse(localStorage.getItem('userReferrals') || '[]');
+    function updateDisplay() {
+        document.getElementById('cashbackAmount').innerText = '₹' + userCashback;
+        document.getElementById('pendingPayout').innerText = '₹' + userCashback;
+        let level = getSponsorshipLevel();
+        document.getElementById('sponsorshipLevel').innerText = level;
     }
-
-    function joinTelegram() {
-        window.open(TELEGRAM_LINK, '_blank');
-        alert('✈️ Follow Dil-Ke-AnnS on Telegram for instant updates!');
-    }
-
-    function joinArattai() {
-        window.open(ARATTAI_LINK, '_blank');
-        alert('💬 Join Dil-Ke-AnnS on Arattai for career discussions and guidance!');
-    }
-
-    function sendEmail() {
-        window.location.href = 'mailto:' + EMAIL;
-        alert('📧 Compose email to dilkeanns@zohomail.com for any queries!');
-    }
-
-    // ============================================
-    // DATA ISOLATION - SEPARATE STORAGE FOR EACH USER TYPE
-    // ============================================
-    
-    // Owner Data (Only Owner can access - Aggregated, no individual user details)
-    let ownerData = {
-        totalRevenue: 125000,
-        monthlyRevenue: 45000,
-        weeklyRevenue: 12000,
-        partnerCommissions: {
-            shopping: 25000,
-            travel: 15000,
-            business: 5000,
-            industrial: 0
-        },
-        userCashbackPaid: 8500,
-        userCashbackPending: 3200,
-        netProfit: 116500,
-        withdrawableBalance: 116500,
-        totalUsers: 1250,
-        totalPartners: 200,
-        totalClicks: 45000,
-        conversionRate: "3.2%"
-    }
-
-    // Team Data (Only Team can access)
-    let teamData = {
-        assignedTasks: [
-            { id: 1, task: "Update SSC CGL jobs", status: "pending", priority: "high" },
-            { id: 2, task: "Add new partner offers", status: "in-progress", priority: "medium" },
-            { id: 3, task: "Review user feedback", status: "pending", priority: "low" }
-        ],
-        supportTickets: [
-            { id: 101, user: "user***@email.com", issue: "Login issue", status: "open" },
-            { id: 102, user: "user***@email.com", issue: "Payment query", status: "resolved" }
-        ],
-        pendingQueries: 12,
-        resolvedToday: 5,
-        contentQueue: 8,
-        teamMembers: 4
-    }
-
-    // Partner Data (Each Partner has their own data - isolated)
-    let partnerData = {
-        partnerId: "PARTNER_001",
-        name: "Amazon India",
-        category: "Shopping",
-        rating: 4.6,
-        earnings: {
-            thisMonth: 25000,
-            lastMonth: 22000,
-            total: 125000,
-            pending: 5000
-        },
-        referrals: [
-            { userId: "USER_123", date: "2026-06-01", commission: 250 },
-            { userId: "USER_456", date: "2026-06-05", commission: 180 },
-            { userId: "USER_789", date: "2026-06-10", commission: 320 }
-        ],
-        commissionRate: "5-10%",
-        clickCount: 1250,
-        conversionRate: "3.2%"
-    }
-
-    // User Data (Each User has their own data - isolated from others)
-    let userData = {
-        userId: "USER_" + Math.random().toString(36).substring(2, 8).toUpperCase(),
-        earnings: {
-            thisMonth: 150,
-            lastMonth: 200,
-            total: 350,
-            pending: 150
-        },
-        cashbackHistory: [
-            { date: "2026-06-01", source: "Amazon", amount: 50, status: "credited" },
-            { date: "2026-06-05", source: "Flipkart", amount: 100, status: "pending" }
-        ],
-        referrals: [
-            { code: "REF123", clicks: 5, signups: 2, earnings: 100 }
-        ],
-        level: "Bronze",
-        nextLevel: "Silver (Need 8 more referrals)"
-    }
-
-    // Current active user type
-    let currentUserType = null;
-
-    // ============================================
-    // LOGIN HANDLER WITH DATA ISOLATION
-    // ============================================
-    function handleLogin(type) {
-        currentUserType = type;
-        localStorage.setItem('currentUserType', type);
-        
-        // Hide user earning section
-        document.getElementById('userEarningSection').style.display = 'none';
-        
-        if (type === 'owner') {
-            showOwnerDashboard();
-            alert('👑 Owner Login - Full Admin Access Granted. You can view all aggregated data.');
-        } 
-        else if (type === 'team') {
-            showTeamDashboard();
-            alert('👥 Team Login - Staff Access Granted. You can manage content and support tickets.');
-        } 
-        else if (type === 'partner') {
-            showPartnerDashboard();
-            alert('🤝 Partners Login - Partner Portal Access Granted. You can view your earnings only.');
-        } 
-        else if (type === 'user') {
-            showUserDashboard();
-            alert('👤 User Login - Welcome back! You can view your personal earnings only.');
-        }
-    }
-
-    function logout() {
-        currentUserType = null;
-        localStorage.removeItem('currentUserType');
-        document.getElementById('dashboardContainer').classList.remove('active');
-        document.getElementById('dashboardContainer').innerHTML = '';
-        document.getElementById('userEarningSection').style.display = 'block';
-        updateUserEarningsDisplay();
-        alert('👋 Logged out successfully!');
-    }
-
-    // ============================================
-    // OWNER DASHBOARD (Aggregated data only - no individual user details)
-    // ============================================
-    function showOwnerDashboard() {
-        const container = document.getElementById('dashboardContainer');
-        container.innerHTML = `
-            <div class="dashboard-card">
-                <div class="dashboard-header">
-                    <span>👑</span>
-                    <h3>Owner Earnings Dashboard</h3>
-                    <button class="dashboard-btn" onclick="logout()" style="width: auto; padding: 8px 20px; margin-left: auto;">🚪 Logout</button>
-                </div>
-                <div class="dashboard-stats-grid">
-                    <div class="dashboard-stat-box">
-                        <div class="amount">₹${ownerData.totalRevenue.toLocaleString()}</div>
-                        <div class="label">Total App Revenue</div>
-                    </div>
-                    <div class="dashboard-stat-box">
-                        <div class="amount">₹${ownerData.monthlyRevenue.toLocaleString()}</div>
-                        <div class="label">This Month Revenue</div>
-                    </div>
-                    <div class="dashboard-stat-box">
-                        <div class="amount">₹${ownerData.weeklyRevenue.toLocaleString()}</div>
-                        <div class="label">This Week Revenue</div>
-                    </div>
-                    <div class="dashboard-stat-box">
-                        <div class="amount">₹${ownerData.netProfit.toLocaleString()}</div>
-                        <div class="label">Net Profit</div>
-                    </div>
-                </div>
-                
-                <div class="partner-breakdown">
-                    <h4>📊 Partner-wise Earnings</h4>
-                    <div class="partner-row"><span>🛍️ Shopping Partners</span><span>₹${ownerData.partnerCommissions.shopping.toLocaleString()}</span></div>
-                    <div class="partner-row"><span>✈️ Travel Partners</span><span>₹${ownerData.partnerCommissions.travel.toLocaleString()}</span></div>
-                    <div class="partner-row"><span>🤝 Business Partners</span><span>₹${ownerData.partnerCommissions.business.toLocaleString()}</span></div>
-                    <div class="partner-row"><span>🏭 Industrial Partners</span><span>₹${ownerData.partnerCommissions.industrial.toLocaleString()}</span></div>
-                </div>
-                
-                <div class="partner-breakdown">
-                    <h4>👥 User & Platform Stats</h4>
-                    <div class="partner-row"><span>Total Cashback Paid to Users</span><span>₹${ownerData.userCashbackPaid.toLocaleString()}</span></div>
-                    <div class="partner-row"><span>Pending Cashback</span><span>₹${ownerData.userCashbackPending.toLocaleString()}</span></div>
-                    <div class="partner-row"><span>Total Registered Users</span><span>${ownerData.totalUsers}</span></div>
-                    <div class="partner-row"><span>Active Partners</span><span>${ownerData.totalPartners}</span></div>
-                    <div class="partner-row"><span>Total Clicks</span><span>${ownerData.totalClicks.toLocaleString()}</span></div>
-                    <div class="partner-row"><span>Conversion Rate</span><span>${ownerData.conversionRate}</span></div>
-                </div>
-                
-                <div class="partner-breakdown">
-                    <h4>💰 Withdrawal Information</h4>
-                    <div class="partner-row"><span>Withdrawable Balance</span><span>₹${ownerData.withdrawableBalance.toLocaleString()}</span></div>
-                    <div class="partner-row"><span>Next Payout Date</span><span>30th June 2026</span></div>
-                    <div class="partner-row"><span>Minimum Withdrawal</span><span>₹10,000</span></div>
-                </div>
-                
-                <button class="dashboard-btn" onclick="ownerWithdraw()">💰 Withdraw to Bank Account</button>
-            </div>
-        `;
-        container.classList.add('active');
-    }
-
-    // ============================================
-    // TEAM DASHBOARD (Operational data only)
-    // ============================================
-    function showTeamDashboard() {
-        const container = document.getElementById('dashboardContainer');
-        container.innerHTML = `
-            <div class="dashboard-card">
-                <div class="dashboard-header">
-                    <span>👥</span>
-                    <h3>Team Dashboard</h3>
-                    <button class="dashboard-btn" onclick="logout()" style="width: auto; padding: 8px 20px; margin-left: auto;">🚪 Logout</button>
-                </div>
-                <div class="dashboard-stats-grid">
-                    <div class="dashboard-stat-box">
-                        <div class="amount">${teamData.pendingQueries}</div>
-                        <div class="label">Pending Queries</div>
-                    </div>
-                    <div class="dashboard-stat-box">
-                        <div class="amount">${teamData.resolvedToday}</div>
-                        <div class="label">Resolved Today</div>
-                    </div>
-                    <div class="dashboard-stat-box">
-                        <div class="amount">${teamData.contentQueue}</div>
-                        <div class="label">Content Queue</div>
-                    </div>
-                    <div class="dashboard-stat-box">
-                        <div class="amount">${teamData.teamMembers}</div>
-                        <div class="label">Team Members</div>
-                    </div>
-                </div>
-                
-                <div class="partner-breakdown">
-                    <h4>📋 Assigned Tasks</h4>
-                    ${teamData.assignedTasks.map(task => `
-                        <div class="partner-row"><span>${task.task}</span><span class="${task.status === 'pending' ? 'deadline' : 'salary'}">${task.status} (${task.priority})</span></div>
-                    `).join('')}
-                </div>
-                
-                <div class="partner-breakdown">
-                    <h4>🎫 Support Tickets</h4>
-                    ${teamData.supportTickets.map(ticket => `
-                        <div class="partner-row"><span>Ticket #${ticket.id}: ${ticket.issue}</span><span>${ticket.status}</span></div>
-                    `).join('')}
-                </div>
-                
-                <button class="dashboard-btn" onclick="refreshTeamData()">🔄 Refresh Dashboard</button>
-            </div>
-        `;
-        container.classList.add('active');
-    }
-
-    // ============================================
-    // PARTNER DASHBOARD (Partner's own data only - isolated)
-    // ============================================
-    function showPartnerDashboard() {
-        const container = document.getElementById('dashboardContainer');
-        container.innerHTML = `
-            <div class="dashboard-card">
-                <div class="dashboard-header">
-                    <span>🤝</span>
-                    <h3>Partner Dashboard - ${partnerData.name}</h3>
-                    <button class="dashboard-btn" onclick="logout()" style="width: auto; padding: 8px 20px; margin-left: auto;">🚪 Logout</button>
-                </div>
-                <div class="dashboard-stats-grid">
-                    <div class="dashboard-stat-box">
-                        <div class="amount">₹${partnerData.earnings.thisMonth.toLocaleString()}</div>
-                        <div class="label">This Month Earnings</div>
-                    </div>
-                    <div class="dashboard-stat-box">
-                        <div class="amount">₹${partnerData.earnings.total.toLocaleString()}</div>
-                        <div class="label">Total Earnings</div>
-                    </div>
-                    <div class="dashboard-stat-box">
-                        <div class="amount">₹${partnerData.earnings.pending.toLocaleString()}</div>
-                        <div class="label">Pending Payout</div>
-                    </div>
-                    <div class="dashboard-stat-box">
-                        <div class="amount">⭐ ${partnerData.rating}</div>
-                        <div class="label">Rating</div>
-                    </div>
-                </div>
-                
-                <div class="partner-breakdown">
-                    <h4>📊 Performance Metrics</h4>
-                    <div class="partner-row"><span>Total Clicks</span><span>${partnerData.clickCount}</span></div>
-                    <div class="partner-row"><span>Conversion Rate</span><span>${partnerData.conversionRate}</span></div>
-                    <div class="partner-row"><span>Commission Rate</span><span>${partnerData.commissionRate}</span></div>
-                </div>
-                
-                <div class="partner-breakdown">
-                    <h4>📈 Recent Referrals</h4>
-                    ${partnerData.referrals.map(ref => `
-                        <div class="partner-row"><span>User: ${ref.userId} (${ref.date})</span><span>₹${ref.commission}</span></div>
-                    `).join('')}
-                </div>
-                
-                <button class="dashboard-btn" onclick="partnerWithdraw()">💰 Request Payout</button>
-            </div>
-        `;
-        container.classList.add('active');
-    }
-
-    // ============================================
-    // USER DASHBOARD (User's own data only - isolated)
-    // ============================================
-    function showUserDashboard() {
-        // Update earnings display with user's own data
-        document.getElementById('thisMonthEarnings').innerText = '₹' + userData.earnings.thisMonth;
-        document.getElementById('lastMonthEarnings').innerText = '₹' + userData.earnings.lastMonth;
-        document.getElementById('totalEarnings').innerText = '₹' + userData.earnings.total;
-        document.getElementById('pendingPayout').innerText = '₹' + userData.earnings.pending;
-        document.getElementById('sponsorshipLevel').innerText = userData.level;
-        
-        // Update referral link
-        document.getElementById('referralLinkDisplay').innerText = `dilkeanns.com/?ref=${userData.userId}`;
-        
-        // Show user earning section
-        document.getElementById('userEarningSection').style.display = 'block';
-        
-        // Hide dashboard container
-        document.getElementById('dashboardContainer').classList.remove('active');
-        
-        // Scroll to earnings section
-        document.getElementById('userEarningSection').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function updateUserEarningsDisplay() {
-        document.getElementById('thisMonthEarnings').innerText = '₹' + userData.earnings.thisMonth;
-        document.getElementById('lastMonthEarnings').innerText = '₹' + userData.earnings.lastMonth;
-        document.getElementById('totalEarnings').innerText = '₹' + userData.earnings.total;
-        document.getElementById('pendingPayout').innerText = '₹' + userData.earnings.pending;
-        document.getElementById('sponsorshipLevel').innerText = userData.level;
-    }
-
-    // ============================================
-    // HELPER FUNCTIONS
-    // ============================================
-    function ownerWithdraw() {
-        if (ownerData.withdrawableBalance >= 10000) {
-            alert(`💰 Withdrawal request initiated for ₹${ownerData.withdrawableBalance.toLocaleString()}. Amount will be credited within 2-3 business days.`);
-            ownerData.withdrawableBalance = 0;
-            ownerData.netProfit = 0;
-            showOwnerDashboard();
-        } else {
-            alert(`⚠️ Minimum withdrawal amount is ₹10,000. Current balance: ₹${ownerData.withdrawableBalance.toLocaleString()}`);
-        }
-    }
-
-    function partnerWithdraw() {
-        if (partnerData.earnings.pending >= 1000) {
-            alert(`💰 Payout request initiated for ₹${partnerData.earnings.pending}. Amount will be credited within 5-7 business days.`);
-            partnerData.earnings.pending = 0;
-            showPartnerDashboard();
-        } else {
-            alert(`⚠️ Minimum payout amount is ₹1,000. Current pending: ₹${partnerData.earnings.pending}`);
-        }
-    }
-
-    function refreshTeamData() {
-        alert('🔄 Dashboard refreshed!');
-        showTeamDashboard();
-    }
-
-    function withdrawEarnings() {
-        if (userData.earnings.pending >= 500) {
-            alert(`💰 Withdrawal request initiated for ₹${userData.earnings.pending}. Amount will be credited within 3-5 business days.`);
-            userData.earnings.pending = 0;
-            localStorage.setItem('userData', JSON.stringify(userData));
-            updateUserEarningsDisplay();
-        } else {
-            alert(`⚠️ Minimum withdrawal amount is ₹500. You have ₹${userData.earnings.pending} pending. Shop/Book through our partners to earn more!`);
-        }
-    }
-
-    function generateReferralLink() {
-        let link = `https://dilkeanns.com/?ref=${userData.userId}`;
-        document.getElementById('referralLinkDisplay').innerText = link;
-        navigator.clipboard.writeText(link);
-        alert('✅ Referral link copied to clipboard! Share with friends to earn rewards.');
-        
-        userData.referrals.push({ code: userData.userId, clicks: 0, signups: 0, earnings: 0 });
-        localStorage.setItem('userData', JSON.stringify(userData));
-        updateUserEarningsDisplay();
-    }
-
-    // ============================================
-    // AnnS AI FUNCTION
-    // ============================================
-    function askAI(question) {
-        let inputField = document.getElementById('aiQuestion');
-        let questionText = question || inputField.value;
-        
-        if (!questionText.trim()) {
-            alert('Please type your question!');
-            return;
-        }
-        
-        let response = getAIResponse(questionText);
-        document.getElementById('aiResponse').innerHTML = `🤖 AnnS AI: ${response}`;
-        inputField.value = '';
-    }
-
-    function getAIResponse(question) {
-        let q = question.toLowerCase();
-        if (q.includes('job') || q.includes('career')) {
-            return "Based on your profile, I recommend exploring government jobs, private sector opportunities, and global careers. Check our Jobs Portal for 40 Lakh+ verified jobs!";
-        } else if (q.includes('exam') || q.includes('12th') || q.includes('science')) {
-            return "After 12th Science, you can appear for JEE Main, NEET, NDA, or various state-level entrance exams. Check our Exams Portal for complete details!";
-        } else if (q.includes('haryana') || q.includes('near me')) {
-            return "Haryana has excellent opportunities! Check HSSC Group C & D, Haryana Police, Patwari, and HTET exams. Visit our Jobs Portal for Haryana state jobs!";
-        } else if (q.includes('ssc') || q.includes('cgl')) {
-            return "For SSC CGL preparation, focus on Quantitative Aptitude, Reasoning, English, and General Awareness. Practice mock tests daily. Check our Mock Test section!";
-        } else if (q.includes('b.com') || q.includes('commerce')) {
-            return "After B.Com, great career options include CA, CMA, CS, MBA, Banking PO, and Financial Analyst. Explore our Commerce stream in the Jobs Portal!";
-        } else {
-            return "Thank you for your question! Please visit our Jobs Portal, Exams Portal, or Partners section for more specific guidance. AnnS AI is here to help 24/7!";
-        }
-    }
-
-    // ============================================
-    // NOTIFICATIONS & SEARCH
-    // ============================================
-    function showNotifications() {
-        alert('🔔 New: SSC CGL Notification | New: Amazon Cashback Offer | New: Haryana Police Recruitment');
-    }
-
-    document.getElementById('searchInput').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            let query = this.value;
-            alert(`🔍 Searching for "${query}" in Jobs, Exams, and Partners...`);
-        }
-    });
-
-    // ============================================
-    // INITIALIZE
-    // ============================================
-    updateUserEarningsDisplay();
+    function getSponsorshipLevel() { let r = userReferrals.length; if(r>=1000) return "💎 Platinum"; if(r>=200) return "🥇 Gold"; if(r>=50) return "🥈 Silver"; if(r>=10) return "🥉 Bronze"; return "No Tier"; }
+    function generateReferralLink() { let code = Math.random().toString(36).substring(2,10).toUpperCase(); let link = `https://dilkeanns.com/?ref=${code}`; document.getElementById('referralLinkDisplay').innerText = link; navigator.clipboard.writeText(link); alert('✅ Referral link copied!'); userReferrals.push({code:code,date:new Date().toISOString()}); localStorage.setItem('userReferrals',JSON.stringify(userReferrals)); updateDisplay(); }
+    function claimCashback() { if(userCashback>=500){ alert(`💰 Withdrawal for ₹${userCashback} initiated!`); userCashback=0; localStorage.setItem('userCashback',userCashback); updateDisplay(); } else { alert(`⚠️ Need ₹500 minimum. You have ₹${userCashback}`); } }
+    function handleLogin(type) { alert({owner:"👑 Owner Login - Full Admin Access",team:"👥 Team Login - Staff Access",partner:"🤝 Partners Login - Partner Portal",user:"👤 User Login - Welcome back!"}[type]); }
+    function joinWhatsApp() { window.open('https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a', '_blank'); alert('📱 Follow Dil-Ke-AnnS on WhatsApp!'); }
+    function joinTelegram() { window.open('https://t.me/DilKeAnnS', '_blank'); alert('✈️ Follow Dil-Ke-AnnS on Telegram!'); }
+    function joinArattai() { window.open('https://aratt.ai/@dil_ke_anns', '_blank'); alert('💬 Join Dil-Ke-AnnS on Arattai!'); }
+    function joinDilKeAnnS() { alert('🎯 Dil-Ke-AnnS Channel'); }
+    function sendEmail() { window.location.href = 'mailto:dilkeanns@zohomail.com'; alert('📧 Email sent!'); }
+    function showNotifications() { alert('🔔 New: SSC CGL Notification | New: Amazon Cashback Offer'); }
+    document.getElementById('searchInput').addEventListener('keypress', function(e) { if(e.key==='Enter') alert(`🔍 Searching for "${this.value}"...`); });
+    updateDisplay();
 </script>
-
 </body>
 </html>
