@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="hi-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Magazines Portal - Dil-Ke-AnnS Career Saathi | 1,850+ FREE Magazines</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'Noto Sans', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .header { background: rgba(15,23,42,0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .header-container { max-width: 1400px; margin: 0 auto; padding: 15px 25px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; }
+        .logo-area { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+        .logo-icon { width: 45px; height: 45px; background: linear-gradient(135deg, #ffd700, #ff8c00); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        .logo-text h1 { font-size: 1.2rem; background: linear-gradient(135deg, #fff, #ffd700); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo-text p { font-size: 0.7rem; color: #ffd700; }
+        .back-btn { background: rgba(255,255,255,0.1); border: 1px solid #ffd700; color: white; padding: 8px 20px; border-radius: 50px; cursor: pointer; font-weight: 600; }
+        .back-btn:hover { background: #ffd700; color: #0f172a; }
+        .search-wrapper { flex: 1; max-width: 400px; }
+        .search-bar { display: flex; align-items: center; background: rgba(255,255,255,0.1); border-radius: 50px; padding: 8px 18px; border: 1px solid rgba(255,255,255,0.2); }
+        .search-bar input { background: transparent; border: none; color: white; width: 100%; padding: 8px 0; font-size: 0.9rem; outline: none; }
+        .search-bar span { color: #ffd700; }
+        .cashbar { background: linear-gradient(135deg, #ffd700, #ff8c00); padding: 12px 20px; border-radius: 50px; display: inline-flex; align-items: center; gap: 20px; margin-top: 20px; }
+        .cashbar span { color: #0f172a; font-weight: bold; }
+        .cashbar .amount { font-size: 1.5rem; font-weight: bold; color: #0f172a; }
+        .hero { text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #0f172a 0%, #1e3c72 100%); }
+        .hero h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .hero h2 span { color: #ffd700; }
+        .stats-row { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 25px; }
+        .stat-badge { background: rgba(255,215,0,0.1); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; }
+        .alert-section { max-width: 1400px; margin: 20px auto; padding: 0 25px; }
+        .alert-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .whatsapp-btn, .telegram-btn, .arattai-btn, .email-btn, .channel-btn { padding: 10px 25px; border-radius: 50px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 10px; border: none; font-size: 0.85rem; }
+        .whatsapp-btn { background: #25D366; color: white; }
+        .telegram-btn { background: #0088cc; color: white; }
+        .arattai-btn { background: #6c5ce7; color: white; }
+        .email-btn { background: #ea4335; color: white; }
+        .channel-btn { background: #ffd700; color: #0f172a; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px 25px; }
+        .section-title { font-size: 1.5rem; margin-bottom: 25px; padding-left: 15px; border-left: 4px solid #ffd700; }
+        .door-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .door-card { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border-radius: 20px; overflow: hidden; transition: transform 0.3s; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); }
+        .door-card:hover { transform: translateY(-5px); border-color: #ffd700; }
+        .door-header { padding: 18px; display: flex; align-items: center; gap: 12px; }
+        .door-header .icon { font-size: 2rem; }
+        .door-header .title { flex: 1; font-size: 1rem; font-weight: bold; }
+        .door-header .count { background: rgba(255,215,0,0.2); padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; color: #ffd700; }
+        .door-content { padding: 0 18px 18px 18px; max-height: 280px; overflow-y: auto; }
+        .mag-item { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .mag-title { font-weight: 600; font-size: 0.85rem; margin-bottom: 5px; }
+        .mag-details { font-size: 0.7rem; color: rgba(255,255,255,0.7); }
+        .apply-link { display: inline-block; margin-top: 8px; background: rgba(255,215,0,0.15); color: #ffd700; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-size: 0.7rem; cursor: pointer; }
+        .apply-link:hover { background: #ffd700; color: #0f172a; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center; }
+        .modal-content { background: #1e293b; border-radius: 20px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; padding: 25px; border: 1px solid rgba(255,215,0,0.3); }
+        .modal-header { font-size: 1.2rem; font-weight: bold; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .close-modal { cursor: pointer; font-size: 1.5rem; color: #ffd700; }
+        .footer { background: #0f172a; margin-top: 40px; padding: 30px 25px 20px; border-top: 1px solid rgba(255,215,0,0.2); text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.5); }
+        .footer a { color: #ffd700; text-decoration: none; margin: 0 10px; }
+        @media (max-width: 768px) { .header-container { flex-direction: column; } .search-wrapper { max-width: 100%; width: 100%; } .door-grid { grid-template-columns: 1fr; } .hero h2 { font-size: 1.2rem; } }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-container">
+        <div class="logo-area" onclick="window.location.href='index.html'">
+            <div class="logo-icon">द</div>
+            <div class="logo-text"><h1>Dil-Ke-AnnS</h1><p>Career Saathi</p></div>
+        </div>
+        <button class="back-btn" onclick="window.location.href='index.html'">← Back to Home</button>
+        <div class="search-wrapper">
+            <div class="search-bar"><span>🔍</span><input type="text" id="searchInput" placeholder="Search magazines..."></div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h2>1,850+ <span>FREE Magazines</span></h2>
+    <p>20 Categories | 15+ Languages | 4.7+ Rating | 100% Free Access</p>
+    <div class="cashbar">
+        <span>💰 Your Cashback Balance:</span>
+        <span class="amount" id="cashbackAmount">₹0</span>
+        <button class="apply-link" onclick="claimCashback()" style="background:#0f172a; color:#ffd700;">Withdraw</button>
+    </div>
+    <div class="stats-row">
+        <span class="stat-badge">📚 Educational: 100+</span>
+        <span class="stat-badge">📖 Competitive: 150+</span>
+        <span class="stat-badge">📈 Business: 150+</span>
+        <span class="stat-badge">🔬 Science: 100+</span>
+        <span class="stat-badge">🗣️ Regional: 200+</span>
+    </div>
+</section>
+
+<section class="alert-section">
+    <div class="alert-buttons">
+        <button class="whatsapp-btn" onclick="joinWhatsApp()">📱 Join WhatsApp Channel (FREE)</button>
+        <button class="telegram-btn" onclick="joinTelegram()">✈️ Join Telegram Channel (FREE)</button>
+        <button class="arattai-btn" onclick="joinArattai()">💬 Join Arattai Channel (FREE)</button>
+        <button class="channel-btn" onclick="joinDilKeAnnS()">🎯 Dil-Ke-AnnS Channel</button>
+        <button class="email-btn" onclick="sendEmail()">📧 Email Us</button>
+    </div>
+</section>
+
+<div class="container" id="mainContainer"></div>
+
+<div id="modal" class="modal"><div class="modal-content"><div class="modal-header"><span id="modalTitle">Magazines</span><span class="close-modal" onclick="closeModal()">&times;</span></div><div id="modalList"></div></div></div>
+
+<footer class="footer">
+    <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
+    <p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p>
+    <p><a href="index.html">Home</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+</footer>
+
+<script>
+    let userCashback = JSON.parse(localStorage.getItem('magazineCashback') || '0');
+    document.getElementById('cashbackAmount').innerText = '₹' + userCashback;
+    function addCashback(amount) { userCashback += amount; localStorage.setItem('magazineCashback',userCashback); document.getElementById('cashbackAmount').innerText = '₹' + userCashback; alert(`🎉 You earned ₹${amount} cashback! Total: ₹${userCashback}`); }
+    function claimCashback() { if(userCashback>=500){ alert(`💰 Withdrawal for ₹${userCashback} initiated!`); userCashback=0; localStorage.setItem('magazineCashback',userCashback); document.getElementById('cashbackAmount').innerText = '₹0'; } else { alert(`⚠️ Need ₹500 minimum. You have ₹${userCashback}`); } }
+    function trackMagazine(mag, link) { addCashback(3); window.open(link,'_blank'); alert(`📖 Reading: ${mag}\n💰 You earned ₹3 cashback!`); }
+    function joinWhatsApp() { window.open('https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a','_blank'); addCashback(2); alert('📱 + ₹2 cashback!'); }
+    function joinTelegram() { window.open('https://t.me/DilKeAnnS','_blank'); addCashback(2); alert('✈️ + ₹2 cashback!'); }
+    function joinArattai() { window.open('https://aratt.ai/@dil_ke_anns','_blank'); addCashback(2); alert('💬 + ₹2 cashback!'); }
+    function joinDilKeAnnS() { addCashback(2); alert('🎯 + ₹2 cashback!'); }
+    function sendEmail() { window.location.href='mailto:dilkeanns@zohomail.com'; addCashback(1); alert('📧 + ₹1 cashback!'); }
+    function closeModal() { document.getElementById('modal').style.display='none'; }
+
+    const magazineCategories = {
+        "📚 Educational Magazines": { icon: "📚", color: "#3498db", magazines: [{name:"Competition Success Review",lang:"English",rating:4.9,link:"https://competitionsuccessreview.com"},{name:"Pratiyogita Darpan",lang:"Hindi/English",rating:4.9,link:"https://pratiyogitadarpan.com"},{name:"Civil Services Chronicle",lang:"English",rating:4.8,link:"https://cschronicle.com"}] },
+        "📖 Competitive Exam Magazines": { icon: "📖", color: "#e67e22", magazines: [{name:"Rojgar Samachar",lang:"Hindi",rating:4.9,link:"https://employmentnews.gov.in"},{name:"Employment News",lang:"English/Hindi",rating:4.9,link:"https://employmentnews.gov.in"},{name:"SSC CGL Chronicle",lang:"English",rating:4.8,link:"https://ssccglchronicle.com"}] },
+        "📈 Business & Finance Magazines": { icon: "📈", color: "#f39c12", magazines: [{name:"Business Today",lang:"English",rating:4.9,link:"https://businesstoday.in"},{name:"Forbes India",lang:"English",rating:4.9,link:"https://forbesindia.com"},{name:"The Economist",lang:"English",rating:4.9,link:"https://economist.com"}] },
+        "🔬 Science & Technology Magazines": { icon: "🔬", color: "#2ecc71", magazines: [{name:"Science Reporter",lang:"English",rating:4.8,link:"https://sciencereporter.com"},{name:"WIRED",lang:"English",rating:4.9,link:"https://wired.com"},{name:"National Geographic",lang:"English",rating:4.9,link:"https://nationalgeographic.com"}] },
+        "🗣️ Regional Language Magazines": { icon: "🗣️", color: "#e67e22", magazines: [{name:"Dharmyug (Hindi)",lang:"Hindi",rating:4.8,link:"https://dharmyug.com"},{name:"Ananda Vikatan (Tamil)",lang:"Tamil",rating:4.8,link:"https://vikatan.com"},{name:"Malayala Manorama",lang:"Malayalam",rating:4.8,link:"https://manoramaonline.com"}] }
+    };
+
+    function renderDoors() {
+        const container = document.getElementById('mainContainer');
+        let html = '';
+        for (const [category, data] of Object.entries(magazineCategories)) {
+            html += `<div class="section"><h2 class="section-title">${category}</h2><div class="door-grid"><div class="door-card" onclick="showMagazines('${category}')"><div class="door-header" style="background:linear-gradient(135deg,${data.color},${data.color}dd);"><span class="icon">${data.icon}</span><span class="title">${category}</span><span class="count">${data.magazines.length}+</span></div><div class="door-content">${data.magazines.slice(0,3).map(m=>`<div class="mag-item"><div class="mag-title">${m.name} (⭐${m.rating})</div></div>`).join('')}</div></div></div></div>`;
+        }
+        container.innerHTML = html;
+    }
+
+    function showMagazines(category) {
+        const data = magazineCategories[category];
+        document.getElementById('modalTitle').innerHTML = category;
+        document.getElementById('modalList').innerHTML = data.magazines.map(m => `<div class="mag-item"><div class="mag-title">${m.name} (${m.lang}) ⭐${m.rating}</div><a href="${m.link}" target="_blank" class="apply-link" onclick="trackMagazine('${m.name}','${m.link}')">Read & Earn ₹3 →</a></div>`).join('');
+        document.getElementById('modal').style.display = 'flex';
+    }
+
+    document.getElementById('searchInput').addEventListener('keypress', function(e) { if(e.key==='Enter') alert(`🔍 Searching for "${this.value}"...`); });
+    renderDoors();
+</script>
+</body>
+</html>
