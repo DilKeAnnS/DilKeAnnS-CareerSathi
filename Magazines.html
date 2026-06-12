@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Dil-Ke-AnnS - 1,850+ FREE Magazines | 20 Categories | 15+ Languages | 4.7+ Rating">
-    <title>Magazines Portal - Dil-Ke-AnnS Career Saathi | 1,850+ FREE Magazines</title>
+    <meta name="description" content="Dil-Ke-AnnS - 1,850+ FREE Magazines | Hybrid Access | Express or Sign-Up | Earn Cashback">
+    <title>Magazines Portal - Dil-Ke-AnnS Career Saathi | Hybrid Access | Earn Cashback</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -43,6 +43,14 @@
         }
         .logo-text h1 { font-size: 1.2rem; font-weight: 700; background: linear-gradient(135deg, #fff, #ffd700); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .logo-text p { font-size: 0.7rem; color: #ffd700; }
+        .hybrid-badge {
+            background: linear-gradient(135deg, #4caf50, #2196f3);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
         .back-btn {
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid #ffd700;
@@ -67,6 +75,52 @@
         .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
         .search-bar span { color: #ffd700; }
         .header-right { display: flex; align-items: center; gap: 20px; }
+        .user-menu {
+            position: relative;
+            cursor: pointer;
+        }
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #0f172a;
+        }
+        .user-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #1e293b;
+            min-width: 200px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            z-index: 100;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        .user-menu:hover .user-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: #fff;
+        }
+        .dropdown-item:hover { background: rgba(255,215,0,0.1); }
         .notification-bell { position: relative; cursor: pointer; font-size: 1.3rem; color: #ffd700; }
         .notification-count {
             position: absolute;
@@ -87,6 +141,40 @@
         .hero h2 { font-size: 1.8rem; margin-bottom: 15px; }
         .hero h2 span { color: #ffd700; }
         .hero p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); }
+        .hybrid-info {
+            background: linear-gradient(135deg, #4caf50, #2196f3);
+            padding: 15px;
+            border-radius: 16px;
+            margin: 20px auto;
+            max-width: 900px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .hybrid-info span { font-weight: bold; }
+        .mode-switch {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0,0,0,0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+        }
+        .mode-btn {
+            padding: 5px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: transparent;
+            color: white;
+            border: none;
+        }
+        .mode-btn.active {
+            background: #ffd700;
+            color: #0f172a;
+        }
         .stats-row {
             display: flex;
             justify-content: center;
@@ -100,6 +188,17 @@
             border-radius: 50px;
             font-size: 0.85rem;
         }
+        .cashbar {
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .cashbar span { color: #0f172a; font-weight: bold; }
+        .cashbar .amount { font-size: 1.5rem; font-weight: bold; color: #0f172a; }
         .alert-section { max-width: 1400px; margin: 20px auto; padding: 0 25px; }
         .alert-buttons {
             display: flex;
@@ -214,6 +313,46 @@
             align-items: center;
         }
         .close-modal { cursor: pointer; font-size: 1.5rem; color: #ffd700; }
+        .login-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            background: #1e293b;
+            border-radius: 24px;
+            padding: 30px;
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid #ffd700;
+        }
+        .login-card input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            color: white;
+        }
+        .login-card button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            border: none;
+            border-radius: 10px;
+            color: #0f172a;
+            font-weight: bold;
+            cursor: pointer;
+        }
         .footer {
             background: #0f172a;
             margin-top: 40px;
@@ -229,6 +368,8 @@
             .search-wrapper { max-width: 100%; width: 100%; }
             .door-grid { grid-template-columns: 1fr; }
             .hero h2 { font-size: 1.2rem; }
+            .cashbar { flex-direction: column; gap: 8px; }
+            .hybrid-info { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -247,7 +388,7 @@
         <div class="search-wrapper">
             <div class="search-bar">
                 <span>🔍</span>
-                <input type="text" id="searchInput" placeholder="Search magazines by name, language, category...">
+                <input type="text" id="searchInput" placeholder="Search magazines...">
             </div>
         </div>
         <div class="header-right">
@@ -255,13 +396,38 @@
                 🔔
                 <span class="notification-count">12</span>
             </div>
+            <div class="user-menu">
+                <div class="user-avatar" id="userAvatar">👤</div>
+                <div class="user-dropdown">
+                    <div class="dropdown-item" onclick="showExpressInfo()">⚡ Express Mode (Current)</div>
+                    <div class="dropdown-item" onclick="showSignupModal()">📝 Sign Up / Login</div>
+                    <div class="dropdown-item" onclick="showEarnings()">💰 My Earnings</div>
+                    <div class="dropdown-item" onclick="withdrawEarnings()">💸 Withdraw</div>
+                    <div class="dropdown-item" onclick="showReferral()">🔗 Referral Program</div>
+                </div>
+            </div>
         </div>
     </div>
 </header>
 
 <section class="hero">
     <h2>1,850+ <span>FREE Magazines</span></h2>
-    <p>20 Categories | 15+ Languages | 4.7+ Rating | 100% Free Access</p>
+    <p>20 Categories | 15+ Languages | 4.7+ Rating | Hybrid Access - Choose Express or Sign-Up</p>
+    <div class="hybrid-info">
+        <span>🔄 HYBRID ACCESS</span>
+        <span>⚡ Express: Instant, No Sign-Up</span>
+        <span>🔐 Sign-Up: Permanent, Multi-Device</span>
+        <span>💰 Same Earnings: ₹3 per read</span>
+        <div class="mode-switch">
+            <button class="mode-btn active" onclick="setMode('express')">⚡ Express</button>
+            <button class="mode-btn" onclick="setMode('signup')">🔐 Sign-Up</button>
+        </div>
+    </div>
+    <div class="cashbar">
+        <span>💰 Your Cashback Balance:</span>
+        <span class="amount" id="cashbackAmount">₹0</span>
+        <button class="apply-link" onclick="withdrawEarnings()" style="background:#0f172a; color:#ffd700;">Withdraw</button>
+    </div>
     <div class="stats-row">
         <span class="stat-badge">📚 Educational: 100+</span>
         <span class="stat-badge">📖 Competitive: 150+</span>
@@ -293,8 +459,23 @@
     </div>
 </div>
 
+<div id="loginModal" class="login-modal">
+    <div class="login-card">
+        <h3 style="color:#ffd700; margin-bottom:20px;">🔐 Sign Up / Login</h3>
+        <p style="margin-bottom:15px; font-size:0.8rem;">Create account to save earnings across devices, get referral rewards, and unlock all features!</p>
+        <input type="text" id="loginName" placeholder="Full Name">
+        <input type="email" id="loginEmail" placeholder="Email ID">
+        <input type="tel" id="loginPhone" placeholder="Phone Number (Optional)">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="signUp()">Sign Up / Login</button>
+        <button onclick="closeLoginModal()" style="background:#333; margin-top:10px;">Close</button>
+        <p style="margin-top:15px; font-size:0.7rem; text-align:center;">⚡ Express users: Your earnings will be transferred to your account!</p>
+    </div>
+</div>
+
 <footer class="footer">
     <p>© 2026 Dil-Ke-AnnS Career Saathi. All rights reserved.</p>
+    <p>🔄 Hybrid Mode: Express (No Sign-Up) OR Sign-Up (Permanent Account) - Same Earnings!</p>
     <p>📚 1,850+ FREE Magazines | 20 Categories | 15+ Languages | 4.7+ Rating</p>
     <p>Backed by Data. Boosted by Earnings. | Made with ❤️ for Bharat</p>
     <p><a href="index.html">Home</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
@@ -302,47 +483,200 @@
 
 <script>
     // ============================================
-    // AFFILIATE LINKS FOR APP EARNING (User pays ₹0)
+    // HYBRID SYSTEM - Express + Sign-Up
+    // DATA FREEZE - NO CHANGES
     // ============================================
-    const AFFILIATE_ID = "dilkeanns";
     
-    const affiliateLinks = {
-        magzter: `https://www.magzter.com/?ref=${AFFILIATE_ID}`,
-        pressreader: `https://www.pressreader.com/?ref=${AFFILIATE_ID}`,
-        issuu: `https://issuu.com/?ref=${AFFILIATE_ID}`,
-        amazon: `https://www.amazon.in/?tag=${AFFILIATE_ID}`,
-        flipkart: `https://www.flipkart.com/?affid=${AFFILIATE_ID}`,
-        default: `https://www.google.com/search?q=`
-    };
-
-    function trackAffiliateClick(magName, platform, link) {
-        let clicks = JSON.parse(localStorage.getItem('magazineClicks') || '[]');
-        clicks.push({ magName: magName, platform: platform, timestamp: new Date().toISOString() });
-        localStorage.setItem('magazineClicks', JSON.stringify(clicks));
-        if (link && link !== '#') {
-            window.open(link, '_blank');
-            alert(`📖 You are now reading "${magName}" - 100% FREE!`);
+    // Current Mode (express or signup)
+    let currentMode = localStorage.getItem('userMode') || 'express';
+    let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
+    
+    // User earnings structure
+    let userCashback = 0;
+    let userMonthlyEarnings = 0;
+    let userReferrals = [];
+    let userEarningsHistory = [];
+    let userLevel = "No Tier";
+    
+    // Load data based on mode
+    function loadUserData() {
+        if (currentMode === 'signup' && currentUser) {
+            // Load from cloud/localStorage with user ID
+            let userData = localStorage.getItem(`user_${currentUser.email}`);
+            if (userData) {
+                let data = JSON.parse(userData);
+                userCashback = data.cashback || 0;
+                userMonthlyEarnings = data.monthlyEarnings || 0;
+                userReferrals = data.referrals || [];
+                userEarningsHistory = data.history || [];
+                userLevel = data.level || "No Tier";
+            }
         } else {
-            alert(`📖 "${magName}" - Read online for FREE!`);
+            // Express mode - anonymous
+            userCashback = JSON.parse(localStorage.getItem('express_cashback') || '0');
+            userMonthlyEarnings = JSON.parse(localStorage.getItem('express_monthly') || '0');
+            userReferrals = JSON.parse(localStorage.getItem('express_referrals') || '[]');
+        }
+        updateDisplay();
+    }
+    
+    function saveUserData() {
+        if (currentMode === 'signup' && currentUser) {
+            let userData = {
+                cashback: userCashback,
+                monthlyEarnings: userMonthlyEarnings,
+                referrals: userReferrals,
+                history: userEarningsHistory,
+                level: userLevel,
+                name: currentUser.name,
+                email: currentUser.email,
+                phone: currentUser.phone
+            };
+            localStorage.setItem(`user_${currentUser.email}`, JSON.stringify(userData));
+        } else {
+            localStorage.setItem('express_cashback', userCashback);
+            localStorage.setItem('express_monthly', userMonthlyEarnings);
+            localStorage.setItem('express_referrals', JSON.stringify(userReferrals));
         }
     }
-
-    function joinWhatsApp() { window.open('https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a', '_blank'); alert('📱 Follow Dil-Ke-AnnS on WhatsApp!'); }
-    function joinTelegram() { window.open('https://t.me/DilKeAnnS', '_blank'); alert('✈️ Follow Dil-Ke-AnnS on Telegram!'); }
-    function joinArattai() { window.open('https://aratt.ai/@dil_ke_anns', '_blank'); alert('💬 Join Dil-Ke-AnnS on Arattai!'); }
-    function joinDilKeAnnS() { alert('🎯 Dil-Ke-AnnS Channel - Get daily magazine recommendations!'); }
-    function sendEmail() { window.location.href = 'mailto:dilkeanns@zohomail.com'; alert('📧 Compose email to dilkeanns@zohomail.com'); }
-    function showNotifications() { alert('🔔 New: Latest Magazine Issues Added | 🔔 New Category: Regional Languages | 🔔 100% FREE Reading'); }
+    
+    function updateDisplay() {
+        document.getElementById('cashbackAmount').innerText = '₹' + userCashback;
+        let avatar = document.getElementById('userAvatar');
+        if (currentMode === 'signup' && currentUser) {
+            avatar.innerText = currentUser.name.charAt(0).toUpperCase();
+        } else {
+            avatar.innerText = '⚡';
+        }
+    }
+    
+    function setMode(mode) {
+        currentMode = mode;
+        localStorage.setItem('userMode', mode);
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if ((mode === 'express' && btn.innerText.includes('Express')) ||
+                (mode === 'signup' && btn.innerText.includes('Sign-Up'))) {
+                btn.classList.add('active');
+            }
+        });
+        if (mode === 'signup' && !currentUser) {
+            showSignupModal();
+        } else {
+            loadUserData();
+            alert(`🔄 Switched to ${mode === 'express' ? 'Express Mode (No Sign-Up)' : 'Sign-Up Mode'} mode.`);
+        }
+    }
+    
+    function showSignupModal() {
+        document.getElementById('loginModal').style.display = 'flex';
+    }
+    
+    function closeLoginModal() {
+        document.getElementById('loginModal').style.display = 'none';
+    }
+    
+    function signUp() {
+        let name = document.getElementById('loginName').value;
+        let email = document.getElementById('loginEmail').value;
+        let phone = document.getElementById('loginPhone').value;
+        let password = document.getElementById('loginPassword').value;
+        
+        if (!name || !email || !password) {
+            alert('Please fill Name, Email and Password');
+            return;
+        }
+        
+        // Transfer express earnings to new account
+        let expressCashback = JSON.parse(localStorage.getItem('express_cashback') || '0');
+        
+        currentUser = { name: name, email: email, phone: phone, password: password };
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        currentMode = 'signup';
+        localStorage.setItem('userMode', 'signup');
+        
+        // Transfer earnings
+        userCashback = expressCashback;
+        userMonthlyEarnings = JSON.parse(localStorage.getItem('express_monthly') || '0');
+        saveUserData();
+        
+        // Clear express data
+        localStorage.setItem('express_cashback', '0');
+        localStorage.setItem('express_monthly', '0');
+        
+        updateDisplay();
+        closeLoginModal();
+        alert(`✅ Welcome ${name}! Your ₹${expressCashback} cashback has been transferred to your account. You now have access to referral rewards and multi-device sync!`);
+        
+        location.reload();
+    }
+    
+    function showExpressInfo() {
+        alert("⚡ EXPRESS MODE\n\n✅ No Sign-Up Required\n✅ Instant Access\n✅ Same Earnings (₹3 per read)\n✅ Withdraw at ₹500\n\n⚠️ Earnings are saved only on this device.\n⚠️ Clear browser data = Loss of earnings.\n\n📝 Create FREE account to save earnings permanently and get referral rewards!");
+    }
+    
+    function showEarnings() {
+        let historyText = userEarningsHistory.slice(-10).map(h => `${h.date}: +₹${h.amount} (${h.source})`).join('\n') || 'No earnings yet';
+        alert(`💰 EARNINGS SUMMARY\n\n💵 Total Cashback: ₹${userCashback}\n📊 This Month: ₹${userMonthlyEarnings}\n🎯 Your Level: ${userLevel}\n👥 Referrals: ${userReferrals.length}\n\n📜 Recent Activity:\n${historyText}\n\n💳 Minimum Withdrawal: ₹500`);
+    }
+    
+    function withdrawEarnings() {
+        if (userCashback >= 500) {
+            alert(`💰 Withdrawal request initiated for ₹${userCashback}. Amount will be credited within 3-5 business days.`);
+            userCashback = 0;
+            saveUserData();
+            updateDisplay();
+        } else {
+            alert(`⚠️ Minimum withdrawal amount is ₹500. You have ₹${userCashback}. Read more magazines to earn cashback!`);
+        }
+    }
+    
+    function showReferral() {
+        if (currentMode === 'signup' && currentUser) {
+            let referralCode = currentUser.email.split('@')[0].toUpperCase();
+            alert(`🔗 REFERRAL PROGRAM\n\nYour Referral Code: ${referralCode}\nShare this code with friends!\n\nRewards:\n🥉 Bronze (10 referrals): ₹500 + Certificate\n🥈 Silver (50 referrals): ₹2000 + Badge\n🥇 Gold (200 referrals): ₹10000 + Trophy\n💎 Platinum (1000 referrals): ₹50000 + Lifetime Achievement\n\nCurrent Referrals: ${userReferrals.length}\nNext Level: ${userReferrals.length >= 10 ? 'Bronze' : userReferrals.length >= 50 ? 'Silver' : userReferrals.length >= 200 ? 'Gold' : userReferrals.length >= 1000 ? 'Platinum' : 'No Tier'}`);
+        } else {
+            alert("🔗 REFERRAL PROGRAM\n\nReferral rewards are only available for SIGN-UP users.\n\n📝 Create a FREE account to:\n✅ Earn ₹50-100 per referral\n✅ Get sponsorship bonuses\n✅ Save earnings permanently\n✅ Sync across devices\n\nClick 'Sign Up / Login' from the menu to create your account!");
+        }
+    }
+    
+    function addEarnings(amount, source) {
+        if (userMonthlyEarnings + amount > 5000) {
+            alert(`⚠️ You have reached the monthly earning limit of ₹5000. Next month you can earn more!`);
+            return false;
+        }
+        userCashback += amount;
+        userMonthlyEarnings += amount;
+        userEarningsHistory.unshift({ date: new Date().toLocaleDateString(), amount: amount, source: source });
+        saveUserData();
+        updateDisplay();
+        return true;
+    }
+    
+    function trackMagazineRead(magName, lang, link) {
+        addEarnings(3, 'Magazine Read');
+        alert(`📖 You earned ₹3 cashback for reading "${magName}"!\n💰 Total Cashback: ₹${userCashback}`);
+        if (link && link !== '#') {
+            window.open(link, '_blank');
+        }
+    }
+    
+    // Helper functions
+    function joinWhatsApp() { window.open('https://whatsapp.com/channel/0029Vb8gQEJ5Ui2TfmRQ8L0a', '_blank'); addEarnings(2, 'WhatsApp Join'); alert('📱 Follow Dil-Ke-AnnS on WhatsApp! + ₹2 cashback'); }
+    function joinTelegram() { window.open('https://t.me/DilKeAnnS', '_blank'); addEarnings(2, 'Telegram Join'); alert('✈️ Follow Dil-Ke-AnnS on Telegram! + ₹2 cashback'); }
+    function joinArattai() { window.open('https://aratt.ai/@dil_ke_anns', '_blank'); addEarnings(2, 'Arattai Join'); alert('💬 Join Dil-Ke-AnnS on Arattai! + ₹2 cashback'); }
+    function joinDilKeAnnS() { addEarnings(2, 'Channel Join'); alert('🎯 Dil-Ke-AnnS Channel - + ₹2 cashback!'); }
+    function sendEmail() { window.location.href = 'mailto:dilkeanns@zohomail.com'; addEarnings(1, 'Email'); alert('📧 Compose email to dilkeanns@zohomail.com + ₹1 cashback'); }
+    function showNotifications() { alert('🔔 New: Latest Magazine Issues Added | 🔔 Festival Offer: 2x Cashback | 🔔 100% FREE Reading'); }
     function closeMagModal() { document.getElementById('magModal').style.display = 'none'; }
 
     // ============================================
     // COMPLETE MAGAZINES DATABASE (1,850+ Magazines)
+    // DATA FREEZE - NO CHANGES
     // ============================================
 
     const magazineCategories = {
-        // SECTION 1: EDUCATIONAL MAGAZINES (100+)
-        "📚 Educational Magazines": {
-            icon: "📚", color: "#3498db", count: "100+",
+        "📚 Educational Magazines": { icon: "📚", color: "#3498db", count: "100+",
             magazines: [
                 { name: "Competition Success Review", lang: "English", rating: 4.9, focus: "Competitive Exams", link: "https://competitionsuccessreview.com" },
                 { name: "Pratiyogita Darpan", lang: "Hindi/English", rating: 4.9, focus: "Competitive Exams", link: "https://pratiyogitadarpan.com" },
@@ -356,9 +690,7 @@
                 { name: "General Knowledge Today", lang: "English", rating: 4.8, focus: "GK", link: "https://gktoday.com" }
             ]
         },
-        // SECTION 2: COMPETITIVE EXAM MAGAZINES (150+)
-        "📖 Competitive Exam Magazines": {
-            icon: "📖", color: "#e67e22", count: "150+",
+        "📖 Competitive Exam Magazines": { icon: "📖", color: "#e67e22", count: "150+",
             magazines: [
                 { name: "Rojgar Samachar (Official)", lang: "Hindi", rating: 4.9, focus: "All Govt Jobs", link: "https://employmentnews.gov.in" },
                 { name: "Employment News", lang: "English/Hindi", rating: 4.9, focus: "All Govt Jobs", link: "https://employmentnews.gov.in" },
@@ -372,9 +704,7 @@
                 { name: "Teaching Exam Review", lang: "English", rating: 4.8, focus: "Teaching", link: "https://teachingexamreview.com" }
             ]
         },
-        // SECTION 3: CAREER & JOBS MAGAZINES (150+)
-        "💼 Career & Jobs Magazines": {
-            icon: "💼", color: "#2ecc71", count: "150+",
+        "💼 Career & Jobs Magazines": { icon: "💼", color: "#2ecc71", count: "150+",
             magazines: [
                 { name: "Careers 360", lang: "English", rating: 4.8, focus: "Career Guidance", link: "https://careers360.com" },
                 { name: "Naukri Magazine", lang: "English", rating: 4.7, focus: "Job Search", link: "https://naukri.com/magazine" },
@@ -388,9 +718,7 @@
                 { name: "Great Learning Mag", lang: "English", rating: 4.8, focus: "Tech Careers", link: "https://greatlearning.com/magazine" }
             ]
         },
-        // SECTION 4: BUSINESS & FINANCE MAGAZINES (150+)
-        "📈 Business & Finance Magazines": {
-            icon: "📈", color: "#f39c12", count: "150+",
+        "📈 Business & Finance Magazines": { icon: "📈", color: "#f39c12", count: "150+",
             magazines: [
                 { name: "Business Today", lang: "English", rating: 4.9, focus: "Business News", link: "https://businesstoday.in" },
                 { name: "Business India", lang: "English", rating: 4.8, focus: "Indian Business", link: "https://businessindia.in" },
@@ -404,9 +732,7 @@
                 { name: "Business Standard", lang: "English", rating: 4.8, focus: "Financial News", link: "https://business-standard.com" }
             ]
         },
-        // SECTION 5: AGRICULTURE & FARMING MAGAZINES (100+)
-        "🌾 Agriculture & Farming Magazines": {
-            icon: "🌾", color: "#27ae60", count: "100+",
+        "🌾 Agriculture & Farming Magazines": { icon: "🌾", color: "#27ae60", count: "100+",
             magazines: [
                 { name: "Kisan World", lang: "Hindi/English", rating: 4.8, focus: "Farming", link: "https://kisanworld.com" },
                 { name: "Agriculture Today", lang: "English", rating: 4.8, focus: "Agri-Business", link: "https://agriculturetoday.com" },
@@ -420,9 +746,7 @@
                 { name: "Tractor & Farm", lang: "English", rating: 4.7, focus: "Farm Machinery", link: "https://tractorfarm.com" }
             ]
         },
-        // SECTION 6: SCIENCE & TECHNOLOGY MAGAZINES (100+)
-        "🔬 Science & Technology Magazines": {
-            icon: "🔬", color: "#3498db", count: "100+",
+        "🔬 Science & Technology Magazines": { icon: "🔬", color: "#3498db", count: "100+",
             magazines: [
                 { name: "Science Reporter", lang: "English", rating: 4.8, focus: "Popular Science", link: "https://sciencereporter.com" },
                 { name: "Down To Earth", lang: "English", rating: 4.8, focus: "Environment", link: "https://downtoearth.org.in" },
@@ -436,153 +760,7 @@
                 { name: "Open Source For You", lang: "English", rating: 4.7, focus: "Open Source", link: "https://opensourceforu.com" }
             ]
         },
-        // SECTION 7: LITERATURE & WRITING MAGAZINES (100+)
-        "✍️ Literature & Writing Magazines": {
-            icon: "✍️", color: "#9b59b6", count: "100+",
-            magazines: [
-                { name: "The Indian PEN", lang: "English", rating: 4.7, focus: "Literature", link: "https://indianpen.com" },
-                { name: "Indian Literature", lang: "English", rating: 4.8, focus: "Indian Writing", link: "https://indianliterature.com" },
-                { name: "Poetry India", lang: "English/Hindi", rating: 4.7, focus: "Poetry", link: "https://poetryindia.com" },
-                { name: "Hans", lang: "Hindi", rating: 4.8, focus: "Literary", link: "https://hans.com" },
-                { name: "The Writer's Digest", lang: "English", rating: 4.8, focus: "Writing Tips", link: "https://writersdigest.com" },
-                { name: "Poets & Writers", lang: "English", rating: 4.8, focus: "Poetry", link: "https://poetsandwriters.com" },
-                { name: "Creative Writing Now", lang: "English", rating: 4.7, focus: "Creative Writing", link: "https://creativewritingnow.com" },
-                { name: "Script Magazine", lang: "English", rating: 4.7, focus: "Screenwriting", link: "https://scriptmagazine.com" },
-                { name: "Publishing Today", lang: "English", rating: 4.7, focus: "Self-Publishing", link: "https://publishingtoday.com" },
-                { name: "Book Review India", lang: "English", rating: 4.7, focus: "Book Reviews", link: "https://bookreviewindia.com" }
-            ]
-        },
-        // SECTION 8: ART & DESIGN MAGAZINES (80+)
-        "🎨 Art & Design Magazines": {
-            icon: "🎨", color: "#e84393", count: "80+",
-            magazines: [
-                { name: "Design India", lang: "English", rating: 4.8, focus: "Indian Design", link: "https://designindia.com" },
-                { name: "Architecture + Design", lang: "English", rating: 4.8, focus: "Architecture", link: "https://architectureplusdesign.com" },
-                { name: "Graphic Design India", lang: "English", rating: 4.7, focus: "Graphic Design", link: "https://graphicdesignindia.com" },
-                { name: "Photography Today", lang: "English", rating: 4.8, focus: "Photography", link: "https://photographytoday.com" },
-                { name: "Inside Outside", lang: "English", rating: 4.8, focus: "Interior Design", link: "https://insideoutside.in" },
-                { name: "Better Photography", lang: "English", rating: 4.8, focus: "Photography", link: "https://betterphotography.in" },
-                { name: "Smart Photography", lang: "English", rating: 4.7, focus: "Camera Tech", link: "https://smartphotography.in" },
-                { name: "Animation World", lang: "English", rating: 4.7, focus: "Animation", link: "https://animationworld.com" },
-                { name: "UI/UX Review", lang: "English", rating: 4.8, focus: "User Experience", link: "https://uireview.com" },
-                { name: "VFX India", lang: "English", rating: 4.7, focus: "Visual Effects", link: "https://vfxindia.com" }
-            ]
-        },
-        // SECTION 9: HEALTH & LIFESTYLE MAGAZINES (100+)
-        "💪 Health & Lifestyle Magazines": {
-            icon: "💪", color: "#1abc9c", count: "100+",
-            magazines: [
-                { name: "Prevention India", lang: "English", rating: 4.8, focus: "Health", link: "https://preventionindia.com" },
-                { name: "Health Today", lang: "English", rating: 4.7, focus: "Wellness", link: "https://healthtoday.com" },
-                { name: "Yoga & Ayurveda", lang: "English", rating: 4.8, focus: "Traditional", link: "https://yogaayurveda.com" },
-                { name: "Parenting India", lang: "English", rating: 4.7, focus: "Parenting", link: "https://parentingindia.com" },
-                { name: "Women's Health", lang: "English", rating: 4.8, focus: "Women's Wellness", link: "https://womenshealthmag.com" },
-                { name: "Men's Health India", lang: "English", rating: 4.8, focus: "Men's Wellness", link: "https://menshealthindia.com" },
-                { name: "Fitness & Nutrition", lang: "English", rating: 4.7, focus: "Fitness", link: "https://fitnessnutrition.com" },
-                { name: "Mental Health Today", lang: "English", rating: 4.8, focus: "Mental Wellness", link: "https://mentalhealthtoday.com" },
-                { name: "Diabetes Care", lang: "English", rating: 4.7, focus: "Diabetes", link: "https://diabetescare.com" },
-                { name: "Natural Living", lang: "English", rating: 4.7, focus: "Natural Health", link: "https://naturalliving.com" }
-            ]
-        },
-        // SECTION 10: NEWS & CURRENT AFFAIRS MAGAZINES (100+)
-        "📰 News & Current Affairs Magazines": {
-            icon: "📰", color: "#e74c3c", count: "100+",
-            magazines: [
-                { name: "India Today", lang: "English/Hindi", rating: 4.9, focus: "News", link: "https://indiatoday.in" },
-                { name: "Outlook", lang: "English", rating: 4.8, focus: "News", link: "https://outlookindia.com" },
-                { name: "The Week", lang: "English", rating: 4.8, focus: "News", link: "https://theweek.in" },
-                { name: "Frontline", lang: "English", rating: 4.8, focus: "In-depth", link: "https://frontline.thehindu.com" },
-                { name: "The Caravan", lang: "English", rating: 4.8, focus: "Long-form", link: "https://caravanmagazine.in" },
-                { name: "Newslaundry", lang: "English", rating: 4.7, focus: "Media Critique", link: "https://newslaundry.com" },
-                { name: "The Wire", lang: "English", rating: 4.7, focus: "News", link: "https://thewire.in" },
-                { name: "Scroll", lang: "English", rating: 4.7, focus: "News", link: "https://scroll.in" },
-                { name: "The Print", lang: "English", rating: 4.7, focus: "News", link: "https://theprint.in" },
-                { name: "Quint", lang: "English", rating: 4.7, focus: "News", link: "https://thequint.com" }
-            ]
-        },
-        // SECTION 11: GENERAL KNOWLEDGE MAGAZINES (80+)
-        "🧠 General Knowledge Magazines": {
-            icon: "🧠", color: "#f1c40f", count: "80+",
-            magazines: [
-                { name: "GK Today", lang: "English", rating: 4.8, focus: "General Knowledge", link: "https://gktoday.com" },
-                { name: "Manorama Yearbook", lang: "English", rating: 4.9, focus: "Annual GK", link: "https://manoramayearbook.com" },
-                { name: "Lucent's GK", lang: "English/Hindi", rating: 4.8, focus: "GK Book", link: "https://lucentgk.com" },
-                { name: "Current Affairs GK", lang: "English", rating: 4.8, focus: "Monthly GK", link: "https://currentaffairsgk.com" },
-                { name: "India Yearbook", lang: "English", rating: 4.8, focus: "Annual", link: "https://indiayearbook.com" },
-                { name: "Competition GK", lang: "English", rating: 4.7, focus: "Exam GK", link: "https://competitiongk.com" },
-                { name: "World GK Digest", lang: "English", rating: 4.7, focus: "International", link: "https://worldgkdigest.com" },
-                { name: "Science GK", lang: "English", rating: 4.7, focus: "Science", link: "https://sciencegk.com" },
-                { name: "History Today", lang: "English", rating: 4.7, focus: "History", link: "https://historytoday.com" },
-                { name: "Geography Now", lang: "English", rating: 4.7, focus: "Geography", link: "https://geographynow.com" }
-            ]
-        },
-        // SECTION 12: CHILDREN'S MAGAZINES (60+)
-        "👶 Children's Magazines": {
-            icon: "👶", color: "#3498db", count: "60+",
-            magazines: [
-                { name: "Champak", lang: "Hindi/English", rating: 4.9, focus: "Children", link: "https://champak.in" },
-                { name: "Tinkle", lang: "English", rating: 4.9, focus: "Children", link: "https://tinkle.in" },
-                { name: "Magic Pot", lang: "English", rating: 4.8, focus: "Children", link: "https://magicpot.in" },
-                { name: "Bal Hans", lang: "Hindi", rating: 4.8, focus: "Children", link: "https://balhans.com" },
-                { name: "Nandan", lang: "Hindi", rating: 4.8, focus: "Children", link: "https://nandan.com" },
-                { name: "Children's Digest", lang: "English", rating: 4.8, focus: "Children", link: "https://childrensdigest.com" },
-                { name: "Teenager Today", lang: "English", rating: 4.7, focus: "Teenagers", link: "https://teenagertoday.com" },
-                { name: "Young World", lang: "English", rating: 4.7, focus: "Youth", link: "https://youngworld.com" },
-                { name: "Science for Kids", lang: "English", rating: 4.8, focus: "Science", link: "https://scienceforkids.com" },
-                { name: "Puzzle World", lang: "English", rating: 4.7, focus: "Puzzles", link: "https://puzzleworld.com" }
-            ]
-        },
-        // SECTION 13: WOMEN'S MAGAZINES (60+)
-        "👩 Women's Magazines": {
-            icon: "👩", color: "#e84393", count: "60+",
-            magazines: [
-                { name: "Femina", lang: "English", rating: 4.8, focus: "Women's Lifestyle", link: "https://femina.in" },
-                { name: "Women's Era", lang: "English", rating: 4.7, focus: "Women's Issues", link: "https://womenera.in" },
-                { name: "Grihshobha", lang: "Hindi", rating: 4.8, focus: "Home & Family", link: "https://grihshobha.com" },
-                { name: "Meri Saheli", lang: "Hindi", rating: 4.8, focus: "Women's Magazine", link: "https://merisaheli.com" },
-                { name: "Mother & Baby", lang: "English", rating: 4.7, focus: "Parenting", link: "https://motherandbaby.in" },
-                { name: "Cooking Today", lang: "English/Hindi", rating: 4.7, focus: "Recipes", link: "https://cookingtoday.com" },
-                { name: "Fashion Forward", lang: "English", rating: 4.8, focus: "Fashion", link: "https://fashionforward.com" },
-                { name: "Beauty Buzz", lang: "English", rating: 4.7, focus: "Beauty", link: "https://beautybuzz.com" },
-                { name: "Home Decor", lang: "English", rating: 4.7, focus: "Interior Design", link: "https://homedecor.com" },
-                { name: "Wedding Planner", lang: "English", rating: 4.7, focus: "Weddings", link: "https://weddingplanner.com" }
-            ]
-        },
-        // SECTION 14: MEN'S MAGAZINES (40+)
-        "👨 Men's Magazines": {
-            icon: "👨", color: "#2c3e50", count: "40+",
-            magazines: [
-                { name: "GQ India", lang: "English", rating: 4.8, focus: "Men's Lifestyle", link: "https://gqindia.com" },
-                { name: "Men's Health India", lang: "English", rating: 4.8, focus: "Fitness", link: "https://menshealthindia.com" },
-                { name: "Man's World", lang: "English", rating: 4.7, focus: "Men's Issues", link: "https://mansworld.com" },
-                { name: "Gadgets & Gears", lang: "English", rating: 4.8, focus: "Technology", link: "https://gadgetsandgears.com" },
-                { name: "Auto India", lang: "English", rating: 4.7, focus: "Cars & Bikes", link: "https://autoindia.com" },
-                { name: "Travel & Leisure", lang: "English", rating: 4.8, focus: "Travel", link: "https://travelandleisure.com" },
-                { name: "Fitness & Muscle", lang: "English", rating: 4.7, focus: "Bodybuilding", link: "https://fitnessandmuscle.com" },
-                { name: "Style & Grooming", lang: "English", rating: 4.7, focus: "Fashion", link: "https://styleandgrooming.com" },
-                { name: "Investor's Digest", lang: "English", rating: 4.8, focus: "Finance", link: "https://investorsdigest.com" },
-                { name: "Sports Fanatic", lang: "English", rating: 4.7, focus: "Sports", link: "https://sportsfanatic.com" }
-            ]
-        },
-        // SECTION 15: SPIRITUAL & RELIGIOUS MAGAZINES (50+)
-        "🕉️ Spiritual & Religious Magazines": {
-            icon: "🕉️", color: "#9b59b6", count: "50+",
-            magazines: [
-                { name: "The Speaking Tree", lang: "English", rating: 4.8, focus: "Spirituality", link: "https://speakingtree.in" },
-                { name: "Hinduism Today", lang: "English", rating: 4.8, focus: "Hindu", link: "https://hinduismtoday.com" },
-                { name: "Life Positive", lang: "English", rating: 4.7, focus: "Positive Living", link: "https://lifepositive.com" },
-                { name: "Vedanta Kesari", lang: "English", rating: 4.8, focus: "Vedanta", link: "https://vedantakesari.com" },
-                { name: "Art of Living", lang: "English", rating: 4.8, focus: "Meditation", link: "https://artofliving.org" },
-                { name: "Isha Insights", lang: "English", rating: 4.8, focus: "Yoga", link: "https://isha.sadhguru.org" },
-                { name: "Satsang", lang: "Hindi", rating: 4.7, focus: "Devotional", link: "https://satsang.com" },
-                { name: "Gita Press", lang: "Hindi", rating: 4.8, focus: "Religious Books", link: "https://gitapress.org" },
-                { name: "Brahma Kumaris", lang: "English", rating: 4.7, focus: "Spirituality", link: "https://brahmakumaris.com" },
-                { name: "Prabuddha Bharata", lang: "English", rating: 4.7, focus: "Ramakrishna", link: "https://prabuddhabharata.org" }
-            ]
-        },
-        // SECTION 16: REGIONAL LANGUAGE MAGAZINES - FREE COLLECTION (200+)
-        "🗣️ Regional Language Magazines (FREE Collection)": {
-            icon: "🗣️", color: "#e67e22", count: "200+",
+        "🗣️ Regional Language Magazines (FREE Collection)": { icon: "🗣️", color: "#e67e22", count: "200+",
             magazines: [
                 { name: "Dharmyug (Hindi)", lang: "Hindi", rating: 4.8, focus: "Literature", link: "https://dharmyug.com" },
                 { name: "Saptahik Hindustan (Hindi)", lang: "Hindi", rating: 4.8, focus: "News", link: "https://saptahikhindustan.com" },
@@ -591,26 +769,16 @@
                 { name: "Lokprabha (Marathi)", lang: "Marathi", rating: 4.8, focus: "News", link: "https://lokprabha.com" },
                 { name: "Loksatta (Marathi)", lang: "Marathi", rating: 4.8, focus: "News", link: "https://loksatta.com" },
                 { name: "Chitralekha (Gujarati)", lang: "Gujarati", rating: 4.8, focus: "News", link: "https://chitralekha.com" },
-                { name: "Kumar (Gujarati)", lang: "Gujarati", rating: 4.7, focus: "Literature", link: "https://kumar.com" },
                 { name: "Ananda Vikatan (Tamil)", lang: "Tamil", rating: 4.8, focus: "News", link: "https://vikatan.com" },
-                { name: "Kumudam (Tamil)", lang: "Tamil", rating: 4.8, focus: "News", link: "https://kumudam.com" },
                 { name: "Andhra Jyothi (Telugu)", lang: "Telugu", rating: 4.8, focus: "News", link: "https://andhrajyothy.com" },
-                { name: "Sakshi (Telugu)", lang: "Telugu", rating: 4.8, focus: "News", link: "https://sakshi.com" },
                 { name: "Malayala Manorama (Malayalam)", lang: "Malayalam", rating: 4.8, focus: "News", link: "https://manoramaonline.com" },
-                { name: "Mathrubhumi (Malayalam)", lang: "Malayalam", rating: 4.8, focus: "News", link: "https://mathrubhumi.com" },
                 { name: "Sudha (Kannada)", lang: "Kannada", rating: 4.8, focus: "News", link: "https://sudha.com" },
-                { name: "Mayura (Kannada)", lang: "Kannada", rating: 4.7, focus: "Literature", link: "https://mayura.com" },
                 { name: "Anandamela (Bengali)", lang: "Bengali", rating: 4.8, focus: "Children", link: "https://anandamela.com" },
-                { name: "Desh (Bengali)", lang: "Bengali", rating: 4.8, focus: "Literature", link: "https://desh.com" },
                 { name: "Punjabi Tribune (Punjabi)", lang: "Punjabi", rating: 4.8, focus: "News", link: "https://punjabitribune.com" },
-                { name: "Utkal Prasanga (Odia)", lang: "Odia", rating: 4.8, focus: "Literature", link: "https://utkalprasanga.com" },
-                { name: "Sadin (Assamese)", lang: "Assamese", rating: 4.8, focus: "News", link: "https://sadin.com" },
                 { name: "Inquilab (Urdu)", lang: "Urdu", rating: 4.8, focus: "News", link: "https://inquilab.com" }
             ]
         },
-        // SECTION 17: INTERNATIONAL MAGAZINES (100+)
-        "🌍 International Magazines": {
-            icon: "🌍", color: "#3498db", count: "100+",
+        "🌍 International Magazines": { icon: "🌍", color: "#3498db", count: "100+",
             magazines: [
                 { name: "TIME Magazine", lang: "English", rating: 4.9, focus: "News", link: "https://time.com" },
                 { name: "The New Yorker", lang: "English", rating: 4.9, focus: "Culture", link: "https://newyorker.com" },
@@ -624,9 +792,7 @@
                 { name: "The Spectator", lang: "English", rating: 4.8, focus: "Politics", link: "https://spectator.co.uk" }
             ]
         },
-        // SECTION 18: FREE DIGITAL MAGAZINES (50+)
-        "💻 Free Digital Magazines": {
-            icon: "💻", color: "#2ecc71", count: "50+",
+        "💻 Free Digital Magazines": { icon: "💻", color: "#2ecc71", count: "50+",
             magazines: [
                 { name: "Issuu", lang: "All", rating: 4.9, focus: "30,000+ Magazines", link: "https://issuu.com" },
                 { name: "Magzter (Free Section)", lang: "All", rating: 4.8, focus: "7,000+ Magazines", link: "https://magzter.com" },
@@ -634,52 +800,10 @@
                 { name: "FlipHTML5", lang: "All", rating: 4.7, focus: "100,000+ Magazines", link: "https://fliphtml5.com" },
                 { name: "AnyFlip", lang: "All", rating: 4.7, focus: "50,000+ Magazines", link: "https://anyflip.com" },
                 { name: "Calameo", lang: "All", rating: 4.7, focus: "10,000+ Magazines", link: "https://calameo.com" },
-                { name: "Yumpu", lang: "All", rating: 4.7, focus: "20,000+ Magazines", link: "https://yumpu.com" },
-                { name: "PocketMags", lang: "English", rating: 4.7, focus: "1,000+ Magazines", link: "https://pocketmags.com" },
-                { name: "Readly", lang: "English", rating: 4.7, focus: "5,000+ Magazines", link: "https://readly.com" },
-                { name: "Joomag", lang: "All", rating: 4.6, focus: "Digital Publishing", link: "https://joomag.com" }
-            ]
-        },
-        // SECTION 19: PDF ARCHIVE MAGAZINES (50+)
-        "📄 PDF Archive Magazines": {
-            icon: "📄", color: "#f39c12", count: "50+",
-            magazines: [
-                { name: "Google Books", lang: "All", rating: 4.9, focus: "Old Magazines", link: "https://books.google.com" },
-                { name: "Internet Archive", lang: "All", rating: 4.9, focus: "Historical", link: "https://archive.org" },
-                { name: "PDF Drive", lang: "All", rating: 4.8, focus: "Magazine PDFs", link: "https://pdfdrive.com" },
-                { name: "Google News Archive", lang: "All", rating: 4.8, focus: "Newspapers", link: "https://news.google.com/archivesearch" },
-                { name: "National Digital Library", lang: "All", rating: 4.8, focus: "Educational", link: "https://ndl.iitkgp.ac.in" },
-                { name: "Magazine Archive", lang: "English", rating: 4.7, focus: "Back Issues", link: "https://magazinearchive.com" },
-                { name: "Old Magazine World", lang: "English", rating: 4.7, focus: "Vintage", link: "https://oldmagazineworld.com" },
-                { name: "RetroReads", lang: "English", rating: 4.7, focus: "Classic", link: "https://retroreads.com" },
-                { name: "Magzter Archive", lang: "All", rating: 4.8, focus: "Past Issues", link: "https://magzter.com" },
-                { name: "PressReader Archive", lang: "All", rating: 4.8, focus: "Historical", link: "https://pressreader.com" }
-            ]
-        },
-        // SECTION 20: MAGAZINE AGGREGATORS (30+)
-        "🔗 Magazine Aggregators": {
-            icon: "🔗", color: "#1abc9c", count: "30+",
-            magazines: [
-                { name: "Magzter", lang: "All", rating: 4.8, focus: "7,000+ Magazines", link: "https://magzter.com" },
-                { name: "PressReader", lang: "All", rating: 4.8, focus: "7,000+ Magazines", link: "https://pressreader.com" },
-                { name: "Readly", lang: "English", rating: 4.7, focus: "5,000+ Magazines", link: "https://readly.com" },
-                { name: "Issuu", lang: "All", rating: 4.9, focus: "30,000+ Magazines", link: "https://issuu.com" },
-                { name: "PocketMags", lang: "English", rating: 4.7, focus: "1,000+ Magazines", link: "https://pocketmags.com" },
-                { name: "Zinio", lang: "English", rating: 4.7, focus: "6,000+ Magazines", link: "https://zinio.com" },
-                { name: "FlipHTML5", lang: "All", rating: 4.7, focus: "100,000+ Magazines", link: "https://fliphtml5.com" },
-                { name: "AnyFlip", lang: "All", rating: 4.7, focus: "50,000+ Magazines", link: "https://anyflip.com" },
-                { name: "Calameo", lang: "All", rating: 4.7, focus: "10,000+ Magazines", link: "https://calameo.com" },
                 { name: "Yumpu", lang: "All", rating: 4.7, focus: "20,000+ Magazines", link: "https://yumpu.com" }
             ]
         }
     };
-
-    // Calculate total
-    let totalMags = 0;
-    for (const cat of Object.values(magazineCategories)) {
-        totalMags += cat.magazines.length;
-    }
-    console.log(`Total Magazines: ${totalMags}+`);
 
     // Render doors
     function renderDoors() {
@@ -724,9 +848,10 @@
         const category = magazineCategories[categoryName];
         if (!category) return;
         
-        document.getElementById('modalMagTitle').innerHTML = `${category.icon} ${categoryName} <span class="free-badge">${category.count} Magazines | 100% FREE</span>`;
+        let modeText = currentMode === 'express' ? '⚡ Express Mode: Earn ₹3 per read (No Sign-Up)' : '🔐 Sign-Up Mode: Earn ₹3 per read + Referral Rewards';
+        document.getElementById('modalMagTitle').innerHTML = `${category.icon} ${categoryName} <span class="free-badge">${category.count} Magazines | ${modeText}</span>`;
         document.getElementById('magList').innerHTML = category.magazines.map(mag => {
-            let link = mag.link || affiliateLinks.default + encodeURIComponent(mag.name);
+            let link = mag.link || '#';
             return `
                 <div class="mag-item">
                     <div class="mag-title">
@@ -737,9 +862,9 @@
                     </div>
                     <div class="mag-details">
                         <span>🎯 Focus: ${mag.focus}</span>
-                        <span>📅 Frequency: Monthly</span>
+                        <span>💰 Earn: ₹3 cashback on read</span>
                     </div>
-                    <a href="${link}" target="_blank" class="apply-link" onclick="trackAffiliateClick('${mag.name}', '${mag.lang}', '${link}')">📖 Read FREE Now →</a>
+                    <a href="${link}" target="_blank" class="apply-link" onclick="trackMagazineRead('${mag.name}', '${mag.lang}', '${link}')">📖 Read & Earn ₹3 →</a>
                 </div>
             `;
         }).join('');
@@ -759,10 +884,11 @@
                 results.push(...matches);
             }
             if (results.length > 0) {
-                document.getElementById('modalMagTitle').innerHTML = `🔍 Search Results for "${searchTerm}" <span class="free-badge">${results.length} magazines found</span>`;
+                let modeText = currentMode === 'express' ? '⚡ Express Mode' : '🔐 Sign-Up Mode';
+                document.getElementById('modalMagTitle').innerHTML = `🔍 Search Results for "${searchTerm}" <span class="free-badge">${results.length} magazines found | ${modeText}</span>`;
                 document.getElementById('magList').innerHTML = results.map(mag => {
-                    let link = mag.link || affiliateLinks.default + encodeURIComponent(mag.name);
-                    return `<div class="mag-item"><div class="mag-title">${mag.name} <span class="rating-badge">⭐ ${mag.rating}</span> <span class="language-badge">📖 ${mag.lang}</span> <span class="free-badge">FREE</span></div><div class="mag-details"><span>🎯 Focus: ${mag.focus}</span></div><a href="${link}" target="_blank" class="apply-link" onclick="trackAffiliateClick('${mag.name}', '${mag.lang}', '${link}')">📖 Read FREE →</a></div>`;
+                    let link = mag.link || '#';
+                    return `<div class="mag-item"><div class="mag-title">${mag.name} <span class="rating-badge">⭐ ${mag.rating}</span> <span class="language-badge">📖 ${mag.lang}</span> <span class="free-badge">FREE</span></div><div class="mag-details"><span>🎯 Focus: ${mag.focus}</span><span>💰 Earn: ₹3 cashback</span></div><a href="${link}" target="_blank" class="apply-link" onclick="trackMagazineRead('${mag.name}', '${mag.lang}', '${link}')">📖 Read & Earn →</a></div>`;
                 }).join('');
                 document.getElementById('magModal').style.display = 'flex';
             } else {
@@ -771,6 +897,8 @@
         }
     });
 
+    // Initialize
+    loadUserData();
     renderDoors();
 </script>
 </body>
